@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../App.css";
+import Logo from "../../assets/images/CSC.svg";
 
-export default function IndexSectionHeaders6() {
+export default function Headers() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleOpen = () => {
+    setIsOpen(!isOpen);
+    console.log(isOpen);
+  };
+
   return (
     <>
       <>
         <section className="pb-24 position-relative overflow-hidden">
           <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent mb-2">
             <div className="container">
-              <a className="navbar-brand" href="#">
-                Carolina
-              </a>
-              <button className="btn p-0 d-xl-none navbar-burger">
+              <img className="navbar-brand" src={Logo} alt="logo" width={102} />
+              <button
+                className="btn p-0 d-xl-none navbar-burger"
+                onClick={handleOpen}
+              >
                 <svg
                   width={24}
                   height={24}
@@ -94,12 +103,11 @@ export default function IndexSectionHeaders6() {
               </div>
             </div>
           </div>
+
           <div
-            className="d-none d-xl-block py-96 position-absolute top-0 start-0 bg-success-light w-100 mt-n16"
-            style={{ zIndex: -1 }}
-          />
-          <div
-            className="navbar-menu d-none position-fixed top-0 start-0 bottom-0 w-75 mw-sm"
+            className={`navbar-menu ${
+              isOpen ? "show" : "hide"
+            } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
             style={{ zIndex: 9999 }}
           >
             <div
@@ -109,16 +117,13 @@ export default function IndexSectionHeaders6() {
             <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white overflow-auto">
               <div className="d-flex align-items-center mb-12">
                 <a className="me-auto h4 mb-0 text-decoration-none" href="#">
-                  <img
-                    src="pstls-assets/logos/pstls-logo-md.svg"
-                    alt=""
-                    width={102}
-                  />
+                  <img src={Logo} alt="logo" width={102} />
                 </a>
                 <button
                   className="btn navbar-close"
                   type="button"
                   aria-label="Close"
+                  onClick={handleOpen}
                 >
                   <img src="pstls-assets/images/navigations/x2.svg" alt="" />
                 </button>

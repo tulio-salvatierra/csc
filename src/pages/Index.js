@@ -1,10 +1,11 @@
-import React from "react";
-import IndexSectionHeaders6 from "../components/headers/Headers";
+import Header from "../components/headers/Headers";
+import Hero from "../components/Hero/Hero";
 
-export default function Index() {
+export default function IndexPage() {
   return (
     <>
-      <IndexSectionHeaders6 />
+      <Header />
+      <Hero />
     </>
   );
 }

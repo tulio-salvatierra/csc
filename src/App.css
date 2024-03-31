@@ -26,3 +26,12 @@ nav {
   color: #fff;
   font-weight: bold;
 }
+
+/* App.css o el archivo CSS relevante */
+.navbar-menu.show {
+  display: block !important;
+}
+
+.navbar-menu.hide {
+  display: none !important;
+}
