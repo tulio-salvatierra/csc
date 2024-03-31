@@ -35,7 +35,7 @@ function Header() {
       <section className="pb-24 position-relative overflow-hidden">
         <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent mb-2">
           <div className="container">
-            <img className="navbar-brand" src={Logo} alt="logo" width={102} />
+            <img className="navbar-brand" src={Logo} alt="logo" width={152} />
             <button
               className="btn p-0 d-xl-none navbar-burger"
               onClick={handleOpen}

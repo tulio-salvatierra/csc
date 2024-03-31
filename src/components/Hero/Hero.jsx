@@ -1,5 +1,6 @@
 import React from "react";
 import "../../App.css";
+import Carousel from "../Carousel";
 
 function Hero() {
   return (
@@ -35,6 +36,7 @@ function Hero() {
           </p>
         </div>
       </div>
+      <Carousel />
     </div>
   );
 }
