@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../App.css";
 import Logo from "../../assets/images/CSC.svg";
 
-export default function Headers() {
+function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -134,3 +134,5 @@ export default function Headers() {
     </>
   );
 }
+
+export default Header;
