@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FooterSectionFooter1() {
+export default function Footer() {
   return (
     <>
       <>

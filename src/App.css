@@ -35,3 +35,21 @@ nav {
 .navbar-menu.hide {
   display: none !important;
 }
+
+h1,
+a,
+p {
+  font-family: "Moula";
+  color: black;
+  text-align: left;
+}
+
+h1 {
+  font-size: 4.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+p {
+  font-size: 1.5em;
+}

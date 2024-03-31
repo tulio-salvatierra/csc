@@ -6,19 +6,16 @@ function Hero() {
     <div className="container">
       <div className="row align-items-center mb-20 mb-xl-24">
         <div className="col-12 col-md-6 col-xl-7 mb-6 mb-lg-0">
-          <h1 className="mb-6 lh-sm">
-            Welcome to the official website of Carolina skin centre in Midland,
-            TX.
-          </h1>
+          <h1 className="mb-6 lh-sm">Carolina Skin Centre, Midland, TX.</h1>
           <a className="btn btn-dark d-block d-md-inline-block" href="#">
-            Details
+            Book an appointment
           </a>
         </div>
         <div className="col-12 col-md-6 col-xl-5">
           <p className="mb-0 lh-lg mw-md-sm">
-            Here you will find all the information you need to know about our
-            services and treatments. We are a team of professionals dedicated to
-            providing the best care to our patients.
+            Welcome to our official website. We are a team of professionals
+            dedicated to providing the best possible care for your skin. We
+            offer a wide range of services to help you look and feel your best.
           </p>
         </div>
       </div>

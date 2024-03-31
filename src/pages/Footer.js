@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import FooterSectionFooter1 from "../components/footer/FooterSectionFooter1";
+import FooterSectionFooter1 from "../components/Footer";
 
 const meta = {
   title: "",
