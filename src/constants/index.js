@@ -33,13 +33,13 @@ export const MENU_ITEMS = [
   },
 ];
 
-// export const USER_ITEMS = [
-//   {
-//     title: "Sign In",
-//     url: "/signin",
-//   },
-//   {
-//     title: "Sign Up",
-//     url: "/signup",
-//   },
-// ];
+export const USER_ITEMS = [
+  {
+    title: "Sign In",
+    url: "/signin",
+  },
+  {
+    title: "Sign Up",
+    url: "/signup",
+  },
+];
