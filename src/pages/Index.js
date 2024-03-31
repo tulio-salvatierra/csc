@@ -1,23 +1,10 @@
-import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import IndexSectionHeaders6 from '../components/headers/IndexSectionHeaders6';
-
-const meta = {
-  title: '',
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
+import React from "react";
+import IndexSectionHeaders6 from "../components/headers/Headers";
 
 export default function Index() {
   return (
-    <React.Fragment>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
+    <>
       <IndexSectionHeaders6 />
-    </React.Fragment>
+    </>
   );
 }
-

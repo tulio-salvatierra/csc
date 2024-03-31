@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import FaqSectionFaq1 from '../components/faq/FaqSectionFaq1';
+import React from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import FaqSectionFaq1 from "../components/faq/FaqSectionFaq1";
 
 const meta = {
-  title: '',
+  title: "",
   meta: [],
   link: [],
   style: [],
@@ -12,12 +12,11 @@ const meta = {
 
 export default function Faq() {
   return (
-    <React.Fragment>
+    <>
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <FaqSectionFaq1 />
-    </React.Fragment>
+    </>
   );
 }
-

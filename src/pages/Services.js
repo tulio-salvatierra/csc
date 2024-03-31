@@ -1,9 +1,9 @@
-import React from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
-import ServicesSectionBlog1 from '../components/blog/ServicesSectionBlog1';
+import React from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
+import ServicesSectionBlog1 from "../components/blog/ServicesSectionBlog1";
 
 const meta = {
-  title: '',
+  title: "",
   meta: [],
   link: [],
   style: [],
@@ -12,12 +12,11 @@ const meta = {
 
 export default function Services() {
   return (
-    <React.Fragment>
+    <>
       <HelmetProvider>
         <Helmet {...meta}></Helmet>
       </HelmetProvider>
       <ServicesSectionBlog1 />
-    </React.Fragment>
+    </>
   );
 }
-

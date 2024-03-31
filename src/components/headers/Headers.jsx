@@ -1,18 +1,15 @@
 import React from "react";
+import "../../App.css";
 
 export default function IndexSectionHeaders6() {
   return (
-    <React.Fragment>
+    <>
       <>
         <section className="pb-24 position-relative overflow-hidden">
           <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent mb-2">
             <div className="container">
               <a className="navbar-brand" href="#">
-                <img
-                  src="pstls-assets/logos/pstls-logo-md.svg"
-                  alt=""
-                  width={116}
-                />
+                Carolina
               </a>
               <button className="btn p-0 d-xl-none navbar-burger">
                 <svg
@@ -164,6 +161,6 @@ export default function IndexSectionHeaders6() {
           </div>
         </section>
       </>
-    </React.Fragment>
+    </>
   );
 }
