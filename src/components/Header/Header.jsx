@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../../App.css";
 import Logo from "../../assets/images/CSC.svg";
+import "../../constants/index.js";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,25 @@ function Header() {
     setIsOpen(!isOpen);
     console.log(isOpen);
   };
+
+  const MENU_ITEMS = [
+    {
+      title: "Services",
+      url: "/services",
+    },
+    {
+      title: "About",
+      url: "/about",
+    },
+    {
+      title: "Contact",
+      url: "/contact",
+    },
+    {
+      title: "Pricing",
+      url: "/pricing",
+    },
+  ];
 
   return (
     <>
@@ -37,26 +57,13 @@ function Header() {
             </button>
             <div className="collapse navbar-collapse">
               <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Services
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    About us
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Pricing
-                  </a>
-                </li>
+                {MENU_ITEMS.map((item, index) => (
+                  <li className="nav-item" key={index}>
+                    <a className="nav-link" href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
               </ul>
               <div className="ms-auto">
                 <a className="btn" href="#">
@@ -96,26 +103,13 @@ function Header() {
             </div>
             <div>
               <ul className="nav flex-column">
-                <li className="nav-item py-3">
-                  <a className="nav-link fw-bold text-dark" href="#">
-                    Home
-                  </a>
-                </li>
-                <li className="nav-item py-3">
-                  <a className="nav-link fw-bold text-dark" href="#">
-                    Services
-                  </a>
-                </li>
-                <li className="nav-item py-3">
-                  <a className="nav-link fw-bold text-dark" href="#">
-                    About us
-                  </a>
-                </li>
-                <li className="nav-item py-3">
-                  <a className="nav-link fw-bold text-dark" href="#">
-                    Pricing
-                  </a>
-                </li>
+                {MENU_ITEMS.map((item, index) => (
+                  <li className="nav-item py-3" key={index}>
+                    <a className="nav-link fw-bold text-dark" href={item.url}>
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="mt-auto">

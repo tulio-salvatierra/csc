@@ -1,4 +1,4 @@
-export const QUIZ_MENU_URL = "/services";
+export const SERVICES_MENU_URL = "/services";
 
 export const ABOUT_URL = "/about";
 
