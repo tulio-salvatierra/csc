@@ -1,7 +1,6 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
 import IndexPage from "./pages/IndexPage";
 import ContactPage from "./pages/Contact";
 import ServicesPage from "./pages/Services";
