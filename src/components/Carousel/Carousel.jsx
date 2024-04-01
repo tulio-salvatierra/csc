@@ -1,6 +1,19 @@
 import Logo from "../../assets/images/CSC.svg";
+import React, { useEffect } from "react";
 
 function Carousel() {
+  useEffect(() => {
+    // Asegúrate de que el script de Instagram se cargue y ejecute para transformar los bloques de Instagram.
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "//www.instagram.com/embed.js";
+    document.body.appendChild(script);
+
+    return () => {
+      // Opcional: Limpieza al desmontar
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <div id="carouselExampleCaptions" class="carousel slide">
