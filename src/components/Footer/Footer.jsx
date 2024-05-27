@@ -4,25 +4,6 @@ import Logo from "../../assets/images/CSC.svg";
 export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
 
-  const MENU_ITEMS = [
-    {
-      title: "Home",
-      url: "/",
-    },
-    {
-      title: "Services",
-      url: "/services",
-    },
-    {
-      title: "About us",
-      url: "/about",
-    },
-    {
-      title: "Pricing",
-      url: "/pricing",
-    },
-  ];
-
   return (
     <>
       <>

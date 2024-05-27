@@ -5,6 +5,7 @@ import ContactSection from "../components/contacts/ContactSectionContacts1";
 import Brands from "./Brands";
 import Footer from "./Footer";
 import "../pages/pagesGrid/pages.css";
+import FindUs from "./Find-us";
 
 export default function IndexPage() {
   return (
@@ -16,6 +17,7 @@ export default function IndexPage() {
         <div className="content">
           <Hero />
           <Brands />
+          <FindUs />
           <CallToAction />
           <ContactSection />
         </div>

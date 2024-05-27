@@ -1,5 +1,6 @@
-import React from "react";
-
+import "../../App.css";
+import { INSTAGRAM, TELEPHONE, EMAIL, ADDRESS } from "../../constants";
+import Map from "../../assets/images/map.png";
 export default function FindUsSectionContacts1() {
   return (
     <>
@@ -17,17 +18,17 @@ export default function FindUsSectionContacts1() {
                 <div className="text-center">
                   <h3 className="mb-4 font-heading">E-mail</h3>
                   <a
-                    className="text-decoration-none text-dark"
-                    href="mailto:contact@pstls.com"
+                    className="text-decoration-none fs-5 text-dark"
+                    href={`mailto:${EMAIL}`}
                   >
-                    contact@pstls.com
+                    {EMAIL}
                   </a>
                 </div>
               </div>
               <div className="col-12 col-md-4 mb-8 mb-md-0">
                 <div className="text-center">
                   <h3 className="mb-4 font-heading">Phone</h3>
-                  <p className="mb-0">+1-2020-555-109</p>
+                  <p className="mb-0 text-center">{TELEPHONE}</p>
                 </div>
               </div>
               <div className="col-12 col-md-4">
@@ -67,15 +68,11 @@ export default function FindUsSectionContacts1() {
                 />
                 <h2 className="text-white">Office</h2>
                 <p className="text-white" style={{ fontSize: 20 }}>
-                  3177 Tecumsah Lane Keithville, Louisiana
+                  {ADDRESS}
                 </p>
               </div>
             </div>
-            <img
-              className="img-fluid w-100"
-              src="pstls-assets/images/contacts/map.png"
-              alt=""
-            />
+            <img className="img-fluid w-100" src={Map} alt="" />
           </div>
         </section>
       </>

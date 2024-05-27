@@ -1,4 +1,4 @@
-import React from "react";
+import { TELEPHONE, EMAIL } from "../../constants";
 
 export default function ContactSection() {
   return (
@@ -29,15 +29,15 @@ export default function ContactSection() {
                   <div className="col-12 col-md-6 mb-12">
                     <p className="mb-0 text-muted">E-mail</p>
                     <a
-                      className="text-decoration-none text-dark"
-                      href="mailto:contact@pstls.com"
+                      className="text-decoration-none text-dark small align-bottom"
+                      href={`mailto:${EMAIL}`}
                     >
-                      contact@pstls.com
+                      {EMAIL}
                     </a>
                   </div>
                   <div className="col-12 col-md-6 mb-12">
                     <p className="mb-0 text-muted">Phone</p>
-                    <p className="mb-0">+1-2020-555-109</p>
+                    <p className="mb-0 text-s">{TELEPHONE}</p>
                   </div>
                   <div className="col-6">
                     <p className="mb-2 text-muted">Socials</p>

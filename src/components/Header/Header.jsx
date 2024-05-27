@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../App.css";
 import Logo from "../../assets/images/CSC.svg";
-import "../../constants/index.js";
+import { MENU_ITEMS } from "../../constants/index.js";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,28 +11,9 @@ function Header() {
     console.log(isOpen);
   };
 
-  const MENU_ITEMS = [
-    {
-      title: "Services",
-      url: "/services",
-    },
-    {
-      title: "About",
-      url: "/about",
-    },
-    {
-      title: "Contact",
-      url: "/contact",
-    },
-    {
-      title: "Pricing",
-      url: "/pricing",
-    },
-  ];
-
   return (
     <>
-      <section className="pb-24 position-relative overflow-hidden">
+      <section className="position-relative overflow-hidden">
         <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent mb-2">
           <div className="container">
             <img className="navbar-brand" src={Logo} alt="logo" width={152} />
@@ -59,18 +40,19 @@ function Header() {
               <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item" key={index}>
-                    <a className="nav-link" href={item.url}>
+                    <a
+                      className="nav-link"
+                      href={item.url}
+                      onClick={handleOpen}
+                    >
                       {item.title}
                     </a>
                   </li>
                 ))}
               </ul>
               <div className="ms-auto">
-                <a className="btn" href="#">
-                  Log In
-                </a>
                 <a className="btn btn-dark mt-3 mt-md-0" href="#">
-                  Sign Up
+                  Book now
                 </a>
               </div>
             </div>

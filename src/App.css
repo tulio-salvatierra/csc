@@ -12,6 +12,16 @@
   font-style: normal;
 }
 
+h3,
+h2,
+h1 {
+  font-family: "MOULA";
+  font-size: 2em;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
 nav {
   font-family: "Moula";
   font-size: 1.5em;
@@ -20,15 +30,31 @@ nav {
   text-align: center;
 }
 
-.background-hero {
-  background-image: url(../src/assets/images/herobg.png);
+.bg-hero {
+  background-image: url("../src/assets/images/bg.jpeg");
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 65dvh;
-  width: 100%;
+  height: 100dvh;
+  width: 100dvw;
   display: flex;
   color: #fff;
+  justify-content: end;
+  align-items: center;
+}
+
+.hero-bottom {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  font-weight: 700;
+  font-size: x-large;
+  height: 30dvh;
+  width: 100dvw;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -37,7 +63,7 @@ nav {
   font-family: "Grapevine";
   font-size: 1em;
   color: #fff;
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 /* App.css o el archivo CSS relevante */

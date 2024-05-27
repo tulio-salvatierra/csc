@@ -10,9 +10,11 @@ export const TULIO_URL = "https://tuliosalvatierra.com";
 
 export const EMAIL = "carolinaskin@grandecom.net";
 
-const INSTAGRAM = "https://www.instagram.com/carolinaskin";
+export const INSTAGRAM = "https://www.instagram.com/carolinaskin";
 
 export const TELEPHONE = "442-638-0046";
+
+export const ADDRESS = "705 W Wadley Ave Suite-23, Midland, TX 79705";
 
 export const MENU_ITEMS = [
   {
