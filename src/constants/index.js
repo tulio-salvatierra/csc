@@ -8,9 +8,9 @@ export const PRICING_URL = "/pricing";
 
 export const TULIO_URL = "https://tuliosalvatierra.com";
 
-export const EMAIL = "Carolinaskin@grandecom.net";
+export const EMAIL = "carolinaskin@grandecom.net";
 
-const INSTAGRAM = "https://www.instagram.com";
+const INSTAGRAM = "https://www.instagram.com/carolinaskin";
 
 export const TELEPHONE = "442-638-0046";
 
