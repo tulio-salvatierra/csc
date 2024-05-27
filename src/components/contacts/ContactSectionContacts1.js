@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ContactSectionContacts1() {
+export default function ContactSection() {
   return (
     <>
       <>
