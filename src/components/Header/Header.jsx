@@ -13,10 +13,12 @@ function Header() {
 
   return (
     <>
-      <section className="position-relative overflow-hidden">
-        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent mb-2">
+      <section className="overflow-hidden sticky-top">
+        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent">
           <div className="container">
-            <img className="navbar-brand" src={Logo} alt="logo" width={152} />
+            <a href="/">
+              <img className="navbar-brand" src={Logo} alt="logo" width={152} />
+            </a>
             <button
               className="btn p-0 d-xl-none navbar-burger"
               onClick={handleOpen}

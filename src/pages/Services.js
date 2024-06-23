@@ -1,22 +1,17 @@
-import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
-import ServicesSectionBlog1 from "../components/blog/ServicesSectionBlog1";
-
-const meta = {
-  title: "",
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
+import ServicesComponent from "../components/blog/ServicesComponent";
+import Header from "../components/Header";
+import CallToAction from "../components/Call-to-action";
+import Footer from "./Footer";
+import Contact from "./Contact";
 
 export default function Services() {
   return (
     <>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
-      <ServicesSectionBlog1 />
+      <Header />
+      <ServicesComponent />
+      <CallToAction />
+      <Contact />
+      <Footer />
     </>
   );
 }

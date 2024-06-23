@@ -37,7 +37,7 @@ export default function FindUsSectionContacts1() {
                   <div className="d-flex justify-content-center">
                     <a className="text-decoration-none" href="#">
                       <img
-                        src="pstls-assets/images/contacts/facebook.png"
+                        src="pstls-assets/images/contacts/instagram.png"
                         alt=""
                       />
                     </a>

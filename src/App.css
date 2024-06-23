@@ -22,12 +22,13 @@ h1 {
   text-align: center;
 }
 
-nav {
-  font-family: "Moula";
-  font-size: 1.5em;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+.header-bg {
+  background-image: url("../src/assets/images/bg.jpeg");
+}
+@media (max-width: 768px) {
+  .header-bg {
+    background-position: left;
+  }
 }
 
 .bg-hero {
@@ -81,14 +82,11 @@ p {
   font-family: "Moula";
   color: black;
   text-align: left;
+  font-size: clamp(1em, 2vw, 1.15em);
 }
 
 h1 {
-  font-size: 4em;
+  font-size: clamp(4em 5vw 6em);
   font-weight: bold;
   text-align: left;
-}
-
-p {
-  font-size: 1.5em;
 }
