@@ -14,7 +14,7 @@ function Header() {
   return (
     <>
       <section className="overflow-hidden sticky-top">
-        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-transparent">
+        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white">
           <div className="container">
             <a href="/">
               <img className="navbar-brand" src={Logo} alt="logo" width={152} />
