@@ -9,6 +9,7 @@ import BrandsPage from "./pages/Brands";
 import FindUsPage from "./pages/Find-us";
 import FaqPage from "./pages/Faq";
 import CalltoactionPage from "./pages/Calltoaction";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
       <Route path="/services" element={<ServicesPage />} />
 
       <Route path="/about" element={<FaqPage />} />
+
+      <Route path="/pricing" element={<Pricing />} />
 
       <Route path="/brands" element={<BrandsPage />} />
 
