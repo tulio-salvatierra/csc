@@ -5,6 +5,7 @@ import ContactSection from "../components/contacts/ContactSectionContacts1";
 import Brands from "./Brands";
 import Footer from "./Footer";
 import FindUs from "./Find-us";
+import "../App.css";
 
 export default function IndexPage() {
   return (

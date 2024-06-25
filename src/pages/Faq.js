@@ -1,22 +1,13 @@
-import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import FaqSectionFaq1 from "../components/faq/FaqSectionFaq1";
-
-const meta = {
-  title: "",
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
+import Footer from "../components/Footer";
+import Header from "../components/Header";
 
 export default function Faq() {
   return (
     <>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
+      <Header />
       <FaqSectionFaq1 />
+      <Footer />
     </>
   );
 }

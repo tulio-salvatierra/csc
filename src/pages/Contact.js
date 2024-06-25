@@ -1,22 +1,17 @@
-import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import ContactSectionContacts1 from "../components/contacts/ContactSectionContacts1";
-
-const meta = {
-  title: "",
-  meta: [],
-  link: [],
-  style: [],
-  script: [],
-};
+import Header from "../components/Header";
+import CallToAction from "../components/Call-to-action";
+import Footer from "../components/Footer";
+import FindUs from "./Find-us";
 
 export default function Contact() {
   return (
     <>
-      <HelmetProvider>
-        <Helmet {...meta}></Helmet>
-      </HelmetProvider>
+      <Header />
       <ContactSectionContacts1 />
+      <FindUs />
+      <CallToAction />
+      <Footer />
     </>
   );
 }

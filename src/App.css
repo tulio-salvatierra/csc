@@ -47,6 +47,14 @@ h1 {
   align-items: center;
 }
 
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 .hero-bottom {
   background-color: #f9f9f9;
   padding: 1rem;
