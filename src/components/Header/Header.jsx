@@ -49,7 +49,10 @@ function Header() {
                 ))}
               </ul>
               <div className="ms-auto">
-                <a className="btn btn-dark mt-3 mt-md-0" href="#">
+                <a
+                  className="btn btn-dark mt-3 mt-md-0"
+                  href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+                >
                   Book now
                 </a>
               </div>
@@ -98,10 +101,16 @@ function Header() {
             </div>
             <div className="mt-auto">
               <div className="py-6">
-                <a className="btn w-100 mb-4" href="#">
+                <a
+                  className="btn w-100 mb-4"
+                  href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+                >
                   Log In
                 </a>
-                <a className="btn btn-dark w-100" href="#">
+                <a
+                  className="btn btn-dark w-100"
+                  href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+                >
                   Sign Up
                 </a>
               </div>
