@@ -16,7 +16,7 @@ function Hero() {
             </p>
             <a
               className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4"
-              href="#"
+              href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
             >
               Book Now
             </a>
