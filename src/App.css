@@ -24,6 +24,8 @@ h1 {
 
 .header-bg {
   background-image: url("../src/assets/images/bg.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 @media (max-width: 768px) {
   .header-bg {
@@ -45,6 +47,11 @@ h1 {
   color: #fff;
   justify-content: end;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .bg-hero {
+    background-position: right;
+  }
 }
 
 .header {
