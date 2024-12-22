@@ -4,7 +4,7 @@ function Hero() {
   return (
     <>
       <div className="bg-hero d-flex flex-column flex-lg-row mt-20">
-        <div className="container-xl">
+        <div className="  container d-flex flex-column flex-lg-row">
           <div className="col-12 col-lg-6 p-2">
             <h1 className="display-1 fw-bolder w-100">
               Premier Skin Care Center

@@ -6,6 +6,7 @@ import Brands from "./Brands";
 import Footer from "./Footer";
 import FindUs from "./Find-us";
 import "../App.css";
+import SingleReviewCarousel from "../components/Review";
 
 export default function IndexPage() {
   return (
@@ -16,6 +17,7 @@ export default function IndexPage() {
         </div>
         <div className="content">
           <Hero />
+          <SingleReviewCarousel />
           <Brands />
           <FindUs />
           <CallToAction />
