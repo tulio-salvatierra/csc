@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "../../App.css";
+import { useState } from "react";
 import Logo from "../../assets/images/CSC.svg";
 import { MENU_ITEMS } from "../../constants/index.js";
 

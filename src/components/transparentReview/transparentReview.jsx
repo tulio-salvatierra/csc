@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./review.css";
+import "./transparentReview.css";
 import { ChevronLeft, ChevronRight, Star, StarHalf } from "lucide-react";
 import { mockReviews } from "./mockedReviews"; // Replace with actual review data
 
@@ -24,7 +24,7 @@ function StarRating({ rating }) {
 }
 
 // SingleReviewCarousel component
-export default function SingleReviewCarousel() {
+export default function HeroReviewCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [transition, setTransition] = useState(false);
 
@@ -37,7 +37,7 @@ export default function SingleReviewCarousel() {
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setTransition(false);
-    }, 500); // Transition duration
+    }, 500);
   };
 
   const goToNext = () => {
@@ -47,39 +47,51 @@ export default function SingleReviewCarousel() {
     setTimeout(() => {
       setCurrentIndex(newIndex);
       setTransition(false);
-    }, 500); // Transition duration
+    }, 500);
   };
 
-  // Auto-switch reviews every 3 seconds
   useEffect(() => {
     const interval = setInterval(goToNext, 3000);
-    return () => clearInterval(interval); // Cleanup interval on component unmount
+    return () => clearInterval(interval);
   }, [currentIndex]);
 
   return (
-    <div className="container mt-16 shadow-lg p-4">
-      <h1 className="display-3">What our clients say about us</h1>
+    <div
+      className="hero-review-carousel position-relative"
+      style={{
+        maxWidth: "80%",
+        height: "300px",
+        margin: "0 auto",
+        padding: "1rem",
+        background: "rgba(255, 255, 255, 0.1)", // Translucent background
+        borderRadius: "8px",
+        color: "#fff",
+      }}
+    >
       <div
-        className="card mx-auto mt-16 overflow-hidden"
-        style={{ maxWidth: "600px", height: "400px", position: "relative" }}
+        className={`carousel-content ${transition ? "fade-in-out" : ""}`}
+        style={{
+          position: "relative",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          textAlign: "center",
+        }}
       >
-        <div
-          className={`card-body border-0 ${transition ? "fade-in-out" : ""}`}
-        >
-          <div className="d-flex justify-content-around align-items-center mb-3">
-            <StarRating rating={currentReview.rating} />
-          </div>
-          <blockquote className="blockquote text-center">
-            <p className="mb-3">{currentReview.text}</p>
-          </blockquote>
-          <div className="d-flex align-items-center">
-            <div>
-              <p className="mb-0 fw-bold">{currentReview.author}</p>
-              <small className="text-muted">{currentReview.date}</small>
-            </div>
+        <blockquote className="blockquote">
+          <p className="review-text">{currentReview.text}</p>
+        </blockquote>
+        <div className="d-flex justify-content-center align-items-center my-3">
+          <StarRating rating={currentReview.rating} />
+        </div>
+        <div className="d-flex align-items-center">
+          <div className="ms-3">
+            <p className="author mb-0">{currentReview.author}</p>
+            <small className="text-muted">{currentReview.date}</small>
           </div>
         </div>
       </div>
+      <div className="carousel-controls mt-3"></div>
     </div>
   );
 }

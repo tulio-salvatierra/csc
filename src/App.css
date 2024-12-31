@@ -12,6 +12,49 @@
   font-style: normal;
 }
 
+.hero-bottom p {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  font-weight: 900;
+  font-size: 1.5rem;
+  height: 50dvh;
+  width: 50dvw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .hero-bottom p {
+    width: 100dvw;
+    height: 100dvh;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-family: "Moula";
+    font-size: 3rem;
+    color: #000;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+
+.welcome-text {
+  font-family: "Moula";
+  font-size: 2rem;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .welcome-text {
+    display: none;
+  }
+}
+
 h3,
 h2,
 h1 {

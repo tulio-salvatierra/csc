@@ -1,0 +1,14 @@
+.hero-review-carousel {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Makes the background elegant and modern */
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.author {
+  font-weight: bold;
+}

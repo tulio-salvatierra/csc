@@ -5,8 +5,9 @@ import ContactSection from "../components/contacts/ContactSectionContacts1";
 import Brands from "./Brands";
 import Footer from "./Footer";
 import FindUs from "./Find-us";
+
 import "../App.css";
-import SingleReviewCarousel from "../components/Review";
+import Services from "../components/Services";
 
 export default function IndexPage() {
   return (
@@ -17,8 +18,8 @@ export default function IndexPage() {
         </div>
         <div className="content">
           <Hero />
-          <SingleReviewCarousel />
           <Brands />
+          {/* <Services /> */}
           <FindUs />
           <CallToAction />
           <ContactSection />
