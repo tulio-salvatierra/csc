@@ -28,7 +28,12 @@ export default function FindUsSectionContacts1() {
               <div className="col-12 col-md-4 mb-8 mb-md-0">
                 <div className="text-center">
                   <h3 className="mb-4 font-heading">Phone</h3>
-                  <p className="mb-0 text-center">{TELEPHONE}</p>
+                  <a
+                    href={`tel:${TELEPHONE}`}
+                    className="text-decoration-none fs-5 text-dark"
+                  >
+                    <p className="mb-0 text-center">{TELEPHONE}</p>
+                  </a>
                 </div>
               </div>
               <div className="col-12 col-md-4">
@@ -37,7 +42,7 @@ export default function FindUsSectionContacts1() {
                   <div className="d-flex justify-content-center">
                     <a className="text-decoration-none" href="#">
                       <img
-                        src="pstls-assets/images/contacts/instagram.png"
+                        src="https://www.flaticon.com/free-icon/instagram_174855?term=instagram&page=1&position=2&origin=search&related_id=174855"
                         alt=""
                       />
                     </a>

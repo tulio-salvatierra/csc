@@ -1,4 +1,4 @@
-import React from "react";
+import "./../../App.css";
 
 export default function SkinCareClinicLanding() {
   const services = [
@@ -37,7 +37,7 @@ export default function SkinCareClinicLanding() {
 
   return (
     <div className="min-vh-100 bg-light">
-      <main className="container py-5">
+      <main className="container p-10">
         {/* Hero Section */}
         <div className="row align-items-center mb-5">
           <div className="col-lg-6">
@@ -48,13 +48,16 @@ export default function SkinCareClinicLanding() {
               Experience expert skincare treatments tailored to your unique
               needs at our state-of-the-art clinic.
             </p>
-            <a href="#consultation" className="btn btn-primary btn-lg">
+            <a
+              href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+              className="btn btn-primary btn-lg mb-4"
+            >
               Book Consultation
             </a>
           </div>
           <div className="col-lg-6 text-center">
             <img
-              src="/placeholder.svg?height=400&width=600"
+              src="https://images.unsplash.com/photo-1619451427882-6aaaded0cc61?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Skin Care Treatment"
               className="img-fluid rounded shadow"
             />
@@ -67,17 +70,19 @@ export default function SkinCareClinicLanding() {
           <div className="row g-4">
             {services.map((service, index) => (
               <div key={index} className="col-md-6">
-                <div className="card border-0 shadow-sm">
-                  <div className="card-body">
-                    <h5 className="card-title text-primary d-flex align-items-center">
-                      <i className="bi bi-stars me-2"></i>
-                      {service.title}
-                    </h5>
-                    <p className="card-text text-muted">
-                      {service.description}
-                    </p>
+                <a href="/services" className="text-decoration-none text-dark">
+                  <div className="card border-0 shadow-sm">
+                    <div className="card-body">
+                      <h5 className="card-title text-primary d-flex align-items-center hlTitle">
+                        <i className="bi bi-stars me-2"></i>
+                        {service.title}
+                      </h5>
+                      <p className="card-text text-muted">
+                        {service.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                </a>
               </div>
             ))}
           </div>
@@ -90,7 +95,7 @@ export default function SkinCareClinicLanding() {
             {highlights.map((highlight, index) => (
               <div key={index} className="col-md-4">
                 <div className="p-3">
-                  <h5 className="fw-bold">{highlight.title}</h5>
+                  <h5 className="fw-bold hlTitle">{highlight.title}</h5>
                   <p className="text-muted">{highlight.description}</p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Logo from "../../assets/images/CSC.svg";
-import { MENU_ITEMS } from "../../constants/index.js";
+import { MENU_ITEMS, BOOKING_URL } from "../../constants/index.js";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,10 +48,7 @@ function Header() {
                 ))}
               </ul>
               <div className="ms-auto">
-                <a
-                  className="btn btn-dark mt-3 mt-md-0"
-                  href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
-                >
+                <a className="btn btn-dark mt-3 mt-md-0" href={BOOKING_URL}>
                   Book now
                 </a>
               </div>

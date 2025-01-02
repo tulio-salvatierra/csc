@@ -1,4 +1,5 @@
 import services from "./services";
+import { BOOKING_URL } from "../../constants";
 
 export default function Services() {
   return (
@@ -52,7 +53,7 @@ export default function Services() {
                   <p className="mb-0 lh-lg text-dark">{service.description}</p>
                 </a>
                 <div className="text-left">
-                  <a className="btn btn-dark" href="#">
+                  <a className="btn btn-dark" href={BOOKING_URL}>
                     Book now
                   </a>
                 </div>

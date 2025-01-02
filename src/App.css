@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+.hlTitle {
+  font-family: "Moula";
+}
+
 .hero-bottom p {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 1rem;

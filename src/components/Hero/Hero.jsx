@@ -1,5 +1,6 @@
 import "../../App.css";
 import HeroReviewCarousel from "../transparentReview";
+import { BOOKING_URL } from "../../constants";
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
             <HeroReviewCarousel />
             <a
               className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4"
-              href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+              href={BOOKING_URL}
             >
               Book Now
             </a>
