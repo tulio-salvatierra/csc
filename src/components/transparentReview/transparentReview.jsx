@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./transparentReview.css";
-import { ChevronLeft, ChevronRight, Star, StarHalf } from "lucide-react";
+import { Star, StarHalf } from "lucide-react";
 import { mockReviews } from "./mockedReviews"; // Replace with actual review data
 
 // StarRating component
@@ -59,9 +59,9 @@ export default function HeroReviewCarousel() {
     <div
       className="hero-review-carousel position-relative"
       style={{
-        maxWidth: "80%",
+        maxWidth: "100%",
         height: "300px",
-        margin: "0 auto",
+        margin: "1rem",
         padding: "1rem",
         background: "rgba(255, 255, 255, 0.1)", // Translucent background
         borderRadius: "8px",

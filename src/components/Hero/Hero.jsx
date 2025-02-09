@@ -5,33 +5,30 @@ import { BOOKING_URL } from "../../constants";
 function Hero() {
   return (
     <>
-      <div className="bg-hero d-flex flex-column flex-lg-row mt-20">
-        <div className="  container d-flex flex-column flex-lg-row">
-          <div className="col-12 col-lg-6 p-2">
-            <h1 className="display-1 w-100 heading">
-              Glow in Midland: Where Radiant Skin Begins
+      <section className="bg-hero d-flex align-items-center justify-content-center">
+      <div className="overlay">
+        <div className="d-flex flex-column flex-lg-row">
+          <div className="col-12 col-lg-7 col-sm-1 p-2 hero-content">
+            <h1 className="display-4 w-100 heading">
+              Hydrate, renew and balance your skin
             </h1>
-            <p className="w-100 bg-danger-light m-1 p-4 welcome-text">
-              Don't just take our word for it, see what our clients have to say
+            <p className="w-100 bg-danger-light m-1 p-4 welcome-text fs-6">
+              Improve the health and appearance of their skin through
+              personalized facial treatments that will balance your skin &
+              delivering visible and long-lasting results, located in the heart
+              of Midland, TX.
             </p>
-            <HeroReviewCarousel />
             <a
-              className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4"
+              className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
               href={BOOKING_URL}
             >
-              Book Now
+              Book my consultation now!
             </a>
+            <HeroReviewCarousel />
           </div>
-          <div className="col-12 col-lg-6"></div>
         </div>
-      </div>
-      <div className="hero-bottom">
-        <p className="mb-2 m-5 text-black">
-          We are a team of professionals dedicated to providing the best
-          possible care for your skin. We offer a wide range of services to help
-          you look and feel your best.
-        </p>
-      </div>
+        </div>
+      </section>
     </>
   );
 }

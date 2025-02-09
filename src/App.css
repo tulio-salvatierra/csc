@@ -16,28 +16,18 @@
   font-family: "Moula";
 }
 
-.hero-bottom p {
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 1rem;
-  font-weight: 900;
-  font-size: 1.5rem;
-  height: 50dvh;
-  width: 50dvw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 768px) {
-  .hero-bottom p {
-    width: 100dvw;
-    height: 100dvh;
-  }
+.heading {
+  font-family: "Moula";
+  font-size: 6rem;
+  color: #000;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   .heading {
     font-family: "Moula";
-    font-size: 3rem;
+    font-size: 4rem;
     color: #000;
     padding: 10px;
     text-align: left;
@@ -47,16 +37,10 @@
 
 .welcome-text {
   font-family: "Moula";
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: #000;
   padding: 10px;
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .welcome-text {
-    display: none;
-  }
+  text-align: left;
 }
 
 h3,
@@ -80,6 +64,27 @@ h1 {
   }
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.hero-content {
+  justify-content: left;
+  align-items: end;
+  height: 100%;
+  width: 60%;
+  margin-top: 30%;
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    width: 100%;
+    margin-top: 50%;
+  }
+}
+
 .bg-hero {
   background-image: url("../src/assets/images/bg.jpeg");
   display: flex;
@@ -88,12 +93,13 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 100dvh;
+  height: 90dvh;
   width: 100dvw;
   display: flex;
   color: #fff;
-  justify-content: end;
-  align-items: center;
+  justify-content: center;
+  align-items: end;
+ 
 }
 @media (max-width: 768px) {
   .bg-hero {

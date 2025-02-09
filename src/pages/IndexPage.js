@@ -9,6 +9,8 @@ import FindUs from "./Find-us";
 import "../App.css";
 import Services from "../components/Services";
 import SingleReviewCarousel from "../components/Review/Review";
+import Problem from "../components/Problem";
+import Solutions from "../components/Solution/Solution";
 
 export default function IndexPage() {
   return (
@@ -19,6 +21,8 @@ export default function IndexPage() {
         </div>
         <div className="content">
           <Hero />
+          <Problem />
+          <Solutions />
           <Services />
           <SingleReviewCarousel />
           <Brands />

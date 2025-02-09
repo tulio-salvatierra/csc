@@ -3,12 +3,20 @@
   backdrop-filter: blur(10px); /* Makes the background elegant and modern */
 }
 
+.blockquote {
+  color: #fff;
+  padding: 1rem;
+}
+
 .review-text {
   font-size: 1rem;
   line-height: 1.5;
+  font-weight: 700;
   font-style: italic;
+  color: #fff;
+  padding: 1rem;
 }
 
 .author {
-  font-weight: bold;
+  font-weight: 700;
 }
