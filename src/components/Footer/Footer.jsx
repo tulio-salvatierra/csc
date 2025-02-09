@@ -5,8 +5,7 @@ export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
 
   return (
-    <>
-      <>
+   
         <section className="pt-20 pt-md-24 bg-white">
           <div className="container">
             <div className="row pb-12 pb-md-24">
@@ -68,7 +67,6 @@ export default function Footer() {
             </div>
           </div>
         </section>
-      </>
-    </>
+
   );
 }

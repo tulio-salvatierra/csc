@@ -5,7 +5,6 @@ import ContactSection from "../components/contacts/ContactSectionContacts1";
 import Brands from "./Brands";
 import Footer from "./Footer";
 import FindUs from "./Find-us";
-
 import "../App.css";
 import Services from "../components/Services";
 import SingleReviewCarousel from "../components/Review/Review";
@@ -15,7 +14,7 @@ import Solutions from "../components/Solution/Solution";
 export default function IndexPage() {
   return (
     <>
-      <div className="parent">
+      <div className="parent-page">
         <div className="header">
           <Header />
         </div>
