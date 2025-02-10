@@ -93,7 +93,7 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90dvh;
+  height: auto;
   width: 100dvw;
   display: flex;
   color: #fff;
