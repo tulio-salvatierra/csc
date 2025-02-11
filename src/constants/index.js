@@ -34,10 +34,6 @@ export const MENU_ITEMS = [
     title: "About",
     url: ABOUT_URL,
   },
-  {
-    title: "Contact",
-    url: CONTACT_URL,
-  },
 ];
 
 export const USER_ITEMS = [

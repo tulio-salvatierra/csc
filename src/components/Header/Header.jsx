@@ -80,7 +80,7 @@ function Header() {
                 <img src="pstls-assets/images/navigations/x2.svg" alt="" />
               </button>
             </div>
-            <div>
+            <div className="w-auto">
               <ul className="nav flex-column">
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item py-3" key={index}>
@@ -95,7 +95,7 @@ function Header() {
                 ))}
               </ul>
             </div>
-            <div className="mt-auto">
+            <div className="w-auto ">
               <div className="py-6">
                 <a
                   className="btn btn-dark w-100"
