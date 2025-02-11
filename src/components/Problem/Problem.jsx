@@ -12,17 +12,17 @@ export default function Problem() {
         <div className="parent p-12 justify-content-center mt-11">
 
           <div className="bg-secondary text-muted rounded-2 p-4 fs-3">
-            <p>1. Dull, dry, or breakout-prone skin</p>
+            <strong className="fs-1">01. </strong><p>Dull, dry, or breakout-prone skin</p>
           </div>
           <div className="bg-secondary rounded-2 text-muted p-4 fs-3">
-            <p>2. Early signs of aging, such as fine lines and loss of elasticity.</p>
+            <strong className="fs-1">02. </strong><p>Early signs of aging, such as fine lines and loss of elasticity.</p>
           </div>
           <div className="bg-secondary rounded-2 p-4 fs-3 text-muted">
-            <p>3. Frequent skin sensitivity or irritation.
+            <strong className="fs-1">03. </strong><p>Frequent skin sensitivity or irritation.
             </p>
           </div>
           <div className="bg-secondary rounded-2 p-4 fs-3 text-muted"> 
-            <p>4. Difficulty finding the right products or seeing results with their current routine.
+            <strong className="fs-1">04. </strong><p>Difficulty finding the right products or seeing results with their current routine.
             </p>
           </div>
         </div>

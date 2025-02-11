@@ -26,7 +26,7 @@ export default function IndexPage() {
           <SingleReviewCarousel />
           <Brands />
           <FindUs />
-          <CallToAction />
+          {/* <CallToAction /> */}
           <ContactSection />
         </div>
         <div className="footer">
