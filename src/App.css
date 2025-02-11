@@ -1,15 +1,11 @@
 @font-face {
   font-family: "Moula";
   src: url(../src/assets/fonts/moula/Moula.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
   font-family: "Grapevine";
   src: url(../src/assets/fonts/grapevine/Grapevine.ttf) format("truetype");
-  font-weight: normal;
-  font-style: normal;
 }
 
 .hlTitle {
