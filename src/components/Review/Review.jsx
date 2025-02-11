@@ -59,6 +59,7 @@ export default function SingleReviewCarousel() {
   return (
     <div className="container mt-16 shadow-lg p-4">
       <h1 className="display-3">What our clients say about us</h1>
+      <h2 className="text-left">Don't just take our word for, see what iur customers say about us:</h2>
       <div
         className="card mx-auto mt-16 overflow-hidden"
         style={{ maxWidth: "600px", height: "400px", position: "relative" }}

@@ -12,6 +12,10 @@
   font-family: "Moula";
 }
 
+.service {
+  height: 50dvh;
+}
+
 .heading {
   font-family: "Moula";
   font-size: 6rem;
