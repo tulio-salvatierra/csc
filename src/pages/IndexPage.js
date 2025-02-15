@@ -10,6 +10,7 @@ import Services from "../components/Services";
 import SingleReviewCarousel from "../components/Review/Review";
 import Problem from "../components/Problem";
 import Solutions from "../components/Solution/Solution";
+import HL from "../components/Highlights";
 
 export default function IndexPage() {
   return (
@@ -23,6 +24,7 @@ export default function IndexPage() {
           <Problem />
           <Solutions />
           <Services />
+          <HL />
           <SingleReviewCarousel />
           <Brands />
           <FindUs />
