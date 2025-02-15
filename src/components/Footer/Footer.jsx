@@ -15,7 +15,7 @@ export default function Footer() {
                     className="img-fluid"
                     src={Logo}
                     alt="logo"
-                    width={152}
+                    width={250}
                   />
                 </a>
               </div>
@@ -23,7 +23,7 @@ export default function Footer() {
                 <ul className="list-unstyled mb-0 mt-12 mt-sm-0 d-sm-flex justify-content-sm-end">
                   {MENU_ITEMS.map((item, index) => (
                     <li className="me-0 me-sm-6" key={index}>
-                      <a className="text-muted" href={item.url}>
+                      <a className="fs-2 text-decoration-none" href={item.url}>
                         {item.title}
                       </a>
                     </li>

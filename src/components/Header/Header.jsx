@@ -2,7 +2,7 @@ import { useState } from "react";
 import Logo from "../../assets/images/CSC.svg";
 import { MENU_ITEMS, BOOKING_URL } from "../../constants/index.js";
 
-function Header() {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = () => {
@@ -12,47 +12,49 @@ function Header() {
 
   return (
     <>
-      <section className="overflow-hidden sticky-top">
-        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white">
-          <div className="container">
-            <a href="/">
-              <img className="navbar-brand" src={Logo} alt="logo" width={152} />
-            </a>
-            <button
-              className="btn p-0 d-xl-none navbar-burger"
-              onClick={handleOpen}
+      <section className="overflow-hidden sticky-top col-12 col-sm-12">
+        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between">
+          <a href="/">
+            <img className="navbar-brand" src={Logo} alt="logo" width={165} />
+          </a>
+          <button
+            className="btn p-0 d-xl-none navbar-burger"
+            onClick={handleOpen}
+          >
+            <svg
+              width={32}
+              height={32}
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                width={24}
-                height={24}
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
-                  fill="#000"
-                />
-              </svg>
-            </button>
-            <div className="collapse navbar-collapse">
+              <path
+                fillRule="evenodd"
+                clipRule="evenodd"
+                d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+          <div className="collapse navbar-collapse justify-content-between ">
+            <nav className="navbar-nav ms-auto">
               <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item" key={index}>
-                    <a className="nav-link" href={item.url}>
+                    <a className="nav-link fs-2" href={item.url}>
                       {item.title}
                     </a>
                   </li>
                 ))}
               </ul>
-              <div className="ms-auto">
-                <a className="btn btn-dark mt-3 mt-md-0" href={BOOKING_URL}>
+            </nav>
+            <nav>
+              <div className="ms-auto w-100">
+                <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL}>
                   Book now
                 </a>
               </div>
-            </div>
+            </nav>
           </div>
         </nav>
 
@@ -85,7 +87,7 @@ function Header() {
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item py-3" key={index}>
                     <a
-                      className="nav-link fw-bold text-dark"
+                      className="nav-link fw-bold text-dark fs-2"
                       href={item.url}
                       onClick={handleOpen}
                     >
@@ -112,4 +114,4 @@ function Header() {
   );
 }
 
-export default Header;
+
