@@ -1,28 +1,28 @@
 @font-face {
   font-family: "Moula";
   src: url(../src/assets/fonts/moula/Moula.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: "Grapevine";
   src: url(../src/assets/fonts/grapevine/Grapevine.ttf) format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .hlTitle {
   font-family: "Moula";
 }
 
-.service {
-  height: 50dvh;
-}
-
 .heading {
-  font-family: "Moula";
+  font-family: "grapevine";
   font-size: 6rem;
   color: #000;
   padding: 10px;
   text-align: left;
-  font-weight: 700;
+  font-weight: bold;
 }
 @media (max-width: 768px) {
   .heading {
@@ -65,7 +65,7 @@ h1 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
 }
@@ -78,13 +78,6 @@ h1 {
   margin-top: 30%;
 }
 
-@media (max-width: 768px) {
-  .hero-content {
-    width: 100%;
-    margin-top: 50%;
-  }
-}
-
 .bg-hero {
   background-image: url("../src/assets/images/bg.jpeg");
   display: flex;
@@ -93,7 +86,7 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: auto;
+  height: 90dvh;
   width: 100dvw;
   display: flex;
   color: #fff;
