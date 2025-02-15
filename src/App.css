@@ -17,7 +17,7 @@
 }
 
 .heading {
-  font-family: "grapevine";
+  font-family: "Moula";
   font-size: 6rem;
   color: #000;
   padding: 10px;
@@ -65,7 +65,7 @@ h1 {
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.3);
   height: 100%;
   width: 100%;
 }
@@ -86,7 +86,7 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90dvh;
+  height: auto;
   width: 100dvw;
   display: flex;
   color: #fff;
