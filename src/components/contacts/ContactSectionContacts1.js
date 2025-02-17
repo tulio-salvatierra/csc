@@ -32,7 +32,7 @@ export default function ContactSection() {
               </div>
               <div className="col-4 col-sm-12">
                 <p className="mb-0 fs-1">Phone</p>
-                <p className="mb-0 fs-3">{TELEPHONE}</p>
+                <a href={`callto:${TELEPHONE}`}className="mb-0 fs-3 text-decoration-none">{TELEPHONE}</a>
               </div>
               <div className="col-4 col-sm-12">
                 <p className="mb-2 fs-1">Socials</p>
