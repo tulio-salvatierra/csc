@@ -15,7 +15,7 @@ export default function Footer() {
                     className="img-fluid"
                     src={Logo}
                     alt="logo"
-                    width={250}
+                    width="5000"
                   />
                 </a>
               </div>
@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="container">
               <div className="row align-items-center justify-content-between">
                 <div className="col-12 col-sm-auto mb-8 mb-sm-0">
-                  <p className="text-muted small mb-0 lh-sm">
+                  <p className="text-muted fs-3 small mb-0 lh-sm">
                     made by <a href={TULIO_URL}>Tulio Salvatierra</a>
                   </p>
                 </div>

@@ -25,8 +25,8 @@ export default function HL() {
       <h2 className="text-left fw-bold mb-4 fs-1">Why Choose Us</h2>
       <div className="row text-left g-4">
         {highlights.map((highlight, index) => (
-          <div key={index} className="col-md-4 bg-black text-white border-2">
-            <div className="p-3">
+          <div key={index} className="col-md-4 bg-black text-white card">
+            <div className="card-body">
               <h2 className="text-muted fs-1 text-left p-4 text-decoration-underline">{highlight.id}</h2>
               <h5 className="fw-bold hlTitle fs-3 text-white">
                 {highlight.title}

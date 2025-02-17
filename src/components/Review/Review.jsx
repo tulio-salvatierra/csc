@@ -57,26 +57,29 @@ export default function SingleReviewCarousel() {
   }, [currentIndex]);
 
   return (
-    <div className="container mt-16 shadow-lg p-4">
-      <h1 className="display-3">What our clients say about us</h1>
-      <h2 className="text-left">Don't just take our word for, see what iur customers say about us:</h2>
+    <div className="mt-16 p-4">
+      <h2 className="display-2 text-left text-muted">What our clients say about us?</h2>
+      <h3 className="text-left display-3">Don't just take our word for, see what iur customers say about us:</h3>
       <div
-        className="card mx-auto mt-16 overflow-hidden"
-        style={{ maxWidth: "600px", height: "400px", position: "relative" }}
+        className="card mx-auto mt-16 overflow-hidden shadow comment-grid justify-content-between"
+        style={{ maxWidth: "100%", height: "500px", position: "relative" }}
       >
         <div
           className={`card-body border-0 ${transition ? "fade-in-out" : ""}`}
         >
-          <div className="d-flex justify-content-around align-items-center mb-3">
-            <StarRating rating={currentReview.rating} />
-          </div>
-          <blockquote className="blockquote text-center">
+          
+          <blockquote className="blockquote text-center fs-4 comment">
             <p className="mb-3">{currentReview.text}</p>
           </blockquote>
-          <div className="d-flex align-items-center">
-            <div>
-              <p className="mb-0 fw-bold">{currentReview.author}</p>
-              <small className="text-muted">{currentReview.date}</small>
+          <div className="d-flex align-items-center author">
+            <img src={currentReview.photoUrl} className="p-2"></img>
+            <div className="me-3">
+              <p className="mb-0 fw-bold fs-2">{currentReview.author}</p>
+              <div className="d-flex justify-content-around align-items-center mb-3">
+            <StarRating rating={currentReview.rating} />
+            <small className="text-muted">{currentReview.date}</small>
+          </div>
+             
             </div>
           </div>
         </div>

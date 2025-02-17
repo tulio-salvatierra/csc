@@ -1,11 +1,11 @@
 export const mockReviews = [
   {
     id: "1",
-    author: "Karen Scharbauer",
+    author: "Stacie Wommack",
     rating: 5,
-    text: "Carolina is an excellent esthetician, I have been experiencing her facials monthly for at least 10 years. She knows her business and makes recommendations accordingly for my skin. My skin always feels and looks better after her facial, and l’m very relaxed!!",
-    date: "a month ago",
-    photoUrl: "/placeholder.svg?height=40&width=40",
+    text: "Outstanding!!",
+    date: "2 month ago",
+    photoUrl: "https://lh3.googleusercontent.com/a-/ALV-UjUJW2HsLERoTWrBWwqHoEODW-YnnTH6AmVMBshZJbyYQmFnnnS0=s72-c-rp-mo-br100",
   },
   {
     id: "2",
@@ -13,7 +13,7 @@ export const mockReviews = [
     rating: 5,
     text: "Carolina is wonderful! She created a calm and soothing atmosphere for all her clients!  She is so meticulous in her craft. Many people have commented on how natural my eyelashes look. Going to Carolina Skin Centre is always a pleasure and I love my lashes!",
     date: "2023-06-10",
-    photoUrl: "/placeholder.svg?height=40&width=40",
+    photoUrl: "https://lh3.googleusercontent.com/a-/ALV-UjWql6dWr6NapbrXsIxrhmu4HHdEwWL5DTzdoYVywRolM1enPtI=s72-c-rp-mo-br100",
   },
   {
     id: "3",
@@ -21,14 +21,6 @@ export const mockReviews = [
     rating: 5,
     text: "Carolina is wonderful!",
     date: "a month ago",
-    photoUrl: "/placeholder.svg?height=40&width=40",
-  },
-  {
-    id: "4",
-    author: "Melissa Kothmann",
-    rating: 5,
-    text: "Carolina is the best in Midland. She is very professional and very knowledgeable. Every appt. Is incredibly relaxing. I highly recommend Carolina. You won’t be disappointed.",
-    date: "a month ago",
-    photoUrl: "/placeholder.svg?height=40&width=40",
+    photoUrl: "https://lh3.googleusercontent.com/a/ACg8ocKhEXiqjwMqwwSMag7BIux8yguujmkZAYVae95sy-lEjhpijg=s72-c-rp-mo-br100",
   },
 ];

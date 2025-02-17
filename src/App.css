@@ -16,6 +16,18 @@
   font-family: "Moula";
 }
 
+.commet-grid {  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr .25fr;
+  gap: 16px 0px;
+  grid-auto-flow: row;
+}
+
+.comment { grid-area: 1 / 1 / 3 / 2; }
+
+.author { grid-area: 2 / 1 / 3 / 2; }
+
+
 .heading {
   font-family: "Moula";
   font-size: 6rem;
