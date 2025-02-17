@@ -6,3 +6,32 @@
 .fade-in-out-active {
   opacity: 1;
 }
+
+.comment-grid {
+  justify-self: center;
+  justify-content: between;
+  height: 358px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comment-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+.comment-author {
+  width: 1000%;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}

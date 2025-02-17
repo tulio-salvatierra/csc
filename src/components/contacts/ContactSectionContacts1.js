@@ -5,12 +5,7 @@ export default function ContactSection() {
     <>
       <>
         <section className="position-relative py-28 bg-white">
-          {/* <img
-            className="position-absolute top-0 start-0 bottom-0 h-100 w-100"
-            style={{ objectFit: "cover" }}
-            src="pstls-assets/images/contacts/pink-shadows.png"
-            alt=""
-          /> */}
+          
           <div className="container">
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
@@ -21,7 +16,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="flex-wrap flex-md-row">
-              <div className="col-4 col-sm-12">
+              <div className="col-6 col-sm-12">
                 <p className="mb-0 fs-1">E-mail</p>
                 <a
                   className="text-decoration-none text-dark fs-3 align-bottom"
@@ -30,11 +25,11 @@ export default function ContactSection() {
                   {EMAIL}
                 </a>
               </div>
-              <div className="col-4 col-sm-12">
+              <div className="col-6 col-sm-12">
                 <p className="mb-0 fs-1">Phone</p>
                 <a href={`callto:${TELEPHONE}`}className="mb-0 fs-3 text-decoration-none">{TELEPHONE}</a>
               </div>
-              <div className="col-4 col-sm-12">
+              <div className="col-6 col-sm-12">
                 <p className="mb-2 fs-1">Socials</p>
                 <div className="d-flex">
                   <a className="text-decoration-none" href="#">
