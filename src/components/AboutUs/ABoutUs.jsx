@@ -8,10 +8,10 @@ export default function AboutPage() {
       <section className="mb-5">
         <h2 className="h4 mb-3 hlTitle">Our Story</h2>
         <p className="text-muted">
-          Founded in 2023, our company has been at the forefront of innovation
-          in Hydrafacial, Nano Needling,Deep cleansing facial, anti-aging
-          facial, face & body waxing, lash & brow tinting, eyelash extensions,
-          microdermabrasion, chemical peels.
+          With 16 years of experience under my belt, my company has been at the
+          forefront of innovation in Hydrafacial, Deep cleansing facial,
+          anti-aging facial, face & body waxing, lash & brow tinting, eyelash
+          extensions, microdermabrasion, chemical peels.
         </p>
       </section>
 
@@ -37,6 +37,7 @@ export default function AboutPage() {
               </div>
             </div>
           ))}
+          
         </div>
       </section>
 
@@ -53,46 +54,14 @@ export default function AboutPage() {
           </p>
         </blockquote>
       </section>
-
-      {/* Contact Us Section */}
-      <section>
-        <h2 className="h4 mb-3">Contact Us</h2>
-        <p className="text-muted">
-          We'd love to hear from you! Reach out to us at{" "}
-          <a
-            href={`mailto:${EMAIL}`}
-            className="text-primary text-decoration-none"
-          >
-            info@example.com
-          </a>{" "}
-          or give us a call at{" "}
-          <a
-            href={`tel:${TELEPHONE}`}
-            className="text-primary text-decoration-none"
-          >
-            {TELEPHONE}
-          </a>
-          .
-        </p>
-      </section>
     </div>
   );
 }
 
 const teamMembers = [
   {
-    name: "Carolina Camargo",
+    name: "Carolina Alcalá",
     role: "CEO & Founder",
     image: "",
-  },
-  {
-    name: "Kike Vivaldi",
-    role: "CTO",
-    image: "/placeholder.svg?height=100&width=100",
-  },
-  {
-    name: "El gatico",
-    role: "Lead Designer",
-    image: "/placeholder.svg?height=100&width=100",
   },
 ];
