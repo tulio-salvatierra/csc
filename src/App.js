@@ -7,9 +7,8 @@ import ServicesPage from "./pages/Services";
 import FooterPage from "./pages/Footer";
 import BrandsPage from "./pages/Brands";
 import FindUsPage from "./pages/Find-us";
-import FaqPage from "./pages/Faq";
+import About from "./pages/AboutPage";
 import CalltoactionPage from "./pages/Calltoaction";
-import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -20,15 +19,11 @@ function App() {
 
       <Route path="/services" element={<ServicesPage />} />
 
-      <Route path="/about" element={<FaqPage />} />
-
-      <Route path="/pricing" element={<Pricing />} />
+      <Route path="/about" element={<About />} />
 
       <Route path="/brands" element={<BrandsPage />} />
 
       <Route path="/findus" element={<FindUsPage />} />
-
-      <Route path="/faq" element={<FaqPage />} />
 
       <Route path="/calltoaction" element={<CalltoactionPage />} />
     </Routes>

@@ -3,7 +3,7 @@ import FaqSectionFaq1 from "../components/faq/FaqSectionFaq1";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
-export default function Faq() {
+export default function About() {
   return (
     <>
       <Header />
