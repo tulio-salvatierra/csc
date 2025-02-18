@@ -60,9 +60,7 @@ export default function HeroReviewCarousel() {
       className="hero-review-carousel position-relative"
       style={{
         maxWidth: "100%",
-        height: "300px",
         margin: "1rem",
-        padding: "1rem",
         background: "rgba(255, 255, 255, 0.1)", // Translucent background
         borderRadius: "8px",
         color: "#fff",
@@ -72,22 +70,21 @@ export default function HeroReviewCarousel() {
         className={`carousel-content ${transition ? "fade-in-out" : ""}`}
         style={{
           position: "relative",
+          justifyContent: "between",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           textAlign: "center",
+          height: "200px",
         }}
       >
         <blockquote className="blockquote">
           <p className="review-text">{currentReview.text}</p>
         </blockquote>
-        <div className="d-flex justify-content-center align-items-center my-3">
-          <StarRating rating={currentReview.rating} />
-        </div>
+        <div className="d-flex justify-content-center align-items-center my-3"></div>
         <div className="d-flex align-items-center">
           <div className="ms-3">
             <p className="author mb-0">{currentReview.author}</p>
-            <small className="text-muted">{currentReview.date}</small>
           </div>
         </div>
       </div>

@@ -11,7 +11,7 @@ export const mockReviews = [
     id: "2",
     author: "Donna Gore",
     rating: 5,
-    text: "Carolina is wonderful! She created a calm and soothing atmosphere for all her clients!  She is so meticulous in her craft and I love my lashes!",
+    text: "Carolina is wonderful! She created a calm and soothing atmosphere for all her clients!",
     date: "2023-06-10",
     photoUrl: "/placeholder.svg?height=40&width=40",
   },
