@@ -66,12 +66,12 @@ export default function SingleReviewCarousel() {
       </h3>
 
       <div
-        className={`border-0 comment-grid ${transition ? "fade-in-out" : ""}`}
+        className={`review-box border-0 ${transition ? "fade-in-out" : ""}`}
       >
-        <div className="blockquote text-center fs-4 comment">
-          <p className="mb-3">{currentReview.text}</p>
+        <div className="blockquote mt-4 text-center fs-4 comment">
+          <p className="mb-3 mt-6">{currentReview.text}</p>
           <StarRating rating={currentReview.rating} />
-          <div className="d-flex align-items-center author">
+          <div className="d-flex align-items-center ">
             <img src={currentReview.photoUrl} className="p-2"></img>
 
             <p className="mb-0 fw-bold fs-4">{currentReview.author}</p>
