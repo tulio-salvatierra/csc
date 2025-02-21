@@ -66,7 +66,7 @@ export default function SingleReviewCarousel() {
       </h3>
 
       <div
-        className={`border-0 comment-grid ${transition ? "fade-in-out" : ""}`}
+        className={`border-0  p-10 comment-grid ${transition ? "fade-in-out" : ""}`}
       >
         <div className="blockquote text-center fs-4 comment">
           <p className="mb-3">{currentReview.text}</p>
