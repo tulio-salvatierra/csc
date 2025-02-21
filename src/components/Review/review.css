@@ -7,7 +7,7 @@
   opacity: 1;
 }
 
-.comment-grid {
+.review-box {
   justify-self: center;
   justify-content: between;
   height: 358px;
@@ -20,7 +20,7 @@
 }
 
 @media (min-width: 768px) {
-  .comment-grid {
+  .review-box {
     width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
