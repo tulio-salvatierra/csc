@@ -1,3 +1,4 @@
+import { BOOKING_URL } from "../../constants";
 import "./Solution.css";
 
 export default function Solutions() {
@@ -21,7 +22,7 @@ export default function Solutions() {
               Get in touch to book your consultation today!
             </p>
             <a
-              href="https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr&theme=651&p_mobile=y&p_start=1"
+              href={BOOKING_URL}
               className="btn btn-dark fs-4 btn-lg mb-4 w-100"
             >
               Book my consultation now!
@@ -29,7 +30,7 @@ export default function Solutions() {
           </div>
           <div className="col-lg-6 col-sm-12 text-center">
             <img
-              src="https://images.unsplash.com/photo-1619451427882-6aaaded0cc61?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src={BOOKING_URL}
               alt="Skin Care Treatment"
               className="img-fluid rounded shadow"
             />
