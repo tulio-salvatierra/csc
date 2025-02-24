@@ -66,9 +66,9 @@ export default function Header() {
         >
           <div
             className="navbar-close position-fixed top-0 start-0 end-0 bottom-0 bg-dark"
-            style={{ opacity: "75%" }}
+            
           />
-          <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white overflow-auto">
+          <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
             <div className="d-flex align-items-center mb-12">
               <a className="me-auto h4 mb-0 text-decoration-none" href="/">
                 <img src={Logo} alt="logo" width={102} />
