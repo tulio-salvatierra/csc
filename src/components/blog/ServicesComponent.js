@@ -8,10 +8,10 @@ export default function Services() {
         <div className="header-bg h-96 bg-hero bg-cover bg-center">
           <div className="row align-items-center justify-content-center mb-16 mb-md-20">
             
-              <h1 className="display-1 text-center">Services</h1>
+              <h1 className="display-1 text-center text-white">Services</h1>
             
             
-              <p className="w-50 justify-content-center fw-lighter p-4">
+              <p className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
                 At our skin care clinic, we offer a range of expert facial
                 treatments designed to rejuvenate and enhance your natural
                 beauty. Our services include luxurious facials, advanced
@@ -24,7 +24,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={`service ${index}`}
-              className="col-12 col-md-4 mb-12 mb-md-0 p-5 h-auto"
+              className="col-12 col-md-4 mb-12 mb-md-0 p-5 justify-content-evenly h-100"
             >
               <a className="text-decoration-none" href="#">
                 <span className="badge bg-primary text-uppercase fw-lighter">
@@ -50,8 +50,8 @@ export default function Services() {
                 <p className="text-muted">{service.description}</p>
               </a>
               <div className="text-left">
-                <a className="btn btn-dark" href={BOOKING_URL}>
-                  Book now
+                <a className="btn btn-dark w-auto" href={BOOKING_URL}>
+                  Book my appointment now!
                 </a>
               </div>
             </div>

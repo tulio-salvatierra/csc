@@ -26,7 +26,7 @@ export default function Solutions() {
               href={BOOKING_URL}
               className="btn btn-dark fs-4 btn-lg mb-4 w-100"
             >
-              Book my consultation now!
+              Book my appointment now!
             </a>
           </div>
           <div className="col-lg-6 col-sm-12 text-center">

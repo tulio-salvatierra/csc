@@ -1,5 +1,4 @@
 import "../../App.css";
-import HeroReviewCarousel from "../transparentReview";
 import { BOOKING_URL } from "../../constants";
 
 function Hero() {
@@ -21,7 +20,7 @@ function Hero() {
               className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
               href={BOOKING_URL}
             >
-              Book my consultation now!
+              Book my appointment now!
             </a>
           </div>
         </div>
