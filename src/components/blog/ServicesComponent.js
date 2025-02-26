@@ -34,15 +34,16 @@ export default function Services() {
               <div className="mb-8">
                 <img
                   style={{
-                    objectFit: "fit",
-                    width: "100%",
+                    objectFit: "cover",
+                    width: "420px",
+                    height: "280px",
                   }}
                   src={service.icon}
                   alt={service.name}
                 />
               </div>
               <a className="d-inline-block text-decoration-none mb-6" href="#">
-                <h2 className="text-start font-heading fw-bold fs-2">
+                <h2 className="text-start p-0 fs-3">
                   {service.name}
                 </h2>
 

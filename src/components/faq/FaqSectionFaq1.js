@@ -7,8 +7,8 @@ export default function FaqSectionFaq1() {
         <section className="py-24 bg-light">
           <div className="container">
             <div className="mw-xl mx-auto text-center mb-20 mb-xl-16">
-              <h1 className="mb-6 lh-sm px-xl-12 font-heading">
-                Frequently asked questions
+              <h1 className=" display-1 mb-6 lh-sm px-xl-12 font-heading">
+                FAQ
               </h1>
             </div>
             <div className="row mb-20 mb-xl-24">
