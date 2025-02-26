@@ -24,7 +24,7 @@ function Hero() {
               >
                 Book my consultation now!
               </a>
-              <HeroReviewCarousel />
+              
             </div>
           </div>
         </div>
