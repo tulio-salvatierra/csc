@@ -43,7 +43,7 @@ export default function Header() {
               <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item" key={index}>
-                    <a className="nav-link fs-2" href={item.url}>
+                    <a className="nav-link fs-3" href={item.url}>
                       {item.title}
                     </a>
                   </li>
@@ -73,7 +73,7 @@ export default function Header() {
           <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
             <div className="d-flex align-items-center mb-12">
               <a className="me-auto h4 mb-0 text-decoration-none" href="/">
-                <img src={Logo} alt="logo" width={102} />
+                <img src={Logo} alt="logo" width={132} />
               </a>
               <button
                 className="btn navbar-close"
@@ -89,7 +89,7 @@ export default function Header() {
                 {MENU_ITEMS.map((item, index) => (
                   <li className="nav-item py-3" key={index}>
                     <a
-                      className="nav-link fw-bold text-dark fs-2"
+                      className="nav-link fw-bold text-dark fs-3"
                       href={item.url}
                       onClick={handleOpen}
                     >
