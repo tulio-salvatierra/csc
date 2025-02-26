@@ -1,7 +1,19 @@
 @font-face {
   font-family: "Moula";
-  src: url(../src/assets/fonts/moula/Moula.ttf) format("truetype");
+  src: url(../src/assets/fonts/Nanum/Nanum-Regular.ttf) format("truetype");
   font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Moula";
+  src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Moula";
+  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
+  font-weight: black;
   font-style: normal;
 }
 
