@@ -66,9 +66,9 @@ export default function SkinCareClinicLanding() {
                   alt={service.title}
                 />
                 <div className="card-body">
-                  <h5 className="card-title fs-2 text-dark d-flex align-items-center hlTitle">
+                  <h2 className="card-title fs-3 p-0 text-dark d-flex align-items-center hlTitle">
                     {service.title}
-                  </h5>
+                  </h2>
                   <p className="card-text text-muted">
                     {service.description}
                   </p>
