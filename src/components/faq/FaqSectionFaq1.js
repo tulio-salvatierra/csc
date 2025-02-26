@@ -7,7 +7,7 @@ export default function FaqSectionFaq1() {
         <section className="py-24 bg-light">
           <div className="container">
             <div className="mw-xl mx-auto text-center mb-20 mb-xl-16">
-              <h1 className=" display-1 mb-6 lh-sm px-xl-12 font-heading">
+              <h1 className="display-1 mb-6 lh-sm text-center px-xl-12 font-heading">
                 FAQ
               </h1>
             </div>
@@ -19,9 +19,9 @@ export default function FaqSectionFaq1() {
                     src="pstls-assets/icons/faq-info.svg"
                     alt=""
                   />
-                  <h5 className="mt-6 lh-lg mb-5 font-heading">
+                  <h2 className="mt-6 lh-lg mb-5 font-heading">
                     What skincare treatments are best for anti-aging?
-                  </h5>
+                  </h2>
                   <p className="text-muted lh-lg mb-0">
                     We offer specialized anti-aging facials, such as
                     Hydrafacial, Nano Needling, and chemical peels, designed to
@@ -38,9 +38,9 @@ export default function FaqSectionFaq1() {
                     src="pstls-assets/icons/faq-info.svg"
                     alt=""
                   />
-                  <h5 className="mt-6 lh-lg mb-5 font-heading">
+                  <h2 className="mt-6 lh-lg mb-5 font-heading">
                     How often should I get a deep cleansing facial?
-                  </h5>
+                  </h2>
                   <p className="text-muted lh-lg mb-0">
                     For optimal results, we recommend a deep cleansing facial
                     every 4-6 weeks. This helps maintain clear and healthy skin
@@ -55,9 +55,9 @@ export default function FaqSectionFaq1() {
                     src="pstls-assets/icons/faq-info.svg"
                     alt=""
                   />
-                  <h5 className="mt-6 lh-lg mb-5 font-heading">
+                  <h2 className="mt-6 lh-lg mb-5 font-heading">
                     Are the waxing services suitable for sensitive skin?
-                  </h5>
+                  </h2>
                   <p className="text-muted lh-lg mb-0">
                     Yes, our face and body waxing services are gentle and
                     suitable for sensitive skin. We use high-quality,
@@ -73,10 +73,10 @@ export default function FaqSectionFaq1() {
                     src="pstls-assets/icons/faq-info.svg"
                     alt=""
                   />
-                  <h5 className="mt-6 lh-lg mb-5 font-heading">
+                  <h2 className="mt-6 lh-lg mb-5 font-heading">
                     How long do eyelash extensions last, and how do I maintain
                     them?
-                  </h5>
+                  </h2>
                   <p className="text-muted lh-lg mb-0">
                     Eyelash extensions typically last 4-6 weeks, depending on
                     your natural lash cycle and care routine. To maintain them,
@@ -92,13 +92,13 @@ export default function FaqSectionFaq1() {
                 src="pstls-assets/icons/faq-info.svg"
                 alt=""
               />
-              <h1 className="mb-4 lh-sm font-heading">Have more questions?</h1>
-              <p className="mb-8 lh-lg">
+              <h1 className="mb-4 fs-1 font-heading">Have more questions?</h1>
+              <p className="mb-8 lh-lg text-muted">
                 Can’t find the answer you’re looking for? Please send us a
                 message.
               </p>
               <a
-                className="btn btn-primary d-block d-md-inline-block"
+                className="btn btn-dark fs-6 d-block d-md-inline-block"
                 href={`tel:${TELEPHONE}`}
               >
                 Get in Touch

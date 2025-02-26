@@ -29,7 +29,7 @@
 }
 
 .card-img {
-  width: 480px;
+  width: auto;
   height: 480px;
   object-fit: cover;
 }

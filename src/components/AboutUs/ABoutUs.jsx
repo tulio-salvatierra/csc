@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       {/* Our Mission Section */}
       <section className="mb-5 mt-10">
-        <h2 className="display-2 mb-3">Our Mission</h2>
+        <h2 className="display-1 mb-3">Our Mission</h2>
         <blockquote className="blockquote border-start ps-3">
           <p className="text-muted">
             "Our mission is to enhance your natural beauty and boost your
