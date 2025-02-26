@@ -7,7 +7,6 @@ export default function ContactSection() {
     <>
       <>
         <section className="position-relative py-28 bg-white">
-          
           <div className="container">
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
@@ -18,26 +17,25 @@ export default function ContactSection() {
               </div>
             </div>
             <div className="flex-wrap flex-md-row">
-              <div className="col-6 col-sm-12">
+              <div className="col-6 col-sm-12 p-4">
                 <p className="mb-0 fs-1">E-mail</p>
                 <a
-                  className="text-decoration-none text-dark fs-3 align-bottom"
+                  className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
                 >
                   {EMAIL}
                 </a>
               </div>
-              <div className="col-6 col-sm-12">
+              <div className="col-6 col-sm-12 p-4">
                 <p className="mb-0 fs-1">Phone</p>
-                <a href={TELEPHONE} className="mb-0 fs-3 text-decoration-none">{TELEPHONE}</a>
+                <a href={TELEPHONE} className="mb-0 text-muted fs-4 text-decoration-none">{TELEPHONE}</a>
               </div>
-              <div className="col-6 col-sm-12">
+              <div className="col-6 col-sm-12 p-4">
                 <p className="mb-2 fs-1">Socials</p>
                 <div className="d-flex">
                   <a className="text-decoration-none" href={WHATSAPP} target="_blank" rel="noreferrer">
                     <img src={WA} alt="WhatsApp" />
                   </a>
-                  
                   <a className="text-decoration-none" href={INSTAGRAM}>
                     <img src={IG} alt="Instagram" />
                   </a>
