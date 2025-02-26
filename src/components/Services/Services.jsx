@@ -42,12 +42,12 @@ export default function SkinCareClinicLanding() {
     },
     {
       title: "Nano Needle",
-      description: "Skin rejuvenation",
+      description: "Non-invasive skin rejuvination treatment",
       image: NN,
     },
     {
       title: "Carboxy Therapy",
-      description: "Skin rejuvenation",
+      description: "Non-surgical cosmetic medicine treatment",
       image: Therapy,
     },
   ];

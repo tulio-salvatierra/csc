@@ -99,7 +99,7 @@ export default function FaqSectionFaq1() {
               </p>
               <a
                 className="btn btn-dark fs-6 d-block d-md-inline-block"
-                href={`tel:${TELEPHONE}`}
+                href={`${TELEPHONE}`}
               >
                 Get in Touch
               </a>
