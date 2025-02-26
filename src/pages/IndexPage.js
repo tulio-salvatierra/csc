@@ -21,7 +21,6 @@ export default function IndexPage() {
         </div>
         <div className="content">
           <Hero />
-          <Problem />
           <Solutions />
           <Services />
           <HL />

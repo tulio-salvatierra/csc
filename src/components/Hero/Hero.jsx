@@ -7,9 +7,9 @@ function Hero() {
     <>
       <section className="bg-hero d-flex align-items-center justify-content-center">
         <div className="overlay">
-          <div className="d-flex flex-column flex-lg-row">
-            <div className="col-12  p-2 hero-content">
-              <h1 className="display-4 heading">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <div className=" hero-content">
+              <h1 className="display-4 heading text-white text-center">
                 Hydrate, renew and balance your skin
               </h1>
               <p className="w-100 bg-danger-light m-1 p-4 welcome-text fs-6">

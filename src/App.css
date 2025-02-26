@@ -28,6 +28,12 @@
   font-family: "Moula";
 }
 
+.card-img {
+  width: 480px;
+  height: 480px;
+  object-fit: cover;
+}
+
 .commet-grid {  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr .25fr;
@@ -80,7 +86,7 @@ h1 {
 }
 
 .header-bg {
-  background-image: url("../src/assets/images/bg.jpeg");
+  background-image: url("../src/assets/images/hero/csc-hero.jpg"); 
   background-size: cover;
   background-position: center;
 }
@@ -100,12 +106,12 @@ h1 {
   justify-content: left;
   align-items: end;
   height: 100%;
-  width: 60%;
+  width: 80%;
   margin-top: 30%;
 }
 
 .bg-hero {
-  background-image: url("../src/assets/images/bg.jpeg");
+  background-image: url("../src/assets/images/hero/csc-hero.jpg");
   display: flex;
   flex-direction: column;
   object-fit: cover;
