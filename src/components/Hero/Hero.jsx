@@ -17,9 +17,9 @@ export default function Hero() {
       gsap.from(animated.current, {
         y: 25,
         opacity: 0,
-        duration: 1,
-        ease: "power4.out",
-        stagger: 0.2,
+        duration: 1.5,
+        ease: "power2.out",
+        stagger: 0.3,
         ScrollTrigger: {
           trigger: animated.current,
           start: "top 80%",

@@ -58,7 +58,7 @@ export default function SingleReviewCarousel() {
 
   return (
     <div className="mt-16 p-4">
-      <h2 className="display-4 text-left text-muted">
+      <h2 className="fs-2 text-left text-muted">
         What our clients say about us?
       </h2>
       <h3 className="text-left display-3">
@@ -68,10 +68,10 @@ export default function SingleReviewCarousel() {
       <div
         className={`border-0  p-10 comment-grid ${transition ? "fade-in-out" : ""}`}
       >
-        <div className="blockquote mt-4 text-center fs-4 comment">
+        <div className="flex mt-4 text-center justify-content-center fs-4 comment">
           <p className="mb-3 mt-6">{currentReview.text}</p>
           <StarRating rating={currentReview.rating} />
-          <div className="d-flex align-items-center ">
+          <div className="d-flex mt-4 p-10 align-items-center ">
             <img src={currentReview.photoUrl} className="p-2"></img>
 
             <p className="mb-0 fw-bold fs-4">{currentReview.author}</p>

@@ -1,6 +1,6 @@
 .fade-in-out {
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .fade-in-out-active {
@@ -12,11 +12,13 @@
   justify-content: between;
   height: 358px;
   width: 60%;
-  display: grid;
+  display: flex;
+  justify-content: center;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-gap: 1rem;
   margin-top: 1rem;
+
 }
 
 @media (min-width: 768px) {
@@ -28,7 +30,7 @@
 }
 
 .comment-author {
-  width: 1000%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   font-size: 1.5rem;
