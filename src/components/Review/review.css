@@ -1,6 +1,6 @@
 .fade-in-out {
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity .5s ease-in-out;
 }
 
 .fade-in-out-active {

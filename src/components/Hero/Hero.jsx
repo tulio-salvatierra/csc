@@ -13,7 +13,7 @@ export default function Hero() {
 
   useEffect(() => {
     const easeFromBelow = gsap.matchMedia();
-    easeFromBelow.add("(min-width: 800px)", () => {
+    easeFromBelow.add("(min-width: 1200px)", () => {
       gsap.from(animated.current, {
         y: 25,
         opacity: 0,
