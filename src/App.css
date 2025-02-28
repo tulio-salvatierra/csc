@@ -8,13 +8,13 @@
   font-family: "Moula";
   src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
   font-weight: bold;
-  font-style: normal;
+  font-style: bold;
 }
 @font-face {
   font-family: "Moula";
   src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
   font-weight: black;
-  font-style: normal;
+  font-style: ExtraBold;
 }
 
 @font-face {

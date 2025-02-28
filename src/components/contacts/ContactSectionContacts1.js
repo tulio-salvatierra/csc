@@ -10,7 +10,7 @@ export default function ContactSection() {
           <div className="container">
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
-                <h2 className="display-1 font-heading">Contact</h2>
+                <h2 className="display-3 font-heading">Contact</h2>
                 <p className="text-muted fs-3">
                   Get in touch with us today for all your skincare needs.
                 </p>
@@ -18,7 +18,7 @@ export default function ContactSection() {
             </div>
             <div className="flex-wrap flex-md-row">
               <div className="col-6 col-sm-12 p-4">
-                <p className="mb-0 fs-1">E-mail</p>
+                <p className="mb-0 fs-2">E-mail</p>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
@@ -27,16 +27,16 @@ export default function ContactSection() {
                 </a>
               </div>
               <div className="col-6 col-sm-12 p-4">
-                <p className="mb-0 fs-1">Phone</p>
+                <p className="mb-0 fs-2">Phone</p>
                 <a href={TELEPHONE} className="mb-0 text-muted fs-4 text-decoration-none">{TELEPHONE}</a>
               </div>
               <div className="col-6 col-sm-12 p-4">
-                <p className="mb-2 fs-1">Socials</p>
+                <p className="mb-2 fs-2">Socials</p>
                 <div className="d-flex">
-                  <a className="text-decoration-none" href={WHATSAPP} target="_blank" rel="noreferrer">
+                  <a className="text-decoration-none p-3" href={WHATSAPP} target="_blank" rel="noreferrer">
                     <img src={WA} alt="WhatsApp" />
                   </a>
-                  <a className="text-decoration-none" href={INSTAGRAM}>
+                  <a className="text-decoration-none p-3" href={INSTAGRAM}>
                     <img src={IG} alt="Instagram" />
                   </a>
                 </div>
