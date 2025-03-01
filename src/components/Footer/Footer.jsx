@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="row pb-12 pb-md-24">
           <div className="col-12 col-sm-4 col-lg-3">
             <a href="/">
-              <img className="img-fluid" src={Logo} alt="logo" width="5000" />
+              <img className="w-100" src={Logo} alt="logo"  />
             </a>
           </div>
           <div className="col-12 col-sm-8 col-lg-9">

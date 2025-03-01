@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Logo from "../../assets/images/CSC.svg";
-import { MENU_ITEMS, BOOKING_URL, WHATSAPP, INSTAGRAM } from "../../constants/index.js";
+import Logo from "../../assets/images/CSC.png";
+import { MENU_ITEMS, WHATSAPP, INSTAGRAM, BOOKING_URL_2 } from "../../constants/index.js";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
 
@@ -17,7 +17,7 @@ export default function Header() {
       <section className="overflow-hidden sticky-top col-12 col-sm-12">
         <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between">
           <a href="/">
-            <img className="navbar-brand" src={Logo} alt="logo" width={165} />
+            <img className="navbar-brand" src={Logo} alt="logo" width={155} />
           </a>
           <button
             className="btn p-0 d-xl-none navbar-burger"
@@ -52,7 +52,7 @@ export default function Header() {
             </nav>
             <nav>
               <div className="ms-auto w-100">
-                <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL}>
+                <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL_2}>
                   Book now
                 </a>
               </div>
@@ -112,7 +112,7 @@ export default function Header() {
               <div className="py-6">
                 <a
                   className="btn btn-dark w-100"
-                  href={BOOKING_URL}
+                  href={BOOKING_URL_2}
                 >
                   Book now
                 </a>

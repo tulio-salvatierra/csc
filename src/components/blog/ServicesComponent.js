@@ -43,11 +43,11 @@ export default function Services() {
                 />
               </div>
               <a className="d-inline-block text-decoration-none mb-6" href="#">
-                <h2 className="text-start p-0 fs-3">
+                <h2 className="text-start p-0 fs-2">
                   {service.name}
                 </h2>
 
-                <p className="text-muted">{service.description}</p>
+                <p className="text-muted fs-5">{service.description}</p>
               </a>
               <div className="text-left">
                 <a className="btn btn-dark w-auto" href={BOOKING_URL}>
