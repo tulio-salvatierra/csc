@@ -32,8 +32,8 @@ const services = [
   },
   {
     id: 4,
-    name: "European facial",
-    description: "Pamper yourself with our luxurious body treatments designed to relax, rejuvenate, and refresh your skin. From exfoliating scrubs to detoxifying wraps, our experienced therapists will help you achieve the smooth, glowing skin you desire. Treat yourself to a day of indulgence and relaxation with our body treatments.",
+    name: "Facials",
+    description: "Pamper yourself with our luxurious facial designed to relax, rejuvenate, and refresh your skin. From exfoliating scrubs to detoxifying wraps, our experienced therapist will help you achieve the smooth, glowing skin you desire. Treat yourself to a day of indulgence and relaxation with our expert facial treatment.",
     icon: EF,
     category: "Body treatments",
   },

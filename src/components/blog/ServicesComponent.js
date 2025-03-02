@@ -7,17 +7,14 @@ export default function Services() {
       <section className="py-28 bg-white">
         <div className="header-bg h-96 bg-hero bg-cover bg-center">
           <div className="row align-items-center justify-content-center mb-16 mb-md-20">
-            
-              <h1 className="display-1 text-center text-white">Services</h1>
-            
-            
-              <p className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
-                At our skin care clinic, we offer a range of expert facial
-                treatments designed to rejuvenate and enhance your natural
-                beauty. Our services include luxurious facials, advanced
-                HydraFacials, and professional eyebrow shaping and tinting.
-              </p>
-            
+            <h1 className="display-1 text-center text-white">Services</h1>
+
+            <p className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
+              At our skin care studio, we offer a range of expert facial
+              treatments designed to rejuvenate and enhance your natural beauty.
+              Our services include luxurious facials, HydraFacials, microdermabrasion, nano needle, acne facials and
+              professional eyebrow shaping and tinting.
+            </p>
           </div>
         </div>
         <div className="row mb-20">
@@ -43,9 +40,7 @@ export default function Services() {
                 />
               </div>
               <a className="d-inline-block text-decoration-none mb-6" href="#">
-                <h2 className="text-start p-0 fs-2">
-                  {service.name}
-                </h2>
+                <h2 className="text-start p-0 fs-2">{service.name}</h2>
 
                 <p className="text-muted fs-5">{service.description}</p>
               </a>

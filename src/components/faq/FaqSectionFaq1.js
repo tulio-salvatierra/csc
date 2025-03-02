@@ -42,7 +42,7 @@ export default function FaqSectionFaq1() {
                     How often should I get a deep cleansing facial?
                   </h2>
                   <p className="text-muted lh-lg mb-0">
-                    For optimal results, we recommend a deep cleansing facial
+                    For optimal results, we recommend a facial
                     every 4-6 weeks. This helps maintain clear and healthy skin
                     by removing impurities and preventing clogged pores.
                   </p>
