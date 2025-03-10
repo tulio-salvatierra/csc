@@ -35,7 +35,7 @@ const services = [
     name: "Facials",
     description: "Pamper yourself with our luxurious facial designed to relax, rejuvenate, and refresh your skin. From exfoliating scrubs to detoxifying wraps, our experienced therapist will help you achieve the smooth, glowing skin you desire. Treat yourself to a day of indulgence and relaxation with our expert facial treatment.",
     icon: EF,
-    category: "Body treatments",
+    category: "Facials",
   },
   {
     id: 5,
