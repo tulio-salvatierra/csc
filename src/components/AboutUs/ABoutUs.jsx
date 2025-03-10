@@ -7,7 +7,7 @@ export default function AboutPage() {
     <div className="container py-4">
       {/* Our Story Section */}
       <section className="mb-5">
-        <h2 className="display-2 mb-3 hlTitle">Our Story</h2>
+        <h2 className="fs-1 mb-3 hlTitle">Our Story</h2>
         <p className="text-muted">
           Growing up, I struggled with acne in my late teens and early 20s, and
           it affected my confidence. But once I started getting professional
@@ -49,7 +49,7 @@ export default function AboutPage() {
 
       {/* Our Mission Section */}
       <section className="mb-5 mt-10">
-        <h2 className="display-1 mb-3">Our Mission</h2>
+        <h2 className="fs-1 mb-3">Our Mission</h2>
         <blockquote className="blockquote border-start ps-3">
           <p className="text-muted">
             "Our mission is to enhance your natural beauty and boost your
