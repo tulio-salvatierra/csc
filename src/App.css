@@ -142,6 +142,52 @@ h1 {
   }
 }
 
+.bg-services {
+  background-image: url("../src/assets/images/services/services skin.jpg");
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: auto;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .bg-services {
+    background-position: right;
+  }
+}
+
+
+.bg-about {
+  background-image: url("../src/assets/images/about/about skin.jpg");
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: auto;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: end;
+}
+@media (max-width: 768px) {
+  .bg-hero {
+    background-position: right;
+  }
+  .hero-content {
+    width: 100%;
+    margin-top: 50%;
+  }
+}
 .header {
   position: fixed;
   top: 0;

@@ -5,7 +5,7 @@ export default function Services() {
   return (
     <>
       <section className="py-28 bg-white">
-        <div className="header-bg h-96 bg-hero bg-cover bg-center">
+        <div className="header-bg h-96 bg-services bg-cover bg-center">
           <div className="row align-items-center justify-content-center mb-16 mb-md-20">
             <h1 className="display-1 text-center text-white">Services</h1>
 
