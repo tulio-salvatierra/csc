@@ -1,13 +1,55 @@
 import { BOOKING_URL } from "../../constants";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
 import "./Solution.css";
 import SkinCare from "../../assets/images/solutions/skin-care.jpg";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Solutions() {
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+  const imageRef = useRef(null);
+
+
+  useEffect(() => {
+    const section = sectionRef.current;
+    const content = contentRef.current;
+    const image = imageRef.current;
+
+    if (section && content && image) {
+      const contentAnimation = gsap.to(content, {
+        yPercent: -70,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "bottom bottom",
+          scrub: true,
+        },
+      });
+
+      const imageAnimation = gsap.to(image, {
+        yPercent: 70,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "bottom bottom",
+          scrub: true,
+        },
+      });
+
+      return () => {
+        contentAnimation.kill();
+        imageAnimation.kill();
+      };
+    }
+  }, []);
+
+
   return (
     <>
-      <section className="py-24 p-4 h-auto bg-muted d-flex flex-column justify-content-center">
+      <section className="py-24 p-4 h-auto bg-muted d-flex flex-column justify-content-center relative" ref={sectionRef}>
         <div className="row align-items-center mb-5">
-          <div className="col-lg-6">
+          <div className="col-lg-6" ref={contentRef}>
             <h1 className="fs-1 fw-bold mb-3">
               Transform Your Skin with Professional, Personalized Care
             </h1>
@@ -33,7 +75,7 @@ export default function Solutions() {
             <img
               src={SkinCare}
               alt="Skin Care Treatment"
-              className="img-fluid rounded shadow"
+              className="img-fluid rounded shadow image" ref={imageRef}
             />
           </div>
         </div>
