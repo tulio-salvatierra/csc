@@ -1,4 +1,4 @@
-import { BOOKING_URL } from "../../constants";
+import { BOOKING_URL_2 } from "../../constants";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -65,7 +65,7 @@ export default function Solutions() {
               Get in touch to book your consultation today!
             </p>
             <a
-              href={BOOKING_URL}
+              href={BOOKING_URL_2}
               className="btn btn-dark fs-4 btn-lg mb-4 w-100"
             >
               Book my appointment now!

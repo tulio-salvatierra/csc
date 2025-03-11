@@ -1,5 +1,5 @@
 import "../../App.css";
-import { BOOKING_URL } from "../../constants";
+import { BOOKING_URL_2 } from "../../constants";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
@@ -50,7 +50,7 @@ export default function Hero() {
             </p>
             <a
               className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
-              href={BOOKING_URL}
+              href={BOOKING_URL_2}
               ref={(el) => (animated.current[1] = el)}
             >
               Book my appointment now!
