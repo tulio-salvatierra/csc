@@ -62,7 +62,7 @@ export default function SingleReviewCarousel() {
         What our clients say about us?
       </h2>
       <h3 className="text-left display-3">
-        Don't just take our word for, see what iur customers say about us:
+        Don't just take our word for, see what our customers say about us:
       </h3>
 
       <div
