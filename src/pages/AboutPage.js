@@ -6,10 +6,18 @@ import Header from "../components/Header";
 export default function About() {
   return (
     <>
-      <Header />
-      <AboutPage />
-      <FaqSectionFaq1 />
-      <Footer />
+      <main className="parent-page">
+        <div className="header">
+          <Header />
+        </div>
+        <div className="content">
+          <AboutPage />
+          <FaqSectionFaq1 />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
+      </main>
     </>
   );
 }

@@ -1,19 +1,21 @@
 import services from "./services";
 import { BOOKING_URL_2 } from "../../constants";
+import "./../../../src/App.css";
 
 export default function Services() {
   return (
     <>
       <section className="py-28 bg-white">
-        <div className="header-bg h-96 bg-services bg-cover bg-center">
+        <div className="  h-96 bg-services bg-cover bg-center">
           <div className="row align-items-center justify-content-center mb-16 mb-md-20">
-            <h1 className="display-1 text-center text-white">Services</h1>
+            <h1 className="m-3 text-center text-white display-1">Services</h1>
 
             <p className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
               At our skin care studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
-              Our services include luxurious facials, HydraFacials, microdermabrasion, nano needle, acne facials and
-              professional eyebrow shaping and tinting.
+              Our services include luxurious facials, HydraFacials,
+              microdermabrasion, nano needle, acne facials and professional
+              eyebrow shaping and tinting.
             </p>
           </div>
         </div>

@@ -177,6 +177,7 @@ h1 {
   display: flex;
   color: #fff;
   justify-content: center;
+  justify-items: center;
   align-items: end;
 }
 @media (max-width: 768px) {

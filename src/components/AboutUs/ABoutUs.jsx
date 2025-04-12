@@ -4,24 +4,25 @@ import Caro from "./../../assets/images/about/carolina.jpg";
 
 export default function AboutPage() {
   return (
-    <div className="container py-4">
+    <>
       {/* Our Story Section */}
-      <section className="mb-5">
-        <div className="bg-about bg-cover bg-center">
-        <h2 className="m-3 text-center display-1">Our Story</h2>
+      <section className="mb-5 py-28 align-items-center justify-content-center">
+        <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
+          <h2 className="m-3 text-white display-1">Our Story</h2>
+          <p className="w-50 fw-lighter bg-danger-light p-4">
+            Growing up, I struggled with acne in my late teens and early 20s,
+            and it affected my confidence. But once I started getting
+            professional treatments and saw my skin clear up, I felt like a new
+            person—more confident and comfortable in my own skin. That
+            experience inspired me to help others feel the same. As an
+            esthetician, my goal is simple: to give my clients the confidence
+            and self-esteem they deserve by providing personalized skincare that
+            truly works. At my studio, every treatment is about you—your skin,
+            your journey, and helping you feel great in your own skin. Whether
+            it’s acne, aging, or just skin care, I’m here to support you every
+            step of the way.
+          </p>
         </div>
-        <p className="text-muted">
-          Growing up, I struggled with acne in my late teens and early 20s, and
-          it affected my confidence. But once I started getting professional
-          treatments and saw my skin clear up, I felt like a new person—more
-          confident and comfortable in my own skin. That experience inspired me
-          to help others feel the same. As an esthetician, my goal is simple: to
-          give my clients the confidence and self-esteem they deserve by
-          providing personalized skincare that truly works. At my studio, every
-          treatment is about you—your skin, your journey, and helping you feel
-          great in your own skin. Whether it’s acne, aging, or just skin care,
-          I’m here to support you every step of the way.
-        </p>
       </section>
 
       {/* Our Team Section */}
@@ -62,7 +63,7 @@ export default function AboutPage() {
           </p>
         </blockquote>
       </section>
-    </div>
+    </>
   );
 }
 

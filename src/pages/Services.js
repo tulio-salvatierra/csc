@@ -7,18 +7,21 @@ import ContactSection from "../components/contacts/ContactSectionContacts1";
 
 export default function Services() {
   return (
-    <> <div className="parent-page">
-    <div className="header">
-      <Header />
-    </div>
-    <div className="content">
-      <ServicesComponent />
-      <CallToAction />
-      <ContactSection /></div>
-      <div className="footer">
+    <>
+      {" "}
+      <div className="parent-page">
+        <div className="header">
+          <Header />
+        </div>
+        <div className="content">
+          <ServicesComponent />
+          <CallToAction />
+          <ContactSection />
+        </div>
+        <div className="footer">
           <Footer />
         </div>
-    </div>
+      </div>
     </>
   );
 }

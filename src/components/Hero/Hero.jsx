@@ -6,9 +6,7 @@ import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 export default function Hero() {
-
   const animated = useRef([]);
 
   useEffect(() => {
@@ -25,24 +23,32 @@ export default function Hero() {
           start: "top 80%",
           end: "bottom bottom",
           scrub: false,
-        }
-      }
-    )})
+        },
+      });
+    });
     return () => {
       easeFromBelow.revert();
-    }
-   }, []);
+    };
+  }, []);
 
- 
   return (
     <>
-      <section className="bg-hero d-flex align-items-center justify-content-center" ref={(el) => (animated.current[0] = el)}>
+      <section
+        className="bg-hero d-flex align-items-center justify-content-center"
+        ref={(el) => (animated.current[0] = el)}
+      >
         <div className="d-flex flex-column justify-content-center align-items-center">
           <div className=" hero-content">
-            <h1 className="display-4 heading text-white text-center" ref={(el) => (animated.current[3] = el)}>
+            <h1
+              className="display-4 heading text-white text-center"
+              ref={(el) => (animated.current[3] = el)}
+            >
               Hydrate, renew and balance your skin
             </h1>
-            <p className="w-100 bg-danger-light m-1 p-4 welcome-text fs-6" ref={(el) => (animated.current[2] = el)}>
+            <p
+              className="w-100 bg-danger-light m-1 p-4 welcome-text fs-6"
+              ref={(el) => (animated.current[2] = el)}
+            >
               Improve the health and appearance of their skin through
               personalized facial treatments that will balance your skin &
               delivering visible and long-lasting results, located in the heart
@@ -61,5 +67,3 @@ export default function Hero() {
     </>
   );
 }
-
-
