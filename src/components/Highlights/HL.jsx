@@ -21,7 +21,7 @@ export default function HL() {
   ];
 
   return (
-    <section className="mt-32 mb-32 why">
+    <section className="mt-32 mb-32 py-56 why">
       <h2 className="text-left fw-bold mb-4 fs-1">Why Choose Us</h2>
       <div className="row text-left g-4">
         {highlights.map((highlight, index) => (

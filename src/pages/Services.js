@@ -4,12 +4,13 @@ import CallToAction from "../components/Call-to-action";
 import Footer from "./Footer";
 import Contact from "./Contact";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
+import FloatingCallbutton from "../components/floatingCallButton";
 
 export default function Services() {
   return (
     <>
       {" "}
-      <div className="parent-page">
+      <main className="parent-page">
         <div className="header">
           <Header />
         </div>
@@ -21,7 +22,8 @@ export default function Services() {
         <div className="footer">
           <Footer />
         </div>
-      </div>
+      </main>
+      <FloatingCallbutton />
     </>
   );
 }

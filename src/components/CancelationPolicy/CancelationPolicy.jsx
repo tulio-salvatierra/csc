@@ -1,3 +1,5 @@
+import "./../../App.css";
+
 export default function CancellationPolicy() {
   return (
     <section className="py-48 bg-white text-dark">

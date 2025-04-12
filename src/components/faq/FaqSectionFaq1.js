@@ -86,14 +86,14 @@ export default function FaqSectionFaq1() {
                 </div>
               </div>
             </div>
-            <div className="text-center">
+            <div className="text-center align-items-center justify-content-center">
               <img
                 className="img-fluid"
                 src="pstls-assets/icons/faq-info.svg"
                 alt=""
               />
-              <h1 className="mb-4 fs-1 font-heading">Have more questions?</h1>
-              <p className="mb-8 lh-lg text-muted">
+              <h1 className="mb-4 fs-1 font-heading text-center">Have more questions?</h1>
+              <p className="mb-8 lh-lg text-muted text-center">
                 Can’t find the answer you’re looking for? Please send us a
                 message.
               </p>
