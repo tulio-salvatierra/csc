@@ -24,6 +24,18 @@
   font-style: normal;
 }
 
+html, body {
+  width: 100dvw;
+  height: 100dvh;
+  scroll-behavior: smooth;
+}
+
+section {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .hlTitle {
   font-family: "Moula";
 }
