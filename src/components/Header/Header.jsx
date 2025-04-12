@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <>
       <section className="overflow-hidden sticky-top col-12 col-sm-12">
-        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between">
+        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between shadow-xl">
           <a href="/">
             <img className="navbar-brand" src={Logo} alt="logo" width={155} />
           </a>
