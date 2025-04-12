@@ -12,11 +12,26 @@ function StarRating({ rating }) {
     <div className="d-flex">
       {[...Array(5)].map((_, i) => {
         if (i < fullStars) {
-          return <Star key={i} className="text-warning me-1" />;
+          return (
+            <Star
+              key={i}
+              className="text-warning me-1 align-content-center justify-content-center"
+            />
+          );
         } else if (i === fullStars && hasHalfStar) {
-          return <StarHalf key={i} className="text-warning me-1" />;
+          return (
+            <StarHalf
+              key={i}
+              className="text-warning me-1 align-content-center justify-content-center"
+            />
+          );
         } else {
-          return <Star key={i} className="text-muted me-1" />;
+          return (
+            <Star
+              key={i}
+              className="text-muted me-1 align-content-center justify-content-center"
+            />
+          );
         }
       })}
     </div>
@@ -66,14 +81,14 @@ export default function SingleReviewCarousel() {
       </h3>
 
       <div
-        className={`border-0  p-10 comment-grid ${transition ? "fade-in-out" : ""}`}
+        className={`border-0  p-10 comment-grid ${
+          transition ? "fade-in-out" : ""
+        }`}
       >
-        <div className="flex mt-4 text-center justify-content-center fs-4 comment">
-          <p className="mb-3 mt-6">{currentReview.text}</p>
-          <StarRating rating={currentReview.rating} />
-          <div className="d-flex mt-4 p-10 align-items-center ">
+        <div className="flex mt-4 text-center justify-content-center align-content-center fs-4 comment">
+          <p className="mb-3 mt-6 text-center">{currentReview.text}</p>
+          <div className="d-flex mt-4 p-10 align-items-center justify-content-center text-center ">
             <img src={currentReview.photoUrl} className="p-2"></img>
-
             <p className="mb-0 fw-bold fs-4">{currentReview.author}</p>
           </div>
         </div>

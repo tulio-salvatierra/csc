@@ -53,7 +53,7 @@ export default function SkinCareClinicLanding() {
   ];
 
   return (
-    <section className="h-100 mt-32 mb-32">
+    <section className="h-100 mt-32 py-24 mb-32">
       <h2 className="text-center fs-1 fw-bold mb-4">Services</h2>
       <div className="row g-4">
         {services.map((service, index) => (
