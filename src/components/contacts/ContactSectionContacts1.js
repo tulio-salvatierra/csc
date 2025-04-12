@@ -7,7 +7,7 @@ export default function ContactSection() {
     <>
       <>
         <section className="position-relative py-28 bg-white">
-          <div className="container">
+          <div className="p-4">
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
                 <h2 className="display-3 font-heading">Contact</h2>

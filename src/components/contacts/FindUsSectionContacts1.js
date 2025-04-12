@@ -6,7 +6,7 @@ export default function FindUsSectionContacts1() {
     <>
       <>
         <section className="pt-24 bg-white overflow-hidden">
-          <div className="container mb-12 mb-md-0">
+          <div className="mb-12 mb-md-0">
             <div className="mw-md mx-auto text-center mb-24">
               <h3 className="mb-6 text-primary">Get in touch with us</h3>
               <h2 className="display-4 lh-sm font-heading">

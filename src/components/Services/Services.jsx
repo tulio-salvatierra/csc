@@ -47,7 +47,8 @@ export default function SkinCareClinicLanding() {
     },
     {
       title: "Carboxy Therapy",
-      description: "Non-surgical cosmetic medicine treatment",
+      description:
+        "A minimally invasive treatment that uses carbon dioxide to improve skin elasticity, reduce cellulite, and enhance circulation.",
       image: Therapy,
     },
   ];
@@ -69,9 +70,7 @@ export default function SkinCareClinicLanding() {
                   <h2 className="card-title fs-3 p-0 text-dark d-flex align-items-center hlTitle">
                     {service.title}
                   </h2>
-                  <p className="card-text text-muted">
-                    {service.description}
-                  </p>
+                  <p className="card-text text-muted">{service.description}</p>
                 </div>
               </div>
             </a>
