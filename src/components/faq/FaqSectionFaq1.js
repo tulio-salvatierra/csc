@@ -14,7 +14,7 @@ export default function FaqSectionFaq1() {
             <div className="col-12 col-md-6 px-xl-4 mb-8">
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
-                  className="img-fluid"
+                  className="img-fluid mx-auto d-block"
                   src="pstls-assets/icons/faq-info.svg"
                   alt=""
                 />
@@ -33,7 +33,7 @@ export default function FaqSectionFaq1() {
             <div className="col-12 col-md-6 px-xl-4 mb-8">
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
-                  className="img-fluid"
+                  className="img-fluid mx-auto d-block"
                   src="pstls-assets/icons/faq-info.svg"
                   alt=""
                 />
@@ -50,7 +50,7 @@ export default function FaqSectionFaq1() {
             <div className="col-12 col-md-6 px-xl-4 mb-8">
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
-                  className="img-fluid"
+                  className="img-fluid mx-auto d-block"
                   src="pstls-assets/icons/faq-info.svg"
                   alt=""
                 />
