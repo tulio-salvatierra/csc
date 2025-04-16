@@ -28,10 +28,10 @@ export default function FindUsSectionContacts1() {
               <div className="text-center">
                 <h3 className="mb-4 font-heading">Phone</h3>
                 <a
-                  href={`tel:${TELEPHONE}`}
+                  href={`${TELEPHONE}`}
                   className="text-decoration-none fs-5 text-dark"
                 >
-                  <p className="mb-0 text-center">{TELEPHONE}</p>
+                  <p className="mb-0 text-center">432-638-0046</p>
                 </a>
               </div>
             </div>

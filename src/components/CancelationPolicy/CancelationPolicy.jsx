@@ -12,10 +12,10 @@ export default function CancellationPolicy() {
                 <p className="mb-4 text-muted">
                   As a courtesy to other guests and myself as your provider, I
                   kindly ask that you provide a minimum of{" "}
-                  <strong>48 hours’ notice</strong> for any cancellations or
+                  <strong>48 hours notice</strong> for any cancellations or
                   rescheduling.
                 </p>
-                <ul className="list-unstyled mb-4">
+                <ul className="mb-4 text-left ">
                   <li className="mb-2 text-muted">
                     <strong>Within 48 Hours:</strong> 50% of the service cost
                     will be charged.

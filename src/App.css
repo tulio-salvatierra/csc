@@ -24,7 +24,8 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   width: 100dvw;
   height: 100dvh;
   scroll-behavior: smooth;
@@ -53,17 +54,21 @@ section {
   }
 }
 
-.commet-grid {  display: grid;
+.commet-grid {
+  display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr .25fr;
+  grid-template-rows: 1fr 0.25fr;
   gap: 16px 0px;
   grid-auto-flow: row;
 }
 
-.comment { grid-area: 1 / 1 / 3 / 2; }
+.comment {
+  grid-area: 1 / 1 / 3 / 2;
+}
 
-.author { grid-area: 2 / 1 / 3 / 2; }
-
+.author {
+  grid-area: 2 / 1 / 3 / 2;
+}
 
 .heading {
   font-family: "Moula";
@@ -84,7 +89,6 @@ section {
   }
 }
 
-
 .welcome-text {
   font-family: "Moula";
   font-size: 1.5rem;
@@ -95,16 +99,17 @@ section {
 
 h3,
 h2,
-h1 {
+h1,
+strong,
+ul {
   font-family: "MOULA";
   color: #000;
-  padding: 10px;
-  text-align: center;
   font-weight: bold;
+  text-align: center;
 }
 
 .header-bg {
-  background-image: url("../src/assets/images/hero/csc-hero.jpg"); 
+  background-image: url("../src/assets/images/hero/csc-hero.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -142,7 +147,6 @@ h1 {
   color: #fff;
   justify-content: center;
   align-items: end;
- 
 }
 @media (max-width: 768px) {
   .bg-hero {
@@ -174,7 +178,6 @@ h1 {
     background-position: right;
   }
 }
-
 
 .bg-about {
   background-image: url("../src/assets/images/about/about skin.jpg");

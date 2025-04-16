@@ -32,7 +32,7 @@ export default function ContactSection() {
                   href={TELEPHONE}
                   className="mb-0 text-muted fs-4 text-decoration-none"
                 >
-                  {TELEPHONE}
+                  432-638-0046
                 </a>
               </div>
               <div className="col-6 col-sm-12 p-4">

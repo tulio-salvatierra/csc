@@ -22,13 +22,13 @@ export default function HL() {
 
   return (
     <section className="mt-32 mb-32 py-56 why">
-      <h2 className="text-left fw-bold mb-4 fs-1">Why Choose Us</h2>
+      <h2 className="text-center fw-bold mb-4 fs-1">Why Choose Us</h2>
       <div className="row text-left g-4">
         {highlights.map((highlight, index) => (
           <div key={index} className="col-md-4 bg-black text-white card">
             <div className="card-body p-4">
               <h2 className="text-muted fs-1 text-left p-4 text-decoration-none">{highlight.id}</h2>
-              <h5 className="fw-bold hlTitle fs-2 text-white">
+              <h5 className="fw-bold hlTitle fs-3 text-white">
                 {highlight.title}
               </h5>
               <p className="text-muted mt-4">{highlight.description}</p>
