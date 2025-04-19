@@ -1,13 +1,13 @@
-import DP from "./../../assets/images/services/dp.jpg";
-import HF from "./../../assets/images/services/hf.jpg";
-import MD from "./../../assets/images/services/md.jpg";
-import EF from "./../../assets/images/services/ef.jpg";
-import CP from "./../../assets/images/services/cp.jpg";
-import WAX from "./../../assets/images/services/wax.jpg";
-import NN from "./../../assets/images/services/nano.jpg";
-import Therapy from "./../../assets/images/services/therapy.jpg";
+import DP from "./../../assets/images/ServicesPageCard/dp.jpg";
+import HF from "./../../assets/images/ServicesPageCard/hf.jpg";
+import MD from "./../../assets/images/ServicesPageCard/md.jpg";
+import EF from "./../../assets/images/ServicesPageCard/ef.jpg";
+import CP from "./../../assets/images/ServicesPageCard/cp.jpg";
+import WAX from "./../../assets/images/ServicesPageCard/wax.jpg";
+import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
+import Therapy from "./../../assets/images/ServicesPageCard/therapy.jpg";
 
-const services = [
+const servicesCardInfo = [
   {
     id: 1,
     name: "Dermaplaning",
@@ -74,4 +74,6 @@ const services = [
   },
 ];
 
-export default services;
+export default servicesCardInfo;
+
+

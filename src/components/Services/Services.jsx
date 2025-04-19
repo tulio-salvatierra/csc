@@ -1,14 +1,14 @@
 import "./../../App.css";
-import DP from "./../../assets/images/services/dp.jpg";
-import HF from "./../../assets/images/services/hf.jpg";
-import MD from "./../../assets/images/services/md.jpg";
-import EF from "./../../assets/images/services/ef.jpg";
-import CP from "./../../assets/images/services/cp.jpg";
-import WAX from "./../../assets/images/services/wax.jpg";
-import NN from "./../../assets/images/services/nano.jpg";
-import Therapy from "./../../assets/images/services/therapy.jpg";
+import DP from "./../../assets/images/servicesComponent/dp.jpeg";
+import HF from "./../../assets/images/servicesComponent/hf.jpeg";
+import MD from "./../../assets/images/servicesComponent/md.jpg";
+import EF from "./../../assets/images/servicesComponent/ef.jpeg";
+import CP from "./../../assets/images/servicesComponent/cp.jpeg";
+import WAX from "./../../assets/images/servicesComponent/wax.jpg";
+import NN from "./../../assets/images/servicesComponent/nano.jpeg";
+import Therapy from "./../../assets/images/servicesComponent/therapy.png";
 
-export default function SkinCareClinicLanding() {
+export default function ServicesComponent() {
   const services = [
     {
       title: "Dermaplaning",

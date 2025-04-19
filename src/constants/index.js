@@ -6,7 +6,7 @@ export const ABOUT_URL = "/about";
 
 export const CONTACT_URL = "/contact";
 
-export const PRICING_URL = "/pricing";
+export const POLICIES_URL = "/policies";
 
 export const TULIO_URL = "https://tuliosalvatierra.com";
 
@@ -38,4 +38,8 @@ export const MENU_ITEMS = [
     title: "About",
     url: ABOUT_URL,
   },
+  {
+    title: "Policies",
+    url: "/policies",
+  }
 ];

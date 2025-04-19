@@ -1,4 +1,4 @@
-import services from "./services";
+import services from "./servicesPageCard";
 import { BOOKING_URL_2 } from "../../constants";
 import "./../../../src/App.css";
 

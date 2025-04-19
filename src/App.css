@@ -164,7 +164,7 @@ li {
 }
 
 .bg-services {
-  background-image: url("../src/assets/images/services/services skin.jpg");
+  background-image: url("../src/assets/images/ServicesPageCard/services skin.jpg");
   display: flex;
   flex-direction: column;
   object-fit: cover;

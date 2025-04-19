@@ -21,7 +21,6 @@ export default function IndexPage() {
           <Header />
         </div>
         <div className="content">
-          
           <Hero />
           <Solutions />
           <CancellationPolicy />
