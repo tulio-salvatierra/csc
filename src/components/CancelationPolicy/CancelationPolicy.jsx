@@ -31,6 +31,10 @@ export default function CancellationPolicy() {
                   Thank you for your understanding and cooperation!
                 </p>
               </div>
+              <a href="/policies" className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6">
+                Read our policies
+              </a>
+              
             </div>
           </div>
         </div>
