@@ -7,7 +7,7 @@ import ServicesPage from "./pages/ServicesPage";
 import PolicyPage from "./pages/PolicyPage";
 import FindUsPage from "./pages/Find-us";
 import About from "./pages/AboutPage";
-import CalltoactionPage from "./pages/Calltoaction";
+
 
 function App() {
   return (
@@ -24,7 +24,6 @@ function App() {
 
       <Route path="/findus" element={<FindUsPage />} />
 
-      <Route path="/calltoaction" element={<CalltoactionPage />} />
     </Routes>
   );
 }
