@@ -50,7 +50,7 @@ export default function ContactSection() {
               <div ref={(el) => (animated.current[1] = el)} className="col-6 col-sm-12 p-4 text-left">
                 <h3 className="mb-0 fs-2">Address</h3>
                 <a
-                  className="text-decoration-none text-muted fs-4 align-bottom"
+                  className="mb-0 text-muted fs-4 text-decoration-none"
                   href={ADDRESS_URL}
                 >
                   Carolina Skin Centre, 705 W Wadley Ave Suite-23, Midland, TX
