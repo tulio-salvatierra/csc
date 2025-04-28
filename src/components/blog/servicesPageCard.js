@@ -1,11 +1,11 @@
 import DP from "./../../assets/images/ServicesPageCard/dp.jpg";
-import HF from "./../../assets/images/ServicesPageCard/hf.jpg";
+import HF from "./../../assets/images/servicesComponent/hf.jpeg";
 import MD from "./../../assets/images/ServicesPageCard/md.jpg";
 import EF from "./../../assets/images/ServicesPageCard/ef.jpg";
-import CP from "./../../assets/images/ServicesPageCard/cp.jpg";
-import WAX from "./../../assets/images/ServicesPageCard/wax.jpg";
+import CP from "./../../assets/images/servicesComponent/cp.jpeg";
+import WAX from "./../../assets/images/servicesComponent/wax.jpg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
-import Therapy from "./../../assets/images/ServicesPageCard/therapy.jpg";
+import Therapy from "./../../assets/images/servicesComponent/therapy.png"
 
 const servicesCardInfo = [
   {

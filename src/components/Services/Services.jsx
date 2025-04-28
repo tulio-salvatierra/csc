@@ -1,35 +1,12 @@
 import "./../../App.css";
-import DP from "./../../assets/images/servicesComponent/dp.jpeg";
-import HF from "./../../assets/images/servicesComponent/hf.jpeg";
-import MD from "./../../assets/images/servicesComponent/md.jpg";
-import EF from "./../../assets/images/servicesComponent/ef.jpeg";
 import CP from "./../../assets/images/servicesComponent/cp.jpeg";
 import WAX from "./../../assets/images/servicesComponent/wax.jpg";
-import NN from "./../../assets/images/servicesComponent/nano.jpeg";
+import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png";
 
 export default function ServicesComponent() {
   const services = [
-    {
-      title: "Dermaplaning",
-      description: "Top layer of skin removal to exfoliate and improve texture",
-      image: DP,
-    },
-    {
-      title: "Hydrafacial",
-      description: "Deep cleansing, exfoliation, and hydration",
-      image: HF,
-    },
-    {
-      title: "Microdermabrasion",
-      description: "Exfoliation and skin rejuvenation",
-      image: MD,
-    },
-    {
-      title: "European facial",
-      description: "Deep cleansing, exfoliation, and hydration",
-      image: EF,
-    },
+
     {
       title: "Chemical Peels",
       description: "Exfoliation and skin rejuvenation",

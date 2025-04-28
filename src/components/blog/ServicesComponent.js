@@ -11,7 +11,7 @@ export default function Services() {
             <h1 className="m-3 text-center text-white display-1">Services</h1>
 
             <p className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
-              At our skin care studio, we offer a range of expert facial
+              At our Skin Wellness Studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
               Our services include luxurious facials, HydraFacials,
               microdermabrasion, nano needle, acne facials and professional
@@ -23,7 +23,7 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={`service ${index}`}
-              className="col-12 col-md-4 mb-12 mb-md-0 p-5 justify-content-evenly h-100"
+              className="col-12 col-md-4 mb-12 mb-md-0 p-5 justify-content-between h-auto"
             >
               <a className="text-decoration-none" href="#">
                 <span className="badge bg-primary text-uppercase fw-lighter">
