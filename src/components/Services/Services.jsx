@@ -14,7 +14,7 @@ export default function ServicesComponent() {
 
     {
       title: "Chemical Peels",
-      description: "Exfoliation and skin rejuvenation",
+      description: "Exfoliation and Skin Rejuvenation",
       image: CP,
     },
     {
@@ -24,13 +24,13 @@ export default function ServicesComponent() {
     },
     {
       title: "Nano Needle",
-      description: "Non-invasive skin rejuvination treatment",
+      description: "Non-invasive Skin Rejuvination Treatment",
       image: NN,
     },
     {
       title: "Carboxy Therapy",
       description:
-        "A minimally invasive treatment that uses carbon dioxide to improve skin elasticity, reduce cellulite, and enhance circulation.",
+        "A minimally invasive treatment that uses Carbon Dioxide to improve skin elasticity, reduce cellulite, and enhance circulation.",
       image: Therapy,
     },
   ];

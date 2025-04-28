@@ -55,10 +55,10 @@ export default function Solutions() {
             </h1>
             <p className="lead text-muted mb-4">
               Hey! I'm Carolina and I have over 18 years of experience in
-              skincare, my journey began with my own struggle with acne, which
+              skincare. My journey began with my own struggle with acne, which
               led me to study at the Euro Institute of Skin Care in Seattle.
               Combining European and naturopathic techniques with advanced
-              medispa procedures, I’ve built a loyal client base in Midland,
+              medispa procedures that led me to build a loyal customer base in Midland,
               Texas. My expertise and personalized approach ensure that each
               client receives the best care tailored to their unique skin needs.
               <br /><br />

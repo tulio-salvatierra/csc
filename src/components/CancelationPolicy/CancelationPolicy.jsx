@@ -39,8 +39,7 @@ export default function CancellationPolicy() {
             <div className="card shadow-sm border-0 rounded-4">
               <div className="card-body p-4">
                 <p ref={(el) => (animated.current[2] = el)} className="mb-4 text-muted">
-                  As a courtesy to other guests and myself as your provider, I
-                  kindly ask that you provide a minimum of{" "}
+                  To ensure customer satisfaction, we kindly ask as a courtesy for other customers, please provide a minimum of{" "}
                   <strong>48 hours notice</strong> for any cancellations or
                   rescheduling.
                 </p>

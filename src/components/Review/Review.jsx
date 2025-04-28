@@ -77,7 +77,7 @@ export default function SingleReviewCarousel() {
         What our clients say about us?
       </h2>
       <h3 className="text-left display-3">
-        Don't just take our word for, see what our customers say about us:
+        See the feedback we received in our Google My Business profile:
       </h3>
 
       <div

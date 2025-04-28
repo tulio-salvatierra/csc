@@ -41,9 +41,9 @@ export default function Services() {
             <p  ref={(el) => (animated.current[1] = el)} className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
               At our Skin Wellness Studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
-              Our services include luxurious facials, HydraFacials,
-              microdermabrasion, nano needle, acne facials and professional
-              eyebrow shaping and tinting.
+              Our services include Luxurious Facials, HydraFacials,
+              Microdermabrasion, Nanoneedle, Acne Facials and Professional
+              Eyebrow Shaping and Tinting.
             </p>
           </div>
         </div>

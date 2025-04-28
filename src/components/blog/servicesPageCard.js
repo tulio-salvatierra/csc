@@ -28,7 +28,7 @@ const servicesCardInfo = [
     id: 3,
     name: "Microdermabrasion",
     description:
-      "Microdermabrasion is a non-invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. The procedure typically uses either a diamond-tipped wand or fine crystals combined with suction to resurface the skin, promoting cell turnover and collagen production.",
+      "Microdermabrasion is a non-invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. The procedure typically uses either a diamond-tipped wand or fine crystals combined with suction to resurface the skin by promoting cell turnover and collagen production.",
     icon: MD,
     category: "Eyebrow services",
   },
@@ -36,7 +36,7 @@ const servicesCardInfo = [
     id: 4,
     name: "Facials",
     description:
-      "Our customized facials are designed to cleanse, nourish, and rejuvenate your skin, leaving you with a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high-quality products and expert techniques, our facials deliver both relaxation and noticeable results—helping you look and feel your best.",
+      "Our customized facials are designed to cleanse, nourish, and rejuvenate your skin resuting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high quality products and expert techniques, our facials deliver both relaxation and noticeable results by helping you look and feel at your best.",
     icon: EF,
     category: "Facials",
   },
@@ -44,7 +44,7 @@ const servicesCardInfo = [
     id: 5,
     name: "Chemical Peels",
     description:
-      "designed to exfoliate and renew your skin, revealing a fresher, more radiant complexion. Using carefully selected acids, chemical peels remove dead skin cells, unclog pores, and stimulate collagen production, improving skin texture, tone, and overall clarity.",
+      "Designed to exfoliate and renew your skin by revealing a fresher, more radiant complexion. Using carefully selected acids, chemical peels remove dead skin cells, unclog pores, and stimulate collagen production to improve skin texture, tone, and overall clarity.",
     icon: CP,
     category: "Skin rejuvenation",
   },
@@ -52,7 +52,7 @@ const servicesCardInfo = [
     id: 6,
     name: "Waxing Services",
     description:
-      "Say goodbye to unwanted hair with our expert waxing services. From brows to bikini lines, our skilled aestheticians will help you achieve smooth, hair-free skin. We use high-quality waxes and techniques to ensure a comfortable and effective waxing experience. Book your appointment today and enjoy silky-smooth skin.",
+      "Say goodbye to unwanted hair with our expert waxing services. From brows to bikini lines, our skilled aestheticians will help you achieve smooth, hair free skin. We use high quality wax and techniques to ensure a comfortable and effective waxing experience.",
     icon: WAX,
     category: "Waxing services",
   },
