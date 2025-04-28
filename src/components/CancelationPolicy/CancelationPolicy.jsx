@@ -1,15 +1,44 @@
 import "./../../App.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function CancellationPolicy() {
+  const animated = useRef([]);
+
+  useEffect(() => {
+    const easeFromBelow = gsap.matchMedia();
+    easeFromBelow.add("(min-width: 1200px)", () => {
+      gsap.from(animated.current, {
+        y: 25,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        stagger: 0.5,
+        ScrollTrigger: {
+          trigger: animated.current,
+          start: "top 70%",
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+    });
+    return () => {
+      easeFromBelow.revert();
+    };
+  }, []);
+
   return (
-    <section className="py-48 bg-white text-dark">
+    <section ref={(el) => (animated.current[0] = el)} className="py-48 bg-white text-dark">
       <div className="container py-48 shadow-sm bg-primary-light">
         <div className="row justify-content-center">
           <div className="col-lg-8">
-            <h2 className="text-center mb-4 fs-1 ">New Cancellation Policy </h2>
+            <h2 ref={(el) => (animated.current[1] = el)} className="text-center mb-4 fs-1 ">New Cancellation Policy </h2>
             <div className="card shadow-sm border-0 rounded-4">
               <div className="card-body p-4">
-                <p className="mb-4 text-muted">
+                <p ref={(el) => (animated.current[2] = el)} className="mb-4 text-muted">
                   As a courtesy to other guests and myself as your provider, I
                   kindly ask that you provide a minimum of{" "}
                   <strong>48 hours notice</strong> for any cancellations or

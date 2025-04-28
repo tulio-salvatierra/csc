@@ -17,7 +17,7 @@ export default function Hero() {
         opacity: 0,
         duration: 1.5,
         ease: "power2.out",
-        stagger: 0.3,
+        stagger: 0.5,
         ScrollTrigger: {
           trigger: animated.current,
           start: "top 80%",

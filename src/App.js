@@ -5,7 +5,6 @@ import IndexPage from "./pages/IndexPage";
 import ContactPage from "./pages/Contact";
 import ServicesPage from "./pages/ServicesPage";
 import PolicyPage from "./pages/PolicyPage";
-import BrandsPage from "./pages/Brands";
 import FindUsPage from "./pages/Find-us";
 import About from "./pages/AboutPage";
 import CalltoactionPage from "./pages/Calltoaction";
@@ -22,8 +21,6 @@ function App() {
       <Route path="/policies" element={<PolicyPage />} />
 
       <Route path="/about" element={<About />} />
-
-      <Route path="/brands" element={<BrandsPage />} />
 
       <Route path="/findus" element={<FindUsPage />} />
 

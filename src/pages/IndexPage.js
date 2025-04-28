@@ -2,7 +2,7 @@ import FloatingCallbutton from "../components/floatingCallButton";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
-import Brands from "./Brands";
+import BrandsSection from "../components/BrandSection/BrandsSectionLogoClouds1";
 import Footer from "./Footer";
 
 import "../App.css";
@@ -27,7 +27,7 @@ export default function IndexPage() {
           <Services />
           <HL />
           <SingleReviewCarousel />
-          <Brands />
+          <BrandsSection />
           <ContactSection />
         </div>
         <div className="footer">
