@@ -28,25 +28,42 @@ export default function HL() {
   const animated = useRef([]);
   
   useEffect(() => {
-    const easeFromBelow = gsap.matchMedia();
-    easeFromBelow.add("(min-width: 1200px)", () => {
+    const mm = gsap.matchMedia();
+  
+    mm.add("(min-width: 1200px)", () => {
+      // Desktop animation (movement + fade)
       gsap.from(animated.current, {
         y: 25,
         opacity: 0,
         duration: 1.5,
         ease: "power2.out",
-        stagger: 0.3,
+        stagger: 0.5,
         scrollTrigger: {
           trigger: animated.current,
-          start: "top 70%",
+          start: "top 80%",
           end: "bottom bottom",
           scrub: false,
         },
       });
     });
-    return () => {
-      easeFromBelow.revert();
-    };
+  
+    mm.add("(max-width: 1199px)", () => {
+      // Mobile and Tablet animation (fade only, very smooth)
+      gsap.from(animated.current, {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.out",
+        stagger: 0.4,
+        scrollTrigger: {
+          trigger: animated.current,
+          start: "top 90%", // trigger a bit later for mobile
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+    });
+  
+    return () => mm.revert();
   }, []);
 
   return (

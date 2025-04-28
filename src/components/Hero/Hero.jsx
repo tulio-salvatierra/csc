@@ -11,6 +11,7 @@ export default function Hero() {
 
   useEffect(() => {
     const easeFromBelow = gsap.matchMedia();
+
     easeFromBelow.add("(min-width: 1200px)", () => {
       gsap.from(animated.current, {
         y: 25,
@@ -26,6 +27,22 @@ export default function Hero() {
         },
       });
     });
+
+    easeFromBelow.add("(max-width: 1199px)", () => {
+      gsap.from(animated.current, {
+        opacity: 0,
+        duration: 1,
+        ease: "power1.out",
+        stagger: 0.4,
+        scrollTrigger: {
+          trigger: animated.current,
+          start: "top 90%",
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+    });
+
     return () => {
       easeFromBelow.revert();
     };
