@@ -1,15 +1,50 @@
 import "./../../App.css";
-import { TELEPHONE, EMAIL } from "../../constants";
 import Caro from "./../../assets/images/about/carolina.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutPage() {
+  const animated = useRef([]);
+
+  useEffect(() => {
+    const easeFromBelow = gsap.matchMedia();
+    easeFromBelow.add("(min-width: 1200px)", () => {
+      gsap.from(animated.current, {
+        y: 25,
+        opacity: 0,
+        duration: 1.5,
+        ease: "power2.out",
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: animated.current,
+          start: "top 70%",
+          end: "bottom bottom",
+          scrub: false,
+        },
+      });
+    });
+    return () => {
+      easeFromBelow.revert();
+    };
+  }, []);
   return (
     <>
       {/* Our Story Section */}
       <section className="mb-5 py-28 align-items-center justify-content-center">
         <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
-          <h2 className="m-3 text-white display-1">Our Story</h2>
-          <p className="w-50 fw-lighter bg-danger-light p-4">
+          <h2
+            ref={(el) => (animated.current[0] = el)}
+            className="m-3 text-white display-1"
+          >
+            Our Story
+          </h2>
+          <p
+            ref={(el) => (animated.current[1] = el)}
+            className="w-50 fw-lighter bg-danger-light p-4"
+          >
             Growing up, I struggled with acne in my late teens and early 20s,
             and it affected my confidence. But once I started getting
             professional treatments and saw my skin clear up, I felt like a new
@@ -26,11 +61,15 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team Section */}
-      <section className="mb-5">
+      <section ref={(el) => (animated.current[2] = el)} className="mb-5">
         <h2 className="mb-3 hlTitle">About me</h2>
         <div className="row g-4 justify-content-center mt-10">
           {teamMembers.map((member) => (
-            <div className="col-12 col-md-8 col-lg-8" key={member.name}>
+            <div
+              ref={(el) => (animated.current[3] = el)}
+              className="col-12 col-md-8 col-lg-8"
+              key={member.name}
+            >
               <div className="card text-center h-100">
                 <div className="card-header bg-transparent">
                   <img
@@ -51,7 +90,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section className="mb-5 mt-10">
+      <section ref={(el) => (animated.current[4] = el)} className="mb-5 mt-10">
         <h2 className="fs-1 mb-3">Our Mission</h2>
         <blockquote className="blockquote border-start ps-3">
           <p className="text-muted">

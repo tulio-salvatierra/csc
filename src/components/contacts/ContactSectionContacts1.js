@@ -20,7 +20,7 @@ export default function ContactSection() {
         duration: 1.5,
         ease: "power2.out",
         stagger: 0.5,
-        ScrollTrigger: {
+        scrollTrigger: {
           trigger: animated.current,
           start: "top 60%",
           end: "bottom bottom",

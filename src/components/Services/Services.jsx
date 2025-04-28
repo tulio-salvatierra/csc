@@ -46,7 +46,7 @@ export default function ServicesComponent() {
         duration: 1.5,
         ease: "power2.out",
         stagger: 0.3,
-        ScrollTrigger: {
+        scrollTrigger: {
           trigger: animated.current,
           start: "top 70%",
           end: "bottom bottom",
