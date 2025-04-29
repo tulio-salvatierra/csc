@@ -1,5 +1,4 @@
-import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
+import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
 import {
   MENU_ITEMS,
@@ -9,7 +8,8 @@ import {
 } from "../../constants/index.js";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
-import { useMenuAnimation } from "./../../hooks/useMenuAnimation";
+import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
+import { useMenuTransition } from "../../hooks/useMenuTransition.js";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +21,14 @@ export default function Header() {
 
   const shouldRender = useMenuTransition(isOpen, 400);
 
-  useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, socialIconsRef, bookNowRef);
+  useMenuAnimation(
+    isOpen,
+    menuRef,
+    overlayRef,
+    menuLinksRef,
+    socialIconsRef,
+    bookNowRef
+  );
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -85,7 +92,7 @@ export default function Header() {
               ref={menuRef}
               className={`navbar-menu ${
                 isOpen ? "show" : "hide"
-              } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+              } position-fixed top-0 start-0 end-0 bottom-0`}
               style={{
                 zIndex: 9999,
                 backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -103,10 +110,24 @@ export default function Header() {
                     aria-label="Close"
                     onClick={handleOpen}
                   >
-                    <img
-                      src="pstls-assets/images/navigations/x2.svg"
-                      alt="close menu"
-                    />
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <line
+                        x1="4"
+                        y1="4"
+                        x2="20"
+                        y2="20"
+                        stroke="black"
+                        strokeWidth="2"
+                      />
+                      <line
+                        x1="20"
+                        y1="4"
+                        x2="4"
+                        y2="20"
+                        stroke="black"
+                        strokeWidth="2"
+                      />
+                    </svg>
                   </button>
                 </div>
 
@@ -114,7 +135,7 @@ export default function Header() {
                   {MENU_ITEMS.map((item, index) => (
                     <li className="nav-item py-3" key={index}>
                       <a
-                        ref={(el) => (menuLinksRef.current[index + 1] = el)}
+                        ref={(el) => (menuLinksRef.current[index] = el)}
                         className="nav-link text-dark fs-5"
                         href={item.url}
                         onClick={handleOpen}
