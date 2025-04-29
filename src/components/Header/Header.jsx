@@ -1,6 +1,11 @@
 import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
-import { MENU_ITEMS, WHATSAPP, INSTAGRAM, BOOKING_URL_2 } from "../../constants/index.js";
+import {
+  MENU_ITEMS,
+  WHATSAPP,
+  INSTAGRAM,
+  BOOKING_URL_2,
+} from "../../constants/index.js";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
 import { useMenuAnimation } from "./../../hooks/useMenuAnimation.js";
@@ -54,7 +59,7 @@ export default function Header() {
             </svg>
           </button>
 
-          <div className="collapse navbar-collapse justify-content-between">
+          <div className="collapse navbar-collapse justify-content-end d-none d-xl-flex">
             <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
@@ -64,11 +69,6 @@ export default function Header() {
                 </li>
               ))}
             </ul>
-            <div className="ms-auto w-100">
-              <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL_2}>
-                Book now
-              </a>
-            </div>
           </div>
         </nav>
 
@@ -76,7 +76,9 @@ export default function Header() {
         {shouldRender && (
           <div
             ref={menuRef} // 👈 solo aquí
-            className={`navbar-menu ${isOpen ? "show" : "hide"} position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+            className={`navbar-menu ${
+              isOpen ? "show" : "hide"
+            } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
             style={{
               zIndex: 9999,
               backdropFilter: "blur(8px)",
@@ -94,7 +96,10 @@ export default function Header() {
                   aria-label="Close"
                   onClick={handleOpen}
                 >
-                  <img src="pstls-assets/images/navigations/x2.svg" alt="close menu" />
+                  <img
+                    src="pstls-assets/images/navigations/x2.svg"
+                    alt="close menu"
+                  />
                 </button>
               </div>
 
@@ -114,10 +119,20 @@ export default function Header() {
 
               <div className="w-auto">
                 <div className="d-flex">
-                  <a className="text-decoration-none" href={WHATSAPP} target="_blank" rel="noreferrer">
+                  <a
+                    className="text-decoration-none"
+                    href={WHATSAPP}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src={WA} alt="Whatsapp" />
                   </a>
-                  <a className="text-decoration-none" href={INSTAGRAM} target="_blank" rel="noreferrer">
+                  <a
+                    className="text-decoration-none"
+                    href={INSTAGRAM}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src={IG} alt="Instagram" />
                   </a>
                 </div>
