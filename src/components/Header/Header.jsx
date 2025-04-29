@@ -16,37 +16,107 @@ export default function Header() {
   const menuRef = useRef(null);
   const menuLinksRef = useRef([]);
   const overlayRef = useRef(null);
+  const socialIconsRef = useRef([]);
+  const bookNowRef = useRef(null);
 
   const shouldRender = useMenuTransition(isOpen, 400);
 
   useEffect(() => {
-    if (!menuRef.current) return;
+    if (!menuRef.current || !overlayRef.current) return;
 
-    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+    const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
 
     if (isOpen) {
-      gsap.set(menuRef.current, { display: "block" });
+      gsap.set(menuRef.current, { y: "-100%", autoAlpha: 0 });
 
       gsap.fromTo(
         overlayRef.current,
-        { opacity: 0 },
-        { opacity: 1, duration: 0.5, ease: "power2.out" }
+        { autoAlpha: 0 },
+        { autoAlpha: 0.8, duration: 0.8, ease: "power2.out" }
       );
 
-      tl.fromTo(
-        menuRef.current,
-        { x: "100%" },
-        { x: "0%", duration: 0.7 }
-      ).from(
-        menuLinksRef.current,
-        { x: 50, opacity: 0, stagger: 0.1, duration: 0.5 },
-        "-=0.5"
-      );
+      tl.to(menuRef.current, {
+        y: "0%",
+        autoAlpha: 1,
+        duration: 0.8,
+        ease: "power4.out",
+      })
+        .from(
+          menuLinksRef.current,
+          {
+            y: 50,
+            autoAlpha: 0,
+            stagger: 0.1,
+            duration: 0.5,
+            ease: "back.out(1.7)",
+          },
+          "-=0.5"
+        )
+        .from(
+          socialIconsRef.current,
+          {
+            y: 30,
+            autoAlpha: 0,
+            stagger: 0.2,
+            duration: 0.5,
+            ease: "back.out(1.7)",
+          },
+          "-=0.4"
+        )
+        .from(
+          bookNowRef.current,
+          {
+            scale: 0.8,
+            autoAlpha: 0,
+            duration: 0.5,
+            ease: "back.out(1.7)",
+          },
+          "-=0.3"
+        );
     } else {
-      tl.to(overlayRef.current, { opacity: 0, duration: 0.5 }, "<");
+      const tlClose = gsap.timeline({ defaults: { ease: "power3.out" } });
 
-      tl.to(menuRef.current, { x: "100%", duration: 0.7 })
-        .set(menuRef.current, { display: "none" });
+      tlClose
+        .to(bookNowRef.current, {
+          scale: 0.8,
+          autoAlpha: 0,
+          duration: 0.4,
+        })
+        .to(
+          socialIconsRef.current,
+          {
+            y: 30,
+            autoAlpha: 0,
+            stagger: 0.1,
+            duration: 0.3,
+          },
+          "-=0.3"
+        )
+        .to(
+          menuLinksRef.current,
+          {
+            y: 50,
+            autoAlpha: 0,
+            stagger: 0.05,
+            duration: 0.3,
+          },
+          "-=0.3"
+        )
+        .to(menuRef.current, {
+          y: "-100%",
+          autoAlpha: 0,
+          duration: 0.8,
+          ease: "power4.in",
+        })
+        .to(
+          overlayRef.current,
+          {
+            autoAlpha: 0,
+            duration: 0.5,
+          },
+          "-=0.6"
+        )
+        .set(menuRef.current, { clearProps: "all" });
     }
 
     return () => {
@@ -114,7 +184,9 @@ export default function Header() {
           >
             <div
               ref={menuRef}
-              className={`navbar-menu ${isOpen ? "show" : "hide"} position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+              className={`navbar-menu ${
+                isOpen ? "show" : "hide"
+              } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
               style={{
                 zIndex: 9999,
                 backgroundColor: "rgba(255, 255, 255, 0.8)",
@@ -143,7 +215,7 @@ export default function Header() {
                   {MENU_ITEMS.map((item, index) => (
                     <li className="nav-item py-3" key={index}>
                       <a
-                        ref={(el) => (menuLinksRef.current[index] = el)}
+                        ref={(el) => (menuLinksRef.current[index + 1] = el)}
                         className="nav-link text-dark fs-5"
                         href={item.url}
                         onClick={handleOpen}
@@ -161,20 +233,27 @@ export default function Header() {
                       href={WHATSAPP}
                       target="_blank"
                       rel="noreferrer"
+                      ref={(el) => (socialIconsRef.current[0] = el)}
                     >
                       <img src={WA} alt="Whatsapp" />
                     </a>
+
                     <a
                       className="text-decoration-none"
                       href={INSTAGRAM}
                       target="_blank"
                       rel="noreferrer"
+                      ref={(el) => (socialIconsRef.current[1] = el)}
                     >
                       <img src={IG} alt="Instagram" />
                     </a>
                   </div>
                   <div className="py-6">
-                    <a className="btn btn-dark w-100" href={BOOKING_URL_2}>
+                    <a
+                      ref={bookNowRef}
+                      className="btn btn-dark w-100"
+                      href={BOOKING_URL_2}
+                    >
                       Book now
                     </a>
                   </div>
