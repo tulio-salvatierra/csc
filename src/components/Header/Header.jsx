@@ -4,37 +4,36 @@ import { MENU_ITEMS, WHATSAPP, INSTAGRAM, BOOKING_URL_2 } from "../../constants/
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
 import { useMenuAnimation } from "./../../hooks/useMenuAnimation.js";
-import { useMenuTransition } from "./../../hooks/useMenuTransition.js"; // 👈 nuevo
+import { useMenuTransition } from "./../../hooks/useMenuTransition.js";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
 
-  // Controla visibilidad DOM
   const shouldRender = useMenuTransition(isOpen, 400);
 
-  // Controla animación
   useMenuAnimation(menuRef, isOpen, {
     durationOpen: 0.7,
     durationClose: 0.5,
     easeOpen: "power4.out",
     easeClose: "power2.in",
     openX: "0%",
-    closeX: "100%", // Slide desde la derecha
+    closeX: "100%",
   });
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
-    console.log(isOpen);
   };
 
   return (
     <>
-      <section ref={menuRef} className="overflow-hidden sticky-top col-12 col-sm-12">
+      {/* Header NORMAL, no ref, no animación */}
+      <section className="overflow-hidden sticky-top col-12 col-sm-12">
         <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between shadow-xl">
           <a href="/">
             <img className="navbar-brand" src={Logo} alt="logo" width={155} />
           </a>
+
           <button
             className="btn p-0 d-xl-none navbar-burger"
             onClick={handleOpen}
@@ -56,39 +55,34 @@ export default function Header() {
           </button>
 
           <div className="collapse navbar-collapse justify-content-between">
-            <nav className="navbar-nav ms-auto">
-              <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
-                {MENU_ITEMS.map((item, index) => (
-                  <li className="nav-item" key={index}>
-                    <a className="nav-link fs-5" href={item.url}>
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            <nav>
-              <div className="ms-auto w-100">
-                <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL_2}>
-                  Book now
-                </a>
-              </div>
-            </nav>
+            <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
+              {MENU_ITEMS.map((item, index) => (
+                <li className="nav-item" key={index}>
+                  <a className="nav-link fs-5" href={item.url}>
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            <div className="ms-auto w-100">
+              <a className="btn btn-dark mt-md-0 w-100" href={BOOKING_URL_2}>
+                Book now
+              </a>
+            </div>
           </div>
         </nav>
 
+        {/* Aquí SÍ el menú móvil animado */}
         {shouldRender && (
           <div
-            className={`navbar-menu ${
-              isOpen ? "show" : "hide"
-            } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+            ref={menuRef} // 👈 solo aquí
+            className={`navbar-menu ${isOpen ? "show" : "hide"} position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
             style={{
               zIndex: 9999,
               backdropFilter: "blur(8px)",
               backgroundColor: "rgba(255, 255, 255, 0.8)",
             }}
           >
-            
             <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
               <div className="d-flex align-items-center mb-12">
                 <a className="me-auto h4 mb-0 text-decoration-none" href="/">
@@ -104,38 +98,26 @@ export default function Header() {
                 </button>
               </div>
 
-              <div className="w-auto">
-                <ul className="nav flex-column">
-                  {MENU_ITEMS.map((item, index) => (
-                    <li className="nav-item py-3" key={index}>
-                      <a
-                        className="nav-link text-dark fs-5"
-                        href={item.url}
-                        onClick={handleOpen}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="nav flex-column">
+                {MENU_ITEMS.map((item, index) => (
+                  <li className="nav-item py-3" key={index}>
+                    <a
+                      className="nav-link text-dark fs-5"
+                      href={item.url}
+                      onClick={handleOpen}
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
 
               <div className="w-auto">
                 <div className="d-flex">
-                  <a
-                    className="text-decoration-none"
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a className="text-decoration-none" href={WHATSAPP} target="_blank" rel="noreferrer">
                     <img src={WA} alt="Whatsapp" />
                   </a>
-                  <a
-                    className="text-decoration-none"
-                    href={INSTAGRAM}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
+                  <a className="text-decoration-none" href={INSTAGRAM} target="_blank" rel="noreferrer">
                     <img src={IG} alt="Instagram" />
                   </a>
                 </div>
