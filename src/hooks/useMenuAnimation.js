@@ -32,6 +32,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
         duration: 0.8,
         ease: "power4.out",
       })
+      .addLabel("menuOpened")
       .from(
         menuLinksRef.current,
         {
@@ -41,7 +42,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
           duration: 0.5,
           ease: "back.out(1.7)",
         },
-        "-=0.5"
+        "menuOpened+=0.1"
       )
       .from(
         socialIconsRef.current,
@@ -52,7 +53,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
           duration: 0.5,
           ease: "back.out(1.7)",
         },
-        "-=0.4"
+        "menuOpened+=0.4"
       )
       .from(
         bookNowRef.current,
@@ -62,7 +63,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
           duration: 0.5,
           ease: "back.out(1.7)",
         },
-        "-=0.3"
+        "menuOpened+=0.6"
       );
     } else {
       const tlClose = gsap.timeline({ defaults: { ease: "power3.out" } });
@@ -73,6 +74,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
           autoAlpha: 0,
           duration: 0.4,
         })
+        .addLabel("startClose")
         .to(
           socialIconsRef.current,
           {
@@ -81,7 +83,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
             stagger: 0.1,
             duration: 0.3,
           },
-          "-=0.3"
+          "startClose+=0.1"
         )
         .to(
           menuLinksRef.current,
@@ -91,21 +93,25 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
             stagger: 0.05,
             duration: 0.3,
           },
-          "-=0.3"
+          "startClose+=0.2"
         )
         .to(menuRef.current, {
           y: "-100%",
           autoAlpha: 0,
           duration: 0.8,
-          ease: "power4.in",
+          ease: "bounce.out",
         })
-        .to(overlayRef.current, {
-          autoAlpha: 0,
-          backdropFilter: "blur(0px)",
-          backgroundColor: "rgba(0, 0, 0, 0)",
-          duration: 0.6,
-          ease: "power2.in",
-        }, "-=0.6")
+        .to(
+          overlayRef.current,
+          {
+            autoAlpha: 0,
+            backdropFilter: "blur(0px)",
+            backgroundColor: "rgba(0, 0, 0, 0)",
+            duration: 0.6,
+            ease: "power2.in",
+          },
+          "-=0.6"
+        )
         .set(menuRef.current, { clearProps: "all" });
     }
 

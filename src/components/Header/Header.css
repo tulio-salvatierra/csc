@@ -1,6 +1,4 @@
-.mobile-menu {
-  background-image: url("../../assets/images/Butterfly.svg");
-}
+
 
 .navbar-menu {
   position: fixed;
@@ -34,4 +32,11 @@
 
 .navbar-close-button:hover {
   transform: rotate(90deg);
+}
+
+.navbar-menu-background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }

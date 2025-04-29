@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Logo from "../../assets/images/CSC.png";
+import BF from "./../../assets/images/Butterfly.svg";
 import {
   MENU_ITEMS,
   WHATSAPP,
@@ -11,16 +12,26 @@ import IG from "../../assets/icon/instagram.svg";
 import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
 import { useMenuTransition } from "../../hooks/useMenuTransition.js";
 import { gsap } from "gsap";
+import "./Header.css";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const menuRef = useRef(null);
   const menuLinksRef = useRef([]);
   const overlayRef = useRef(null);
   const socialIconsRef = useRef([]);
   const bookNowRef = useRef(null);
 
-  const shouldRender = useMenuTransition(isOpen, 300);
+  useEffect(() => {
+    const img = new Image();
+    img.src = BF;
+    img.onload = () => {
+      setBackgroundLoaded(true);
+    };
+  }, []);
+
+  const shouldRender = useMenuTransition(isOpen, 1000);
 
   useMenuAnimation(
     isOpen,
@@ -45,39 +56,43 @@ export default function Header() {
         duration: 0.4,
         ease: "power3.out",
       })
-      .to(
-        socialIconsRef.current,
-        {
-          y: 30,
+        .to(
+          socialIconsRef.current,
+          {
+            y: 30,
+            autoAlpha: 0,
+            stagger: 0.1,
+            duration: 0.3,
+            ease: "power3.out",
+          },
+          "-=0.3"
+        )
+        .to(
+          menuLinksRef.current,
+          {
+            y: 50,
+            autoAlpha: 0,
+            stagger: 0.05,
+            duration: 0.3,
+            ease: "power3.out",
+          },
+          "-=0.3"
+        )
+        .to(menuRef.current, {
+          y: "-100%",
           autoAlpha: 0,
-          stagger: 0.1,
-          duration: 0.3,
-          ease: "power3.out",
-        },
-        "-=0.3"
-      )
-      .to(
-        menuLinksRef.current,
-        {
-          y: 50,
-          autoAlpha: 0,
-          stagger: 0.05,
-          duration: 0.3,
-          ease: "power3.out",
-        },
-        "-=0.3"
-      )
-      .to(menuRef.current, {
-        y: "-100%",
-        autoAlpha: 0,
-        duration: 0.8,
-        ease: "power4.in",
-      })
-      .to(overlayRef.current, {
-        autoAlpha: 0,
-        backdropFilter: "blur(0px)",
-        duration: 0.5,
-      }, "-=0.6");
+          duration: 0.8,
+          ease: "power4.in",
+        })
+        .to(
+          overlayRef.current,
+          {
+            autoAlpha: 0,
+            backdropFilter: "blur(0px)",
+            duration: 0.5,
+          },
+          "-=0.6"
+        );
     }
 
     setTimeout(() => {
@@ -128,29 +143,32 @@ export default function Header() {
         </nav>
 
         {/* Aquí SÍ el menú móvil animado */}
-        {shouldRender && (
+        {shouldRender && backgroundLoaded && (
           <div
             ref={overlayRef}
             className="position-fixed top-0 start-0 end-0 bottom-0"
             style={{
               zIndex: 9998,
-              backgroundColor: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(8px)",
             }}
             onClick={handleCloseWithAnimation}
           >
             <div
               ref={menuRef}
-              className={`navbar-menu ${
-                isOpen ? "show" : "hide"
-              } position-fixed top-0 start-0 end-0 bottom-0`}
+              className="position-absolute top-0 start-0 end-0 bottom-0"
               style={{
                 zIndex: 9999,
-                backgroundColor: "rgba(255, 255, 255, 0.8)",
+                height: "100%",
+                width: "100%",
+                backgroundColor: "rgba(255, 255, 255, 0.9)",
+                backgroundImage: `url(${BF})`,
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backgroundSize: "cover", // 👈 AQUÍ el cambio importante
               }}
               onClick={(e) => e.stopPropagation()}
             >
-              <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
+              <nav className="position-relative d-flex flex-column py-10 px-6 mobile-menu overflow-auto">
                 <div className="d-flex align-items-center mb-12">
                   <a className="me-auto h4 mb-0 text-decoration-none" href="/">
                     <img src={Logo} alt="logo" width={132} />
