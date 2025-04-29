@@ -31,6 +31,27 @@ export default function Header() {
     };
   }, []);
 
+  useEffect(() => {
+    if (!menuRef.current || !overlayRef.current) return;
+  
+    const handleScroll = () => {
+      const scrollTop = menuRef.current.scrollTop;
+      const blurValue = scrollTop > 10 ? 3 : 8;
+    
+      gsap.to(overlayRef.current, {
+        css: { backdropFilter: `blur(${blurValue}px)` },
+        duration: 0.5,
+        ease: "power2.out",
+      });
+    };
+  
+    menuRef.current.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      menuRef.current.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const shouldRender = useMenuTransition(isOpen, 1000);
 
   useMenuAnimation(

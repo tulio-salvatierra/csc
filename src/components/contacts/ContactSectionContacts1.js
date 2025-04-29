@@ -78,9 +78,9 @@ export default function ContactSection() {
                 width="600"
                 height="450"
                 style={{ border: 0 }}
-                allowFullscreen=""
+                allowFullScreen=""
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
           </div>

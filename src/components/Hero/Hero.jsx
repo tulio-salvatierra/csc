@@ -23,7 +23,7 @@ export default function Hero() {
               Hydrate, renew and balance your skin
             </h1>
             <h2
-              className="w-100 bg-danger-light m-1 p-4 welcome-text fs-6"
+              className="w-100 bg-danger-light p-4 welcome-text fs-6"
               ref={(el) => (animated.current[2] = el)}
             >
               Improve the health and appearance of your skin through

@@ -23,7 +23,9 @@ export default function Solutions() {
         yPercent: -70,
         ease: "none",
         scrollTrigger: {
-          trigger: "bottom bottom",
+          trigger: section,
+          start: "top bottom",
+           end: "bottom bottom",
           scrub: true,
         },
       });
@@ -32,7 +34,9 @@ export default function Solutions() {
         yPercent: 70,
         ease: "none",
         scrollTrigger: {
-          trigger: "bottom bottom",
+          trigger: section,
+          start: "top bottom",
+           end: "bottom bottom",
           scrub: true,
         },
       });
