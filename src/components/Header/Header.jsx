@@ -19,7 +19,7 @@ export default function Header() {
   const socialIconsRef = useRef([]);
   const bookNowRef = useRef(null);
 
-  const shouldRender = useMenuTransition(isOpen, 400);
+  const shouldRender = useMenuTransition(isOpen, 1000);
 
   useMenuAnimation(
     isOpen,

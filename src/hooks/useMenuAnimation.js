@@ -12,8 +12,8 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
 
       gsap.fromTo(
         overlayRef.current,
-        { autoAlpha: 0 },
-        { autoAlpha: 0.8, duration: 0.8, ease: "power2.out" }
+        { autoAlpha: 0, backdropFilter: "blur(0px)" },
+        { autoAlpha: 0.8, backdropFilter: "blur(8px)", duration: 0.8, ease: "power2.out" }
       );
 
       tl.to(menuRef.current, {
@@ -91,6 +91,7 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
         })
         .to(overlayRef.current, {
           autoAlpha: 0,
+          backdropFilter: "blur(0px)",
           duration: 0.5,
         }, "-=0.6")
         .set(menuRef.current, { clearProps: "all" });
