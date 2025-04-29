@@ -10,6 +10,7 @@ import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
 import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
 import { useMenuTransition } from "../../hooks/useMenuTransition.js";
+import { gsap } from "gsap";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ export default function Header() {
   const socialIconsRef = useRef([]);
   const bookNowRef = useRef(null);
 
-  const shouldRender = useMenuTransition(isOpen, 1000);
+  const shouldRender = useMenuTransition(isOpen, 300);
 
   useMenuAnimation(
     isOpen,
@@ -32,6 +33,56 @@ export default function Header() {
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleCloseWithAnimation = () => {
+    if (menuRef.current && overlayRef.current) {
+      const tl = gsap.timeline();
+
+      tl.to(bookNowRef.current, {
+        scale: 0.8,
+        autoAlpha: 0,
+        duration: 0.4,
+        ease: "power3.out",
+      })
+      .to(
+        socialIconsRef.current,
+        {
+          y: 30,
+          autoAlpha: 0,
+          stagger: 0.1,
+          duration: 0.3,
+          ease: "power3.out",
+        },
+        "-=0.3"
+      )
+      .to(
+        menuLinksRef.current,
+        {
+          y: 50,
+          autoAlpha: 0,
+          stagger: 0.05,
+          duration: 0.3,
+          ease: "power3.out",
+        },
+        "-=0.3"
+      )
+      .to(menuRef.current, {
+        y: "-100%",
+        autoAlpha: 0,
+        duration: 0.8,
+        ease: "power4.in",
+      })
+      .to(overlayRef.current, {
+        autoAlpha: 0,
+        backdropFilter: "blur(0px)",
+        duration: 0.5,
+      }, "-=0.6");
+    }
+
+    setTimeout(() => {
+      setIsOpen(false);
+    }, 1000);
   };
 
   return (
@@ -86,7 +137,7 @@ export default function Header() {
               backgroundColor: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(8px)",
             }}
-            onClick={() => setIsOpen(false)}
+            onClick={handleCloseWithAnimation}
           >
             <div
               ref={menuRef}
@@ -138,7 +189,7 @@ export default function Header() {
                         ref={(el) => (menuLinksRef.current[index] = el)}
                         className="nav-link text-dark fs-5"
                         href={item.url}
-                        onClick={handleOpen}
+                        onClick={handleCloseWithAnimation}
                       >
                         {item.title}
                       </a>
