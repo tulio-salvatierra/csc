@@ -1,11 +1,27 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
 import { MENU_ITEMS, WHATSAPP, INSTAGRAM, BOOKING_URL_2 } from "../../constants/index.js";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
+import { useMenuAnimation } from "./../../hooks/useMenuAnimation.js";
+import { useMenuTransition } from "./../../hooks/useMenuTransition.js"; // 👈 nuevo
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null);
+
+  // Controla visibilidad DOM
+  const shouldRender = useMenuTransition(isOpen, 400);
+
+  // Controla animación
+  useMenuAnimation(menuRef, isOpen, {
+    durationOpen: 0.7,
+    durationClose: 0.5,
+    easeOpen: "power4.out",
+    easeClose: "power2.in",
+    openX: "0%",
+    closeX: "100%", // Slide desde la derecha
+  });
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -14,7 +30,7 @@ export default function Header() {
 
   return (
     <>
-      <section className="overflow-hidden sticky-top col-12 col-sm-12">
+      <section ref={menuRef} className="overflow-hidden sticky-top col-12 col-sm-12">
         <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between shadow-xl">
           <a href="/">
             <img className="navbar-brand" src={Logo} alt="logo" width={155} />
@@ -38,7 +54,8 @@ export default function Header() {
               />
             </svg>
           </button>
-          <div className="collapse navbar-collapse justify-content-between ">
+
+          <div className="collapse navbar-collapse justify-content-between">
             <nav className="navbar-nav ms-auto">
               <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
                 {MENU_ITEMS.map((item, index) => (
@@ -60,69 +77,78 @@ export default function Header() {
           </div>
         </nav>
 
-        <div
-          className={`navbar-menu ${
-            isOpen ? "show" : "hide"
-          } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
-          style={{ zIndex: 9999 }}
-        >
+        {shouldRender && (
           <div
-            className="navbar-close position-fixed top-0 start-0 end-0 bottom-0 bg-dark"
+            className={`navbar-menu ${
+              isOpen ? "show" : "hide"
+            } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+            style={{
+              zIndex: 9999,
+              backdropFilter: "blur(8px)",
+              backgroundColor: "rgba(255, 255, 255, 0.8)",
+            }}
+          >
             
-          />
-          <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
-            <div className="d-flex align-items-center mb-12">
-              <a className="me-auto h4 mb-0 text-decoration-none" href="/">
-                <img src={Logo} alt="logo" width={132} />
-              </a>
-              <button
-                className="btn navbar-close"
-                type="button"
-                aria-label="Close"
-                onClick={handleOpen}
-              >
-                <img src="pstls-assets/images/navigations/x2.svg" alt="" />
-              </button>
-            </div>
-            <div className="w-auto">
-              <ul className="nav flex-column">
-                {MENU_ITEMS.map((item, index) => (
-                  <li className="nav-item py-3" key={index}>
-                    <a
-                      className="nav-link text-dark fs-5"
-                      href={item.url}
-                      onClick={handleOpen}
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="w-auto ">
-            <div className="d-flex">
-                  <a className="text-decoration-none" href={WHATSAPP} target="_blank" rel="noreferrer">
-                    <img src={WA} alt="Whatsapp"/>
+            <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
+              <div className="d-flex align-items-center mb-12">
+                <a className="me-auto h4 mb-0 text-decoration-none" href="/">
+                  <img src={Logo} alt="logo" width={132} />
+                </a>
+                <button
+                  className="btn navbar-close"
+                  type="button"
+                  aria-label="Close"
+                  onClick={handleOpen}
+                >
+                  <img src="pstls-assets/images/navigations/x2.svg" alt="close menu" />
+                </button>
+              </div>
+
+              <div className="w-auto">
+                <ul className="nav flex-column">
+                  {MENU_ITEMS.map((item, index) => (
+                    <li className="nav-item py-3" key={index}>
+                      <a
+                        className="nav-link text-dark fs-5"
+                        href={item.url}
+                        onClick={handleOpen}
+                      >
+                        {item.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="w-auto">
+                <div className="d-flex">
+                  <a
+                    className="text-decoration-none"
+                    href={WHATSAPP}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={WA} alt="Whatsapp" />
                   </a>
-                  
-                  <a className="text-decoration-none" href={INSTAGRAM}>
-                    <img src={IG} alt="Instagram"/>
+                  <a
+                    className="text-decoration-none"
+                    href={INSTAGRAM}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={IG} alt="Instagram" />
                   </a>
                 </div>
-              <div className="py-6">
-                <a
-                  className="btn btn-dark w-100"
-                  href={BOOKING_URL_2}
-                >
-                  Book now
-                </a>
+                <div className="py-6">
+                  <a className="btn btn-dark w-100" href={BOOKING_URL_2}>
+                    Book now
+                  </a>
+                </div>
               </div>
-            </div>
-          </nav>
-        </div>
+            </nav>
+          </div>
+        )}
       </section>
     </>
   );
 }
-
-
