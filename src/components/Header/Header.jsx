@@ -256,19 +256,3 @@ export default function Header() {
   );
 }
 
-  // Dynamically adjust overlay blur based on scroll in mobile menu
-  useEffect(() => {
-    if (!menuRef.current || !overlayRef.current) return;
-
-    const handleScroll = () => {
-      const scrollTop = menuRef.current.scrollTop;
-      const blurValue = scrollTop > 10 ? 3 : 8;
-      overlayRef.current.style.backdropFilter = `blur(${blurValue}px)`;
-    };
-
-    menuRef.current.addEventListener("scroll", handleScroll);
-
-    return () => {
-      menuRef.current.removeEventListener("scroll", handleScroll);
-    };
-  }, [menuRef, overlayRef]);
