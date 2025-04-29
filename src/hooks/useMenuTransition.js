@@ -7,13 +7,12 @@ export function useMenuTransition(isOpen, delay = 400) {
     let timeoutId;
 
     if (isOpen) {
-      setShouldRender(true); // 👈 Cuando abres el menú, lo montamos inmediatamente
+      setShouldRender(true);
     } else {
       timeoutId = setTimeout(() => setShouldRender(false), delay);
-      // 👈 Cuando cierras el menú, esperamos 'delay' ms antes de desmontarlo
     }
 
-    return () => clearTimeout(timeoutId); // 👈 Limpieza si el componente se desmonta rápido
+    return () => clearTimeout(timeoutId);
   }, [isOpen, delay]);
 
   return shouldRender;

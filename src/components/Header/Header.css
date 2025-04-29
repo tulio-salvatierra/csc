@@ -3,13 +3,35 @@
 }
 
 .navbar-menu {
-  transition: height 0.3s ease, opacity 0.3s ease;
-  height: 0;
-  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
   overflow: hidden;
+  display: none;
 }
 
 .navbar-menu .show {
   height: auto;
   opacity: 1;
+}
+
+.navbar-close-button {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #111;
+  cursor: pointer;
+  z-index: 10000;
+  transition: transform 0.2s ease;
+}
+
+.navbar-close-button:hover {
+  transform: rotate(90deg);
 }

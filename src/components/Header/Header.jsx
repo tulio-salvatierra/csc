@@ -1,4 +1,5 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
+import gsap from "gsap";
 import Logo from "../../assets/images/CSC.png";
 import {
   MENU_ITEMS,
@@ -8,23 +9,50 @@ import {
 } from "../../constants/index.js";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
-import { useMenuAnimation } from "./../../hooks/useMenuAnimation.js";
 import { useMenuTransition } from "./../../hooks/useMenuTransition.js";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef(null);
+  const menuLinksRef = useRef([]);
+  const overlayRef = useRef(null);
 
   const shouldRender = useMenuTransition(isOpen, 400);
 
-  useMenuAnimation(menuRef, isOpen, {
-    durationOpen: 0.7,
-    durationClose: 0.5,
-    easeOpen: "power4.out",
-    easeClose: "power2.in",
-    openX: "0%",
-    closeX: "100%",
-  });
+  useEffect(() => {
+    if (!menuRef.current) return;
+
+    const tl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+
+    if (isOpen) {
+      gsap.set(menuRef.current, { display: "block" });
+
+      gsap.fromTo(
+        overlayRef.current,
+        { opacity: 0 },
+        { opacity: 1, duration: 0.5, ease: "power2.out" }
+      );
+
+      tl.fromTo(
+        menuRef.current,
+        { x: "100%" },
+        { x: "0%", duration: 0.7 }
+      ).from(
+        menuLinksRef.current,
+        { x: 50, opacity: 0, stagger: 0.1, duration: 0.5 },
+        "-=0.5"
+      );
+    } else {
+      tl.to(overlayRef.current, { opacity: 0, duration: 0.5 }, "<");
+
+      tl.to(menuRef.current, { x: "100%", duration: 0.7 })
+        .set(menuRef.current, { display: "none" });
+    }
+
+    return () => {
+      tl.kill();
+    };
+  }, [isOpen]);
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
@@ -75,74 +103,84 @@ export default function Header() {
         {/* Aquí SÍ el menú móvil animado */}
         {shouldRender && (
           <div
-            ref={menuRef} // 👈 solo aquí
-            className={`navbar-menu ${
-              isOpen ? "show" : "hide"
-            } position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+            ref={overlayRef}
+            className="position-fixed top-0 start-0 end-0 bottom-0"
             style={{
-              zIndex: 9999,
+              zIndex: 9998,
+              backgroundColor: "rgba(0, 0, 0, 0.5)",
               backdropFilter: "blur(8px)",
-              backgroundColor: "rgba(255, 255, 255, 0.8)",
             }}
+            onClick={() => setIsOpen(false)}
           >
-            <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
-              <div className="d-flex align-items-center mb-12">
-                <a className="me-auto h4 mb-0 text-decoration-none" href="/">
-                  <img src={Logo} alt="logo" width={132} />
-                </a>
-                <button
-                  className="btn navbar-close"
-                  type="button"
-                  aria-label="Close"
-                  onClick={handleOpen}
-                >
-                  <img
-                    src="pstls-assets/images/navigations/x2.svg"
-                    alt="close menu"
-                  />
-                </button>
-              </div>
+            <div
+              ref={menuRef}
+              className={`navbar-menu ${isOpen ? "show" : "hide"} position-fixed top-0 start-0 bottom-0 w-75 mw-sm`}
+              style={{
+                zIndex: 9999,
+                backgroundColor: "rgba(255, 255, 255, 0.8)",
+              }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <nav className="position-relative h-100 w-100 d-flex flex-column py-10 px-6 bg-white mobile-menu overflow-auto">
+                <div className="d-flex align-items-center mb-12">
+                  <a className="me-auto h4 mb-0 text-decoration-none" href="/">
+                    <img src={Logo} alt="logo" width={132} />
+                  </a>
+                  <button
+                    className="btn navbar-close"
+                    type="button"
+                    aria-label="Close"
+                    onClick={handleOpen}
+                  >
+                    <img
+                      src="pstls-assets/images/navigations/x2.svg"
+                      alt="close menu"
+                    />
+                  </button>
+                </div>
 
-              <ul className="nav flex-column">
-                {MENU_ITEMS.map((item, index) => (
-                  <li className="nav-item py-3" key={index}>
+                <ul className="nav flex-column">
+                  {MENU_ITEMS.map((item, index) => (
+                    <li className="nav-item py-3" key={index}>
+                      <a
+                        ref={(el) => (menuLinksRef.current[index] = el)}
+                        className="nav-link text-dark fs-5"
+                        href={item.url}
+                        onClick={handleOpen}
+                      >
+                        {item.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="w-auto">
+                  <div className="d-flex">
                     <a
-                      className="nav-link text-dark fs-5"
-                      href={item.url}
-                      onClick={handleOpen}
+                      className="text-decoration-none"
+                      href={WHATSAPP}
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      {item.title}
+                      <img src={WA} alt="Whatsapp" />
                     </a>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="w-auto">
-                <div className="d-flex">
-                  <a
-                    className="text-decoration-none"
-                    href={WHATSAPP}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={WA} alt="Whatsapp" />
-                  </a>
-                  <a
-                    className="text-decoration-none"
-                    href={INSTAGRAM}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={IG} alt="Instagram" />
-                  </a>
+                    <a
+                      className="text-decoration-none"
+                      href={INSTAGRAM}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <img src={IG} alt="Instagram" />
+                    </a>
+                  </div>
+                  <div className="py-6">
+                    <a className="btn btn-dark w-100" href={BOOKING_URL_2}>
+                      Book now
+                    </a>
+                  </div>
                 </div>
-                <div className="py-6">
-                  <a className="btn btn-dark w-100" href={BOOKING_URL_2}>
-                    Book now
-                  </a>
-                </div>
-              </div>
-            </nav>
+              </nav>
+            </div>
           </div>
         )}
       </section>
