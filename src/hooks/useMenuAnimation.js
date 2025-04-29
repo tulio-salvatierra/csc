@@ -9,8 +9,10 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
 
     if (isOpen) {
       gsap.set(menuRef.current, { y: "-100%", autoAlpha: 0 });
-
-      gsap.fromTo(
+    
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+    
+      tl.fromTo(
         overlayRef.current,
         {
           autoAlpha: 0,
@@ -24,13 +26,12 @@ export function useMenuAnimation(isOpen, menuRef, overlayRef, menuLinksRef, soci
           duration: 0.8,
           ease: "power2.out",
         }
-      );
-
-      tl.to(menuRef.current, {
+      )
+      .to(menuRef.current, {
         y: "0%",
         autoAlpha: 1,
         duration: 0.8,
-        ease: "power4.out",
+        ease: "bounce.out",
       })
       .addLabel("menuOpened")
       .from(
