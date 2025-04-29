@@ -3,11 +3,10 @@ import CP from "./../../assets/images/servicesComponent/cp.jpeg";
 import WAX from "./../../assets/images/servicesComponent/wax.jpg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
+import {  useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+
 
 export default function ServicesComponent() {
   const services = [
@@ -37,44 +36,7 @@ export default function ServicesComponent() {
 
   const animated = useRef([]);
 
-  useEffect(() => {
-    const mm = gsap.matchMedia();
-  
-    mm.add("(min-width: 1200px)", () => {
-      // Desktop animation (movement + fade)
-      gsap.from(animated.current, {
-        y: 25,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: animated.current,
-          start: "top 80%",
-          end: "bottom bottom",
-          scrub: false,
-        },
-      });
-    });
-  
-    mm.add("(max-width: 1199px)", () => {
-      // Mobile and Tablet animation (fade only, very smooth)
-      gsap.from(animated.current, {
-        opacity: 0,
-        duration: 1,
-        ease: "power1.out",
-        stagger: 0.4,
-        scrollTrigger: {
-          trigger: animated.current,
-          start: "top 90%", // trigger a bit later for mobile
-          end: "bottom bottom",
-          scrub: false,
-        },
-      });
-    });
-  
-    return () => mm.revert();
-  }, []);
+  useFadeInAnimation(animated);
 
   return (
     <section className="h-100 mt-32 py-24 mb-32">

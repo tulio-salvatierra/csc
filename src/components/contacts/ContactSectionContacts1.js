@@ -1,37 +1,17 @@
 import { TELEPHONE, EMAIL, INSTAGRAM, WHATSAPP, ADDRESS_URL } from "../../constants";
 import WA from "../../assets/icon/whatsapp.svg";
 import IG from "../../assets/icon/instagram.svg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation"; 
 
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 export default function ContactSection() {
 
   const animated = useRef([]);
 
-  useEffect(() => {
-    const easeFromBelow = gsap.matchMedia();
-    easeFromBelow.add("(min-width: 1200px)", () => {
-      gsap.from(animated.current, {
-        y: 25,
-        opacity: 0,
-        duration: 1.5,
-        ease: "power2.out",
-        stagger: 0.5,
-        scrollTrigger: {
-          trigger: animated.current,
-          start: "top 60%",
-          end: "bottom bottom",
-          scrub: false,
-        },
-      });
-    });
-    return () => {
-      easeFromBelow.revert();
-    };
-  }, []);
+  useFadeInAnimation(animated);
 
   return (
     <>
