@@ -9,13 +9,19 @@ import {  useRef } from "react";
 
 export default function BrandsSectionLogoClouds1() {
 
-  const animated = useRef([]);
-  useFadeInAnimation(animated);
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs);
   return (
     <>
       <section className="py-48 bg-white">
         <div className="container">
-          <p  ref={(el) => (animated.current[0] = el)} className="text-muted mb-6 lh-lg text-center">
+          <p  ref={addToRefs} className="text-muted mb-6 lh-lg text-center">
             Trusted by brands all over the world
           </p>
           <div className="row mx-sm-n4">
@@ -26,12 +32,12 @@ export default function BrandsSectionLogoClouds1() {
                 src={HYDRAPRODUCT}
                 alt="hydrafacial-product-logo"
                 style={{ height: 526, width: "auto" }}
-                ref={(el) => (animated.current[1] = el)}
+                ref={addToRefs}
               />
               <div
                 className="bg-primary-light d-flex align-items-center justify-content-center px-4"
                 style={{ height: 380 }}
-                ref={(el) => (animated.current[2] = el)}
+                ref={addToRefs}
               >
                 <img
                   className="img-fluid mx-auto"
@@ -46,7 +52,7 @@ export default function BrandsSectionLogoClouds1() {
                 src={GLOPRODUCT}
                 alt="hydrafacial-product-logo"
                 style={{ height: 526, width: "auto" }}
-                ref={(el) => (animated.current[3] = el)}
+                ref={addToRefs}
               />
               <div
                 className="bg-secondary-light d-flex align-items-center justify-content-center px-4"
@@ -56,7 +62,7 @@ export default function BrandsSectionLogoClouds1() {
                   className="img-fluid d-block mx-auto"
                   src={GLO}
                   alt="GLO-LOGO"
-                  ref={(el) => (animated.current[4] = el)}
+                  ref={addToRefs}
                 />
               </div>
             </div>

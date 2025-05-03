@@ -22,14 +22,19 @@ export default function HL() {
     },
   ];
 
-  const animated = useRef([]);
-
-  useFadeInAnimation(animated);
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs);
 
   return (
     <section className="mt-32 mb-32 py-56 why">
       <h2
-        ref={(el) => (animated.current[0] = el)}
+        ref={addToRefs}
         className="text-center fw-bold mb-4 fs-1"
       >
         Why Choose Us
@@ -38,7 +43,7 @@ export default function HL() {
         {highlights.map((highlight, index) => (
           <div
             key={index}
-            ref={(el) => (animated.current[index + 1] = el)}
+            ref={addToRefs}
             className="col-md-4 bg-black text-white card"
           >
             <div className="card-body p-4">

@@ -1,11 +1,4 @@
-.fade-in-out {
-  opacity: 0;
-  transition: opacity .5s ease-in-out;
-}
 
-.fade-in-out-active {
-  opacity: 1;
-}
 
 .review-box {
   justify-self: center;

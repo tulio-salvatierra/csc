@@ -1,16 +1,17 @@
 import "./../../App.css";
 import Caro from "./../../assets/images/about/carolina.jpg";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation"; 
 import {  useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
-
 export default function AboutPage() {
-  const animated = useRef([]);
-
- useFadeInAnimation(animated);
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs);
 
   return (
     <>
@@ -18,13 +19,13 @@ export default function AboutPage() {
       <section className="mb-5 py-28 align-items-center justify-content-center">
         <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
           <h2
-            ref={(el) => (animated.current[0] = el)}
+            ref={addToRefs}
             className="m-3 text-white display-1"
           >
             Our Story
           </h2>
           <p
-            ref={(el) => (animated.current[1] = el)}
+            ref={addToRefs}
             className="w-50 fw-lighter bg-danger-light p-4"
           >
             Growing up, I struggled with acne in my late teens and early 20s,
@@ -43,12 +44,12 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team Section */}
-      <section ref={(el) => (animated.current[2] = el)} className="mb-5">
+      <section ref={addToRefs} className="mb-5">
         <h2 className="mb-3 hlTitle">About me</h2>
         <div className="row g-4 justify-content-center mt-10">
           {teamMembers.map((member) => (
             <div
-              ref={(el) => (animated.current[3] = el)}
+              ref={addToRefs}
               className="col-12 col-md-8 col-lg-8"
               key={member.name}
             >
@@ -72,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section ref={(el) => (animated.current[4] = el)} className="mb-5 mt-10">
+      <section ref={addToRefs} className="mb-5 mt-10">
         <h2 className="fs-1 mb-3">Our Mission</h2>
         <blockquote className="blockquote border-start ps-3">
           <p className="text-muted">

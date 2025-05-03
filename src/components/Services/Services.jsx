@@ -34,16 +34,21 @@ export default function ServicesComponent() {
     },
   ];
 
-  const animated = useRef([]);
-
-  useFadeInAnimation(animated);
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs);
 
   return (
     <section className="h-100 mt-32 py-24 mb-32">
-      <h2  ref={(el) => (animated.current[0] = el)} className="text-center fs-1 fw-bold mb-4">Services</h2>
+      <h2  ref={addToRefs} className="text-center fs-1 fw-bold mb-4">Services</h2>
       <div className="row g-4">
         {services.map((service, index) => (
-          <div  ref={(el) => (animated.current[index + 1] = el)} key={index} className="col-md-6 p-5">
+          <div  ref={addToRefs} key={index} className="col-md-6 p-5">
             <a href="/services" className="text-decoration-none text-dark">
               <div className="card border-0 service-card h-100 p-5 shadow-lg">
                 <img
