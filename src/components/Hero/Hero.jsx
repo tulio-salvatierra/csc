@@ -18,7 +18,7 @@ export default function Hero() {
           <div className=" hero-content">
             <h1
               className="display-4 heading text-white text-center"
-              ref={(el) => (animated.current[3] = el)}
+              ref={(el) => (animated.current[1] = el)}
             >
               Hydrate, renew and balance your skin
             </h1>
@@ -34,7 +34,7 @@ export default function Hero() {
             <a
               className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
               href={BOOKING_URL_2}
-              ref={(el) => (animated.current[1] = el)}
+              ref={(el) => (animated.current[3] = el)}
             >
               Book my appointment now!
             </a>

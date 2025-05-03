@@ -12,11 +12,11 @@ export default function CancellationPolicy() {
       ref={(el) => (animated.current[0] = el)}
       className="py-48 bg-white text-dark"
     >
-      <div className="container py-48 shadow-sm bg-primary-light">
+      <div  ref={(el) => (animated.current[1] = el)} className="container py-48 shadow-sm bg-primary-light">
         <div className="row justify-content-center">
           <div className="col-lg-8">
             <h2
-              ref={(el) => (animated.current[1] = el)}
+              ref={(el) => (animated.current[2] = el)}
               className="text-center mb-4 fs-1 "
             >
               New Cancellation Policy{" "}
@@ -24,7 +24,8 @@ export default function CancellationPolicy() {
             <div className="card shadow-sm border-0 rounded-4">
               <div className="card-body p-4">
                 <p
-                  ref={(el) => (animated.current[2] = el)}
+                  ref={(el) => (animated.current[3] = el)}
+                  
                   className="mb-4 text-muted"
                 >
                   To ensure customer satisfaction, we kindly ask as a courtesy
@@ -33,24 +34,29 @@ export default function CancellationPolicy() {
                   rescheduling.
                 </p>
                 <ul className="mb-4 text-left ">
-                  <li className="mb-2 text-muted">
+                  <li
+                  ref={(el) => (animated.current[4] = el)}
+                  className="mb-2 text-muted">
                     <strong>Within 48 Hours:</strong> 50% of the service cost
                     will be charged.
                   </li>
-                  <li className="mb-2 text-muted">
+                  <li 
+                  ref={(el) => (animated.current[5] = el)}
+                  className="mb-2 text-muted">
                     <strong>
                       Same-Day Cancellations / Rescheduling / No-Shows:
                     </strong>{" "}
                     Full service cost will be charged.
                   </li>
                 </ul>
-                <p className="text-muted mb-0">
+                <p ref={(el) => (animated.current[6] = el)} className="text-muted mb-0">
                   Thank you for your understanding and cooperation!
                 </p>
               </div>
               <a
                 href="/policies"
                 className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
+                ref={(el) => (animated.current[7] = el)}
               >
                 Read our policies
               </a>
