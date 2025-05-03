@@ -26,13 +26,13 @@ export default function ContactSection() {
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
                 <h2 className="display-3 mb-10 font-heading">Contact</h2>
-                <p className="text-muted fs-3">
+                <p className="text-muted fs-3 text-center">
                   Get in touch with us today for all your skincare needs.
                 </p>
               </div>
             </div>
             <div className="flex-wrap flex-md-row">
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-left">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 fs-2">Address</h3>
                 <a
                   className="mb-0 text-muted fs-4 text-decoration-none"
@@ -42,7 +42,7 @@ export default function ContactSection() {
                   79705
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 fs-2">E-mail</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
@@ -51,7 +51,7 @@ export default function ContactSection() {
                   {EMAIL}
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
                 <a
                   href={TELEPHONE}
@@ -60,9 +60,9 @@ export default function ContactSection() {
                   432-638-0046
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-2 fs-2">Socials</h3>
-                <div className="d-flex">
+                <div className="d-flex justify-content-center">
                   <a
                     className="text-decoration-none p-3"
                     href={WHATSAPP}

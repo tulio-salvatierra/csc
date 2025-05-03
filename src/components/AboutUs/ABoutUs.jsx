@@ -18,7 +18,7 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <section className="mb-5 py-28 align-items-center justify-content-center">
         <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
-          <h2 ref={addToRefs} className="m-3 text-white display-1">
+          <h2 ref={addToRefs} className="mb-3 text-white display-1">
             Our Story
           </h2>
           <p ref={addToRefs} className="w-50 fw-lighter bg-danger-light p-4">
@@ -34,7 +34,7 @@ export default function AboutPage() {
 
       {/* Our Team Section */}
       <section ref={addToRefs} className="mb-5">
-        <h2 className="mb-3 hlTitle">About me</h2>
+        <h2 className="mb-3 fs-1">About me</h2>
         <div className="row g-4 justify-content-center mt-10">
           {teamMembers.map((member) => (
             <div
