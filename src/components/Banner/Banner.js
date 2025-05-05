@@ -11,38 +11,33 @@ export function Banner() {
   let xTo;
 
   useEffect(() => {
-    let isWheeling;
-    let tickerId;
-
+    let wheelDelta = 0;
+    let total = 0;
     const content = containerRef.current;
     const phraseWidth = phraseRef.current.clientWidth;
     const wrap = gsap.utils.wrap(-phraseWidth, 0);
 
-    xTo = gsap.quickTo(content, "x", {
-      duration: 0.5,
-      ease: 'power3',
+    const xTo = gsap.quickTo(content, "x", {
+      duration: 1,
+      ease: 'none',
       modifiers: {
         x: gsap.utils.unitize(wrap),
       },
     });
 
     const tick = () => {
-      if (wheel !== 0) {
-        total -= wheel;
-        xTo(total);
-      }
-    };
+      total -= 1.2 + wheelDelta * 1;
+      xTo(total);
 
-    tickerId = gsap.ticker.add(tick);
+      wheelDelta *= 0.9;
+      if (Math.abs(wheelDelta) < 0.01) wheelDelta = 0;
+    };
 
     const handleWheel = (e) => {
-      wheel = e.deltaY;
-      clearTimeout(isWheeling);
-      isWheeling = setTimeout(() => {
-        wheel = 0;
-      }, 600);
+      wheelDelta += e.deltaY * 0.02;
     };
 
+    gsap.ticker.add(tick);
     window.addEventListener('wheel', handleWheel, { passive: true });
 
     return () => {
@@ -55,8 +50,10 @@ export function Banner() {
     <section className="mwg_effect013 h-100 mb-96">
       <div className="inner">
         <div className="container" ref={containerRef}>
-          <p className="phrase flex" ref={phraseRef} style={{ height: "400px" }}>
-            <img src={BF} className="h-100" />
+          <p className="phrase flex" ref={phraseRef} style={{ height: "300px" }}>
+            {Array.from({ length: 10 }).map((_, index) => (
+              <img key={index} src={BF} className="h-100" alt="Banner frame" />
+            ))}
           </p>
         </div>
       </div>
