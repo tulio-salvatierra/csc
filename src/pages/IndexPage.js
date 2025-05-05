@@ -12,6 +12,7 @@ import SingleReviewCarousel from "../components/Review/Review";
 import Solutions from "../components/Solution/Solution";
 import HL from "../components/Highlights";
 import CancellationPolicy from "../components/CancelationPolicy";
+import { Banner } from "../components/Banner/Banner";
 
 export default function IndexPage() {
   return (
@@ -26,6 +27,7 @@ export default function IndexPage() {
           <CancellationPolicy />
           <Services />
           <HL />
+          <Banner />
           <SingleReviewCarousel />
           <BrandsSection />
           <ContactSection />
