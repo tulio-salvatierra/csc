@@ -26,9 +26,9 @@
 
 html,
 body {
-  width: 100dvw;
-  height: 100dvh;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-behavior: auto;
+  
 }
 
 section {
