@@ -13,23 +13,13 @@ import About from "./pages/AboutPage";
 function App() {
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.2,
-      easing: (x) => Math.sin((x * Math.PI) / 3), // easeOutSine
-      smooth: true,
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smoothTouch: true,
-      touchMultiplier: .12,
-    });
-
+    const lenis = new Lenis();
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
-  }, []);
+  });
   return (
     <Routes>
       <Route path="/" element={<IndexPage />} />
