@@ -1,9 +1,26 @@
 import { TELEPHONE } from "../../constants";
+import { useRef } from "react";
+import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 
 export default function FaqSectionFaq1() {
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs, {
+    y: 20,
+    opacity: 0,
+    duration: 0.8,
+    ease: "power2.out",
+    stagger: 0.2,
+    start: "top 90%"
+  });
   return (
     <>
-      <section className="py-24 bg-light">
+      <section className="py-24 bg-light" ref={addToRefs}>
         <div className="container">
           <div className="mw-xl mx-auto text-center mb-20 mb-xl-16">
             <h1 className="fs-1 mb-6 lh-sm text-center px-xl-12 font-heading">
@@ -11,7 +28,7 @@ export default function FaqSectionFaq1() {
             </h1>
           </div>
           <div className="row mb-20 mb-xl-24">
-            <div className="col-12 col-md-6 px-xl-4 mb-8">
+            <div className="col-12 col-md-6 px-xl-4 mb-8" ref={addToRefs}>
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
                   className="img-fluid mx-auto d-block"
@@ -30,7 +47,7 @@ export default function FaqSectionFaq1() {
                 </p>
               </div>
             </div>
-            <div className="col-12 col-md-6 px-xl-4 mb-8">
+            <div className="col-12 col-md-6 px-xl-4 mb-8" ref={addToRefs}>
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
                   className="img-fluid mx-auto d-block"
@@ -47,7 +64,7 @@ export default function FaqSectionFaq1() {
                 </p>
               </div>
             </div>
-            <div className="col-12 col-md-6 px-xl-4 mb-8">
+            <div className="col-12 col-md-6 px-xl-4 mb-8" ref={addToRefs}>
               <div className="bg-white py-12 px-6 px-md-16">
                 <img
                   className="img-fluid mx-auto d-block"
@@ -64,7 +81,7 @@ export default function FaqSectionFaq1() {
                 </p>
               </div>
             </div>
-            <div className="col-12 col-md-6 px-xl-4 mb-8">
+            <div className="col-12 col-md-6 px-xl-4 mb-8" ref={addToRefs}>
               <div className="bg-white py-12 px-6 px-md-16 text-center">
                 <img
                   className="img-fluid mx-auto d-block"
@@ -84,7 +101,7 @@ export default function FaqSectionFaq1() {
               </div>
             </div>
           </div>
-          <div className="text-center align-items-center justify-content-center">
+          <div className="text-center align-items-center justify-content-center" ref={addToRefs}>
             <img
               className="img-fluid"
               src="pstls-assets/icons/faq-info.svg"

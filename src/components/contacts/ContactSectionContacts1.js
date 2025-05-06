@@ -9,25 +9,30 @@ import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
 
 export default function ContactSection() {
 
-  const animated = useRef([]);
-
-  useFadeInAnimation(animated);
+  const fadeRefs = useRef([]);
+  fadeRefs.current = [];
+  const addToRefs = el => {
+    if (el && !fadeRefs.current.includes(el)) {
+      fadeRefs.current.push(el);
+    }
+  };
+  useFadeInAnimation(fadeRefs);
 
   return (
     <>
       <>
-        <section ref={(el) => (animated.current[0] = el)} className="position-relative py-28 bg-white">
+        <section ref={addToRefs} className="position-relative py-28 bg-white">
           <div className="p-4">
             <div className="row mb-8 mb-md-24">
               <div className="col-12">
                 <h2 className="display-3 mb-10 font-heading">Contact</h2>
-                <p className="text-muted fs-3">
+                <p className="text-muted fs-3 text-center">
                   Get in touch with us today for all your skincare needs.
                 </p>
               </div>
             </div>
             <div className="flex-wrap flex-md-row">
-              <div ref={(el) => (animated.current[1] = el)} className="col-6 col-sm-12 p-4 text-left">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 fs-2">Address</h3>
                 <a
                   className="mb-0 text-muted fs-4 text-decoration-none"
@@ -37,7 +42,7 @@ export default function ContactSection() {
                   79705
                 </a>
               </div>
-              <div ref={(el) => (animated.current[2] = el)} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 fs-2">E-mail</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
@@ -46,7 +51,7 @@ export default function ContactSection() {
                   {EMAIL}
                 </a>
               </div>
-              <div ref={(el) => (animated.current[3] = el)} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
                 <a
                   href={TELEPHONE}
@@ -55,9 +60,9 @@ export default function ContactSection() {
                   432-638-0046
                 </a>
               </div>
-              <div ref={(el) => (animated.current[4] = el)} className="col-6 col-sm-12 p-4">
+              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
                 <h3 className="mb-2 fs-2">Socials</h3>
-                <div className="d-flex">
+                <div className="d-flex justify-content-center">
                   <a
                     className="text-decoration-none p-3"
                     href={WHATSAPP}
@@ -72,7 +77,7 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <div ref={(el) => (animated.current[5] = el)} className="row">
+            <div ref={addToRefs} className="row">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"
                 width="600"
