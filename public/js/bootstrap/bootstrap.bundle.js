@@ -1,4 +1,5 @@
 /* eslint-disable import/no-unused-modules */
+/* eslint-disable import/no-unused-modules */
 /*!
   * Bootstrap v5.0.0 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -2062,7 +2063,7 @@
         });
       });
     };
-  } // eslint-disable-next-line import/no-unused-modules
+  }
 
 
   var applyStyles$1 = {
