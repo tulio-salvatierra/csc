@@ -1,3 +1,4 @@
+/* eslint-disable import/no-unused-modules */
 /*!
   * Bootstrap v5.0.0 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
@@ -361,7 +362,7 @@
             event.delegateTarget = target;
 
             if (handler.oneOff) {
-              // eslint-disable-next-line unicorn/consistent-destructuring
+              // eslint-disable-next-line
               EventHandler.off(element, event.type, selector, fn);
             }
 
@@ -3631,7 +3632,7 @@
   var defaultModifiers = [eventListeners, popperOffsets$1, computeStyles$1, applyStyles$1, offset$1, flip$1, preventOverflow$1, arrow$1, hide$2];
   var createPopper = /*#__PURE__*/popperGenerator({
     defaultModifiers: defaultModifiers
-  }); // eslint-disable-next-line import/no-unused-modules
+  }); 
 
   var Popper = /*#__PURE__*/Object.freeze({
     __proto__: null,
