@@ -3,12 +3,10 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
 import BrandsSection from "../components/BrandSection/BrandsSectionLogoClouds1";
-import Footer from "./Footer";
-
+import Footer from "../components/Footer";
 import "../App.css";
 import Services from "../components/Services";
 import SingleReviewCarousel from "../components/Review/Review";
-
 import Solutions from "../components/Solution/Solution";
 import HL from "../components/Highlights";
 import CancellationPolicy from "../components/CancelationPolicy";

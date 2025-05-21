@@ -18,10 +18,10 @@ export default function AboutPage() {
       {/* Our Story Section */}
       <section className="mb-5 py-28 align-items-center justify-content-center">
         <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
-          <h2 ref={addToRefs} className="mb-3 text-white display-1">
+          <h2 ref={addToRefs} className="mb-3 text-white display-1 mt-28">
             Our Story
           </h2>
-          <p ref={addToRefs} className="w-50 fw-lighter bg-danger-light p-4">
+          <p ref={addToRefs} className="w-50 fw-lighter bg-danger-light p-4 mt-4">
             I battled acne in my late teens and early twenties, which shook my
             confidence. After seeing real results from professional treatments,
             I felt renewed and inspired to help others achieve that same boost.

@@ -1,7 +1,7 @@
 import ServicesComponent from "../components/blog/ServicesComponent";
 import Header from "../components/Header";
 import CallToAction from "../components/Call-to-action";
-import Footer from "./Footer";
+import Footer from "./../components/Footer";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
 import FloatingCallbutton from "../components/floatingCallButton";
 
