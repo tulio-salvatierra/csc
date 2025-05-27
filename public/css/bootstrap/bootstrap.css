@@ -1,9 +1,11 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 11 | @import "./../node_modules/bootstrap/scss/functions";
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   src/scss/bootstrap-theme.scss 11:9  root stylesheet */
+/* Error: Undefined mixin.
+ *   ,
+ * 2 |   @include clearfix();
+ *   |   ^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   node_modules/bootstrap/scss/helpers/_clearfix.scss 2:3  @use
+ *   node_modules/bootstrap/scss/_helpers.scss 1:1           @use
+ *   src/scss/bootstrap-theme.scss 14:1                      root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 11 \2502  @import \"./../node_modules/bootstrap/scss/functions\";\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src/scss/bootstrap-theme.scss 11:9  root stylesheet";
+  content: "Error: Undefined mixin.\a   \2577 \a 2 \2502    @include clearfix();\a   \2502    ^^^^^^^^^^^^^^^^^^^\a   \2575 \a   node_modules/bootstrap/scss/helpers/_clearfix.scss 2:3  @use\a   node_modules/bootstrap/scss/_helpers.scss 1:1           @use\a   src/scss/bootstrap-theme.scss 14:1                      root stylesheet";
 }
