@@ -1,6 +1,6 @@
 import Cancel from "./../../assets/images/policies/Group 18.jpg";
 import Business from "./../../assets/images/policies/business.jpg";
-import GiftCard from "./../../assets/images/policies/giftcard.jpg";
+import GiftCard from "./../../assets/images/policies/Group 18.jpg";
 
 export const policies = [
   {
@@ -19,6 +19,6 @@ export const policies = [
     title: "Gift Card Policy",
     image: GiftCard,
     description:
-      "Our Giftcard are non-refundable and Non-transferable, they cannot be exchanged for cash. They are valid for 12 months from the date of purchase. Gift cards can be used towards any of our services or products.",
+      "Our Gift card are non-refundable and Non-transferable, they cannot be exchanged for cash. They are valid for 12 months from the date of purchase. Gift cards can be used towards any of our services or products.",
   },
 ];
