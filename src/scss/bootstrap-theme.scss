@@ -10,7 +10,7 @@ $dark: #212529;
 
 // 2. Importa módulos base en el orden necesario
 @use "../../node_modules/bootstrap/scss/functions" as *;
-@use "../../node_modules/bootstrap/scss/mixins" as *;
+
 @use "../../node_modules/bootstrap/scss/helpers" as *;
 @use "../../node_modules/bootstrap/scss/variables" as vars;
 
