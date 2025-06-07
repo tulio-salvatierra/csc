@@ -1,7 +1,8 @@
-import "../../App.css";
+
 import { BOOKING_URL_2 } from "../../constants";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
+import "./Hero.css"; 
 
 export default function Hero() {
   const fadeRefs = useRef([]);
@@ -44,19 +45,19 @@ export default function Hero() {
   return (
     <>
       <section
-        className="bg-hero d-flex align-items-center justify-content-center"
+        className="bg-hero items-center"
         ref={addToRefs}
       >
-        <div className="d-flex flex-column justify-content-center align-items-center">
-          <div className=" hero-content">
+        <div className="flex">
+          <div className="px-4 flex flex-col justify-center items-center w-full h-screen">
             <h1
-              className="display-4 heading text-white text-center"
+              className="text-4xl font-bold text-white"
               ref={addToSplitRefs}
             >
               Hydrate, renew and balance your skin
             </h1>
             <h2
-              className="w-100 bg-danger-light p-4 welcome-text fs-6"
+              className="bg-red-100 p-4 text-gray-800 mt-4"
               ref={addToRefs}
             >
               Improve the health and appearance of your skin through
@@ -65,7 +66,7 @@ export default function Hero() {
               heart of Midland, TX.
             </h2>
             <a
-              className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
+              className="bg-black text-white p-4 mt-4 text-xl"
               href={BOOKING_URL_2}
               ref={addToRefs}
             >

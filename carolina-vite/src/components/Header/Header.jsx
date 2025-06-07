@@ -111,16 +111,16 @@ export default function NewHeader() {
         aria-expanded={isOpen}
         aria-label="Toggle menu"
       >
-        <p
+        <h2
           ref={(el) => {
             if (el && !menuButtonTexts.current.includes(el))
               menuButtonTexts.current.push(el);
           }}
-          className="text- font-medium leading-none"
+          className="text-lg font-medium leading-none"
           aria-hidden="true"
         >
           Menu
-        </p>
+        </h2>
        
         <svg
           ref={menuButtonIcon}
@@ -178,7 +178,7 @@ export default function NewHeader() {
             ></div>
           </div>
           <div className="menu-inner">
-            <h2 className="p-6 text-gray-500 text-xl font-bold">Menu</h2>
+            <h2 className="p-6 text-gray-500 text-xl sm:text-sm  font-normal">Menu</h2>
             <ul className="menu-list flex flex-col p-6 space-y-4">
               {MENU_ITEMS.map(({ title, number, url },idx) => (
                 

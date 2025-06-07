@@ -1,6 +1,15 @@
 .p-small {
-  font-size: .875em;
+  font-size: 0.875em;
   margin: 0;
+}
+
+h2 {
+  font-family: Grapevine, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.5em;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0.5em;
 }
 
 .socials-row {
@@ -61,7 +70,7 @@
 
 .eyebrow {
   z-index: 1;
-  color: #000 .5;
+  color: #000 0.5;
   text-transform: uppercase;
   font-family: Grapevine, Arial, sans-serif;
   font-weight: 400;
@@ -90,6 +99,7 @@
 
 .p-large.text-link {
   color: #131313;
+  font-family: Moula, Arial, sans-serif;
 }
 
 .menu-details {
@@ -118,12 +128,12 @@
 }
 
 .menu-link {
-  grid-column-gap: .75em;
-  grid-row-gap: .75em;
+  grid-column-gap: 0.75em;
+  grid-row-gap: 0.75em;
   color: #131313;
   width: 100%;
-  padding-top: .75em;
-  padding-bottom: .75em;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
   padding-left: 2em;
   text-decoration: none;
   display: flex;
@@ -134,9 +144,21 @@
   text-transform: uppercase;
   font-family: Grapevine, Arial, sans-serif;
   font-size: 5.625em;
+
+  @media (max-width: 1024px) {
+    font-size: 4em;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 3em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2em;
+  }
   font-weight: 700;
-  line-height: .75;
-  transition: transform .55s cubic-bezier(.65, .05, 0, 1);
+  line-height: 0.75;
+  transition: transform 0.55s cubic-bezier(0.65, 0.05, 0, 1);
   position: relative;
 }
 
@@ -152,8 +174,8 @@
 
 .menu-button {
   z-index: 10;
-  grid-column-gap: .625em;
-  grid-row-gap: .625em;
+  grid-column-gap: 0.625em;
+  grid-row-gap: 0.625em;
   justify-content: flex-end;
   align-items: center;
   margin: -1em;
@@ -171,7 +193,7 @@
 }
 
 .icon-wrap {
-  transition: transform .4s cubic-bezier(.65, .05, 0, 1);
+  transition: transform 0.4s cubic-bezier(0.65, 0.05, 0, 1);
 }
 
 .menu-button-icon {

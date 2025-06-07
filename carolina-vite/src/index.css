@@ -32,11 +32,7 @@
     
   }
   
-  section {
-    margin: 0;
-    margin-right: auto;
-    margin-left: auto;
-  }
+
   
   .hlTitle {
     font-family: "Moula";
@@ -266,18 +262,5 @@
     display: none !important;
   }
   
-  h1,
-  a,
-  p {
-    font-family: "Moula";
-    color: black;
-    text-align: left;
-    font-size: clamp(1em, 2vw, 1.15em);
-  }
-  
-  h1 {
-    font-size: clamp(4em 5vw 6em);
-    font-weight: bold;
-    text-align: left;
-  }
+
   
