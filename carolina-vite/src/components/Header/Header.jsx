@@ -1,228 +1,237 @@
-import { useState, useRef, useEffect } from "react";
-import Logo from "../../assets/images/CSC.png";
-import BF from "./../../assets/images/Butterfly.svg";
+import React, { useRef, useEffect, useState } from "react";
+import "./Header.css";
+import { gsap } from "gsap";
+import { CustomEase } from "gsap/CustomEase";
 import {
   MENU_ITEMS,
   WHATSAPP,
   INSTAGRAM,
   BOOKING_URL_2,
 } from "../../constants/index.js";
-import WA from "../../assets/icon/whatsapp.svg";
-import IG from "../../assets/icon/instagram.svg";
-import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
-import { useMenuTransition } from "../../hooks/useMenuTransition.js";
-import { gsap } from "gsap";
-import "./Header.css";
 
-export default function Header() {
+export default function NewHeader() {
   const [isOpen, setIsOpen] = useState(false);
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-  const menuRef = useRef(null);
-  const menuLinksRef = useRef([]);
-  const overlayRef = useRef(null);
-  const socialIconsRef = useRef([]);
-  const bookNowRef = useRef(null);
+  const navWrap = useRef(null);
+  const overlay = useRef(null);
+  const menu = useRef(null);
+  const bgPanels = useRef([]);
+  const menuLinks = useRef([]);
+  const fadeTargets = useRef([]);
+  const menuButtonTexts = useRef([]);
+  const menuButtonIcon = useRef(null);
+  const tl = useRef();
 
   useEffect(() => {
-    const img = new Image();
-    img.src = BF;
-    img.onload = () => {
-      setBackgroundLoaded(true);
-    };
+    gsap.registerPlugin(CustomEase);
+    CustomEase.create("main", "0.65, 0.01, 0.05, 0.99");
+    gsap.defaults({
+      ease: "main",
+      duration: 0.7,
+    });
+
+    tl.current = gsap.timeline({ paused: true });
+
+    // Initialize refs arrays length
+    bgPanels.current = bgPanels.current.slice(0, 3);
+    menuLinks.current = menuLinks.current.slice(0, 5);
+    fadeTargets.current = fadeTargets.current.slice(0, 8);
+    menuButtonTexts.current = menuButtonTexts.current.slice(0, 2);
   }, []);
 
   useEffect(() => {
-    if (!menuRef.current || !overlayRef.current) return;
+    if (!tl.current) return;
 
-    const menuElement = menuRef.current; // Copy menuRef.current to a local variable
+    if (isOpen) {
+      navWrap.current.style.display = "block";
 
-    const handleScroll = () => {
-      const scrollTop = menuElement.scrollTop;
-      const blurValue = scrollTop > 10 ? 3 : 8;
+      tl.current
+        .clear()
+        .set(navWrap.current, { display: "block" })
+        .set(menu.current, { xPercent: 0 }, "<")
+        .fromTo(
+          menuButtonTexts.current,
+          { yPercent: 0 },
+          { yPercent: -100, stagger: 0.2 }
+        )
+        .fromTo(menuButtonIcon.current, { rotate: 0 }, { rotate: 315 }, "<")
+        .fromTo(overlay.current, { autoAlpha: 0 }, { autoAlpha: 1 }, "<")
+        .fromTo(
+          bgPanels.current,
+          { xPercent: 101 },
+          { xPercent: 0, stagger: 0.12, duration: 0.575 },
+          "<"
+        )
+        .fromTo(
+          menuLinks.current,
+          { yPercent: 140, rotate: 10 },
+          { yPercent: 0, rotate: 0, stagger: 0.05 },
+          "<+=0.35"
+        )
+        .fromTo(
+          fadeTargets.current,
+          { autoAlpha: 0, yPercent: 50 },
+          { autoAlpha: 1, yPercent: 0, stagger: 0.04 },
+          "<+=0.2"
+        );
+      tl.current.play();
+    } else {
+      tl.current
+        .clear()
+        .to(overlay.current, { autoAlpha: 0 })
+        .to(menu.current, { xPercent: 120 }, "<")
+        .to(menuButtonTexts.current, { yPercent: 0 }, "<")
+        .to(menuButtonIcon.current, { rotate: 0 }, "<")
+        .set(navWrap.current, { display: "none" });
+      tl.current.play();
+    }
+  }, [isOpen]);
 
-      gsap.to(overlayRef.current, {
-        css: { backdropFilter: `blur(${blurValue}px)` },
-        duration: 0.5,
-        ease: "power2.out",
-      });
+  // Close menu on Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isOpen) {
+        setIsOpen(false);
+      }
     };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [isOpen]);
 
-    menuElement.addEventListener("scroll", handleScroll);
-
-    return () => {
-      menuElement.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const shouldRender = useMenuTransition(isOpen, 1000);
-
-  useMenuAnimation(
-    isOpen,
-    menuRef,
-    overlayRef,
-    menuLinksRef,
-    socialIconsRef,
-    bookNowRef
-  );
-
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
+  const toggleMenu = () => {
+    setIsOpen((prev) => !prev);
   };
 
- 
+  const socials = [...WHATSAPP, ...INSTAGRAM];
+
   return (
     <>
-      {/* Header NORMAL, no ref, no animación */}
-      <section className="overflow-hidden sticky-top col-12 col-sm-12">
-        <nav className="navbar py-5 navbar-expand-xl navbar-light bg-white justify-content-between shadow-xl">
-          <a href="/">
-            <img className="navbar-brand" src={Logo} alt="logo" width={155} />
-          </a>
+      <button
+        className="menu-button fixed top-8 right-8 z-60 flex flex-col items-center justify-center space-y-1 bg-white p-2 rounded-md shadow-md cursor-pointer"
+        onClick={toggleMenu}
+        aria-expanded={isOpen}
+        aria-label="Toggle menu"
+      >
+        <p
+          ref={(el) => {
+            if (el && !menuButtonTexts.current.includes(el))
+              menuButtonTexts.current.push(el);
+          }}
+          className="text- font-medium leading-none"
+          aria-hidden="true"
+        >
+          Menu
+        </p>
+       
+        <svg
+          ref={menuButtonIcon}
+          className="menu-button-icon w-6 h-6 text-gray-800"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
 
-          <button
-            className="btn p-0 d-xl-none navbar-burger"
-            onClick={handleOpen}
-          >
-            <svg
-              width={32}
-              height={32}
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
-                fill="#000"
-              />
-            </svg>
-          </button>
-
-          <div className="collapse navbar-collapse justify-content-end d-none d-xl-flex">
-            <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
-              {MENU_ITEMS.map((item, index) => (
-                <li className="nav-item" key={index}>
-                  <a className="nav-link fs-5" href={item.url}>
-                    {item.title}
+      <div
+        ref={navWrap}
+        className={`fixed inset-0 z-50 ${isOpen ? "block" : "hidden"}`}
+        data-nav={isOpen ? "open" : "closed"}
+      >
+        <div
+          ref={overlay}
+          className="fixed inset-0 bg-black/50 backdrop-blur-lg"
+          data-menu-toggle=""
+          onClick={() => setIsOpen(false)}
+        ></div>
+        <nav
+          ref={menu}
+          className="absolute inset-y-0 right-0 w-3/4 md:w-1/3 bg-white shadow-lg overflow-y-auto flex flex-col"
+        >
+          <div className="menu-bg">
+            <div
+              ref={(el) => {
+                if (el && !bgPanels.current.includes(el))
+                  bgPanels.current.push(el);
+              }}
+              className="bg-panel first"
+            ></div>
+            <div
+              ref={(el) => {
+                if (el && !bgPanels.current.includes(el))
+                  bgPanels.current.push(el);
+              }}
+              className="bg-panel second"
+            ></div>
+            <div
+              ref={(el) => {
+                if (el && !bgPanels.current.includes(el))
+                  bgPanels.current.push(el);
+              }}
+              className="bg-panel"
+            ></div>
+          </div>
+          <div className="menu-inner">
+            <h2 className="p-6 text-gray-500 text-xl font-bold">Menu</h2>
+            <ul className="menu-list flex flex-col p-6 space-y-4">
+              {MENU_ITEMS.map(({ title, number, url },idx) => (
+                
+                <li key={idx} className="menu-list-item">
+                  <a
+                    href={`${url}`}
+                    className="menu-link w-inline-block flex justify-between items-center"
+                    ref={(el) => {
+                      if (el && !menuLinks.current.includes(el))
+                        menuLinks.current.push(el);
+                    }}
+                  >
+                    <p className="menu-link-heading text-2xl font-semibold">
+                      {title}
+                    </p>
+                    <p className="eyebrow text-sm text-gray-500">{number}</p>
                   </a>
                 </li>
               ))}
             </ul>
-          </div>
-        </nav>
-
-        {/* Aquí SÍ el menú móvil animado */}
-        {shouldRender && backgroundLoaded && (
-          <div
-            ref={overlayRef}
-            className="position-fixed top-0 start-0 end-0 bottom-0"
-            style={{
-              zIndex: 9998,
-              backdropFilter: "blur(8px)",
-            }}
-            onClick={handleOpen}
-          >
-            <div
-              ref={menuRef}
-              className="position-absolute top-0 start-0 end-0 bottom-0"
-              style={{
-                zIndex: 9999,
-                height: "100%",
-                width: "100%",
-                backgroundColor: "rgba(255, 255, 255, 0.9)",
-                backgroundImage: `url(${BF})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover", // 👈 AQUÍ el cambio importante
-              }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <nav className="position-relative d-flex flex-column py-10 px-6 mobile-menu overflow-auto">
-                <div className="d-flex align-items-center mb-12">
-                  <a className="me-auto h4 mb-0 text-decoration-none" href="/">
-                    <img src={Logo} alt="logo" width={132} />
-                  </a>
-                  <button
-                    className="btn navbar-close"
-                    type="button"
-                    aria-label="Close"
-                    onClick={handleOpen}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <line
-                        x1="4"
-                        y1="4"
-                        x2="20"
-                        y2="20"
-                        stroke="black"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="20"
-                        y1="4"
-                        x2="4"
-                        y2="20"
-                        stroke="black"
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <ul className="nav flex-column">
-                  {MENU_ITEMS.map((item, index) => (
-                    <li className="nav-item py-3" key={index}>
-                      <a
-                        ref={(el) => (menuLinksRef.current[index] = el)}
-                        className="nav-link text-dark fs-5"
-                        href={item.url}
-                        onClick={handleOpen}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="w-auto">
-                  <div className="d-flex">
+            <div className="menu-details p-6 space-y-2">
+              <h2
+                data-menu-fade=""
+                className="text-gray-700 text-xl font-bold"
+                ref={(el) => {
+                  if (el && !fadeTargets.current.includes(el))
+                    fadeTargets.current.push(el);
+                }}
+              >
+                Socials
+              </h2>
+              <div className="socials-row flex flex-wrap gap-4">
+                {socials.map(
+                  ({url, title}, idx) => (
                     <a
-                      className="text-decoration-none"
-                      href={WHATSAPP}
-                      target="_blank"
-                      rel="noreferrer"
-                      ref={(el) => (socialIconsRef.current[0] = el)}
+                      key={idx}
+                      href={url}
+                      data-menu-fade=""
+                      className="p-large text-link text-lg text-blue-600 hover:underline"
+                      ref={(el) => {
+                        if (el && !fadeTargets.current.includes(el))
+                          fadeTargets.current.push(el);
+                      }}
                     >
-                      <img src={WA} alt="Whatsapp" />
+                      {title}
                     </a>
-
-                    <a
-                      className="text-decoration-none"
-                      href={INSTAGRAM}
-                      target="_blank"
-                      rel="noreferrer"
-                      ref={(el) => (socialIconsRef.current[1] = el)}
-                    >
-                      <img src={IG} alt="Instagram" />
-                    </a>
-                  </div>
-                  <div className="py-6">
-                    <a
-                      ref={bookNowRef}
-                      className="btn btn-dark w-100"
-                      href={BOOKING_URL_2}
-                    >
-                      Book now
-                    </a>
-                  </div>
-                </div>
-              </nav>
+                  )
+                )}
+              </div>
             </div>
           </div>
-        )}
-      </section>
+        </nav>
+      </div>
     </>
   );
 }
-

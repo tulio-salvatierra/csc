@@ -12,11 +12,10 @@ export const TULIO_URL = "https://tuliosalvatierra.com";
 
 export const EMAIL = "carolinaskin@grandecom.net";
 
-export const INSTAGRAM = "https://www.instagram.com/carolinaskin";
+export const INSTAGRAM = [{ url: "https://www.instagram.com/carolinaskin", title: "Instagram" }];
 
-// Removed duplicate ADDRESS declaration
 
-export const WHATSAPP = "https://wa.me/4326380046";
+export const WHATSAPP = [{url: "https://wa.me/4326380046", title: "WhatsApp"}];
 
 export const TELEPHONE = "tel:432-638-0046";
 
@@ -34,17 +33,21 @@ export const MENU_ITEMS = [
   {
     title: "Home",
     url: HOME_URL,
+    number: "01",
   },
   {
     title: "Services",
     url: SERVICES_MENU_URL,
+    number: "02",
   },
   {
     title: "About",
     url: ABOUT_URL,
+    number: "03",
   },
   {
     title: "Policies",
     url: "/policies",
+    number: "04",
   }
 ];

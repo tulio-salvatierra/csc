@@ -1,7 +1,7 @@
 import Lenis from "lenis";
 import React, { useEffect } from "react";
 import "./App.css";
-import { Router, Routes, Route } from "react-router";
+import { Routes, Route } from "react-router";
 import IndexPage from "./pages/IndexPage";
 import ServicesPage from "./pages/ServicesPage";
 import PolicyPage from "./pages/PolicyPage";
