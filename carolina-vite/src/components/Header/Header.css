@@ -79,6 +79,7 @@
   display: flex;
   position: relative;
   overflow: auto;
+  background-color: transparent;
 }
 
 .p-large {
