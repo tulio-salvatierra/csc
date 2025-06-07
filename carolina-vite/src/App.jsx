@@ -1,4 +1,4 @@
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import React, { useEffect } from "react";
 import "./App.css";
 import { Router, Routes, Route } from "react-router";
