@@ -1,12 +1,48 @@
-# React + Vite
+# Carolina Skin Center
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive marketing site for Carolina Skin Center, built with React, Vite & Tailwind CSS.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Demo
 
-## Expanding the ESLint configuration
+> Live site: <https://your-production-url.com>  
+> (Replace with your actual deployed URL)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- **Ultra-fast dev server** with Vite  
+- **Utility-first styling** via Tailwind CSS  
+- **React Router v6** for SPA navigation  
+- **Clean, component-driven** codebase  
+- **Git workflow** supporting staging → production branches
+
+---
+
+## 🛠️ Tech Stack
+
+- [Vite](https://vitejs.dev/)  
+- [React 18](https://reactjs.org/)  
+- [Tailwind CSS](https://tailwindcss.com/)  
+- [React Router v6](https://reactrouter.com/)  
+- Optional: GSAP
+
+---
+
+## 📥 Getting Started
+
+### Prerequisites
+
+- Node.js ≥ 16.x (tested on 18.x)  
+- npm (bundled with Node.js)  
+
+### Installation
+
+1. **Clone the repo**  
+   ```bash
+   git clone git@github.com:your-org/carolina-skin-vite.git
+   cd carolina-skin-vite
+
+   Cicero Web Studio by Tulio Salvatierra

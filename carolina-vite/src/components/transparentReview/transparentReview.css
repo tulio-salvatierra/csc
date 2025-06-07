@@ -1,0 +1,22 @@
+.hero-review-carousel {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Makes the background elegant and modern */
+}
+
+.blockquote {
+  color: #fff;
+  padding: 1rem;
+}
+
+.review-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 700;
+  font-style: italic;
+  color: #fff;
+  padding: 1rem;
+}
+
+.author {
+  font-weight: 700;
+}
