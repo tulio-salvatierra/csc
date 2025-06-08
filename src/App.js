@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Lenis from "@studio-freight/lenis";
+import Lenis from "lenis";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
