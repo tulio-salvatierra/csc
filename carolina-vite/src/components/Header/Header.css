@@ -70,11 +70,12 @@ h2 {
 
 .eyebrow {
   z-index: 1;
-  color: #000 0.5;
+  color: #000 0.25;
   text-transform: uppercase;
   font-family: Grapevine, Arial, sans-serif;
   font-weight: 400;
   position: relative;
+  font-size: 4em;
 }
 
 .menu-inner {
@@ -162,6 +163,10 @@ h2 {
   position: relative;
 }
 
+.menu-link-heading:hover {
+  transform: translateY(-0.06em);
+}
+
 .overlay {
   z-index: 0;
   cursor: pointer;
@@ -203,11 +208,11 @@ h2 {
 
 .header {
   z-index: 10;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   display: flex;
   position: fixed;
-  top: 2em;
+  top: 0.1rem;
   left: 2em;
   right: 2em;
 }

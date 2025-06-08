@@ -8,6 +8,7 @@ import {
   INSTAGRAM,
   BOOKING_URL_2,
 } from "../../constants/index.js";
+import Logo from "./../../assets/images/CSC.png";
 
 export default function NewHeader() {
   const [isOpen, setIsOpen] = useState(false);
@@ -104,24 +105,20 @@ export default function NewHeader() {
   const socials = [...WHATSAPP, ...INSTAGRAM];
 
   return (
-    <>
+    <header className="top-0.5">
+      <div class="header-logo flex justify-center items-baseline p-4">
+          <img className="h-28 w-auto " src={Logo} alt="Carolina Skin Center Logo"/>
+        </div>
       <button
         className="menu-button fixed top-8 right-8 z-60 flex flex-col items-center justify-center space-y-1 bg-white p-2 rounded-md shadow-md cursor-pointer"
         onClick={toggleMenu}
         aria-expanded={isOpen}
         aria-label="Toggle menu"
-      >
-        <h2
-          ref={(el) => {
-            if (el && !menuButtonTexts.current.includes(el))
-              menuButtonTexts.current.push(el);
-          }}
-          className="text-lg font-medium leading-none"
-          aria-hidden="true"
-        >
-          Menu
-        </h2>
-       
+        ref={(el) => {
+          if (el && !menuButtonTexts.current.includes(el))
+            menuButtonTexts.current.push(el);
+        }}
+      >       
         <svg
           ref={menuButtonIcon}
           className="menu-button-icon w-6 h-6 text-gray-800"
@@ -132,6 +129,7 @@ export default function NewHeader() {
           strokeLinejoin="round"
           viewBox="0 0 24 24"
           aria-hidden="true"
+          
         >
           <line x1="3" y1="12" x2="21" y2="12"></line>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -202,7 +200,7 @@ export default function NewHeader() {
             <div className="menu-details p-6 space-y-2">
               <h2
                 data-menu-fade=""
-                className="text-gray-700 text-xl font-bold"
+                className="text-gray-500 text-xl font-bold"
                 ref={(el) => {
                   if (el && !fadeTargets.current.includes(el))
                     fadeTargets.current.push(el);
@@ -232,6 +230,6 @@ export default function NewHeader() {
           </div>
         </nav>
       </div>
-    </>
+    </header>
   );
 }
