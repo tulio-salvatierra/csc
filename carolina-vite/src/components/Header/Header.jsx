@@ -106,7 +106,7 @@ export default function NewHeader() {
 
   return (
     <header className="top-0.5">
-      <div class="header-logo flex justify-center items-baseline p-4">
+      <div className="header-logo flex justify-center items-baseline p-4">
           <img className="h-28 w-auto " src={Logo} alt="Carolina Skin Center Logo"/>
         </div>
       <button

@@ -1,13 +1,13 @@
-
 import { BOOKING_URL_2 } from "../../constants";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
-import "./Hero.css"; 
+import BookingButton from "./../BookingButton/index";
+import "./Hero.css";
 
 export default function Hero() {
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
@@ -15,7 +15,7 @@ export default function Hero() {
   // separate refs for SplitText on the H1 only
   const splitRefs = useRef([]);
   splitRefs.current = [];
-  const addToSplitRefs = el => {
+  const addToSplitRefs = (el) => {
     if (el && !splitRefs.current.includes(el)) {
       splitRefs.current.push(el);
     }
@@ -39,39 +39,28 @@ export default function Hero() {
     ease: "power2.out",
     stagger: 0.7,
     start: "top 90%",
-    scrub: false
+    scrub: false,
   });
 
   return (
     <>
-      <section
-        className="bg-hero items-center"
-        ref={addToRefs}
-      >
-        <div className="flex">
-          <div className="px-4 flex flex-col justify-center items-center w-full h-screen">
-            <h1
-              className="text-4xl font-bold text-white"
-              ref={addToSplitRefs}
-            >
+      <section className="bg-hero items-center" ref={addToRefs}>
+        <div className="flex justify-center items-center h-screen">
+          <div className="flex flex-col justify-center items-center max-w-2/3">
+            <h1 className="font-extrabold text-white" ref={addToSplitRefs}>
               Hydrate, renew and balance your skin
             </h1>
-            <h2
-              className="bg-red-100 p-4 text-gray-800 mt-4"
-              ref={addToRefs}
-            >
+            <h2 className="bg-red-100 p-4 text-gray-800 mt-4" ref={addToRefs}>
               Improve the health and appearance of your skin through
               personalized facial treatments that will balance your skin by
               delivering visible and long-lasting results. we are located in the
               heart of Midland, TX.
             </h2>
-            <a
-              className="bg-black text-white p-4 mt-4 text-xl"
+            <BookingButton
               href={BOOKING_URL_2}
+              label={"Book my appointment now!"}
               ref={addToRefs}
-            >
-              Book my appointment now!
-            </a>
+            />
           </div>
         </div>
       </section>
