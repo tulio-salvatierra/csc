@@ -1,6 +1,4 @@
 import { TELEPHONE, EMAIL, INSTAGRAM, WHATSAPP, ADDRESS_URL } from "../../constants";
-import WA from "../../assets/icon/whatsapp.svg";
-import IG from "../../assets/icon/instagram.svg";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation"; 
 
@@ -69,10 +67,10 @@ export default function ContactSection() {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={WA} alt="WhatsApp" />
+                   WhatsApp
                   </a>
                   <a className="text-decoration-none p-3" href={INSTAGRAM}>
-                    <img src={IG} alt="Instagram" />
+                    Instagram
                   </a>
                 </div>
               </div>

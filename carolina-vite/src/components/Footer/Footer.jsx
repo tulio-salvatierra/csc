@@ -1,7 +1,6 @@
 import { MENU_ITEMS, WHATSAPP, INSTAGRAM } from "../../constants";
 import Logo from "../../assets/images/CSC.svg";
-import WA from "../../assets/icon/whatsapp.svg";
-import IG from "../../assets/icon/instagram.svg";
+
 
 export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
@@ -32,11 +31,11 @@ export default function Footer() {
                 target="_blank"
                 rel="noreferrer"
               >
-               <img src={WA}/>
+               Whatsapp
               </a>
 
               <a className="text-decoration-none p-3" href={INSTAGRAM}>
-                <img src={IG} />
+                Instagram
               </a>
             </div>
           </div>
