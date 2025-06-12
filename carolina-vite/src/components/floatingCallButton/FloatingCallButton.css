@@ -84,7 +84,9 @@
 }
 
 .btn-icon-content__text {
-  font-size: .875em;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Moula', sans-serif;
 }
 
 .btn-icon-content__mask {

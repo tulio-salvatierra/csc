@@ -30,7 +30,7 @@ export default function BookingButton({ href, label }) {
   }, []);
 
   return (
-    <a href={href} aria-label={label} className="btn-animate-chars">
+    <a href={href} aria-label={label} className="btn-animate-chars place-self-center">
       <div className="btn-animate-chars__bg"></div>
       <span
         ref={textRef}

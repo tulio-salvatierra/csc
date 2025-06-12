@@ -1,11 +1,12 @@
-import "./../../App.css";
+import "./CancelationPolicy.css";
 import { useRef } from "react";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
+import BookingButton from "../BookingButton";
 
 export default function CancellationPolicy() {
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
@@ -16,42 +17,34 @@ export default function CancellationPolicy() {
   return (
     <section
       ref={addToRefs}
-      className="py-48 bg-white text-dark"
+      className="py-48 bg-red-100 text-dark grid place-items-center"
     >
-      <div  ref={addToRefs} className="container py-48 shadow-sm bg-primary-light">
-        <div className="row justify-content-center">
-          <div className="col-lg-8">
+      <div ref={addToRefs} className="container py-48 shadow-sm bg-white">
+        <div className="row">
+          <div className="col-lg-8 place-justify-center mx-auto">
             <h2
               ref={addToRefs}
-              className="text-center mb-4 fs-1 "
+              className="text-center text-dark fw-black mb-4 fs-2 fs-sm-3 fs-md-4 fs-lg-5"
             >
               New Cancellation Policy{" "}
             </h2>
-            <div className="card shadow-sm border-0 rounded-4">
+            <div className="card border-0 rounded-4 justify-content-center">
               <div className="card-body p-4">
-                <p
-                  ref={addToRefs}
-                  
-                  className="mb-4 text-muted"
-                >
+                <p ref={addToRefs} className="mb-4">
                   To ensure customer satisfaction, we kindly ask as a courtesy
                   for other customers, please provide a minimum of{" "}
-                  <strong>48 hours notice</strong> for any cancellations or
+                  <a className="font-black">48 hours notice</a> for any cancellations or
                   rescheduling.
                 </p>
                 <ul className="mb-4 text-left ">
-                  <li
-                  ref={addToRefs}
-                  className="mb-2 text-muted">
-                    <strong>Within 48 Hours:</strong> 50% of the service cost
+                  <li ref={addToRefs} className="mb-2 text-muted">
+                  <a className="font-black">Within 48 Hours:</a> 50% of the service cost
                     will be charged.
                   </li>
-                  <li 
-                  ref={addToRefs}
-                  className="mb-2 text-muted">
-                    <strong>
+                  <li ref={addToRefs} className="mb-2 text-muted">
+                  <a className="font-black">
                       Same-Day Cancellations / Rescheduling / No-Shows:
-                    </strong>{" "}
+                    </a>{" "}
                     Full service cost will be charged.
                   </li>
                 </ul>
@@ -59,14 +52,9 @@ export default function CancellationPolicy() {
                   Thank you for your understanding and cooperation!
                 </p>
               </div>
-              <a
-                href="/policies"
-                className="btn btn-dark p-4 mt-4 w-100 w-md-auto text-white fs-4 fs-sm-6"
-                ref={addToRefs}
-              >
-                Read our policies
-              </a>
+              
             </div>
+            <BookingButton href={"/policies"} label={"Read Our Policies"} />
           </div>
         </div>
       </div>
