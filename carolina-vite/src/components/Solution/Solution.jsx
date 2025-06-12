@@ -20,7 +20,7 @@ export default function Solutions() {
 
     if (section && content && image) {
       const contentAnimation = gsap.to(content, {
-        yPercent: 12,
+        yPercent: 19,
         ease: "none",
         scrollTrigger: {
           trigger: section,
@@ -31,7 +31,7 @@ export default function Solutions() {
       });
 
       const imageAnimation = gsap.to(image, {
-        yPercent: 30,
+        yPercent: 5,
         ease: "none",
         scrollTrigger: {
           trigger: section,
