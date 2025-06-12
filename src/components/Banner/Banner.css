@@ -1,4 +1,4 @@
-/ * Allow vertical scrolling while preventing horizontal overflow */
+/* Allow vertical scrolling while preventing horizontal overflow */
 body {
     overflow-x: hidden;
     overflow-y: auto;
