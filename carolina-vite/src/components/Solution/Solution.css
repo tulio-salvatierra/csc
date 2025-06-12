@@ -14,16 +14,15 @@
 }
 
 
-.solution {
-  
+.content-text{
+  font-family: "Moula";
+  font-size: 1.5rem;
+  color: #000;
+  padding: 10px;
+  text-align: left;
+  font-weight: normal;
 }
 
-.content {
-  
-}
-
-.image {
-  
-  
+.img {
   z-index: 1;
 }
