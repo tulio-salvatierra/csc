@@ -6,24 +6,62 @@
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
-  font-weight: black;
-  font-style: ExtraBold;
-}
 
 @font-face {
   font-family: "Grapevine";
   src: url(../src/assets/fonts/grapevine/Grapevine.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+h1 {
+  font-family: 'Moula', sans-serif;
+  font-size: 8rem;
+
+  @media (max-width: 1024px) {
+      font-size: 5.5rem;
+  }
+
+  @media (max-width: 768px) {
+      font-size: 4.5rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 3.5rem;
+  }
+}
+
+h2 {
+  font-family: 'Moula', sans-serif;
+  font-size: 2.5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+      font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 1.25rem;
+  }
+}
+
+p {
+  font-family: 'Moula', sans-serif;
+  font-size: 1.5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+      font-size: 1rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.875rem;
+  }
+
 }
 
 html,
@@ -33,9 +71,7 @@ body {
 }
 
 
-.hlTitle {
-  font-family: "Moula";
-}
+
 
 .card-img {
   width: auto;
@@ -85,30 +121,7 @@ body {
   }
 }
 
-.welcome-text {
-  font-family: "Moula";
-  font-size: 1.5rem;
-  color: #000;
-  padding: 10px;
-  text-align: left;
-}
 
-.header-bg {
-  background-image: url("../src/assets/images/hero/csc-hero.jpg");
-  background-size: cover;
-  background-position: center;
-}
-@media (max-width: 768px) {
-  .header-bg {
-    background-position: left;
-  }
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%;
-}
 
 .hero-content {
   justify-content: left;
