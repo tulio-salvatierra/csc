@@ -32,16 +32,5 @@ export function useFadeInAnimation(refsArray, options = {}) {
     }, refsArray);
 
     return () => ctx.revert();
-  }, [
-    refsArray,
-    options.y,
-    options.opacity,
-    options.duration,
-    options.ease,
-    options.stagger,
-    options.start,
-    options.end,
-    options.scrub,
-    options.onComplete,
-  ]);
+  }, [refsArray, options]);
 }

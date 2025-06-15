@@ -69,7 +69,7 @@ export default function ImageCycle({ items }) {
   
 
   return (
-    <div className="flex flex-col items-center gap-6 w-full h-100
+    <div className="grid items-center gap-6 w-full h-100
     ">
       <div className="flex-1">
         <h2 className="text-2xl font-bold mb-2">{items[currentIndex.current]?.title}</h2>

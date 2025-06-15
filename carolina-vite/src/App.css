@@ -127,7 +127,6 @@ body {
 section {  
   display: grid;
   place-items:center;
-  height: auto;
   }
 
 

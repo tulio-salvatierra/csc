@@ -1,7 +1,15 @@
 
+.grid {
+  grid-template-columns: repeat(auto-fit, minmax(2fr));
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(1fr));
+  }
+}
+
 .image-cycle-collection {
   width: min(95vw, 60em);
   position: relative;
+  margin: 0 auto;
 }
 
 .image-cycle-collection__before {
