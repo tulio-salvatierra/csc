@@ -67,6 +67,23 @@ h2 {
 p {
   font-family: 'Moula', sans-serif;
   font-size: 1.5rem;
+  color: #929292;
+
+  @media (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+      font-size: 1rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.875rem;
+  }
+}
+
+quote {
+  font-family: 'Moula', sans-serif;
+  font-size: 1.5rem;
+  color: #929292;
 
   @media (max-width: 1024px) {
       font-size: 1.25rem;
@@ -127,6 +144,7 @@ body {
 section {  
   display: grid;
   place-items:center;
+  height: auto;
   }
 
 

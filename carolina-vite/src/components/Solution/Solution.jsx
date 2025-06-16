@@ -62,7 +62,7 @@ export default function Solutions() {
           </h1>
           <div className="parent" ref={contentRef}>
             <div>
-              <p className="mb-10">
+              <p className="mb-10 text-muted">
                 Hey! I'm Carolina and I have over 18 years of experience in
                 skincare. My journey began with my own struggle with acne, which
                 led me to study at the Euro Institute of Skin Care in Seattle.

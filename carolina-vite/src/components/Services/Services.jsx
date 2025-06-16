@@ -42,12 +42,12 @@ export default function ServicesComponent() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="h-screen mt-32 mb-32">
+    <section className="h-screen mt-16 mb-16 p-4 d-flex flex-column align-items-center justify-content-center">
       <h1 ref={addToRefs} className="mb-4">
         Services
       </h1>
       <a href="/services">
-        <div ref={addToRefs}>
+        <div ref={addToRefs} className="d-flex flex-column align-items-center justify-content-center h-100">
         <ImageCycle items={services.map(service => ({
             src: service.image,
             title: service.title,
