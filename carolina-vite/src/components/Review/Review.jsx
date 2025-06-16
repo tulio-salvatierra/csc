@@ -33,7 +33,7 @@ export default function ReviewCards() {
         {mockReviews.map((review, idx) => (
           <div key={idx} className="flex mb-4" ref={addToRefs}>
             <div className="w-100 h-100 content-evenly shadow-lg m-4 p-4 rounded-lg bg-gray-100">
-              <quote className="">{review.text}</quote>
+              <p className="">{review.text}</p>
               <div className="">
                 <img
                   src={review.photoUrl}

@@ -64,6 +64,7 @@ h2 {
   }
 }
 
+
 p {
   font-family: 'Moula', sans-serif;
   font-size: 1.5rem;
@@ -111,7 +112,7 @@ li {
   }
 }
 
-strong {
+strong, a {
   font-family: 'Moula', sans-serif;
   font-weight: extra-bold;
 }

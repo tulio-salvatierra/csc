@@ -1,15 +1,17 @@
-import { TELEPHONE, EMAIL, INSTAGRAM, WHATSAPP, ADDRESS_URL } from "../../constants";
+import {
+  TELEPHONE,
+  EMAIL,
+  INSTAGRAM,
+  WHATSAPP,
+  ADDRESS_URL,
+} from "../../constants";
 import { useRef } from "react";
-import { useFadeInAnimation } from "../../hooks/useFadeInAnimation"; 
-
-
-
+import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 
 export default function ContactSection() {
-
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
@@ -18,30 +20,26 @@ export default function ContactSection() {
 
   return (
     <>
-      <>
-        <section ref={addToRefs} className="position-relative py-28 bg-white">
-          <div className="p-4">
-            <div className="row mb-8 mb-md-24">
-              <div className="col-12">
-                <h2 className="display-3 mb-10 font-heading">Contact</h2>
-                <p className="text-muted fs-3 text-center">
-                  Get in touch with us today for all your skincare needs.
-                </p>
-              </div>
-            </div>
-            <div className="flex-wrap flex-md-row">
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
-                <h3 className="mb-0 fs-2">Address</h3>
+      <section ref={addToRefs} className="w-100 py-28 bg-white">
+        <div className="row w-full">
+          <h1 className="mb-10">Contact</h1>
+          <p className="text-muted text-left mb-6 lh-lg">
+            Get in touch with us today for all your skincare needs.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <div>
+              <div ref={addToRefs} className="p-4 text-left">
+                <h2 className="">Address</h2>
                 <a
-                  className="mb-0 text-muted fs-4 text-decoration-none"
+                  className="mb-0 text-muted text-decoration-none"
                   href={ADDRESS_URL}
                 >
                   Carolina Skin Centre, 705 W Wadley Ave Suite-23, Midland, TX
                   79705
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
-                <h3 className="mb-0 fs-2">E-mail</h3>
+              <div ref={addToRefs} className="text-left p-4">
+                <h2 className="">E-mail</h2>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
@@ -49,25 +47,22 @@ export default function ContactSection() {
                   {EMAIL}
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
-                <h3 className="mb-0 text-left fs-2">Phone</h3>
-                <a
-                  href={TELEPHONE}
-                  className="mb-0 text-muted fs-4 text-decoration-none"
-                >
+              <div ref={addToRefs} className="p-4">
+                <h2 className="mb-0 text-left fs-2">Phone</h2>
+                <a href={TELEPHONE} className="text-muted text-decoration-none">
                   432-638-0046
                 </a>
               </div>
-              <div ref={addToRefs} className="col-6 col-sm-12 p-4 text-center">
-                <h3 className="mb-2 fs-2">Socials</h3>
-                <div className="d-flex justify-content-center">
+              <div ref={addToRefs} className="text-left p-4">
+                <h2 className="">Socials</h2>
+                <div className="d-flex justify-content-left">
                   <a
                     className="text-decoration-none p-3"
                     href={WHATSAPP}
                     target="_blank"
                     rel="noreferrer"
                   >
-                   WhatsApp
+                    WhatsApp
                   </a>
                   <a className="text-decoration-none p-3" href={INSTAGRAM}>
                     Instagram
@@ -75,11 +70,12 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <div ref={addToRefs} className="row">
+            <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"
-                width="600"
-                height="450"
+                width="100%"
+                height="350"
+                className="w-full h-[350px] rounded-2xl"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"
@@ -87,8 +83,8 @@ export default function ContactSection() {
               ></iframe>
             </div>
           </div>
-        </section>
-      </>
+        </div>
+      </section>
     </>
   );
 }
