@@ -27,39 +27,40 @@ export default function BrandsSectionLogoClouds1() {
           <div className="row mx-sm-n4">
             <div className="col-12 col-sm-6 col-md-6 mb-6 mb-md-0 px-sm-6">
               {" "}
-              <img
+         
+              <div
+                className="bg-red-100 d-flex align-items-center justify-content-center p-6"
+                
+                ref={addToRefs}
+              >
+                     <img
                 className="img-fluid mx-auto"
                 src={HYDRAPRODUCT}
                 alt="hydrafacial-product-logo"
-                style={{ height: 526, width: "auto" }}
+                
                 ref={addToRefs}
               />
-              <div
-                className="bg-primary-light d-flex align-items-center justify-content-center px-4"
-                style={{ height: 380 }}
-                ref={addToRefs}
-              >
                 <img
-                  className="img-fluid mx-auto"
+                  className="img-fluid my-6"
                   src={HYDRA}
                   alt="hydrafacial-logo"
                 />
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-6 mb-6 mb-md-0 px-sm-6">
-            <img
+            <div className="col-12 col-sm-6 col-md-6 mb-6 mb-md-0 p-6">
+        
+              <div
+                className="bg-red-100 d-flex align-items-center justify-content-center p-4"
+              >
+                    <img
                 className="img-fluid mx-auto"
                 src={GLOPRODUCT}
                 alt="hydrafacial-product-logo"
-                style={{ height: 526, width: "auto" }}
+                
                 ref={addToRefs}
               />
-              <div
-                className="bg-secondary-light d-flex align-items-center justify-content-center px-4"
-                style={{ height: 380 }}
-              >
                 <img
-                  className="img-fluid d-block mx-auto"
+                  className="img-fluid d-block my-auto"
                   src={GLO}
                   alt="GLO-LOGO"
                   ref={addToRefs}
