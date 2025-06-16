@@ -1,7 +1,7 @@
-import "./CancelationPolicy.css";
 import { useRef } from "react";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
 import BookingButton from "../BookingButton";
+import "./../../App.css";
 
 export default function CancellationPolicy() {
   const fadeRefs = useRef([]);
@@ -21,34 +21,34 @@ export default function CancellationPolicy() {
     >
       <div ref={addToRefs} className="container py-48 shadow-sm bg-white">
         <div className="row">
-          <div className="col-lg-8 place-justify-center mx-auto">
-            <h2
+          <div className="place-justify-center mx-auto">
+            <h1
               ref={addToRefs}
-              className="text-center text-dark fw-black mb-4 fs-2 fs-sm-3 fs-md-4 fs-lg-5"
+              className="text-center text-dark fw-black"
             >
               New Cancellation Policy{" "}
-            </h2>
-            <div className="card border-0 rounded-4 justify-content-center">
+            </h1>
+            <div className="card border-0 justify-content-center" ref={addToRefs}>
               <div className="card-body p-4">
                 <p ref={addToRefs} className="mb-4">
                   To ensure customer satisfaction, we kindly ask as a courtesy
                   for other customers, please provide a minimum of{" "}
-                  <a className="font-black">48 hours notice</a> for any cancellations or
+                  <strong className="font-black">48 hours notice</strong> for any cancellations or
                   rescheduling.
                 </p>
-                <ul className="mb-4 text-left ">
-                  <li ref={addToRefs} className="mb-2 text-muted">
-                  <a className="font-black">Within 48 Hours:</a> 50% of the service cost
+                <ul className="mb-4">
+                  <li ref={addToRefs} className="mb-2">
+                  <strong className="font-black">Within 48 Hours:</strong> 50% of the service cost
                     will be charged.
                   </li>
-                  <li ref={addToRefs} className="mb-2 text-muted">
-                  <a className="font-black">
+                  <li ref={addToRefs} className="mb-2">
+                  <strong className="font-black">
                       Same-Day Cancellations / Rescheduling / No-Shows:
-                    </a>{" "}
+                    </strong>{" "}
                     Full service cost will be charged.
                   </li>
                 </ul>
-                <p ref={addToRefs} className="text-muted mb-0">
+                <p ref={addToRefs} className="mb-0">
                   Thank you for your understanding and cooperation!
                 </p>
               </div>
