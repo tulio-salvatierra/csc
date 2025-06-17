@@ -1,11 +1,12 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(2fr, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(1fr, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 

@@ -119,7 +119,7 @@ strong, a {
 
 html,
 body {
-  overflow-x: hidden;
+  
   scroll-behavior: auto;
 }
 
@@ -135,18 +135,7 @@ body {
   z-index: 1000;
 }
 
-.content {
-  display: grid;
-  grid-template-columns: 1fr;
-  height: auto;
-  width: 100%;
-}
 
-section {  
-  display: grid;
-  place-items:center;
-  height: auto;
-  }
 
 
 .footer {
