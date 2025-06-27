@@ -11,6 +11,7 @@ import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
 import { useMenuTransition } from "../../hooks/useMenuTransition.js";
 import { gsap } from "gsap";
 import "./Header.css";
+import BookingButton from "../BookingButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,26 +32,25 @@ export default function Header() {
 
   useEffect(() => {
     if (!menuRef.current || !overlayRef.current) return;
-  
+
     const menuElement = menuRef.current;
-    
+
     const handleScroll = () => {
       const scrollTop = menuElement.scrollTop;
       const blurValue = scrollTop > 10 ? 3 : 8;
-    
+
       gsap.to(overlayRef.current, {
         css: { backdropFilter: `blur(${blurValue}px)` },
         duration: 0.5,
         ease: "power2.out",
       });
     };
-  
+
     menuElement.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       menuElement.removeEventListener("scroll", handleScroll);
     };
-    
   }, []);
 
   const shouldRender = useMenuTransition(isOpen, 1000);
@@ -128,13 +128,15 @@ export default function Header() {
       <section className="sticky top-0 w-full overflow-hidden z-50 shadow-2xl">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
           <a href="/">
-            <img className="w-[155px] h-auto" src={LogoBG} alt="logo" width={155} />
+            <img
+              className="w-[155px] h-auto"
+              src={LogoBG}
+              alt="logo"
+              width={155}
+            />
           </a>
 
-          <button
-            className="block lg:hidden p-0 z-50"
-            onClick={handleOpen}
-          >
+          <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
             <svg
               width={32}
               height={32}
@@ -155,12 +157,16 @@ export default function Header() {
             <ul className="flex space-x-8">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
-                  <a className="text-lg text-black no-underline hover:underline" href={item.url}>
+                  <a
+                    className="text-lg text-black no-underline hover:underline"
+                    href={item.url}
+                  >
                     {item.title}
                   </a>
                 </li>
               ))}
             </ul>
+            <BookingButton href={BOOKING_URL_2} title={"Book now!"} />
           </div>
         </nav>
 
@@ -192,7 +198,10 @@ export default function Header() {
             >
               <nav className="relative flex flex-col py-10 px-6 overflow-auto bg-white">
                 <div className="flex items-center mb-12">
-                  <a className="flex-1 text-2xl font-semibold mb-0 no-underline" href="/">
+                  <a
+                    className="flex-1 text-2xl font-semibold mb-0 no-underline"
+                    href="/"
+                  >
                     <img src={Logo} alt="logo" width={132} />
                   </a>
                   <button
@@ -259,21 +268,13 @@ export default function Header() {
                   </a>
                 </div>
                 <div className="py-6">
-                  <BookingButton 
-                  ref={bookNowRef}
-                  className="bg-black text-white w-full py-2 px-4 text-center"
-                  onClick={handleCloseWithAnimation}
-                  href={BOOKING_URL_2}
-                  title="Book now"
-
-                  />
-                  <a
+                  <BookingButton
                     ref={bookNowRef}
                     className="bg-black text-white w-full py-2 px-4 text-center"
+                    onClick={handleCloseWithAnimation}
                     href={BOOKING_URL_2}
-                  >
-                    Book now
-                  </a>
+                    title="Book now"
+                  />
                 </div>
               </nav>
             </div>
