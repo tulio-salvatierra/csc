@@ -1,18 +1,6 @@
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-}
-
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 .image-cycle-collection {
-  width: min(500px, 100%);
-  height: min(500px, 100%);
+  width: 100%;
+  height: 100%;
   position: relative;
   margin: 0 auto;
 }

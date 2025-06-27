@@ -22,17 +22,17 @@ export default function ReviewCards() {
   });
 
   return (
-    <section className="">
-      <h1 ref={addToRefs} className="">
+    <section className="min-h-screen flex flex-col items-center justify-center bg-white">
+      <h2 ref={addToRefs} className="">
         What our clients say about us?
-      </h1>
-      <h2 ref={addToRefs} className="text-gray-500">
-        See the feedback we received in our Google My Business profile:
       </h2>
+      <h3 ref={addToRefs} className="text-gray-500">
+        See the feedback we received in our Google My Business profile:
+      </h3>
       <div className="row flex flex-wrap justify-center">
         {mockReviews.map((review, idx) => (
           <div key={idx} className="flex mb-4" ref={addToRefs}>
-            <div className="w-100 h-100 content-evenly shadow-lg m-4 p-4 rounded-lg bg-gray-100">
+            <div className="w-100 h-75 content-evenly shadow-lg m-4 p-4 rounded-lg bg-gray-100">
               <p className="">{review.text}</p>
               <div className="">
                 <img

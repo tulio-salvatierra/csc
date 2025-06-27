@@ -16,7 +16,7 @@ export default function ServicesComponent() {
     },
     {
       title: "Waxing Services",
-      description: "Waxing services for face and body",
+      description: "for face and body",
       image: WAX,
     },
     {
@@ -42,19 +42,25 @@ export default function ServicesComponent() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="h-screen mt-16 mb-16 p-4 d-flex flex-column align-items-center justify-content-center">
+    <section className="min-h-screen flex flex-col items-center justify-center p-4">
       <h1 ref={addToRefs} className="mb-4">
         Services
       </h1>
-      <a href="/services">
-        <div ref={addToRefs} className="d-flex flex-column align-items-center justify-content-center h-100">
-        <ImageCycle items={services.map(service => ({
-            src: service.image,
-            title: service.title,
-            description: service.description
-          }))} />
+      
+        <div
+          ref={addToRefs}
+          className="w-full max-w-2xl flex flex-1 justify-center items-center h-full"
+          
+        >
+          <ImageCycle
+            items={services.map((service) => ({
+              src: service.image,
+              title: service.title,
+              description: service.description,
+            }))}
+          />
         </div>
-      </a>
+      
     </section>
   );
 }

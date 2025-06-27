@@ -4,69 +4,62 @@ import GLO from "../../assets/images/glo_logo.svg";
 import HYDRAPRODUCT from "./../../assets/images/hf.webp";
 import GLOPRODUCT from "./../../assets/images/glo.webp";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
-import {  useRef } from "react";
-
+import { useRef } from "react";
 
 export default function BrandsSectionLogoClouds1() {
-
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
   };
   useFadeInAnimation(fadeRefs);
+
+  const brands = [
+    {
+      productSrc: HYDRAPRODUCT,
+      logoSrc: HYDRA,
+      altProduct: "HydraFacial product",
+      altLogo: "HydraFacial logo",
+    },
+    {
+      productSrc: GLOPRODUCT,
+      logoSrc: GLO,
+      altProduct: "GLO product",
+      altLogo: "GLO logo",
+    },
+  ];
   return (
     <>
-      <section className="py-48 bg-white">
+      <section className="min-h-screen flex flex-col items-center justify-center bg-white">
         <div className="container">
-          <p  ref={addToRefs} className="text-muted mb-6 lh-lg text-center">
+          <p ref={addToRefs} className="text-gray-500 mb-6 leading-relaxed text-center">
             Trusted by brands all over the world
           </p>
-          <div className="row mx-sm-n4">
-            <div className="col-12 col-sm-6 col-md-6 mb-6 mb-md-0 px-sm-6">
-              {" "}
-         
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {brands.map(({ productSrc, logoSrc, altProduct, altLogo }, i) => (
               <div
-                className="bg-red-100 d-flex align-items-center justify-content-center p-6"
-                
+                key={i}
+                className="bg-red-100 flex flex-col items-center justify-center p-6"
                 ref={addToRefs}
               >
-                     <img
-                className="img-fluid mx-auto"
-                src={HYDRAPRODUCT}
-                alt="hydrafacial-product-logo"
-                
-                ref={addToRefs}
-              />
                 <img
-                  className="img-fluid my-6"
-                  src={HYDRA}
-                  alt="hydrafacial-logo"
-                />
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-6 mb-6 mb-md-0 p-6">
-        
-              <div
-                className="bg-red-100 d-flex align-items-center justify-content-center p-4"
-              >
-                    <img
-                className="img-fluid mx-auto"
-                src={GLOPRODUCT}
-                alt="hydrafacial-product-logo"
-                
-                ref={addToRefs}
-              />
-                <img
-                  className="img-fluid d-block my-auto"
-                  src={GLO}
-                  alt="GLO-LOGO"
+                  className="max-w-full h-auto mb-4"
+                  src={productSrc}
+                  alt={altProduct}
                   ref={addToRefs}
+                  loading="lazy"
+                />
+                <img
+                  className="max-w-xs h-auto"
+                  src={logoSrc}
+                  alt={altLogo}
+                  ref={addToRefs}
+                  loading="lazy"
                 />
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

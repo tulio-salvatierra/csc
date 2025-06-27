@@ -20,16 +20,16 @@ export default function ContactSection() {
 
   return (
     <>
-      <section ref={addToRefs} className="mx-5 py-28 bg-white">
+      <section ref={addToRefs} className="min-h-screen flex items-center justify-center m-6">
         <div className="row w-full">
-          <h1 className="mb-10">Contact</h1>
+          <h2 className="mb-10">Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
             Get in touch with us today for all your skincare needs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div>
               <div ref={addToRefs} className="p-4 text-left">
-                <h2 className="">Address</h2>
+                <h3 className="">Address</h3>
                 <a
                   className="mb-0 text-muted text-decoration-none"
                   href={ADDRESS_URL}
@@ -39,7 +39,7 @@ export default function ContactSection() {
                 </a>
               </div>
               <div ref={addToRefs} className="text-left p-4">
-                <h2 className="">E-mail</h2>
+                <h3 className="">E-mail</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
@@ -48,13 +48,13 @@ export default function ContactSection() {
                 </a>
               </div>
               <div ref={addToRefs} className="p-4">
-                <h2 className="mb-0 text-left fs-2">Phone</h2>
+                <h3 className="mb-0 text-left fs-2">Phone</h3>
                 <a href={TELEPHONE} className="text-muted text-decoration-none">
                   432-638-0046
                 </a>
               </div>
               <div ref={addToRefs} className="text-left p-4">
-                <h2 className="">Socials</h2>
+                <h3 className="">Socials</h3>
                 <div className="d-flex justify-content-left">
                   <a
                     className="text-decoration-none p-3"

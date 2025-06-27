@@ -32,7 +32,7 @@ export default function HL() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="mt-32 mb-32 py-56 why bg-black h-screen">
+    <section className="why bg-black min-h-screen flex flex-col items-center justify-center py-0">
       <h2
         ref={addToRefs}
         className="text-center text-white fw-bold mb-4 fs-1"

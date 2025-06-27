@@ -29,7 +29,7 @@ export default function Footer() {
 
           {/* Navigation Menu */}
           <div className="lg:col-span-3 xl:col-span-2 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-8">Navigation</h3>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-wider mb-8">Navigation</h3>
             <nav className="space-y-6">
               {MENU_ITEMS.map((item, index) => (
                 <ul className="list-none p-0 m-0">
@@ -49,10 +49,10 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="lg:col-span-3 xl:col-span-3 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider uppercase mb-8">Connect</h3>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-wider mb-8">Connect</h3>
             <nav className="space-y-6">
               <a
-                href="https://wa.me/1234567890"
+                href={WHATSAPP}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-base"
@@ -60,7 +60,7 @@ export default function Footer() {
                 WhatsApp
               </a>
               <a
-                href="https://instagram.com/username"
+                href={INSTAGRAM}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-base"
@@ -74,16 +74,16 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="mt-24 pt-12 border-t border-gray-100">
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Logo. All rights reserved.</p>
+            <p className="text-sm text-gray-500">© {new Date().getFullYear()} Carolina Skin Centre</p>
             <div className="flex space-x-6">
               <a
-                href="/privacy"
+                href="/policies"
                 className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
               >
-                Privacy Policy
+                Cancellation Policy
               </a>
               <a href="/terms" className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200">
-                Terms of Service
+                Made by Tulio Salvatierra
               </a>
             </div>
           </div>
