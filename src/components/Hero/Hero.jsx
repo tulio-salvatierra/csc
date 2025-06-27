@@ -47,15 +47,15 @@ export default function Hero() {
       <section className="bg-hero items-center" ref={addToRefs}>
         <div className="flex justify-center items-center h-screen">
           <div className="flex flex-col justify-center items-center max-w-2/3">
-            <h1 className="font-extrabold text-white" ref={addToSplitRefs}>
+            <h1 className="font-extrabold text-white leading-28" ref={addToSplitRefs}>
               Hydrate, renew and balance your skin
             </h1>
-            <h2 className="bg-red-100 p-4 text-gray-800 mt-4" ref={addToRefs}>
+            <p className="bg-red-100 p-4 mb-8 text-gray-800 mt-4" ref={addToRefs}>
               Improve the health and appearance of your skin through
               personalized facial treatments that will balance your skin by
               delivering visible and long-lasting results. we are located in the
               heart of Midland, TX.
-            </h2>
+            </p>
             <BookingButton
               href={BOOKING_URL_2}
               label={"Book my appointment now!"}

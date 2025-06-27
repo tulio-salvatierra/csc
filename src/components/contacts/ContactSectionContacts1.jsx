@@ -20,7 +20,7 @@ export default function ContactSection() {
 
   return (
     <>
-      <section ref={addToRefs} className="w-100 py-28 bg-white">
+      <section ref={addToRefs} className="mx-5 py-28 bg-white">
         <div className="row w-full">
           <h1 className="mb-10">Contact</h1>
           <p className="text-muted text-left mb-6 lh-lg">

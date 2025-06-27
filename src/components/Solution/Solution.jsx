@@ -53,14 +53,14 @@ export default function Solutions() {
   return (
     <>
       <section
-        className="py-24 p-4 h-auto bg-muted d-flex flex-column justify-content-center relative"
+        className="py-24 p-4 h-screen d-flex flex-column justify-content-center relative"
         ref={sectionRef}
       >
         <div className="row align-items-center mb-5">
-          <h1 className="fs-1 fw-bold mb-3">
+          <h2 className="mb-3">
             Transform Your Skin with Professional, Personalized Care
-          </h1>
-          <div className="parent" ref={contentRef}>
+          </h2>
+          <div className="parent d-flex flex-wrap gap-4 align-items-center" ref={contentRef}>
             <div>
               <p className="mb-10 text-muted">
                 Hey! I'm Carolina and I have over 18 years of experience in
@@ -71,8 +71,7 @@ export default function Solutions() {
                 Midland, Texas. My expertise and personalized approach ensure
                 that each client receives the best care tailored to their unique
                 skin needs.
-                <br />
-                <br />
+                
                 Get in touch to book your consultation today!
               </p>
               <BookingButton
@@ -83,7 +82,8 @@ export default function Solutions() {
             <img
               src={SkinCare}
               alt="Skin Care Treatment"
-              className="img-fluid rounded shadow image"
+              className="img-fluid rounded shadow-xl place-self-auto"
+              style={{ maxHeight: "60vh", width: "auto", maxWidth: "100%" }}
               ref={imageRef}
             />
           </div>

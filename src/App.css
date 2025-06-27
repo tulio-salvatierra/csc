@@ -32,35 +32,35 @@
 
 h1 {
   font-family: 'Moula', sans-serif;
-  font-size: 8rem;
+  font-size: 5rem;
 
   @media (max-width: 1024px) {
-      font-size: 5.5rem;
-  }
-
-  @media (max-width: 768px) {
       font-size: 4.5rem;
   }
 
+  @media (max-width: 768px) {
+      font-size: 3.75rem;
+  }
+
   @media (max-width: 480px) {
-      font-size: 3.5rem;
+      font-size: 3rem;
   }
 }
 
 h2 {
   font-family: 'Moula', sans-serif;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 
   @media (max-width: 1024px) {
-      font-size: 2rem;
+      font-size: 2.5rem;
   }
 
   @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 2rem;
   }
 
   @media (max-width: 480px) {
-      font-size: 1.25rem;
+      font-size: 1.75rem;
   }
 }
 
@@ -131,7 +131,6 @@ body {
   justify-content: flex-start;
   top: 0;
   left: 0;
-  width: 100%;
   z-index: 1000;
 }
 
@@ -143,7 +142,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
   height: auto;
 }
 
@@ -172,7 +170,7 @@ body {
   text-align: left;
   font-weight: bold;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .heading {
     font-family: "Moula";
     font-size: 4rem;
@@ -181,7 +179,7 @@ body {
     text-align: left;
     font-weight: bold;
   }
-}
+} */
 
 .bg-hero {
   background-image: url("../src/assets/images/hero/csc-hero.jpg");
@@ -198,7 +196,7 @@ body {
   justify-content: center;
   align-items: end;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bg-hero {
     background-position: right;
   }
@@ -206,7 +204,7 @@ body {
     width: 100%;
     margin-top: 50%;
   }
-}
+} */
 
 .bg-services {
   background-image: url("../src/assets/images/ServicesPageCard/services skin.jpg");
@@ -223,11 +221,11 @@ body {
   justify-content: center;
   align-items: end;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bg-services {
     background-position: right;
   }
-}
+} */
 
 .bg-about {
   background-image: url("../src/assets/images/about/about skin.jpg");
@@ -245,7 +243,7 @@ body {
   justify-items: center;
   align-items: end;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bg-hero {
     background-position: right;
   }
@@ -253,7 +251,7 @@ body {
     width: 100%;
     margin-top: 50%;
   }
-}
+} */
 
 .bg-policies {
   background-image: url("../src/assets/images/policies/policy.jpg");
@@ -271,7 +269,7 @@ body {
   justify-items: center;
   align-items: end;
 }
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .bg-hero {
     background-position: right;
   }
@@ -279,7 +277,7 @@ body {
     width: 100%;
     margin-top: 50%;
   }
-}
+} */
 
 
 
