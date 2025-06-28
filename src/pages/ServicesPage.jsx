@@ -15,7 +15,6 @@ export default function Services() {
         </div>
         <div className="content">
           <ServicesComponent />
-          <CallToAction />
           <ContactSection />
         </div>
         <div className="footer">

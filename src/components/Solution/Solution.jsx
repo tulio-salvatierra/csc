@@ -60,7 +60,7 @@ export default function Solutions() {
           <h2 className="mb-3">
             Transform Your Skin with Professional, Personalized Care
           </h2>
-          <div className="parent d-flex flex-wrap gap-4 align-items-center" ref={contentRef}>
+          <div className="parent d-flex flex-wrap gap-4 align-items-cente justify-content-center text-center" ref={contentRef}>
             <div>
               <p className="mb-10 text-muted">
                 Hey! I'm Carolina and I have over 18 years of experience in
@@ -79,13 +79,14 @@ export default function Solutions() {
                 label={"Book my appointment now!"}
               />
             </div>
+            <div className="d-flex justify-content-center align-items-center content-center"> 
             <img
               src={SkinCare}
               alt="Skin Care Treatment"
-              className="img-fluid rounded shadow-xl place-self-auto"
-              style={{ maxHeight: "60vh", width: "auto", maxWidth: "100%" }}
+              className="rounded shadow-xl object-cover justify-center"
               ref={imageRef}
             />
+            </div>
           </div>
         </div>
       </section>

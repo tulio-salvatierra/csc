@@ -1,4 +1,4 @@
-import { MENU_ITEMS, WHATSAPP, INSTAGRAM } from "../../constants";
+import { MENU_ITEMS, WHATSAPP, INSTAGRAM, TULIO_URL } from "../../constants";
 import Logo from "../../assets/images/CSC.svg";
 
 
@@ -82,7 +82,7 @@ export default function Footer() {
               >
                 Cancellation Policy
               </a>
-              <a href="/terms" className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200">
+              <a href={TULIO_URL} className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200">
                 Made by Tulio Salvatierra
               </a>
             </div>

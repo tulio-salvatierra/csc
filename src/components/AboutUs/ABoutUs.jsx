@@ -16,12 +16,12 @@ export default function AboutPage() {
   return (
     <>
       {/* Our Story Section */}
-      <section className="mb-5 py-28 align-items-center justify-content-center">
-        <div className="bg-about bg-cover bg-center flex-column flex justify-content-center align-items-center">
-          <h2 ref={addToRefs} className="mb-3 text-white display-1 mt-28">
+      <section className="mb-20 flex items-center justify-center">
+        <div className="bg-services grid place-items-center w-full p-6">
+          <h1 ref={addToRefs} className="mb-3 text-white text-5xl md:text-7xl font-bold mt-28">
             Our Story
-          </h2>
-          <p ref={addToRefs} className="w-50 fw-lighter bg-danger-light p-4 mt-4">
+          </h1>
+          <p ref={addToRefs} className="w-full md:w-1/2 font-light bg-red-100 p-4 mt-4">
             I battled acne in my late teens and early twenties, which shook my
             confidence. After seeing real results from professional treatments,
             I felt renewed and inspired to help others achieve that same boost.
@@ -33,27 +33,27 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team Section */}
-      <section ref={addToRefs} className="mb-5">
-        <h2 className="mb-3 fs-1">About me</h2>
-        <div className="row g-4 justify-content-center mt-10">
+      <section ref={addToRefs} className="mb-20">
+        <h2 className="mb-3 text-4xl font-bold">About me</h2>
+        <div className="flex flex-wrap gap-4 justify-center mt-10">
           {teamMembers.map((member) => (
             <div
               ref={addToRefs}
-              className="col-12 col-md-8 col-lg-8"
+              className="w-full md:w-2/3 lg:w-2/3"
               key={member.name}
             >
-              <div className="card text-center h-100">
-                <div className="card-header bg-transparent">
+              <div className="bg-white rounded-lg shadow-md text-center h-full">
+                <div className="bg-transparent">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className=" mx-auto"
+                    className="mx-auto"
                     style={{ width: "100%", height: "auto" }}
                   />
                 </div>
-                <div className="card-body text-center">
-                  <h5 className="card-title">{member.name}</h5>
-                  <p className="text-muted text-center">{member.role}</p>
+                <div className="p-6 text-center">
+                  <h5 className="text-xl font-semibold">{member.name}</h5>
+                  <p className="text-gray-500 text-center">{member.role}</p>
                 </div>
               </div>
             </div>
@@ -62,10 +62,10 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section ref={addToRefs} className="mb-5 mt-10">
-        <h2 className="fs-1 mb-3">Our Mission</h2>
-        <blockquote className="blockquote border-start ps-3">
-          <p className="text-muted">
+      <section ref={addToRefs} className="mb-20 mt-10">
+        <h2 className="text-4xl font-bold mb-3">Our Mission</h2>
+        <blockquote className="border-l-4 border-gray-300 pl-3">
+          <p className="text-gray-500">
             "Our mission is to enhance your natural beauty and boost your
             confidence by providing personalized, results-driven skincare
             treatments and luxurious beauty services. From rejuvenating facials

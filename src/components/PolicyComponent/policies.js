@@ -1,6 +1,6 @@
-import Cancel from "./../../assets/images/policies/Group 18.jpg";
-import Business from "./../../assets/images/policies/business.jpg";
-import GiftCard from "./../../assets/images/policies/gift-card.png";
+import Cancel from "./../../assets/images/policies/cancel.png";
+import Business from "./../../assets/images/policies/business.png";
+import GiftCard from "./../../assets/images/policies/giftcard.png";
 
 export const policies = [
   {

@@ -18,19 +18,19 @@ export default function Services() {
 
   return (
     <>
-      <section className="py-28 bg-white">
-        <div className="  h-96 bg-services bg-cover bg-center">
-          <div className="row align-items-center justify-content-center mb-16 mb-md-20">
+      <section className="bg-white">
+        <div className="h-72 bg-cover bg-center bg-services">
+          <div className="flex flex-col items-center justify-center mb-16 mb-md-20">
             <h1
               ref={addToRefs}
-              className="m-3 text-center text-white display-1"
+              className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
             >
               Services
             </h1>
 
             <p
               ref={addToRefs}
-              className="w-50 justify-content-center fw-lighter bg-danger-light p-4"
+              className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
             >
               At our Skin Wellness Studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
@@ -40,36 +40,32 @@ export default function Services() {
             </p>
           </div>
         </div>
-        <div className="row mb-20">
+        <div className="flex flex-wrap justify-center mb-20 mt-8 p-2">
           {services.map((service, index) => (
             <div
               key={`service ${index}`}
               ref={addToRefs}
-              className="col-12 col-md-4 mb-12 mb-md-0 p-5 justify-content-between h-auto"
+              className="w-full md:w-1/3 mb-12 px-5 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm md:mx-2 bg-white hover:bg-gray-50 p-4"
             >
-              <a className="text-decoration-none" href="#">
-                <span className="badge bg-primary text-uppercase fw-lighter">
+              <a className="no-underline" href="#">
+                <span className="mb-4 inline-block bg-blue-500 uppercase text-white text-sm font-light px-2 py-1 rounded">
                   {service.category}
                 </span>
               </a>
               <div className="mb-8">
                 <img
-                  style={{
-                    objectFit: "cover",
-                    width: "420px",
-                    height: "280px",
-                  }}
+                  className="w-full h-auto md:w-32 md:h-auto mx-auto mb-4 object-cover position-relative"
                   src={service.icon}
                   alt={service.name}
                 />
               </div>
-              <a className="d-inline-block text-decoration-none mb-6" href="#">
-                <h2 className="text-start p-0 fs-2">{service.name}</h2>
+              <a className="inline-block no-underline mb-6" href="#">
+                <h2 className="text-left p-0 text-2xl font-semibold">{service.name}</h2>
 
-                <p className="text-muted fs-5">{service.description}</p>
+                <p className="text-gray-500 text-lg">{service.description}</p>
               </a>
               <div className="text-left">
-                <a className="btn btn-dark w-auto" href={BOOKING_URL_2}>
+                <a className="bg-black text-white px-4 py-2 rounded" href={BOOKING_URL_2}>
                   Book my appointment now!
                 </a>
               </div>

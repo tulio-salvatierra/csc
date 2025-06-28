@@ -20,7 +20,7 @@ export default function ContactSection() {
 
   return (
     <>
-      <section ref={addToRefs} className="min-h-screen flex items-center justify-center m-6">
+      <section ref={addToRefs} className="min-h-0.5 flex items-center justify-center m-6">
         <div className="row w-full">
           <h2 className="mb-10">Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
