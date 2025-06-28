@@ -3,13 +3,12 @@ import { BOOKING_URL_2 } from "../../constants";
 import "./../../../src/App.css";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
-
-
+import BookingButton from "../BookingButton";
 
 export default function Services() {
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
@@ -60,14 +59,17 @@ export default function Services() {
                 />
               </div>
               <a className="inline-block no-underline mb-6" href="#">
-                <h2 className="text-left p-0 text-2xl font-semibold">{service.name}</h2>
+                <h2 className="text-left p-0 text-2xl font-semibold">
+                  {service.name}
+                </h2>
 
                 <p className="text-gray-500 text-lg">{service.description}</p>
               </a>
               <div className="text-left">
-                <a className="bg-black text-white px-4 py-2 rounded" href={BOOKING_URL_2}>
-                  Book my appointment now!
-                </a>
+                <BookingButton
+                  href={BOOKING_URL_2}
+                  label={"Book my appointment now!"}
+                />
               </div>
             </div>
           ))}

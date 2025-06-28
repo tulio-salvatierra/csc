@@ -2,8 +2,7 @@ import { policies } from "./policies";
 import { BOOKING_URL_2 } from "../../constants";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 import { useRef } from "react";
-
-
+import BookingButton from "../BookingButton/BookingButton";
 
 export default function PolicyComponent() {
   const animated = useRef([]);
@@ -14,9 +13,17 @@ export default function PolicyComponent() {
       <section className="bg-white">
         <div className="h-96 bg-cover bg-center bg-services relative">
           <div className="flex flex-col items-center justify-center mb-16 md:mb-20">
-            <h1 ref={(el) => (animated.current[0] = el)} className="m-3 text-center text-white text-5xl md:text-7xl font-bold">Our Policies</h1>
+            <h1
+              ref={(el) => (animated.current[0] = el)}
+              className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
+            >
+              Our Policies
+            </h1>
 
-            <p ref={(el) => (animated.current[1] = el)} className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4">
+            <p
+              ref={(el) => (animated.current[1] = el)}
+              className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
+            >
               At our skin care studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
               Our services include luxurious facials, HydraFacials,
@@ -32,8 +39,7 @@ export default function PolicyComponent() {
               ref={(el) => (animated.current[index + 2] = el)}
               className="w-full mb-12 px-10"
             >
-                <div className="flex justify-center">
-              
+              <div className="flex justify-center">
                 <img
                   className="rounded-lg shadow-md"
                   style={{
@@ -46,16 +52,17 @@ export default function PolicyComponent() {
                 />
               </div>
               <a className="inline-block no-underline mb-6" href="#">
-                
-                <p className="text-gray-500 text-lg m-10">{policy.description}</p>
+                <p className="text-gray-500 text-lg m-10">
+                  {policy.description}
+                </p>
               </a>
               <div className="text-center">
-                <a className="bg-black text-white px-4 py-2 rounded" href={BOOKING_URL_2}>
-                  Book my appointment now!
-                </a>
+                <BookingButton
+                  label={"Book my appointment now!"}
+                  href={BOOKING_URL_2}
+                />
               </div>
-              </div>
-            
+            </div>
           ))}
         </div>
       </section>

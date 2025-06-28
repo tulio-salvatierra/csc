@@ -4,6 +4,7 @@ import Logo from "../../assets/images/CSC.svg";
 
 export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
+  
 
   return (
     <footer className="bg-white border-t border-gray-100">
@@ -19,9 +20,8 @@ export default function Footer() {
               </div>
               <div className="space-y-6">
               
-                <p className="text-gray-600 text-lg leading-relaxed max-w-2xl">
-                  Building exceptional digital experiences with modern design and cutting-edge technology. We create
-                  solutions that inspire and deliver results.
+                <p className="text-gray-600 text-2xl leading-relaxed max-w-2xl">
+                Hydrate, renew and balance your skin
                 </p>
               </div>
             </div>
@@ -29,15 +29,15 @@ export default function Footer() {
 
           {/* Navigation Menu */}
           <div className="lg:col-span-3 xl:col-span-2 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider mb-8">Navigation</h3>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Navigation</h3>
             <nav className="space-y-6">
               {MENU_ITEMS.map((item, index) => (
                 <ul className="list-none p-0 m-0">
                 <li key={index}>
               <a
-                href="/"
+                href={item.url}
                 key={index}
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-base"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
               >
                 {item.title}
               </a>
@@ -49,21 +49,21 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="lg:col-span-3 xl:col-span-3 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-wider mb-8">Connect</h3>
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Connect</h3>
             <nav className="space-y-6">
               <a
-                href={WHATSAPP}
+                href={WHATSAPP[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-base"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
               >
                 WhatsApp
               </a>
               <a
-                href={INSTAGRAM}
+                href={INSTAGRAM[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-base"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
               >
                 Instagram
               </a>

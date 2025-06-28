@@ -22,7 +22,7 @@ export default function ReviewCards() {
   });
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-white">
+    <section className="min-h-60 flex flex-col items-center justify-center bg-white">
       <h2 ref={addToRefs} className="">
         What our clients say about us?
       </h2>

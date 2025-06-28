@@ -141,14 +141,6 @@ body {
 
 // Layout
 
-.header {
-  position: fixed;
-  display: flex;
-  justify-content: flex-start;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-}
 
 
 
@@ -177,25 +169,7 @@ body {
 .author {
   grid-area: 2 / 1 / 3 / 2;
 }
-
-.heading {
-  font-family: "Moula";
-  font-size: 6rem;
-  color: #000;
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-}
-/* @media (max-width: 768px) {
-  .heading {
-    font-family: "Moula";
-    font-size: 4rem;
-    color: #000;
-    padding: 10px;
-    text-align: left;
-    font-weight: bold;
-  }
-} */
+/* Hero Section */
 
 .bg-hero {
   background-image: url("../src/assets/images/hero/csc-hero.jpg");
@@ -212,7 +186,7 @@ body {
   justify-content: center;
   align-items: end;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .bg-hero {
     background-position: right;
   }
@@ -220,7 +194,7 @@ body {
     width: 100%;
     margin-top: 50%;
   }
-} */
+}
 
 .bg-services {
   background-image: url("../src/assets/images/ServicesPageCard/services skin.jpg");
@@ -237,64 +211,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .bg-services {
     background-position: right;
   }
-} */
-
-.bg-about {
-  background-image: url("../src/assets/images/about/about skin.jpg");
-  display: flex;
-  flex-direction: column;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100dvh;
-  width: auto;
-  display: flex;
-  color: #fff;
-  justify-content: center;
-  justify-items: center;
-  align-items: end;
 }
-/* @media (max-width: 768px) {
-  .bg-hero {
-    background-position: right;
-  }
-  .hero-content {
-    width: 100%;
-    margin-top: 50%;
-  }
-} */
-
-.bg-policies {
-  background-image: url("../src/assets/images/policies/policy.jpg");
-  display: flex;
-  flex-direction: column;
-  object-fit: cover;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100dvh;
-  width: auto;
-  display: flex;
-  color: #fff;
-  justify-content: center;
-  justify-items: center;
-  align-items: end;
-}
-/* @media (max-width: 768px) {
-  .bg-hero {
-    background-position: right;
-  }
-  .hero-content {
-    width: 100%;
-    margin-top: 50%;
-  }
-} */
-
 
 
 .hero-bottom {

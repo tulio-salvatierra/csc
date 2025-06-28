@@ -1,14 +1,16 @@
+import "./../../App.css";
 import CP from "./../../assets/images/servicesComponent/cp.jpeg";
 import WAX from "./../../assets/images/servicesComponent/wax.jpg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
-import { useRef } from "react";
-import ImageCycle from "./ServicesSlider";
-import "./Services.css";
+import {  useRef } from "react";
+
+
 
 export default function ServicesComponent() {
   const services = [
+
     {
       title: "Chemical Peels",
       description: "Exfoliation and Skin Rejuvenation",
@@ -16,7 +18,7 @@ export default function ServicesComponent() {
     },
     {
       title: "Waxing Services",
-      description: "for face and body",
+      description: "Waxing services for face and body",
       image: WAX,
     },
     {
@@ -34,7 +36,7 @@ export default function ServicesComponent() {
 
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
-  const addToRefs = (el) => {
+  const addToRefs = el => {
     if (el && !fadeRefs.current.includes(el)) {
       fadeRefs.current.push(el);
     }
@@ -42,25 +44,29 @@ export default function ServicesComponent() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center p-4">
-      <h1 ref={addToRefs} className="mb-4">
-        Services
-      </h1>
-      
-        <div
-          ref={addToRefs}
-          className="w-full max-w-2xl flex flex-1 justify-center items-center h-full"
-          
-        >
-          <ImageCycle
-            items={services.map((service) => ({
-              src: service.image,
-              title: service.title,
-              description: service.description,
-            }))}
-          />
-        </div>
-      
+    <section className="min-h-screen mt-32 py-24 mb-32">
+      <h2  ref={addToRefs} className="text-center text-4xl font-bold mb-4">Services</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {services.map((service, index) => (
+          <div  ref={addToRefs} key={index} className="p-5">
+            <a href="/services" className="no-underline text-black">
+              <div className="bg-white h-full p-5 shadow-lg rounded-lg">
+                <img
+                  src={service.image}
+                  className="w-full h-100 object-cover rounded"
+                  alt={service.title}
+                />
+                <div className="mt-4">
+                  <h3 className="text-xl p-0 text-black flex items-center font-semibold hlTitle">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-500">{service.description}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }
