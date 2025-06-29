@@ -149,6 +149,11 @@ body {
   height: auto;
 }
 
+@media (max-width: 768px) {
+  section {
+    height: auto;
+  }
+}
 
 .commet-grid {
   display: grid;

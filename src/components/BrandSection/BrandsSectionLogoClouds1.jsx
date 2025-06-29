@@ -32,7 +32,7 @@ export default function BrandsSectionLogoClouds1() {
   ];
   return (
     <>
-      <section className="min-h-screen flex flex-col items-center justify-center bg-white">
+      <section className="min-h-screen flex flex-col items-center justify-center bg-white mx-6">
         <div className="container">
           <p ref={addToRefs} className="text-gray-500 mb-6 leading-relaxed text-center">
             Trusted by brands all over the world
