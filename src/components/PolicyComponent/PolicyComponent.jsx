@@ -11,7 +11,7 @@ export default function PolicyComponent() {
   return (
     <>
       <section className="bg-white">
-        <div className="h-96 bg-cover bg-center bg-services relative">
+        <div className="h-96 bg-cover bg-center bg-policy relative">
           <div className="flex flex-col items-center justify-center mb-16 md:mb-20">
             <h1
               ref={(el) => (animated.current[0] = el)}

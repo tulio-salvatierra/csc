@@ -201,7 +201,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   height: 100dvh;
-  width: auto;
+  width: 100vw;
   display: flex;
   color: #fff;
   justify-content: center;
@@ -209,6 +209,48 @@ body {
 }
 @media (max-width: 768px) {
   .bg-services {
+    background-position: right;
+  }
+}
+
+.bg-about {
+  background-image: url("../src/assets/images/about/about skin.jpg");
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .bg-about {
+    background-position: right;
+  }
+}
+
+.bg-policy {
+  background-image: url("../src/assets/images/policies/policy.jpg");
+  display: flex;
+  flex-direction: column;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100dvh;
+  width: 100vw;
+  display: flex;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .bg-policy {
     background-position: right;
   }
 }

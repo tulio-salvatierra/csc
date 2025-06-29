@@ -17,7 +17,7 @@ export default function AboutPage() {
     <>
       {/* Our Story Section */}
       <section className="mb-20 flex items-center justify-center">
-        <div className="bg-services grid place-items-center w-full p-6">
+        <div className="bg-about grid place-items-center w-full p-6">
           <h1 ref={addToRefs} className="mb-3 text-white text-5xl md:text-7xl font-bold mt-28">
             Our Story
           </h1>
@@ -33,7 +33,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team Section */}
-      <section ref={addToRefs} className="mb-20">
+      <section ref={addToRefs} className="mb-20 mx-6">
         <h2 className="mb-3 text-4xl font-bold">About me</h2>
         <div className="flex flex-wrap gap-4 justify-center mt-10">
           {teamMembers.map((member) => (
@@ -62,7 +62,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section ref={addToRefs} className="mb-20 mt-10">
+      <section ref={addToRefs} className="mb-20 mt-10 mx-6">
         <h2 className="text-4xl font-bold mb-3">Our Mission</h2>
         <blockquote className="border-l-4 border-gray-300 pl-3">
           <p className="text-gray-500">
