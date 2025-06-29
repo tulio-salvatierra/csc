@@ -1,59 +1,102 @@
-import { MENU_ITEMS, WHATSAPP, INSTAGRAM } from "../../constants";
+import { MENU_ITEMS, WHATSAPP, INSTAGRAM, TULIO_URL } from "../../constants";
 import Logo from "../../assets/images/CSC.svg";
-import WA from "../../assets/icon/whatsapp.svg";
-import IG from "../../assets/icon/instagram.svg";
 
 export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
 
   return (
-    <section className="pt-20 pt-md-24 bg-white">
-      <div className="container">
-        <div className="row pb-12 pb-md-24">
-          <div className="col-12 col-sm-4 col-lg-3">
-            <a href="/">
-              <img className="w-100" src={Logo} alt="logo"  />
-            </a>
-          </div>
-          <div className="col-12 col-sm-8 col-lg-9">
-            <ul className="list-unstyled mb-0 mt-12 mt-sm-0 d-sm-flex justify-content-sm-end">
-              {MENU_ITEMS.map((item, index) => (
-                <li className="me-0 me-sm-6" key={index}>
-                  <a className="fs-5 text-decoration-none" href={item.url}>
-                    {item.title}
+    <footer className="bg-white border-t border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
+          {/* Logo Section */}
+          <div className="lg:col-span-6 xl:col-span-7">
+            <div className="flex flex-col items-start">
+              <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-2xl flex items-center justify-center mb-8">
+                <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
+                  <a href="/">
+                    <img className="" src={Logo} alt="logo" />
                   </a>
-                </li>
-              ))}
-            </ul>
-            <div className="d-flex justify-content-end mt-12 mt-sm-0">
-              <a
-                className="text-decoration-none p-3"
-                href={WHATSAPP}
-                target="_blank"
-                rel="noreferrer"
-              >
-               <img src={WA}/>
-              </a>
+                </span>
+              </div>
+              <div className="space-y-6">
+                <p className="text-gray-600 text-2xl leading-relaxed max-w-2xl">
+                  Hydrate, renew and balance your skin
+                </p>
+              </div>
+            </div>
+          </div>
 
-              <a className="text-decoration-none p-3" href={INSTAGRAM}>
-                <img src={IG} />
+          {/* Navigation Menu */}
+          <div className="lg:col-span-3 xl:col-span-2 lg:pl-8">
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">
+              Navigation
+            </h3>
+            <nav className="space-y-6">
+              <ul className="list-none p-0 m-0">
+                {MENU_ITEMS.map((item, index) => (
+                  <li key={index + 1}>
+                    <a
+                      href={item.url}
+                      key={index}
+                      className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+
+          {/* Social Media Links */}
+          <div className="lg:col-span-3 xl:col-span-3 lg:pl-8">
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">
+              Connect
+            </h3>
+            <nav className="space-y-6">
+              <a
+                href={WHATSAPP[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+              >
+                WhatsApp
+              </a>
+              <a
+                href={INSTAGRAM[0].url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+              >
+                Instagram
+              </a>
+            </nav>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="mt-24 pt-12 border-t border-gray-100">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p className="text-sm text-gray-500">
+              © {new Date().getFullYear()} Carolina Skin Centre
+            </p>
+            <div className="flex space-x-6">
+              <a
+                href="/policies"
+                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+              >
+                Cancellation Policy
+              </a>
+              <a
+                href={TULIO_URL}
+                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+              >
+                Made by Tulio Salvatierra
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div className="pt-12 pb-20 bg-light">
-        <div className="container">
-          <div className="row align-items-center justify-content-between">
-            <div className="col-12 col-sm-auto mb-8 mb-sm-0">
-              <p className="text-muted fs-5 small mb-0 lh-sm">
-                made by <a href={TULIO_URL}>Tulio Salvatierra</a>
-              </p>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </section>
+    </footer>
   );
 }

@@ -2,8 +2,7 @@ import { policies } from "./policies";
 import { BOOKING_URL_2 } from "../../constants";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 import { useRef } from "react";
-
-
+import BookingButton from "../BookingButton/BookingButton";
 
 export default function PolicyComponent() {
   const animated = useRef([]);
@@ -11,12 +10,20 @@ export default function PolicyComponent() {
   useFadeInAnimation(animated);
   return (
     <>
-      <section className="py-28 bg-white">
-        <div className="  h-96 bg-policies bg-cover bg-center">
-          <div className="row align-items-center justify-content-center mb-16 mb-md-20">
-            <h1 ref={(el) => (animated.current[0] = el)} className="m-3 text-center text-white display-1">Our Policies</h1>
+      <section className="bg-white">
+        <div className="h-96 bg-cover bg-center bg-policy relative">
+          <div className="flex flex-col items-center justify-center mb-16 md:mb-20">
+            <h1
+              ref={(el) => (animated.current[0] = el)}
+              className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
+            >
+              Our Policies
+            </h1>
 
-            <p ref={(el) => (animated.current[1] = el)} className="w-50 justify-content-center fw-lighter bg-danger-light p-4">
+            <p
+              ref={(el) => (animated.current[1] = el)}
+              className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
+            >
               At our skin care studio, we offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
               Our services include luxurious facials, HydraFacials,
@@ -25,36 +32,37 @@ export default function PolicyComponent() {
             </p>
           </div>
         </div>
-        <div className="row mb-20 container mx-auto flex-column justify-content-evenly">
+        <div className="flex flex-col justify-evenly m-20 container mx-auto">
           {policies.map((policy, index) => (
             <div
               key={`service ${index}`}
               ref={(el) => (animated.current[index + 2] = el)}
-              className="col-12 mb-12 mb-md-0 p-10"
+              className="w-full mb-12 px-10"
             >
-                <div className="justify-content-center">
-              
+              <div className="flex justify-center">
                 <img
+                  className="rounded-lg shadow-md"
                   style={{
                     objectFit: "cover",
-                    width: "100%",
-                    height: "auto",
+                    width: "auto",
+                    height: "80%",
                   }}
                   src={policy.image}
                   alt={policy.name}
                 />
               </div>
-              <a className="d-inline-block text-decoration-none mb-6" href="#">
-                
-                <p className="text-muted fs-5 m-10">{policy.description}</p>
+              <a className="inline-block no-underline mb-6" href="#">
+                <p className="text-gray-500 text-lg m-10">
+                  {policy.description}
+                </p>
               </a>
               <div className="text-center">
-                <a className="btn btn-dark w-auto" href={BOOKING_URL_2}>
-                  Book my appointment now!
-                </a>
+                <BookingButton
+                  label={"Book my appointment now!"}
+                  href={BOOKING_URL_2}
+                />
               </div>
-              </div>
-            
+            </div>
           ))}
         </div>
       </section>

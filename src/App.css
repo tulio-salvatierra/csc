@@ -1,20 +1,12 @@
+@import "tailwindcss";
+
+
+// Fonts
 @font-face {
   font-family: "Moula";
   src: url(../src/assets/fonts/Nanum/Nanum-Regular.ttf) format("truetype");
   font-weight: normal;
   font-style: normal;
-}
-@font-face {
-  font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
-  font-weight: bold;
-  font-style: bold;
-}
-@font-face {
-  font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
-  font-weight: black;
-  font-style: ExtraBold;
 }
 
 @font-face {
@@ -24,33 +16,142 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Moula";
+  src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Moula";
+  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
+  font-weight: extra-bold;
+  font-style: normal;
+}
+
+h1 {
+  font-family: 'Moula', sans-serif;
+  font-size: 5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 4.5rem;
+  }
+
+  @media (max-width: 768px) {
+      font-size: 3.75rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 3rem;
+  }
+}
+
+h2 {
+  font-family: 'Moula', sans-serif;
+  font-size: 3.5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 2.5rem;
+  }
+
+  @media (max-width: 768px) {
+      font-size: 2rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 1.75rem;
+  }
+}
+
+h3 {
+  font-family: 'Moula', sans-serif;
+  font-size: 2.5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 2rem;
+  }
+
+  @media (max-width: 768px) {
+      font-size: 1.75rem;
+  }
+
+  @media (max-width: 480px) {
+      font-size: 1.5rem;
+  }
+}
+
+p {
+  font-family: 'Moula', sans-serif;
+  font-size: 1.5rem;
+  color: #929292;
+
+  @media (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+      font-size: 1rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.875rem;
+  }
+}
+
+quote {
+  font-family: 'Moula', sans-serif;
+  font-size: 1.5rem;
+  color: #929292;
+
+  @media (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+      font-size: 1rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.875rem;
+  }
+}
+
+li {
+  font-family: 'Moula', sans-serif;
+  font-size: 1.5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 1.25rem;
+  }
+  @media (max-width: 768px) {
+      font-size: 1rem;
+  }
+  @media (max-width: 440px) {
+    font-size: 0.875rem;
+  }
+}
+
+strong, a {
+  font-family: 'Moula', sans-serif;
+  font-weight: extra-bold;
+}
+
 html,
 body {
-  overflow-x: hidden;
   scroll-behavior: auto;
-  
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
-section {
-  margin: 0;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-.hlTitle {
-  font-family: "Moula";
-}
-
-.card-img {
-  width: auto;
-  height: 480px;
-  object-fit: cover;
+// Layout
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
 }
 
 @media (max-width: 768px) {
-  .card-img {
-    width: 100%;
-    height: 100%;
+  section {
+    height: auto;
   }
 }
 
@@ -69,74 +170,7 @@ section {
 .author {
   grid-area: 2 / 1 / 3 / 2;
 }
-
-.heading {
-  font-family: "Moula";
-  font-size: 6rem;
-  color: #000;
-  padding: 10px;
-  text-align: left;
-  font-weight: bold;
-}
-@media (max-width: 768px) {
-  .heading {
-    font-family: "Moula";
-    font-size: 4rem;
-    color: #000;
-    padding: 10px;
-    text-align: left;
-    font-weight: bold;
-  }
-}
-
-.welcome-text {
-  font-family: "Moula";
-  font-size: 1.5rem;
-  color: #000;
-  padding: 10px;
-  text-align: left;
-}
-
-h3,
-h2,
-h1,
-strong {
-  font-family: "MOULA";
-  color: #000;
-  font-weight: bold;
-  text-align: center;
-}
-
-li {
-  font-family: "MOULA";
-  color: #000;
-  font-weight: bold;
-  text-align: left;
-}
-.header-bg {
-  background-image: url("../src/assets/images/hero/csc-hero.jpg");
-  background-size: cover;
-  background-position: center;
-}
-@media (max-width: 768px) {
-  .header-bg {
-    background-position: left;
-  }
-}
-
-.overlay {
-  background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  width: 100%;
-}
-
-.hero-content {
-  justify-content: left;
-  align-items: end;
-  height: 100%;
-  width: 80%;
-  margin-top: 30%;
-}
+/* Hero Section */
 
 .bg-hero {
   background-image: url("../src/assets/images/hero/csc-hero.jpg");
@@ -172,11 +206,11 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   height: 100dvh;
-  width: auto;
+  width: 100vw;
   display: flex;
   color: #fff;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .bg-services {
@@ -193,24 +227,19 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   height: 100dvh;
-  width: auto;
+  width: 100vw;
   display: flex;
   color: #fff;
   justify-content: center;
-  justify-items: center;
-  align-items: end;
+  align-items: center;
 }
 @media (max-width: 768px) {
-  .bg-hero {
+  .bg-about {
     background-position: right;
-  }
-  .hero-content {
-    width: 100%;
-    margin-top: 50%;
   }
 }
 
-.bg-policies {
+.bg-policy {
   background-image: url("../src/assets/images/policies/policy.jpg");
   display: flex;
   flex-direction: column;
@@ -219,44 +248,20 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   height: 100dvh;
-  width: auto;
+  width: 100vw;
   display: flex;
   color: #fff;
   justify-content: center;
-  justify-items: center;
-  align-items: end;
-}
-@media (max-width: 768px) {
-  .bg-hero {
-    background-position: right;
-  }
-  .hero-content {
-    width: 100%;
-    margin-top: 50%;
-  }
-}
-
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.hero-bottom {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  font-weight: 700;
-  font-size: x-large;
-  height: 30dvh;
-  width: 100dvw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .bg-policy {
+    background-position: right;
+  }
+}
+
+
+
 
 .navbar-brand {
   font-family: "Grapevine";
@@ -274,17 +279,4 @@ li {
   display: none !important;
 }
 
-h1,
-a,
-p {
-  font-family: "Moula";
-  color: black;
-  text-align: left;
-  font-size: clamp(1em, 2vw, 1.15em);
-}
 
-h1 {
-  font-size: clamp(4em 5vw 6em);
-  font-weight: bold;
-  text-align: left;
-}

@@ -44,23 +44,23 @@ export default function ServicesComponent() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="h-100 mt-32 py-24 mb-32">
-      <h2  ref={addToRefs} className="text-center fs-1 fw-bold mb-4">Services</h2>
-      <div className="row g-4">
+    <section className="min-h-screen mt-32 py-24 mb-32">
+      <h2  ref={addToRefs} className="text-center text-4xl font-bold mb-4">Services</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {services.map((service, index) => (
-          <div  ref={addToRefs} key={index} className="col-md-6 p-5">
-            <a href="/services" className="text-decoration-none text-dark">
-              <div className="card border-0 service-card h-100 p-5 shadow-lg">
+          <div  ref={addToRefs} key={index} className="p-5">
+            <a href="/services" className="no-underline text-black">
+              <div className="bg-white h-full p-5 shadow-lg rounded-lg">
                 <img
                   src={service.image}
-                  className="card-img"
+                  className="w-full h-100 object-cover rounded"
                   alt={service.title}
                 />
-                <div className="card-body">
-                  <h2 className="card-title fs-3 p-0 text-dark d-flex align-items-center hlTitle">
+                <div className="mt-4">
+                  <h3 className="text-xl p-0 text-black flex items-center font-semibold hlTitle">
                     {service.title}
-                  </h2>
-                  <p className="card-text text-muted">{service.description}</p>
+                  </h3>
+                  <p className="text-gray-500">{service.description}</p>
                 </div>
               </div>
             </a>

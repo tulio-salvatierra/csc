@@ -1,72 +1,34 @@
 {
-  "name": "app",
-  "version": "1.0.0",
+  "name": "carolina-vite",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
   "dependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@studio-freight/lenis": "^1.0.42",
-    "assert": "^2.1.0",
-    "bootstrap": "^5.3.6",
-    "browserify-zlib": "^0.2.0",
-    "buffer": "^6.0.3",
-    "constants-browserify": "^1.0.0",
-    "crypto-browserify": "^3.12.1",
-    "gsap": "^3.12.7",
-    "https-browserify": "^1.0.0",
+    "gsap": "^3.13.0",
     "lenis": "^1.3.4",
-    "lucide-react": "^0.469.0",
-    "node-polyfill-webpack-plugin": "^4.1.0",
-    "os-browserify": "^0.3.0",
-    "path-browserify": "^1.0.1",
-    "process": "^0.11.10",
-    "querystring-es3": "^0.2.1",
-    "react": "^18.2.0",
-    "react-apexcharts": "^1.4.0",
-    "react-app-rewired": "^2.2.1",
-    "react-dom": "^18.3.1",
-    "react-helmet-async": "^1.3.0",
-    "react-router-dom": "^6.11.2",
-    "react-scripts": "^5.0.1",
-    "split-type": "^0.3.4",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
-    "url": "^0.11.4",
-    "util": "^0.12.5"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.30.1"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "browser-sync": "^2.27.7",
-    "clean-css-cli": "^4.2.1",
-    "cpx": "^1.5.0",
-    "npm-run-all": "^4.1.5",
-    "rimraf": "^3.0.2",
-    "sass": "^1.43.4"
-  },
-  "scripts": {
-    "css-compile": "sass --style expanded src/scss/bootstrap-theme.scss public/css/bootstrap/bootstrap.css",
-    "css-minify": "cleancss --level 1 --source-map --source-map-inline-sources --output public/css/bootstrap/bootstrap.min.css public/css/bootstrap/bootstrap.css",
-    "css": "npm-run-all --sequential css-*",
-    "start": "react-app-rewired start",
-    "build": "npm run css-compile && react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "@eslint/js": "^9.25.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.25.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^16.0.0",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8",
+    "vite": "^6.3.5"
   }
 }

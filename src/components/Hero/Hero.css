@@ -1,0 +1,20 @@
+
+h1 {
+    font-family: 'Moula', sans-serif;
+    font-size: 8rem;
+
+    @media (max-width: 1024px) {
+        font-size: 5.5rem;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 4.5rem;
+    }
+
+    @media (max-width: 480px) {
+        font-size: 3.5rem;
+    }
+}
+
+
+

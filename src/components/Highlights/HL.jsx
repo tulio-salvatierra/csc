@@ -32,10 +32,10 @@ export default function HL() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="mt-32 mb-32 py-56 why">
+    <section className="why bg-black min-h-screen flex flex-col items-center justify-center py-0">
       <h2
         ref={addToRefs}
-        className="text-center fw-bold mb-4 fs-1"
+        className="text-center text-white fw-bold mb-4 fs-1"
       >
         Why Choose Us
       </h2>
@@ -44,7 +44,7 @@ export default function HL() {
           <div
             key={index}
             ref={addToRefs}
-            className="col-md-4 bg-black text-white card"
+            className="col-md-4 bg-black text-white border-2 m-2.5 rounded-lg"
           >
             <div className="card-body p-4">
               <h2 className="text-muted fs-1 text-left p-4 text-decoration-none">

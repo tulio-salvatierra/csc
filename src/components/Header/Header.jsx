@@ -1,144 +1,50 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
-import BF from "./../../assets/images/Butterfly.svg";
+import LogoBG from "../../assets/images/CSC.svg";
 import {
   MENU_ITEMS,
   WHATSAPP,
   INSTAGRAM,
   BOOKING_URL_2,
 } from "../../constants/index.js";
-import WA from "../../assets/icon/whatsapp.svg";
-import IG from "../../assets/icon/instagram.svg";
-import { useMenuAnimation } from "../../hooks/useMenuAnimation.js";
-import { useMenuTransition } from "../../hooks/useMenuTransition.js";
-import { gsap } from "gsap";
 import "./Header.css";
+import BookingButton from "../BookingButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
   const menuRef = useRef(null);
   const menuLinksRef = useRef([]);
   const overlayRef = useRef(null);
   const socialIconsRef = useRef([]);
-  const bookNowRef = useRef(null);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = BF;
-    img.onload = () => {
-      setBackgroundLoaded(true);
-    };
-  }, []);
 
-  useEffect(() => {
-    if (!menuRef.current || !overlayRef.current) return;
-  
-    const handleScroll = () => {
-      const scrollTop = menuRef.current.scrollTop;
-      const blurValue = scrollTop > 10 ? 3 : 8;
-    
-      gsap.to(overlayRef.current, {
-        css: { backdropFilter: `blur(${blurValue}px)` },
-        duration: 0.5,
-        ease: "power2.out",
-      });
-    };
-  
-    menuRef.current.addEventListener("scroll", handleScroll);
-  
-    return () => {
-      menuRef.current.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  const shouldRender = useMenuTransition(isOpen, 1000);
-
-  useMenuAnimation(
-    isOpen,
-    menuRef,
-    overlayRef,
-    menuLinksRef,
-    socialIconsRef,
-    bookNowRef
-  );
+  // Animation hooks removed
 
   const handleOpen = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleCloseWithAnimation = () => {
-    if (menuRef.current && overlayRef.current) {
-      const tl = gsap.timeline();
-
-      tl.to(bookNowRef.current, {
-        scale: 0.8,
-        autoAlpha: 0,
-        duration: 0.4,
-        ease: "power3.out",
-      })
-        .to(
-          socialIconsRef.current,
-          {
-            y: 30,
-            autoAlpha: 0,
-            stagger: 0.1,
-            duration: 0.3,
-            ease: "power3.out",
-          },
-          "-=0.3"
-        )
-        .to(
-          menuLinksRef.current,
-          {
-            y: 50,
-            autoAlpha: 0,
-            stagger: 0.05,
-            duration: 0.3,
-            ease: "power3.out",
-          },
-          "-=0.3"
-        )
-        .to(menuRef.current, {
-          y: "-100%",
-          autoAlpha: 0,
-          duration: 0.8,
-          ease: "power4.in",
-        })
-        .to(
-          overlayRef.current,
-          {
-            autoAlpha: 0,
-            backdropFilter: "blur(0px)",
-            duration: 0.5,
-          },
-          "-=0.6"
-        );
-    }
-
-    setTimeout(() => {
-      setIsOpen(false);
-    }, 1000);
-  };
+  // Animation close handler removed, use direct close
 
   return (
     <>
       {/* Header NORMAL, no ref, no animación */}
-      <section className="overflow-hidden sticky-top col-12 col-sm-12">
-        <nav className="navbar py-10 navbar-expand-xl navbar-light bg-white justify-content-between shadow-xl">
+      <section className="sticky top-0 w-full z-50 shadow-2xl">
+        <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
           <a href="/">
-            <img className="navbar-brand" src={Logo} alt="logo" width={155} />
+            <img
+              className="w-[155px] h-auto"
+              src={LogoBG}
+              alt="logo"
+            />
           </a>
 
-          <button
-            className="btn p-0 d-xl-none navbar-burger"
-            onClick={handleOpen}
-          >
+          <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
             <svg
               width={32}
               height={32}
               viewBox="0 0 24 24"
-              fill="none"
+              fill="#000"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
@@ -150,130 +56,134 @@ export default function Header() {
             </svg>
           </button>
 
-          <div className="collapse navbar-collapse justify-content-end d-none d-xl-flex">
-            <ul className="navbar-nav ms-32 mb-2 mb-lg-0">
+          <div className="hidden lg:flex justify-end items-center space-x-8">
+            <ul className="flex space-x-8">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
-                  <a className="nav-link fs-5" href={item.url}>
+                  <a
+                    className="text-2xl text-black no-underline hover:underline"
+                    href={item.url}
+                  >
                     {item.title}
                   </a>
                 </li>
               ))}
             </ul>
+            <BookingButton href={BOOKING_URL_2} label={"Book now!"} />
           </div>
         </nav>
-
-        {/* Aquí SÍ el menú móvil animado */}
-        {shouldRender && backgroundLoaded && (
-          <div
-            ref={overlayRef}
-            className="position-fixed top-0 start-0 end-0 bottom-0"
-            style={{
-              zIndex: 9998,
-              backdropFilter: "blur(8px)",
-            }}
-            onClick={handleCloseWithAnimation}
-          >
-            <div
-              ref={menuRef}
-              className="position-absolute top-0 start-0 end-0 bottom-0"
-              style={{
-                zIndex: 9999,
-                height: "100%",
-                width: "100%",
-                backgroundColor: "rgba(255, 255, 255, 0.9)",
-                backgroundImage: `url(${BF})`,
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundSize: "cover", // 👈 AQUÍ el cambio importante
-              }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <nav className="position-relative d-flex flex-column py-10 px-6 mobile-menu overflow-auto">
-                <div className="d-flex align-items-center mb-12">
-                  <a className="me-auto h4 mb-0 text-decoration-none" href="/">
-                    <img src={Logo} alt="logo" width={132} />
-                  </a>
-                  <button
-                    className="btn navbar-close"
-                    type="button"
-                    aria-label="Close"
-                    onClick={handleOpen}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <line
-                        x1="4"
-                        y1="4"
-                        x2="20"
-                        y2="20"
-                        stroke="black"
-                        strokeWidth="2"
-                      />
-                      <line
-                        x1="20"
-                        y1="4"
-                        x2="4"
-                        y2="20"
-                        stroke="black"
-                        strokeWidth="2"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
-                <ul className="nav flex-column">
-                  {MENU_ITEMS.map((item, index) => (
-                    <li className="nav-item py-3" key={index}>
-                      <a
-                        ref={(el) => (menuLinksRef.current[index] = el)}
-                        className="nav-link text-dark fs-5"
-                        href={item.url}
-                        onClick={handleCloseWithAnimation}
-                      >
-                        {item.title}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="w-auto">
-                  <div className="d-flex">
-                    <a
-                      className="text-decoration-none"
-                      href={WHATSAPP}
-                      target="_blank"
-                      rel="noreferrer"
-                      ref={(el) => (socialIconsRef.current[0] = el)}
-                    >
-                      <img src={WA} alt="Whatsapp" />
-                    </a>
-
-                    <a
-                      className="text-decoration-none"
-                      href={INSTAGRAM}
-                      target="_blank"
-                      rel="noreferrer"
-                      ref={(el) => (socialIconsRef.current[1] = el)}
-                    >
-                      <img src={IG} alt="Instagram" />
-                    </a>
-                  </div>
-                  <div className="py-6">
-                    <a
-                      ref={bookNowRef}
-                      className="btn btn-dark w-100"
-                      href={BOOKING_URL_2}
-                    >
-                      Book now
-                    </a>
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-        )}
       </section>
+
+      {/* Aquí SÍ el menú móvil animado */}
+      {isOpen && (
+        <div
+          ref={overlayRef}
+          className="fixed inset-0 pointer-events-none"
+          onClick={() => setIsOpen(false)}
+        >
+          <div
+            ref={menuRef}
+            className="pointer-events-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <nav
+              className="relative z-10 flex flex-col py-10 px-6 bg-white"
+            
+            >
+              <div
+                className="absolute inset-0 z-0 pointer-events-none"
+                 style={{
+                   backgroundImage: `url(${LogoBG})`,
+                   backgroundSize: "contain",
+                   backgroundRepeat: "no-repeat",
+                   backgroundPosition: "center",
+                   backdropFilter: "blur(4px)",
+                   opacity: 0.2,
+                 }}
+              />
+              <div className="absolute inset-0 bg-white opacity-50 z-0 pointer-events-none" />
+              <div className="flex items-center mb-12">
+                <a
+                  className="flex-1 text-2xl font-semibold mb-0 no-underline"
+                  href="/"
+                >
+                  <img src={Logo} alt="logo" width={132} />
+                </a>
+                <button
+                  className="p-2"
+                  type="button"
+                  aria-label="Close"
+                  onClick={handleOpen}
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <line
+                      x1="4"
+                      y1="4"
+                      x2="20"
+                      y2="20"
+                      stroke="black"
+                      strokeWidth="2"
+                    />
+                    <line
+                      x1="20"
+                      y1="4"
+                      x2="4"
+                      y2="20"
+                      stroke="black"
+                      strokeWidth="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <ul className="flex flex-col space-y-4">
+              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Navigation</h2>
+                {MENU_ITEMS.map((item, index) => (
+                  <li className="py-3" key={index}>
+                    <a
+                      ref={(el) => (menuLinksRef.current[index] = el)}
+                      className="text-lg text-black no-underline hover:underline"
+                      href={item.url}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+
+              <div className="flex flex-col space-x-4  mt-6">
+              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Connect</h2>
+                <a
+                  className="no-underline hover:underline"
+                  href={WHATSAPP}
+                  target="_blank"
+                  rel="noreferrer"
+                  ref={(el) => (socialIconsRef.current[0] = el)}
+                >
+                  Whatsapp
+                </a>
+
+                <a
+                  className="no-underline hover:underline"
+                  href={INSTAGRAM}
+                  target="_blank"
+                  rel="noreferrer"
+                  ref={(el) => (socialIconsRef.current[1] = el)}
+                >
+                  Instagram
+                </a>
+              </div>
+              <div className="py-6">
+                <BookingButton
+                  href={BOOKING_URL_2}
+                  label={"Book now"}
+                />
+              </div>
+            </nav>
+          </div>
+        </div>
+      )}
     </>
   );
 }
-

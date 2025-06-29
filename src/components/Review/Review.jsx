@@ -6,7 +6,7 @@ import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 export default function ReviewCards() {
   const cardsRef = useRef([]);
   cardsRef.current = [];
-  const addToRefs = el => {
+  const addToRefs = (el) => {
     if (el && !cardsRef.current.includes(el)) {
       cardsRef.current.push(el);
     }
@@ -22,30 +22,28 @@ export default function ReviewCards() {
   });
 
   return (
-    <section className="container mt-5">
-      <h2 ref={addToRefs} className="fs-2 text-left text-muted">
+    <section className="min-h-60 flex flex-col items-center justify-center bg-white mx-6">
+      <h2 ref={addToRefs} className="">
         What our clients say about us?
       </h2>
-      <h3 ref={addToRefs} className="text-left display-3 mb-4">
+      <h3 ref={addToRefs} className="text-gray-500">
         See the feedback we received in our Google My Business profile:
       </h3>
-      <div className="row">
+      <div className="row flex flex-wrap justify-center">
         {mockReviews.map((review, idx) => (
-          <div key={idx} className="col-md-4 mb-4" ref={addToRefs}>
-            <div className="card h-100">
-              <div className="card-body d-flex flex-column">
-                <p className="card-text">{review.text}</p>
-                <div className="mt-auto d-flex align-items-center">
-                  <img
-                    src={review.photoUrl}
-                    alt={review.author}
-                    className="rounded-circle"
-                    style={{ width: '50px', height: '50px' }}
-                  />
-                  <div className="ms-3">
-                    <h6 className="mb-0">{review.author}</h6>
-                    <small className="text-muted">{review.date}</small>
-                  </div>
+          <div key={idx} className="flex mb-4" ref={addToRefs}>
+            <div className="w-100 h-75 content-evenly shadow-lg m-4 p-4 rounded-lg bg-gray-100">
+              <p className="">{review.text}</p>
+              <div className="">
+                <img
+                  src={review.photoUrl}
+                  alt={review.author}
+                  className="rounded-circle"
+                  style={{ width: "50px", height: "50px" }}
+                />
+                <div className="ms-3">
+                  <p className="">{review.author}</p>
+                  <small className="">{review.date}</small>
                 </div>
               </div>
             </div>

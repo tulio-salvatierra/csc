@@ -1,0 +1,53 @@
+.btn-animate-chars {
+  color: #fff;
+  background-color: #000;
+  cursor: pointer;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  max-width: 12rem;
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  display: flex;
+  position: relative;
+  font-family: 'Moula', sans-serif;
+}
+
+.btn-animate-chars__text {
+  white-space: nowrap;
+  line-height: 1.3;
+}
+
+/* Characters */
+.btn-animate-chars [data-button-animate-chars] {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-animate-chars [data-button-animate-chars] span {
+  display: inline-block;
+  position: relative;
+  text-shadow: 0px 1.3em currentColor;
+  transform: translateY(0em) rotate(0.001deg);
+  transition: transform 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btn-animate-chars:hover [data-button-animate-chars] span {
+  transform: translateY(-1.3em) rotate(0.001deg);
+}
+
+/* Background */
+.btn-animate-chars__bg {
+  background-color: #1e1e1;
+  border-radius: .25em;
+  position: absolute;
+  inset: 0;
+  transition: inset 0.6s cubic-bezier(0.625, 0.05, 0, 1);
+}
+
+.btn-animate-chars:hover .btn-animate-chars__bg {
+  inset: 0.125em;
+}
