@@ -6,8 +6,8 @@ A modern, responsive marketing site for Carolina Skin Center, built with React, 
 
 ## 🚀 Demo
 
-> Live site: <https://your-production-url.com>  
-> (Replace with your actual deployed URL)
+> Live site: https://www.carolinaskincentre.com/  
+
 
 ---
 
