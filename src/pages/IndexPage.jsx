@@ -15,11 +15,11 @@ import { Banner } from "../components/Banner/Banner";
 export default function IndexPage() {
   return (
     <>
-      <main className="parent-page">
-        <div className="header">
+      <main className="overflow-visible min-h-screen">
+        <div className="header sticky top-0 z-50 bg-white shadow-lg">
           <Header />
         </div>
-        <div className="content">
+        <div className="parent-page min-h-screen overflow-visible">
           <Hero />
           <Solutions />
           <CancellationPolicy />

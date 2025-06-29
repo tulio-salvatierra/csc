@@ -79,7 +79,7 @@ export default function Solutions() {
                 label={"Book my appointment now!"}
               />
             </div>
-            <div className="d-flex justify-content-center align-items-center content-center"> 
+            <div className="grid place-items-center"> 
             <img
               src={SkinCare}
               alt="Skin Care Treatment"

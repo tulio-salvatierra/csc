@@ -17,10 +17,10 @@ export default function CancellationPolicy() {
   return (
     <section
       ref={addToRefs}
-      className="min-h-screen flex items-center justify-center bg-red-100 text-dark"
+      className="min-h-80 flex items-center justify-center bg-red-100 text-dark"
     >
-      <div ref={addToRefs} className="container py-8 px-4 md:py-12 md:px-8 shadow-sm bg-white">
-        <div className="row">
+      <div ref={addToRefs} className="py-8 px-4 md:py-12 md:px-8 shadow-sm bg-white">
+        <div className="row w-100">
           <div className="place-justify-center mx-auto">
             <h2
               ref={addToRefs}
@@ -28,7 +28,7 @@ export default function CancellationPolicy() {
             >
               New Cancellation Policy
             </h2>
-            <div className="card border-0 justify-content-center max-w-xl w-full mx-auto" ref={addToRefs}>
+            <div className="card border-0 justify-content-center w-full mx-auto" ref={addToRefs}>
               <div className="card-body p-4">
                 <p ref={addToRefs} className="mb-4">
                   To ensure customer satisfaction, we kindly ask as a courtesy

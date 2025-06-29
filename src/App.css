@@ -135,16 +135,12 @@ strong, a {
 
 html,
 body {
-  
   scroll-behavior: auto;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 // Layout
-
-
-
-
-
 .footer {
   display: flex;
   flex-direction: column;
@@ -218,18 +214,7 @@ body {
 }
 
 
-.hero-bottom {
-  background-color: #f9f9f9;
-  padding: 1rem;
-  font-weight: 700;
-  font-size: x-large;
-  height: 30dvh;
-  width: 100dvw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 
 .navbar-brand {
   font-family: "Grapevine";

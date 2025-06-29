@@ -16,7 +16,7 @@ function App() {
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
-  });
+  }, []);
   return (
     
       <Routes>
