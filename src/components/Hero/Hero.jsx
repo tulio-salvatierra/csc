@@ -53,7 +53,7 @@ export default function Hero() {
             <p className="bg-red-100 p-4 mb-8 text-gray-800 mt-4" ref={addToRefs}>
               Improve the health and appearance of your skin through
               personalized facial treatments that will balance your skin by
-              delivering visible and long-lasting results. we are located in the
+              delivering visible and long-lasting results located in the
               heart of Midland, TX.
             </p>
             <BookingButton
