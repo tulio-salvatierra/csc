@@ -1,4 +1,7 @@
-
+.header {
+  top: 0;
+position: fixed;
+}
 .navbar-menu {
   position: fixed;
   top: 0;

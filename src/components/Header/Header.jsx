@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <>
       {/* Header NORMAL, no ref, no animación */}
-      <section className="sticky top-0 w-full z-50 shadow-2xl">
+      <section className="sticky top-0 w-full z-50 shadow-2xl header">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
           <a href="/">
             <img
