@@ -1,6 +1,7 @@
 .header {
   top: 0;
-position: fixed;
+  position: fixed;
+  z-index: 1000;
 }
 .navbar-menu {
   position: fixed;
@@ -40,5 +41,4 @@ position: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }

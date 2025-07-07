@@ -53,17 +53,17 @@ export default function Services() {
               </a>
               <div className="mb-8">
                 <img
-                  className="w-full h-auto md:w-32 md:h-auto mx-auto mb-4 object-cover position-relative"
+                  className="mx-auto mb-4 position-relative h-80 w-100 object-cover"
                   src={service.icon}
                   alt={service.name}
                 />
               </div>
               <a className="inline-block no-underline mb-6" href="#">
-                <h2 className="text-left p-0 text-2xl font-semibold">
+                <h2 className="text-left p-0font-semibold">
                   {service.name}
                 </h2>
 
-                <p className="text-gray-500 text-lg">{service.description}</p>
+                <p className="text-gray-500">{service.description}</p>
               </a>
               <div className="text-left">
                 <BookingButton
