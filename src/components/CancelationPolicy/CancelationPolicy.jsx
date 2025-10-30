@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
 import BookingButton from "../BookingButton";
 import "./../../App.css";
+import policyBg from "../../assets/images/policies/policy_bg.jpg";
 
 export default function CancellationPolicy() {
   const fadeRefs = useRef([]);
@@ -17,14 +18,15 @@ export default function CancellationPolicy() {
   return (
     <section
       ref={addToRefs}
-      className="min-h-100 sm:min-h-screen flex items-center justify-center text-dark bg-[url('src/assets/images/policies/policy_bg.jpg')] bg-cover bg-center bg-no-repeat py-10"
+      style={{ backgroundImage: `url(${policyBg})` }}
+      className="min-h-screen sm:min-h-screen flex items-center justify-center text-dark bg-cover bg-center bg-no-repeat py-10"
     >
       <a
         ref={addToRefs}
         href="#"
-        class="flex flex-col mx-auto w-full h-1/2 items-center  rounded-md "
+        className="flex flex-col mx-auto w-full h-1/2 items-center rounded-md"
       >
-        <div class="flex flex-col justify-between p-4 leading-normal w-5/6 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 my-8 bg-white/70 rounded-md shadow-lg">
+        <div className="flex flex-col justify-between p-4 leading-normal w-5/6 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 my-8 bg-white/70 rounded-md shadow-lg">
           <h2 ref={addToRefs} className="text-center text-dark fw-black">
             New Cancellation Policy
           </h2>

@@ -1,6 +1,7 @@
 import "./../../App.css";
 import { useRef } from "react";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
+import hlBg from "../../assets/images/hl_bg.jpg";
 
 export default function HL() {
   const highlights = [
@@ -32,7 +33,10 @@ export default function HL() {
   useFadeInAnimation(fadeRefs);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center py-0 bg-[url('src/assets/images/hl_bg.jpg')] bg-cover bg-center bg-no-repeat">
+    <section
+      style={{ backgroundImage: `url(${hlBg})` }}
+      className="min-h-screen flex flex-col items-center justify-center py-0 bg-cover bg-center bg-no-repeat"
+    >
       <h2
         ref={addToRefs}
         className="text-center text-white fw-bold mb-4 fs-1"
