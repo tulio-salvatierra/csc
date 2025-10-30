@@ -35,7 +35,7 @@ export default function CancellationPolicy() {
               <strong className="font-black">48 hours notice</strong> for any
               cancellations or rescheduling.
             </p>
-            <ul className="mb-4">
+            <ul className="mb-8 mt-8">
               <li ref={addToRefs} className="mb-2">
                 <strong className="font-black">Within 48 Hours:</strong> 50% of
                 the service cost will be charged.
@@ -47,7 +47,7 @@ export default function CancellationPolicy() {
                 Full service cost will be charged.
               </li>
             </ul>
-            <p ref={addToRefs} className="mb-0">
+            <p ref={addToRefs} className="my-8">
               Thank you for your understanding and cooperation!
             </p>
           </div>

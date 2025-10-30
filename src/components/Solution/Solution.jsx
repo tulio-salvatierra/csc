@@ -37,6 +37,7 @@ export default function Solutions() {
           trigger: section,
           start: "top bottom",
           end: "bottom bottom",
+          opacity: 0.8,
           scrub: true,
         },
       });
