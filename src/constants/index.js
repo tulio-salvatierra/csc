@@ -10,7 +10,7 @@ export const POLICIES_URL = "/policies";
 
 export const TULIO_URL = "https://tuliosalvatierra.com";
 
-export const EMAIL = "carolinaskin@grandecom.net";
+export const EMAIL = "carolinaskincentre@yahoo.com";
 
 export const INSTAGRAM = [{ url: "https://www.instagram.com/carolinaskin", title: "Instagram" }];
 
