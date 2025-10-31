@@ -6,7 +6,7 @@ body {
 
 
 .mwg_effect013 {
-    height: 50dvh;
+    height: 200px;
     overflow: visible;
 }
 .mwg_effect013 .header {
@@ -39,7 +39,7 @@ body {
 }
 .mwg_effect013 .inner {
     width: 100%;
-    height: 100%;
+    height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;

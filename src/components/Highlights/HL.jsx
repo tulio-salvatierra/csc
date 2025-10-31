@@ -48,7 +48,7 @@ export default function HL() {
           <div
             key={index}
             ref={addToRefs}
-            className="col-md-4 bg-black text-white border-2 m-2.5 rounded-lg"
+            className="col-md-4 bg-black/80 text-white border-2 m-2.5 rounded-lg"
           >
             <div className="card-body p-4">
               <h2 className="text-muted fs-1 text-left p-4 text-decoration-none">

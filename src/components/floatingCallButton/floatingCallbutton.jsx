@@ -1,4 +1,4 @@
-import { TELEPHONE } from "../../constants";
+import { BOOKING_URL_2 } from "../../constants";
 import "./FloatingCallButton.css";
 
 
@@ -23,11 +23,11 @@ export default function FloatingCallbutton() {
   return (
     <div className="btn-group">
     {/* Button Variant 1 */}
-    <a href={TELEPHONE} className="btn-icon-link w-inline-block floating-call-button">
+    <a href={BOOKING_URL_2} className="btn-icon-link w-inline-block floating-call-button">
       <div className="btn-icon-content">
         <div className="btn-icon-content__mask">
           <span data-button-anim-target className="btn-icon-content__text">
-          Call us now!
+          Book your appointment Now!
           </span>
         </div>
 
