@@ -45,8 +45,8 @@ export default function Hero() {
   return (
     <>
       <section className="bg-hero items-center" ref={addToRefs}>
-        <div className="flex justify-center items-center h-screen">
-          <div className="flex flex-col justify-center items-center max-w-2/3">
+        <div className="flex justify-center items-center h-screen mt-30 w-full">
+          <div className="p-4 flex flex-col justify-center items-center sm:max-w-2/3">
             <h1 className="font-extrabold text-white leading-none tracking-tighter" ref={addToSplitRefs}>
               Hydrate, renew and balance your skin
             </h1>
