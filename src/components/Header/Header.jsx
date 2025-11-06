@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
 import LogoBG from "../../assets/images/CSC.svg";
+import { Link } from "react-router-dom";
 import {
   MENU_ITEMS,
   WHATSAPP,
@@ -31,13 +32,13 @@ export default function Header() {
       {/* Header NORMAL, no ref, no animación */}
       <section className="sticky top-0 w-full z-auto shadow-2xl header">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
-          <a href="/">
+          <Link href="/">
             <img
               className="w-[155px] h-auto"
               src={LogoBG}
               alt="logo"
             />
-          </a>
+          </Link>
 
           <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
             <svg
@@ -60,12 +61,12 @@ export default function Header() {
             <ul className="flex space-x-8">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
-                  <a
+                  <Link
                     className="text-2xl text-black no-underline hover:underline"
                     href={item.url}
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -103,12 +104,12 @@ export default function Header() {
               />
               <div className="absolute inset-0 bg-white opacity-50 z-0 pointer-events-none" />
               <div className="flex items-center mb-12">
-                <a
+                <Link
                   className="flex-1 text-2xl font-semibold mb-0 no-underline"
                   href="/"
                 >
                   <img src={Logo} alt="logo" width={132} />
-                </a>
+                </Link>
                 <button
                   className="p-2"
                   type="button"
@@ -140,14 +141,14 @@ export default function Header() {
               <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Navigation</h2>
                 {MENU_ITEMS.map((item, index) => (
                   <li className="py-3" key={index}>
-                    <a
+                    <Link
                       ref={(el) => (menuLinksRef.current[index] = el)}
                       className="text-lg text-black no-underline hover:underline"
                       href={item.url}
                       onClick={() => setIsOpen(false)}
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

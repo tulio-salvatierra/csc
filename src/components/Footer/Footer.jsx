@@ -1,5 +1,6 @@
 import { MENU_ITEMS, WHATSAPP, INSTAGRAM, TULIO_URL } from "../../constants";
 import Logo from "../../assets/images/CSC.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const TULIO_URL = "https://tuliosalvatierra.com";
@@ -13,9 +14,9 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-2xl flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
-                  <a href="/">
+                  <Link href="/">
                     <img className="" src={Logo} alt="logo" />
-                  </a>
+                  </Link>
                 </span>
               </div>
               <div className="space-y-6">
@@ -35,13 +36,13 @@ export default function Footer() {
               <ul className="list-none p-0 m-0">
                 {MENU_ITEMS.map((item, index) => (
                   <li key={index + 1}>
-                    <a
+                    <Link
                       href={item.url}
                       key={index}
                       className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
                     >
                       {item.title}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -81,12 +82,12 @@ export default function Footer() {
               © {new Date().getFullYear()} Carolina Skin Centre
             </p>
             <div className="flex space-x-6">
-              <a
+              <Link
                 href="/policies"
                 className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
               >
                 Cancellation Policy
-              </a>
+              </Link>
               <a
                 href={TULIO_URL}
                 className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
