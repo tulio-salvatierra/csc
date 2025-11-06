@@ -32,7 +32,7 @@ export default function Header() {
       {/* Header NORMAL, no ref, no animación */}
       <section className="sticky top-0 w-full z-auto shadow-2xl header">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
-          <Link href="/">
+          <Link to="/">
             <img
               className="w-[155px] h-auto"
               src={LogoBG}
@@ -63,7 +63,7 @@ export default function Header() {
                 <li className="nav-item" key={index}>
                   <Link
                     className="text-2xl text-black no-underline hover:underline"
-                    href={item.url}
+                    to={item.url}
                   >
                     {item.title}
                   </Link>
@@ -106,7 +106,7 @@ export default function Header() {
               <div className="flex items-center mb-12">
                 <Link
                   className="flex-1 text-2xl font-semibold mb-0 no-underline"
-                  href="/"
+                  to="/"
                 >
                   <img src={Logo} alt="logo" width={132} />
                 </Link>
@@ -142,7 +142,7 @@ export default function Header() {
                 {MENU_ITEMS.map((item, index) => (
                   <li className="py-3" key={index}>
                     <Link
-                      ref={(el) => (menuLinksRef.current[index] = el)}
+                    to={(el) => (menuLinksRef.current[index] = el)}
                       className="text-lg text-black no-underline hover:underline"
                       href={item.url}
                       onClick={() => setIsOpen(false)}

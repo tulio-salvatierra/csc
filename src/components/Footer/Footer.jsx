@@ -14,7 +14,7 @@ export default function Footer() {
             <div className="flex flex-col items-start">
               <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-2xl flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
-                  <Link href="/">
+                  <Link to="/">
                     <img className="" src={Logo} alt="logo" />
                   </Link>
                 </span>
@@ -37,7 +37,7 @@ export default function Footer() {
                 {MENU_ITEMS.map((item, index) => (
                   <li key={index + 1}>
                     <Link
-                      href={item.url}
+                      to={item.url}
                       key={index}
                       className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
                     >
@@ -83,7 +83,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-6">
               <Link
-                href="/policies"
+                to="/policies"
                 className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
               >
                 Cancellation Policy
