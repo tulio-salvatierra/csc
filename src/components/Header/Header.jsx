@@ -34,7 +34,7 @@ export default function Header() {
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
           <Link to="/">
             <img
-              className="w-[155px] h-auto"
+              className="w-[75px] h-auto"
               src={LogoBG}
               alt="logo"
             />
@@ -88,22 +88,11 @@ export default function Header() {
             onClick={(e) => e.stopPropagation()}
           >
             <nav
-              className="relative z-10 flex flex-col py-10 px-6 bg-white"
+              className="relative z-10 flex flex-col py-10 px-6 blurred-bg h-screen backdrop-blur-sm"
             
             >
-              <div
-                className="absolute inset-0 z-0 pointer-events-none"
-                 style={{
-                   backgroundImage: `url(${LogoBG})`,
-                   backgroundSize: "contain",
-                   backgroundRepeat: "no-repeat",
-                   backgroundPosition: "center",
-                   backdropFilter: "blur(4px)",
-                   opacity: 0.2,
-                 }}
-              />
               <div className="absolute inset-0 bg-white opacity-50 z-0 pointer-events-none" />
-              <div className="flex items-center mb-12">
+              <div className="flex items-center mt-16">
                 <Link
                   className="flex-1 text-2xl font-semibold mb-0 no-underline"
                   to="/"
@@ -138,7 +127,7 @@ export default function Header() {
               </div>
 
               <ul className="flex flex-col space-y-4">
-              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Navigation</h2>
+              <h2 className="text-sm font-semibold text-black tracking-normal mb-8">Navigation</h2>
                 {MENU_ITEMS.map((item, index) => (
                   <li className="py-3" key={index}>
                     <Link
@@ -154,7 +143,7 @@ export default function Header() {
               </ul>
 
               <div className="flex flex-col space-x-4  mt-6">
-              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Connect</h2>
+              <h2 className="text-sm font-semibold text-black tracking-normal mb-8">Connect</h2>
                 <a
                   className="no-underline hover:underline"
                   href={WHATSAPP}
