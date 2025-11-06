@@ -1,7 +1,7 @@
 
 h1 {
     font-family: 'Moula', sans-serif;
-    font-size: 8rem;
+    font-size: 6rem;
 
     @media (max-width: 1024px) {
         font-size: 5.5rem;
