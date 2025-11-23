@@ -1,6 +1,7 @@
 import { useState, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
 import LogoBG from "../../assets/images/CSC.svg";
+import { Link } from "react-router-dom";
 import {
   MENU_ITEMS,
   WHATSAPP,
@@ -55,12 +56,12 @@ export default function Header() {
             <ul className="flex space-x-8">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
-                  <a
+                  <Link
                     className="text-2xl text-black no-underline hover:underline"
-                    href={item.url}
+                    to={item.url}
                   >
                     {item.title}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

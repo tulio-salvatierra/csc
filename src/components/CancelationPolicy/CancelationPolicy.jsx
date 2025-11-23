@@ -21,9 +21,8 @@ export default function CancellationPolicy() {
       style={{ backgroundImage: `url(${policyBg})` }}
       className="min-h-screen sm:min-h-screen flex items-center justify-center text-dark bg-cover bg-center bg-no-repeat py-10"
     >
-      <a
+      <div
         ref={addToRefs}
-        href="#"
         className="flex flex-col mx-auto w-full h-1/2 items-center rounded-md"
       >
         <div className="flex flex-col justify-between p-4 leading-normal w-5/6 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/3 my-8 bg-white/70 rounded-md shadow-lg">
@@ -53,10 +52,9 @@ export default function CancellationPolicy() {
               Thank you for your understanding and cooperation!
             </p>
           </div>
-           <BookingButton href={"/policies"} label={"Read Our Policies"} />
+          <BookingButton href={"/policies"} label={"Read Our Policies"} />
         </div>
-       
-      </a>
+      </div>
     </section>
   );
 }
