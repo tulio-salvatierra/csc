@@ -17,7 +17,6 @@ export default function Header() {
   const overlayRef = useRef(null);
   const socialIconsRef = useRef([]);
 
-
   // Animation hooks removed
 
   const handleOpen = () => {
@@ -32,11 +31,7 @@ export default function Header() {
       <section className="sticky top-0 w-full z-auto shadow-2xl header">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
           <a href="/">
-            <img
-              className="w-[155px] h-auto"
-              src={LogoBG}
-              alt="logo"
-            />
+            <img className="w-[155px] h-auto" src={LogoBG} alt="logo" />
           </a>
 
           <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
@@ -75,115 +70,119 @@ export default function Header() {
       </section>
 
       {/* Aquí SÍ el menú móvil animado */}
-      {isOpen && (
+      <div
+        ref={overlayRef}
+        className={`fixed inset-0 transition-[opacity,backdrop-filter] duration-300 ${
+          isOpen
+            ? "opacity-100 pointer-events-auto backdrop-blur-sm"
+            : "opacity-0 pointer-events-none backdrop-blur-none"
+        }`}
+        onClick={() => setIsOpen(false)}
+      >
         <div
-          ref={overlayRef}
-          className="fixed inset-0 pointer-events-none"
-          onClick={() => setIsOpen(false)}
+          ref={menuRef}
+          className="pointer-events-auto"
+          onClick={(e) => e.stopPropagation()}
         >
-          <div
-            ref={menuRef}
-            className="pointer-events-auto"
-            onClick={(e) => e.stopPropagation()}
+          <nav
+            className={`relative z-10 flex flex-col py-10 px-6 bg-white shadow-xl transform transition-all duration-300 ${
+              isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
+            }`}
           >
-            <nav
-              className="relative z-10 flex flex-col py-10 px-6 bg-white"
-            
-            >
-              <div
-                className="absolute inset-0 z-0 pointer-events-none"
-                 style={{
-                   backgroundImage: `url(${LogoBG})`,
-                   backgroundSize: "contain",
-                   backgroundRepeat: "no-repeat",
-                   backgroundPosition: "center",
-                   backdropFilter: "blur(4px)",
-                   opacity: 0.2,
-                 }}
-              />
-              <div className="absolute inset-0 bg-white opacity-50 z-0 pointer-events-none" />
-              <div className="flex items-center mb-12">
-                <a
-                  className="flex-1 text-2xl font-semibold mb-0 no-underline"
-                  href="/"
-                >
-                  <img src={Logo} alt="logo" width={132} />
-                </a>
-                <button
-                  className="p-2"
-                  type="button"
-                  aria-label="Close"
-                  onClick={handleOpen}
-                >
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <line
-                      x1="4"
-                      y1="4"
-                      x2="20"
-                      y2="20"
-                      stroke="black"
-                      strokeWidth="2"
-                    />
-                    <line
-                      x1="20"
-                      y1="4"
-                      x2="4"
-                      y2="20"
-                      stroke="black"
-                      strokeWidth="2"
-                    />
-                  </svg>
-                </button>
-              </div>
+            <div
+              className="absolute inset-0 z-0 pointer-events-none"
+              style={{
+                backgroundImage: `url(${LogoBG})`,
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                backdropFilter: "blur(4px)",
+                opacity: 0.05,
+              }}
+            />
+            <div className="absolute inset-0 bg-white opacity-0 z-0 pointer-events-none" />
+            <div className="flex items-center mb-12">
+              <a
+                className="flex-1 text-2xl font-semibold mb-0 no-underline"
+                href="/"
+              >
+                <img src={Logo} alt="logo" width={132} />
+              </a>
+              <button
+                className="p-2"
+                type="button"
+                aria-label="Close"
+                onClick={handleOpen}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <line
+                    x1="4"
+                    y1="4"
+                    x2="20"
+                    y2="20"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="20"
+                    y1="4"
+                    x2="4"
+                    y2="20"
+                    stroke="black"
+                    strokeWidth="2"
+                  />
+                </svg>
+              </button>
+            </div>
 
-              <ul className="flex flex-col space-y-4">
-              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Navigation</h2>
-                {MENU_ITEMS.map((item, index) => (
-                  <li className="py-3" key={index}>
-                    <a
-                      ref={(el) => (menuLinksRef.current[index] = el)}
-                      className="text-lg text-black no-underline hover:underline"
-                      href={item.url}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+            <ul className="flex flex-col space-y-4">
+              <h2 className="text-sm font-semibold text-black tracking-normal mb-2">
+                Navigation
+              </h2>
+              {MENU_ITEMS.map((item, index) => (
+                <li className="py-2" key={index}>
+                  <a
+                    ref={(el) => (menuLinksRef.current[index] = el)}
+                    className="text-lg text-black no-underline hover:underline"
+                    href={item.url}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
 
-              <div className="flex flex-col space-x-4  mt-6">
-              <h2 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">Connect</h2>
-                <a
-                  className="no-underline hover:underline"
-                  href={WHATSAPP}
-                  target="_blank"
-                  rel="noreferrer"
-                  ref={(el) => (socialIconsRef.current[0] = el)}
-                >
-                  Whatsapp
-                </a>
+            <h2 className="text-sm font-semibold text-black  tracking-normal mt-8">
+              Connect
+            </h2>
+            <div className="flex space-x-4 justify-evenly py-4">
+              <a
+                className="no-underline hover:underline w-auto"
+                href={WHATSAPP}
+                target="_blank"
+                rel="noreferrer"
+                ref={(el) => (socialIconsRef.current[0] = el)}
+              >
+                Whatsapp
+              </a>
 
-                <a
-                  className="no-underline hover:underline"
-                  href={INSTAGRAM}
-                  target="_blank"
-                  rel="noreferrer"
-                  ref={(el) => (socialIconsRef.current[1] = el)}
-                >
-                  Instagram
-                </a>
-              </div>
-              <div className="py-6">
-                <BookingButton
-                  href={BOOKING_URL_2}
-                  label={"Book now"}
-                />
-              </div>
-            </nav>
-          </div>
+              <a
+                className="no-underline hover:underline"
+                href={INSTAGRAM}
+                target="_blank"
+                rel="noreferrer"
+                ref={(el) => (socialIconsRef.current[1] = el)}
+              >
+                Instagram
+              </a>
+            </div>
+            <div className="py-6">
+              <BookingButton href={BOOKING_URL_2} label={"Book now"} />
+            </div>
+          </nav>
         </div>
-      )}
+      </div>
     </>
   );
 }

@@ -51,11 +51,11 @@ export default function PolicyComponent() {
                   alt={policy.name}
                 />
               </div>
-              <a className="inline-block no-underline mb-6" href="#">
+              <div className="inline-block no-underline mb-6" href="#">
                 <p className="text-gray-500 text-lg m-10">
                   {policy.description}
                 </p>
-              </a>
+              </div>
               <div className="text-center">
                 <BookingButton
                   label={"Book my appointment now!"}
