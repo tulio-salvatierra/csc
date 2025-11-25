@@ -38,9 +38,9 @@ export default function Solutions() {
         {
           y: 20,
           opacity: 0,
-          duration: 0.8,
+          duration: 1,
         },
-        "-=0.5"
+        "-=0.8"
       )
       .from(
         imageRef.current,
@@ -79,6 +79,9 @@ export default function Solutions() {
             <div ref={textRef}>
               <MaskedLines
                 as="p"
+                scrollStart={true}
+                once={true}
+                variant="lines"
                 className="mb-10 text-muted text-left justify-center-safe w-100"
               >
                 Hey! I'm Carolina and I have over 18 years of experience in

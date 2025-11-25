@@ -23,7 +23,7 @@ export default function Hero() {
       .from(sectionRef.current, {
         scale: 1.5,
         duration: 1.5,
-        opacity: 0.2,
+        opacity: 0.1,
         ease: "power3.out",
       }, "-=0.8")
         .from(
