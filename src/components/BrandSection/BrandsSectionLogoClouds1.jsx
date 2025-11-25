@@ -41,22 +41,24 @@ export default function BrandsSectionLogoClouds1() {
             {brands.map(({ productSrc, logoSrc, altProduct, altLogo }, i) => (
               <div
                 key={i}
-                className="bg-red-100 flex flex-col items-center justify-center p-6"
+                className="bg-red-100 card flex flex-col items-center justify-evenly p-6"
                 ref={addToRefs}
               >
                 <img
-                  className="max-w-full h-auto mb-4"
+                   className="object-cover aspect-square"
+                   width={400}
+                   height={400}
                   src={productSrc}
                   alt={altProduct}
                   ref={addToRefs}
                   loading="lazy"
                 />
                 <img
-                  className="max-w-xs h-auto"
+                  className="max-w-xs m-2 object-contain"
                   src={logoSrc}
                   alt={altLogo}
                   ref={addToRefs}
-                  loading="lazy"
+                  
                 />
               </div>
             ))}
