@@ -1,84 +1,85 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(SplitText, ScrollTrigger);
-// disable warning about ScrollTrigger with SSR
-// Componente base que soporta variant: "lines" | "words"
+gsap.registerPlugin(SplitText, ScrollTrigger, useGSAP);
+
 function MaskedText({
   children,
   as: Component = "p",
   scroll = false,
   scrollStart = "top 80%",
   once = false,
-  variant = "lines", // "lines" o "words"
-  className = "", // clases Tailwind para el texto
+  variant = "lines", // "lines" | "words"
+  className = "",
 }) {
   const textRef = useRef(null);
 
-  useEffect(() => {
-    let splitInstance;
-    let tween;
+  useGSAP(
+    () => {
+      const el = textRef.current;
+      if (!el) return;
 
-    document.fonts
-      ?.ready?.then(() => {
-        const el = textRef.current;
-        if (!el) return;
+      // ensure base node is visible
+      gsap.set(el, { opacity: 1 });
 
-        // Asegurar que el texto sea visible cuando las fuentes estén listas
-        gsap.set(el, { opacity: 1 });
+      const isWords = variant === "words";
 
-        // Config de SplitText dependiendo del variant
-        const splitConfig =
-          variant === "words"
-            ? {
-                type: "words",
-                autoSplit: true,
-                mask: "words",
-              }
-            : {
-                type: "words,lines",
-                linesClass: "line",
-                autoSplit: true,
-                mask: "lines",
-              };
+      const splitInstance = SplitText.create(el, {
+        ...(isWords
+          ? {
+              type: "words",
+              mask: "words",
+            }
+          : {
+              type: "words,lines",
+              linesClass: "line",
+              mask: "lines",
+            }),
+        autoSplit: true,
+        // 🔑 this runs every time SplitText resplits (fonts, resize, etc.)
+        onSplit: (split) => {
+          const targets = isWords ? split.words : split.lines;
+          if (!targets || !targets.length) return;
 
-        splitInstance = SplitText.create(el, splitConfig);
-
-        // Config de animación dependiendo del variant
-        const isWords = variant === "words";
-        const targets = isWords ? splitInstance.words : splitInstance.lines;
-
-        if (!targets || !targets.length) return;
-
-        const animationConfig = {
-          duration: isWords ? 1.1 : 1.6,
-          yPercent: 120,
-          opacity: 0,
-          stagger: isWords ? 0.06 : 0.28,
-          ease: "power3.out",
-          delay: isWords ? 0.1 : 0.15,
-        };
-
-        if (scroll) {
-          animationConfig.scrollTrigger = {
-            trigger: el,
-            start: scrollStart,
-            toggleActions: once ? "play none none none" : "play none none reset",
+          const animationConfig = {
+            duration: isWords ? 1.1 : 1.6,
+            yPercent: 120,
+            opacity: 0,
+            stagger: isWords ? 0.06 : 0.28,
+            ease: "power3.out",
+            delay: isWords ? 0.1 : 0.15,
           };
-        }
 
-        tween = gsap.from(targets, animationConfig);
-      })
-      .catch(() => {});
+          if (scroll) {
+            animationConfig.scrollTrigger = {
+              trigger: el,
+              start: scrollStart,
+              toggleActions: once
+                ? "play none none none"
+                : "play none none reset",
+            };
+          }
 
-    return () => {
-      if (tween) tween.kill();
-      if (splitInstance) splitInstance.revert();
-    };
-  }, [scroll, scrollStart, once, children, variant]);
+          // this tween always gets the *current* nodes
+          gsap.from(targets, animationConfig);
+        },
+      });
+
+      // useGSAP will automatically revert splitInstance + kill tweens
+      return () => {
+        splitInstance.revert();
+      };
+    },
+    {
+      // if any of these change, the context re-runs cleanly
+      dependencies: [scroll, scrollStart, once, variant, children],
+      scope: textRef,
+    }
+  );
 
   return (
     <div className="container-text-masked-lines">
@@ -89,15 +90,13 @@ function MaskedText({
   );
 }
 
-// Versión por líneas (default export)
+// default: lines
 export default function MaskedLines(props) {
   return <MaskedText {...props} variant="lines" />;
 }
 
-// Versión por palabras
 export function MaskedWords(props) {
   return <MaskedText {...props} variant="words" />;
 }
 
-// Si quieres usar el genérico en algún momento:
 export { MaskedText };

@@ -20,6 +20,12 @@ export default function Hero() {
         opacity: 0,
         duration: 0.8,
       })
+      .from(sectionRef.current, {
+        scale: 1.5,
+        duration: 1.5,
+        opacity: 0.2,
+        ease: "power3.out",
+      }, "-=0.8")
         .from(
           textRef.current,
           {
@@ -32,7 +38,7 @@ export default function Hero() {
         .from(
           buttonRef.current,
           {
-            y: 10,
+            y: 5,
             opacity: 0,
             duration: 0.5,
           },
@@ -45,7 +51,7 @@ export default function Hero() {
    return (
     <section
       ref={sectionRef}
-      className="bg-hero grid place-items-center h-screen bg-cover bg-center"
+      className="bg-hero grid place-items-center h-[120%] bg-cover bg-center"
     >
       <div className="grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p2-4 text-center">
         <div ref={titleRef}>
