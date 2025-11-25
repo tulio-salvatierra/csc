@@ -5,7 +5,8 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
-
+// disable warning about ScrollTrigger with SSR
+// Componente base que soporta variant: "lines" | "words"
 function MaskedText({
   children,
   as: Component = "p",

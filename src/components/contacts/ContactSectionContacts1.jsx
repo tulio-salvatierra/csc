@@ -21,8 +21,8 @@ export default function ContactSection() {
   return (
     <>
       <section ref={addToRefs} className="min-h-0.5 flex items-center justify-center m-6">
-        <div className="row w-full">
-          <h2 className="mb-10">Contact</h2>
+        <div className="row w-full bg-gray-200 p-8 shadow-lg">
+          <h2 className="mb-2">Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
             Get in touch with us today for all your skincare needs.
           </p>
@@ -34,8 +34,8 @@ export default function ContactSection() {
                   className="mb-0 text-muted text-decoration-none"
                   href={ADDRESS_URL}
                 >
-                  Carolina Skin Centre, 705 W Wadley Ave Suite-23, Midland, TX
-                  79705
+                  <p>705 W Wadley Ave Suite-23, Midland, TX
+                  79705</p>
                 </a>
               </div>
               <div ref={addToRefs} className="text-left p-4">
@@ -44,13 +44,13 @@ export default function ContactSection() {
                   className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
                 >
-                  {EMAIL}
+                  <p>{EMAIL}</p>
                 </a>
               </div>
               <div ref={addToRefs} className="p-4">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
-                <a href={TELEPHONE} className="text-muted text-decoration-none">
-                  432-638-0046
+                <a href={TELEPHONE} className="text-decoration-none">
+                  <p>432-638-0046</p>
                 </a>
               </div>
               <div ref={addToRefs} className="text-left p-4">
@@ -71,6 +71,14 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
+              <div ref={addToRefs} className="p-4 text-left">
+                <h3>Hours:</h3>
+                <p className="mb-0 text-muted">Tuesday - Friday: 9:00 AM - 6:00 PM</p>
+                
+                <p className="mb-0 text-muted">Saturdat, Sunday & Monday: Closed</p>
+              </div>
+              <div ref={addToRefs} className="p-4 text-left">
+              <h3 className="mb-4">Find us here</h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"
                 width="100%"
@@ -81,6 +89,7 @@ export default function ContactSection() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
+              </div>
             </div>
           </div>
         </div>

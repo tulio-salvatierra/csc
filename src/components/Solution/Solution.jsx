@@ -27,8 +27,8 @@ export default function Solutions() {
   };
 
   return (
-    <section className="p-4 my-32 h-screen d-flex flex-column justify-content-center relative">
-      <div className="row align-items-center mb-5">
+    <section className="p-4  h-screen d-flex flex-column justify-content-center relative">
+      <div className="grid items-center justify-center text-center">
         <h2 className="mb-3" data-aos="fade-up" data-aos-delay="100">
           Transform Your Skin with Professional & Personalized Care
         </h2>
