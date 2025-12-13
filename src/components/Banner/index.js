@@ -1,1 +1,1 @@
-export {default} from './Banner.js'
+export { Banner } from './Banner.jsx'

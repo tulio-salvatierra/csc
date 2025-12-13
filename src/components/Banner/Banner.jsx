@@ -9,10 +9,14 @@ export function Banner() {
 
 
   useEffect(() => {
+    if (!containerRef.current || !phraseRef.current) return;
+    
     let wheelDelta = 0;
     let total = 0;
     const content = containerRef.current;
     const phraseWidth = phraseRef.current.clientWidth;
+    if (!phraseWidth) return;
+    
     const wrap = gsap.utils.wrap(-phraseWidth, 0);
 
     const xTo = gsap.quickTo(content, "x", {
