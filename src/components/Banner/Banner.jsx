@@ -49,12 +49,12 @@ export function Banner() {
   }, []);
 
   return (
-    <section className="mwg_effect013 min-h-[250px] flex items-center justify-center">
+    <section className="mwg_effect013 min-h-[450px] flex items-center justify-center">
       <div className="inner">
         <div className="banner-container" ref={containerRef}>
-          <p className="phrase flex" ref={phraseRef} style={{ height: "50px" }}>
+          <p className="phrase flex" ref={phraseRef} style={{ height: `${500}px` || "400px" }}>
             {Array.from({ length: 10 }).map((_, index) => (
-              <img key={index} src={BF} className="h-50" alt="Banner frame" />
+              <img key={index} src={BF} className="h-100" alt="Banner frame" />
             ))}
           </p>
         </div>

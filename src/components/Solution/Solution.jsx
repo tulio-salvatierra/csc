@@ -74,7 +74,7 @@ export default function Solutions() {
           Transform Your Skin with Professional & Personalized Care
         </h2>
 
-        <div className="grid grid-cols-2 gap-4 text-center items-center">
+        <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 text-center items-center">
           <div className="grid place-items-center text-left">
             <div ref={textRef}>
               <MaskedLines
