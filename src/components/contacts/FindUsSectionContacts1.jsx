@@ -39,20 +39,20 @@ export default function FindUsSectionContacts1() {
               <div className="text-center">
                 <h3 className="mb-4 font-heading">Socials</h3>
                 <div className="d-flex justify-content-center">
-                  <a className="text-decoration-none" href="#">
+                  <a className="text-decoration-none" href={INSTAGRAM[0].url} target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
                     <img
                       src="https://www.flaticon.com/free-icon/instagram_174855?term=instagram&page=1&position=2&origin=search&related_id=174855"
-                      alt=""
+                      alt="Instagram icon"
                     />
                   </a>
-                  <a className="text-decoration-none" href="#">
+                  <a className="text-decoration-none" href="#" aria-label="Follow us on Twitter">
                     <img
                       src="pstls-assets/images/contacts/twitter.png"
-                      alt=""
+                      alt="Twitter icon"
                     />
                   </a>
-                  <a className="text-decoration-none" href="#">
-                    <img src="pstls-assets/images/contacts/google.png" alt="" />
+                  <a className="text-decoration-none" href="#" aria-label="Find us on Google">
+                    <img src="pstls-assets/images/contacts/google.png" alt="Google icon" />
                   </a>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function FindUsSectionContacts1() {
               <img
                 className="position-absolute top-0 start-0 translate-middle"
                 src="pstls-assets/images/contacts/little-circle.png"
-                alt=""
+                alt="Decorative circle"
               />
               <h2 className="text-white">Office</h2>
               <p className="text-white" style={{ fontSize: 20 }}>
@@ -73,7 +73,7 @@ export default function FindUsSectionContacts1() {
               </p>
             </div>
           </div>
-          <img className="img-fluid w-100" src={Map} alt="" />
+          <img className="img-fluid w-100" src={Map} alt="Map showing Carolina Skin Centre location at 705 W Wadley Ave Suite-23, Midland, TX 79705" />
         </div>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"

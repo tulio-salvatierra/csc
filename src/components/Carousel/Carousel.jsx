@@ -41,7 +41,7 @@ function Carousel() {
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src={Logo} class="d-block w-100" alt="..." />
+            <img src={Logo} class="d-block w-100" alt="Carolina Skin Centre" />
             <div class="carousel-caption d-none d-md-block">
               <h5>First slide label</h5>
               <p>
@@ -50,7 +50,7 @@ function Carousel() {
             </div>
           </div>
           <div class="carousel-item">
-            <img src={Logo} class="d-block w-100" alt="..." />
+            <img src={Logo} class="d-block w-100" alt="Carolina Skin Centre" />
             <div class="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>
@@ -59,7 +59,7 @@ function Carousel() {
             </div>
           </div>
           <div class="carousel-item">
-            <img src={Logo} class="d-block w-100" alt="..." />
+            <img src={Logo} class="d-block w-100" alt="Carolina Skin Centre" />
             <div class="carousel-caption d-none d-md-block">
               <h5>Third slide label</h5>
               <p>

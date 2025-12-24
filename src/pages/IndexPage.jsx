@@ -11,10 +11,19 @@ import Solutions from "../components/Solution/Solution";
 import HL from "../components/Highlights";
 import CancellationPolicy from "../components/CancelationPolicy";
 import { Banner } from "../components/Banner/Banner";
+import SEO from "../components/SEO/SEO";
+import { LocalBusinessSchema } from "../components/SEO/StructuredData";
 
 export default function IndexPage() {
   return (
     <>
+      <SEO
+        title="Carolina Skin Centre, Midland, TX - Professional Skincare & Facial Treatments"
+        description="Expert skincare services in Midland, Texas. Professional facial treatments, chemical peels, nano needle, and carboxy therapy. Over 18 years of experience. Book your consultation today!"
+        keywords="skincare Midland TX, facial treatments, chemical peels, nano needle, carboxy therapy, esthetician, skin care center, professional skincare, Midland Texas skincare"
+        url="/"
+      />
+      <LocalBusinessSchema />
       <main className="overflow-visible min-h-screen">
         <div className="header sticky top-0 z-50 bg-white shadow-lg">
           <Header />

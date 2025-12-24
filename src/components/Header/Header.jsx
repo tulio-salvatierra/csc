@@ -31,8 +31,8 @@ export default function Header() {
       {/* Header NORMAL, no ref, no animación */}
       <section className="sticky top-0 w-full z-auto shadow-2xl header">
         <nav className="flex items-center justify-between bg-white py-10 shadow-xl px-4 xl:px-8">
-          <a href="/">
-            <img className="w-[155px] h-auto" src={LogoBG} alt="logo" />
+          <a href="/" aria-label="Carolina Skin Centre Home">
+            <img className="w-[155px] h-auto" src={LogoBG} alt="Carolina Skin Centre Logo" />
           </a>
 
           <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
@@ -106,8 +106,9 @@ export default function Header() {
               <a
                 className="flex-1 text-2xl font-semibold mb-0 no-underline"
                 href="/"
+                aria-label="Carolina Skin Centre Home"
               >
-                <img src={Logo} alt="logo" width={132} />
+                <img src={Logo} alt="Carolina Skin Centre Logo" width={132} />
               </a>
               <button
                 className="p-2"
