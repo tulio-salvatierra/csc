@@ -23,7 +23,7 @@ export default function IndexPage() {
           <div className="col-span-1">
             <Hero />
           </div>
-          <div className="col-span-1">
+          <div className="col-span-1 min-h-screen">
             <Solutions />
           </div>
           <div className="col-span-1">
