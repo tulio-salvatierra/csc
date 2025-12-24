@@ -19,16 +19,34 @@ export default function IndexPage() {
         <div className="header sticky top-0 z-50 bg-white shadow-lg">
           <Header />
         </div>
-        <div className="parent-page min-h-screen overflow-visible">
-          <Hero />
-          <Solutions />
-          <CancellationPolicy />
-          <Services />
-          <HL />
-          <Banner />
-          <SingleReviewCarousel />
-          <BrandsSection />
-          <ContactSection />
+        <div className="parent-page min-h-screen overflow-visible grid grid-cols-1">
+          <div className="col-span-1">
+            <Hero />
+          </div>
+          <div className="col-span-1">
+            <Solutions />
+          </div>
+          <div className="col-span-1">
+            <CancellationPolicy />
+          </div>
+          <div className="col-span-1">
+            <Services />
+          </div>
+          <div className="col-span-1">
+            <HL />
+          </div>
+          <div className="col-span-1">
+            <Banner />
+          </div>
+          <div className="col-span-1">
+            <SingleReviewCarousel />
+          </div>
+          <div className="col-span-1">
+            <BrandsSection />
+          </div>
+          <div className="col-span-1">
+            <ContactSection />
+          </div>
         </div>
         <div className="footer">
           <Footer />
