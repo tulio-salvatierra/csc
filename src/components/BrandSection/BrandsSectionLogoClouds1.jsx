@@ -45,20 +45,18 @@ export default function BrandsSectionLogoClouds1() {
                 ref={addToRefs}
               >
                 <img
-                   className="object-cover aspect-square"
-                   width={400}
-                   height={400}
+                  className="object-cover w-full h-64"
+                  style={{ width: '100%', height: '256px', objectFit: 'cover' }}
                   src={productSrc}
                   alt={altProduct}
                   ref={addToRefs}
                   loading="lazy"
                 />
                 <img
-                  className="max-w-xs m-2 object-contain"
+                  className="w-48 h-16 m-2 object-contain"
                   src={logoSrc}
                   alt={altLogo}
                   ref={addToRefs}
-                  
                 />
               </div>
             ))}

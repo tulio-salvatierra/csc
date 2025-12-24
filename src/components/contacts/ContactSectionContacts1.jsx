@@ -38,7 +38,7 @@ export default function ContactSection() {
                   79705</p>
                 </a>
               </div>
-              <div ref={addToRefs} className="text-left p-4">
+              <div ref={addToRefs} className="text-left">
                 <h3 className="">E-mail</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
@@ -47,17 +47,17 @@ export default function ContactSection() {
                   <p>{EMAIL}</p>
                 </a>
               </div>
-              <div ref={addToRefs} className="p-4">
+              <div ref={addToRefs} className="">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
                 <a href={TELEPHONE} className="text-decoration-none">
                   <p>432-638-0046</p>
                 </a>
               </div>
-              <div ref={addToRefs} className="text-left p-4">
+              <div ref={addToRefs} className="text-left">
                 <h3 className="">Socials</h3>
                 <div className="d-flex justify-content-left">
                   <a
-                    className="text-decoration-none p-3"
+                    className="text-decoration-none"
                     href={WHATSAPP}
                     target="_blank"
                     rel="noreferrer"
@@ -71,14 +71,14 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <div ref={addToRefs} className="p-4 text-left">
+              <div ref={addToRefs} className="text-left">
                 <h3>Hours:</h3>
                 <p className="mb-0 text-muted">Tuesday - Friday: 9:00 AM - 6:00 PM</p>
                 
                 <p className="mb-0 text-muted">Saturdat, Sunday & Monday: Closed</p>
               </div>
-              <div ref={addToRefs} className="p-4 text-left">
-              <h3 className="mb-4">Find us here</h3>
+              <div ref={addToRefs} className="text-left">
+              <h3>Find us here</h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"
                 width="100%"
@@ -88,7 +88,7 @@ export default function ContactSection() {
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+              />
               </div>
             </div>
           </div>

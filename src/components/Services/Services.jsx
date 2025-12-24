@@ -94,7 +94,7 @@ export default function ServicesComponent() {
       tl.to(media, {
         yPercent: -80, // Moves up by 80% of its height
         y: "-50vh", // Moves up to half the screen
-        scale: 1.2, // The card slightly enlarges as it disappears
+        scale: 0.5, // The card slightly enlarges as it disappears
         rotation: (Math.random() - 0.5) * 50, // Will be different for each media
         ease: "power4.in", // Starts gradually
       });
@@ -116,8 +116,7 @@ export default function ServicesComponent() {
       <div className="pin-height" ref={pinHeightRef}>
         <div className="container" ref={containerRef}>
           <div className="text">
-            <p>Dive into our fantastic world</p>
-            <p>Our Premium Services</p>
+            <h2>Premium Services</h2>
           </div>
 
           <div className="medias">
@@ -136,7 +135,7 @@ export default function ServicesComponent() {
                 />
                 <div className="media-content">
                   <h3 className="media-title">{service.title}</h3>
-                  <p className="media-description">{service.description}</p>
+                  <p className="media-description text-white">{service.description}</p>
                 </div>
               </div>
             ))}
