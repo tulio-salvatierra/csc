@@ -52,6 +52,23 @@ body {
     font-family: Grapevine;
     white-space: nowrap;
     overflow: visible;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.mwg_effect013 .phrase {
+    display: flex;
+    align-items: center;
+    min-height: 500px;
+}
+
+.mwg_effect013 .phrase img {
+    flex-shrink: 0;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    min-width: 0;
 }
 @keyframes rotateInfinite {
     from {

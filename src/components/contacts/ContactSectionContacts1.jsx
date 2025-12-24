@@ -28,7 +28,7 @@ export default function ContactSection() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div>
-              <div ref={addToRefs} className="p-4 text-left">
+              <div ref={addToRefs} className="mt-8 text-left">
                 <h3 className="">Address</h3>
                 <a
                   className="mb-0 text-muted text-decoration-none"
