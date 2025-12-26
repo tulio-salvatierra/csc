@@ -71,20 +71,17 @@ export default function Header() {
       </section>
 
       {/* Aquí SÍ el menú móvil animado */}
-      <div
-        ref={overlayRef}
-        className={`fixed inset-0 transition-[opacity,backdrop-filter] duration-300 ${
-          isOpen
-            ? "opacity-100 pointer-events-auto backdrop-blur-sm"
-            : "opacity-0 pointer-events-none backdrop-blur-none"
-        }`}
-        onClick={() => setIsOpen(false)}
-      >
+      {isOpen && (
         <div
-          ref={menuRef}
-          className="pointer-events-auto"
-          onClick={(e) => e.stopPropagation()}
+          ref={overlayRef}
+          className="fixed inset-0 opacity-100 pointer-events-auto backdrop-blur-sm transition-[opacity,backdrop-filter] duration-300"
+          onClick={() => setIsOpen(false)}
         >
+          <div
+            ref={menuRef}
+            className="pointer-events-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
           <nav
             className={`relative z-10 flex flex-col py-10 px-6 bg-white shadow-xl transform transition-all duration-300 ${
               isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
@@ -185,6 +182,7 @@ export default function Header() {
           </nav>
         </div>
       </div>
+      )}
     </>
   );
 }
