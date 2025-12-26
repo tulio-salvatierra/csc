@@ -39,7 +39,8 @@ export default function Footer() {
                     <Link
                       to={item.url}
                       key={index}
-                      className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+                      className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                      style={{ cursor: "pointer" }}
                     >
                       {item.title}
                     </Link>
@@ -59,7 +60,8 @@ export default function Footer() {
                 href={WHATSAPP[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
                 WhatsApp
               </a>
@@ -67,7 +69,8 @@ export default function Footer() {
                 href={INSTAGRAM[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl"
+                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
                 Instagram
               </a>
@@ -84,13 +87,17 @@ export default function Footer() {
             <div className="flex space-x-6">
               <Link
                 to="/policies"
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
                 Cancellation Policy
               </Link>
               <a
                 href={TULIO_URL}
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                style={{ cursor: "pointer" }}
               >
                 Made by Tulio Salvatierra
               </a>

@@ -40,20 +40,30 @@ export default function BookingButton({ href, label }) {
   }, []);
 
   return (
-    <button
+    <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={label}
       className="btn-animate-chars place-self-center"
       ref={setFadeRef}
+      style={{ 
+        textDecoration: "none", 
+        display: "inline-block",
+        cursor: "pointer",
+        position: "relative",
+        zIndex: 1
+      }}
     >
       <div className="btn-animate-chars__bg"></div>
       <span
         ref={textRef}
         data-button-animate-chars
         className="btn-animate-chars__text"
+        style={{ position: "relative", zIndex: 2 }}
       >
         {label}
       </span>
-    </button>
+    </a>
   );
 }

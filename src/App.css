@@ -133,6 +133,17 @@ strong, a {
   font-weight: extra-bold;
 }
 
+/* Ensure all links are clickable and show pointer cursor */
+a, button, [role="button"] {
+  cursor: pointer;
+}
+
+/* Ensure links are above background elements */
+a {
+  position: relative;
+  z-index: 1;
+}
+
 html,
 body {
   scroll-behavior: auto;

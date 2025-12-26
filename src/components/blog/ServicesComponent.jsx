@@ -65,7 +65,7 @@ export default function Services() {
 
                 <p className="text-gray-500">{service.description}</p>
               </a>
-              <div className="text-left">
+              <div className="text-center">
                 <BookingButton
                   href={BOOKING_URL_2}
                   label={"Book my appointment now!"}
