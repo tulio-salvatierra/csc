@@ -67,9 +67,9 @@ export default function Solutions() {
   return (
     <section
       ref={sectionRef}
-      className="p-4 h-screen flex flex-col justify-center relative"
+      className="p-4 mt-8 h-screen flex flex-col justify-center relative"
     >
-      <div className="grid items-center justify-center text-center">
+      <div className="grid items-center justify-center text-center mt-20">
         <h2 ref={titleRef} className="mb-3">
           Transform Your Skin with Professional & Personalized Care
         </h2>

@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./../../App.css";
@@ -121,12 +122,14 @@ export default function ServicesComponent() {
 
           <div className="medias">
             {services.map((service, index) => (
-              <div
+              <Link
                 key={index}
+                to="/services"
                 className="media-wrapper"
                 ref={(el) => {
                   if (el) mediaRefs.current[index] = el;
                 }}
+                style={{ textDecoration: "none", color: "inherit" }}
               >
                 <img
                   src={service.image}
@@ -137,7 +140,7 @@ export default function ServicesComponent() {
                   <h3 className="media-title">{service.title}</h3>
                   <p className="media-description text-white">{service.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
