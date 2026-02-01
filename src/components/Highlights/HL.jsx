@@ -1,7 +1,11 @@
 import "./../../App.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
 import hlBg from "../../assets/images/hl_bg.jpg";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function HL() {
   const highlights = [
@@ -24,6 +28,8 @@ export default function HL() {
   ];
 
   const fadeRefs = useRef([]);
+  const sectionRef = useRef(null);
+  
   fadeRefs.current = [];
   const addToRefs = el => {
     if (el && !fadeRefs.current.includes(el)) {
@@ -32,8 +38,30 @@ export default function HL() {
   };
   useFadeInAnimation(fadeRefs);
 
+  // Parallax effect for background
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(section, {
+        backgroundPositionY: "30%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <section
+      ref={sectionRef}
       style={{ backgroundImage: `url(${hlBg})` }}
       className="min-h-screen flex flex-col items-center justify-center py-0 bg-cover bg-center bg-no-repeat"
     >

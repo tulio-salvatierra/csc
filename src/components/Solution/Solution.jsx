@@ -1,13 +1,14 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BOOKING_URL_2 } from "../../constants";
 import "./Solution.css";
 import SkinCare from "../../assets/images/solutions/skin-care.jpg";
 import BookingButton from "../BookingButton";
 import MaskedLines from "../MaskedLines/MaskedLines";
 
-gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Solutions() {
   const sectionRef = useRef(null);
@@ -15,6 +16,34 @@ export default function Solutions() {
   const textRef    = useRef(null);
   const buttonRef  = useRef(null);
   const imageRef   = useRef(null);
+  const imageContainerRef = useRef(null);
+
+  // Parallax effect for image
+  useEffect(() => {
+    const image = imageRef.current;
+    const container = imageContainerRef.current;
+    if (!image || !container) return;
+
+    const ctx = gsap.context(() => {
+      gsap.set(image, { scale: 1.2 });
+      gsap.fromTo(
+        image,
+        { yPercent: -15 },
+        {
+          yPercent: 15,
+          ease: "none",
+          scrollTrigger: {
+            trigger: container,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   // ✨ GSAP React hook version
  useGSAP(
@@ -101,12 +130,12 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div className="grid place-items-center">
+          <div ref={imageContainerRef} className="grid place-items-center overflow-hidden rounded shadow-xl">
             <img
               ref={imageRef}
               src={SkinCare}
               alt="Skin Care Treatment"
-              className="rounded shadow-xl object-cover"
+              className="object-cover will-change-transform"
               style={{ width: "100%", height: "auto" }}
             />
           </div>

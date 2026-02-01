@@ -1,12 +1,19 @@
 import services from "./servicesPageCard";
 import { BOOKING_URL_2 } from "../../constants";
 import "./../../../src/App.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 import BookingButton from "../BookingButton";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
   const fadeRefs = useRef([]);
+  const headerSectionRef = useRef(null);
+  const imageRefs = useRef([]);
+  
   fadeRefs.current = [];
   const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
@@ -15,10 +22,59 @@ export default function Services() {
   };
   useFadeInAnimation(fadeRefs);
 
+  // Parallax effect for header background
+  useEffect(() => {
+    const section = headerSectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(section, {
+        backgroundPositionY: "30%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  // Parallax effect for service card images
+  useEffect(() => {
+    const images = imageRefs.current.filter(Boolean);
+    if (images.length === 0) return;
+
+    const ctx = gsap.context(() => {
+      images.forEach((image) => {
+        gsap.set(image, { scale: 1.15 });
+        gsap.fromTo(
+          image,
+          { yPercent: -10 },
+          {
+            yPercent: 10,
+            ease: "none",
+            scrollTrigger: {
+              trigger: image.parentElement,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            },
+          }
+        );
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <section className="bg-white">
-        <div className="h-72 bg-cover bg-center bg-services">
+        <div ref={headerSectionRef} className="h-72 bg-cover bg-center bg-services">
           <div className="flex flex-col items-center justify-center mb-16 mb-md-20">
             <h1
               ref={addToRefs}
@@ -51,9 +107,12 @@ export default function Services() {
                   {service.category}
                 </span>
               </a>
-              <div className="mb-8">
+              <div className="mb-8 overflow-hidden">
                 <img
-                  className="mx-auto mb-4 position-relative h-80 w-100 object-cover"
+                  ref={(el) => {
+                    if (el) imageRefs.current[index] = el;
+                  }}
+                  className="mx-auto mb-4 position-relative h-80 w-100 object-cover will-change-transform"
                   src={service.icon}
                   alt={service.name}
                 />

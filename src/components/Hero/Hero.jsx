@@ -1,15 +1,40 @@
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useEffect } from "react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MaskedLines from "../../components/MaskedLines/MaskedLines";
 import MaskedWords from "../MaskedLines/MaskedLines";
 import BookingButton from "../BookingButton/BookingButton";
 import { BOOKING_URL_2 } from "../../constants";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const sectionRef = useRef(null);
   const titleRef   = useRef(null);
   const textRef    = useRef(null);
   const buttonRef  = useRef(null);
+  const bgRef      = useRef(null);
+
+  // Parallax effect for background
+  useEffect(() => {
+    const bg = bgRef.current;
+    if (!bg) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(bg, {
+        yPercent: 30,
+        ease: "none",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -20,7 +45,7 @@ export default function Hero() {
         opacity: 0,
         duration: 0.8,
       })
-      .from(sectionRef.current, {
+      .from(bgRef.current, {
         scale: 1.5,
         duration: 1.5,
         opacity: 0.1,
@@ -48,12 +73,38 @@ export default function Hero() {
 
     return () => ctx.revert();
   }, []);
+
+  // Smooth tilt animation for the text background
+  useEffect(() => {
+    const el = textRef.current;
+    if (!el) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(el, {
+        rotation: 2,
+        duration: 3,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        transformOrigin: "center center",
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
    return (
     <section
       ref={sectionRef}
-      className="bg-hero grid place-items-center h-[120%] bg-cover bg-center"
+      className="relative grid place-items-center h-screen overflow-hidden"
     >
-      <div className="grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p2-4 text-center">
+      {/* Parallax Background */}
+      <div
+        ref={bgRef}
+        className="absolute inset-x-0 bg-hero bg-cover bg-center will-change-transform"
+        style={{ height: "130%", top: "-15%" }}
+      />
+      {/* Content overlay */}
+      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p2-4 text-center">
         <div ref={titleRef}>
           <MaskedWords
             scrollStart={false}
@@ -62,7 +113,7 @@ export default function Hero() {
             once={true}
             className="font-extrabold h-auto overflow-visible text-white text-xl margin-0 leading-18 tracking-tighter"
           >
-            Hydrate, renew and balance your skin
+            Hydrate, renew and balance <span style={{ fontFamily: 'Grapevine', textTransform: 'uppercase' }}>your</span> skin
           </MaskedWords>
         </div>
 
@@ -72,7 +123,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="bg-red-100 p-4 mb-8 text-white text-left mt-4 font-light"
+            className="bg-red-100 rounded-lg w-full sm:w-2/4 mx-auto p-4 mb-8 text-white text-left mt-4 font-light"
           >
             Improve the health and appearance of your skin through
             personalized facial treatments that will balance your skin by

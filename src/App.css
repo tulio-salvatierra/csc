@@ -299,4 +299,21 @@ flex-direction: column;
   display: none !important;
 }
 
+/* Parallax utilities */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-bg {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Smooth transform performance */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 

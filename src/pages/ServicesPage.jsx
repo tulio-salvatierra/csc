@@ -9,17 +9,19 @@ import { BreadcrumbSchema, ServiceSchema } from "../components/SEO/StructuredDat
 import services from "../components/blog/servicesPageCard";
 
 export default function Services() {
+  // Enhanced service data with additional SEO-friendly information
   const serviceData = services.map((service) => ({
     title: service.name,
     description: service.description,
+    category: service.category,
   }));
 
   return (
     <>
       <SEO
-        title="Skincare Services - Carolina Skin Centre, Midland TX"
-        description="Professional skincare services including chemical peels, nano needle treatments, carboxy therapy, and waxing services. Expert facial treatments in Midland, Texas."
-        keywords="skincare services Midland, chemical peels, nano needle, carboxy therapy, facial treatments, waxing services, skin rejuvenation, Midland TX esthetician"
+        title="Skincare Services | Facials, HydraFacials, Chemical Peels in Midland TX"
+        description="Professional skincare services in Midland, TX: HydraFacials, chemical peels, dermaplaning, nano needle, carboxy therapy & waxing. Expert facial treatments serving Midland, Odessa & the Permian Basin."
+        keywords="skincare services Midland TX, HydraFacial near me, chemical peels Midland, dermaplaning Midland Texas, nano needle therapy, carboxy therapy West Texas, facial treatments Odessa TX, waxing services Midland, skin rejuvenation Permian Basin, best facials near me"
         url="/services"
       />
       <BreadcrumbSchema

@@ -1,10 +1,17 @@
 import "./../../App.css";
 import Caro from "./../../assets/images/about/carolina.jpg";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function AboutPage() {
   const fadeRefs = useRef([]);
+  const sectionRef = useRef(null);
+  const teamImageRef = useRef(null);
+
   fadeRefs.current = [];
   const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
@@ -13,10 +20,56 @@ export default function AboutPage() {
   };
   useFadeInAnimation(fadeRefs);
 
+  // Parallax effect for background
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(section, {
+        backgroundPositionY: "30%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: section,
+          start: "top bottom",
+          end: "bottom top",
+          scrub: true,
+        },
+      });
+    });
+
+    return () => ctx.revert();
+  }, []);
+
+  // Parallax effect for team image
+  useEffect(() => {
+    const image = teamImageRef.current;
+    if (!image) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        image,
+        { yPercent: -10, scale: 1.1 },
+        {
+          yPercent: 10,
+          ease: "none",
+          scrollTrigger: {
+            trigger: image.parentElement,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
+        }
+      );
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       {/* Our Story Section */}
-      <section className="mb-20 flex items-center justify-center">
+      <section ref={sectionRef} className="mb-20 flex items-center justify-center">
         <div className="bg-about grid place-items-center w-full p-6">
           <h1 ref={addToRefs} className="mb-3 text-white text-5xl md:text-7xl font-bold mt-28">
             Our Story
@@ -43,11 +96,12 @@ export default function AboutPage() {
               key={member.name}
             >
               <div className="bg-white rounded-lg shadow-md text-center h-full">
-                <div className="bg-transparent">
+                <div className="bg-transparent overflow-hidden">
                   <img
+                    ref={teamImageRef}
                     src={member.image}
                     alt={member.name}
-                    className="mx-auto"
+                    className="mx-auto will-change-transform"
                     style={{ width: "100%", height: "auto" }}
                   />
                 </div>
