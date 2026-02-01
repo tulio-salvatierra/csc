@@ -95,13 +95,13 @@ export default function Hero() {
    return (
     <section
       ref={sectionRef}
-      className="relative grid place-items-center h-screen overflow-hidden"
+      className="relative grid place-items-center h-dvh min-h-[100svh] overflow-hidden"
     >
       {/* Parallax Background */}
       <div
         ref={bgRef}
-        className="absolute inset-x-0 bg-hero bg-cover bg-center will-change-transform"
-        style={{ height: "130%", top: "-15%" }}
+        className="absolute inset-0 bg-hero bg-cover bg-center will-change-transform"
+        style={{ transform: "scale(1.15)" }}
       />
       {/* Content overlay */}
       <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p2-4 text-center">
@@ -111,7 +111,7 @@ export default function Hero() {
             as="h1"
             variant="words"
             once={true}
-            className="font-extrabold h-auto overflow-visible text-white text-xl margin-0 leading-18 tracking-tighter"
+            className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-tight"
           >
             Hydrate, renew and balance <span style={{ fontFamily: 'Grapevine', textTransform: 'uppercase' }}>your</span> skin
           </MaskedWords>
