@@ -8,6 +8,7 @@ import {
   INSTAGRAM,
   BOOKING_URL_2,
 } from "../../constants/index.js";
+import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
 import "./Header.css";
 import BookingButton from "../BookingButton";
 
@@ -17,6 +18,9 @@ export default function Header() {
   const menuLinksRef = useRef([]);
   const overlayRef = useRef(null);
   const socialIconsRef = useRef([]);
+  const { containerRef: navUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
+  const { containerRef: mobileNavUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
+  const { containerRef: socialUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
 
   // Animation hooks removed
 
@@ -53,14 +57,15 @@ export default function Header() {
           </button>
 
           <div className="hidden lg:flex justify-end items-center space-x-8">
-            <ul className="flex space-x-8">
+            <ul ref={navUnderlineRef} className="flex space-x-8">
               {MENU_ITEMS.map((item, index) => (
                 <li className="nav-item" key={index}>
                   <Link
-                    className="text-2xl text-black no-underline hover:underline"
+                    className="underline-link text-2xl text-black no-underline"
                     to={item.url}
                   >
                     {item.title}
+                    <span className="underline" aria-hidden />
                   </Link>
                 </li>
               ))}
@@ -134,7 +139,7 @@ export default function Header() {
               </button>
             </div>
 
-            <ul className="flex flex-col space-y-4">
+            <ul ref={mobileNavUnderlineRef} className="flex flex-col space-y-4">
               <h2 className="text-sm font-semibold text-black tracking-normal mb-2">
                 Navigation
               </h2>
@@ -142,11 +147,12 @@ export default function Header() {
                 <li className="py-2" key={index}>
                   <a
                     ref={(el) => (menuLinksRef.current[index] = el)}
-                    className="text-lg text-black no-underline hover:underline"
+                    className="underline-link text-lg text-black no-underline w-fit"
                     href={item.url}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.title}
+                    <span className="underline" aria-hidden />
                   </a>
                 </li>
               ))}
@@ -155,25 +161,27 @@ export default function Header() {
             <h2 className="text-sm font-semibold text-black  tracking-normal mt-8">
               Connect
             </h2>
-            <div className="flex space-x-4 justify-evenly py-4">
+            <div ref={socialUnderlineRef} className="flex space-x-4 justify-evenly py-4">
               <a
-                className="no-underline hover:underline w-auto"
+                className="underline-link no-underline w-auto"
                 href={WHATSAPP}
                 target="_blank"
                 rel="noreferrer"
                 ref={(el) => (socialIconsRef.current[0] = el)}
               >
                 Whatsapp
+                <span className="underline" aria-hidden />
               </a>
 
               <a
-                className="no-underline hover:underline"
+                className="underline-link no-underline"
                 href={INSTAGRAM}
                 target="_blank"
                 rel="noreferrer"
                 ref={(el) => (socialIconsRef.current[1] = el)}
               >
                 Instagram
+                <span className="underline" aria-hidden />
               </a>
             </div>
             <div className="py-6">

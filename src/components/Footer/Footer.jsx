@@ -1,13 +1,16 @@
-import { MENU_ITEMS, WHATSAPP, INSTAGRAM, TULIO_URL } from "../../constants";
+import { MENU_ITEMS, WHATSAPP, INSTAGRAM } from "../../constants";
 import Logo from "../../assets/images/CSC.svg";
 import { Link } from "react-router-dom";
+import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
+
+const TULIO_URL = "https://tuliosalvatierra.com";
 
 export default function Footer() {
-  const TULIO_URL = "https://tuliosalvatierra.com";
+  const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
 
   return (
     <footer className="bg-white border-t border-gray-100">
-      <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+      <div ref={footerLinksRef} className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Logo Section */}
           <div className="lg:col-span-6 xl:col-span-7">
@@ -29,7 +32,7 @@ export default function Footer() {
 
           {/* Navigation Menu */}
           <div className="lg:col-span-3 xl:col-span-2 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}>
               Navigation
             </h3>
             <nav className="space-y-6">
@@ -39,10 +42,11 @@ export default function Footer() {
                     <Link
                       to={item.url}
                       key={index}
-                      className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                      className="underline-link block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer w-fit"
                       style={{ cursor: "pointer" }}
                     >
                       {item.title}
+                      <span className="underline" aria-hidden />
                     </Link>
                   </li>
                 ))}
@@ -52,27 +56,29 @@ export default function Footer() {
 
           {/* Social Media Links */}
           <div className="lg:col-span-3 xl:col-span-3 lg:pl-8">
-            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8">
+            <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}>
               Connect
             </h3>
-            <nav className="space-y-6">
+            <nav className="space-y-2 flex flex-col items-start">
               <a
                 href={WHATSAPP[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                className="underline-link block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer w-fit"
                 style={{ cursor: "pointer" }}
               >
                 WhatsApp
+                <span className="underline" aria-hidden />
               </a>
               <a
                 href={INSTAGRAM[0].url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer"
+                className="underline-link block text-gray-600 hover:text-gray-900 transition-colors duration-200 text-2xl cursor-pointer w-fit"
                 style={{ cursor: "pointer" }}
               >
                 Instagram
+                <span className="underline" aria-hidden />
               </a>
             </nav>
           </div>
@@ -87,19 +93,21 @@ export default function Footer() {
             <div className="flex space-x-6">
               <Link
                 to="/policies"
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                className="underline-link text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
                 style={{ cursor: "pointer" }}
               >
                 Cancellation Policy
+                <span className="underline" aria-hidden />
               </Link>
               <a
                 href={TULIO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
+                className="underline-link text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
                 style={{ cursor: "pointer" }}
               >
                 Made by Tulio Salvatierra
+                <span className="underline" aria-hidden />
               </a>
             </div>
           </div>

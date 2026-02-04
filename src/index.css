@@ -1,0 +1,15 @@
+/* Underline hover animation (used by Header + Footer with useUnderlineAnimation) */
+.underline-link {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-link .underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: currentColor;
+  pointer-events: none;
+}
