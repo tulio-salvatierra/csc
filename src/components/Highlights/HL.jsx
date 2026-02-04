@@ -29,7 +29,8 @@ export default function HL() {
 
   const fadeRefs = useRef([]);
   const sectionRef = useRef(null);
-  
+  const bgRef = useRef(null);
+
   fadeRefs.current = [];
   const addToRefs = el => {
     if (el && !fadeRefs.current.includes(el)) {
@@ -38,46 +39,25 @@ export default function HL() {
   };
   useFadeInAnimation(fadeRefs);
 
-  // Parallax effect for background + margin tween (0 when section covers screen, original when scroll out)
+  // BG zoom: expand (scale up) as you scroll into section until it covers whole screen, then zoom out as you scroll away
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section) return;
-
-    const originalMargin = "2rem"; // matches m-8 (Tailwind)
+    const bg = bgRef.current;
+    if (!section || !bg) return;
 
     const ctx = gsap.context(() => {
-      // Parallax background
-      gsap.to(section, {
-        backgroundPositionY: "30%",
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-
-      // Margin: original → 0 when section covers viewport, 0 → original when scrolling out
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: section,
-          start: "top top",
-          end: "bottom bottom",
+          start: "top bottom",   // section just entering from bottom
+          end: "bottom top",     // section has left from top
           scrub: true,
         },
       });
-      tl.fromTo(
-        section,
-        { margin: originalMargin },
-        { margin: 0, duration: 0.5, ease: "power2.out" },
-        0
-      ).fromTo(
-        section,
-        { margin: 0 },
-        { margin: originalMargin, duration: 0.5, ease: "power2.out" },
-        0.5
-      );
+      // First half of scroll: bg scales up (expands to cover screen)
+      tl.fromTo(bg, { scale: 1 }, { scale: 1.2, duration: 0.5, ease: "none" }, 0);
+      // Second half: bg scales back down (zooms out as you leave)
+      tl.fromTo(bg, { scale: 1.2 }, { scale: 1, duration: 0.5, ease: "none" }, 0.5);
     });
 
     return () => ctx.revert();
@@ -86,9 +66,16 @@ export default function HL() {
   return (
     <section
       ref={sectionRef}
-      style={{ backgroundImage: `url(${hlBg})` }}
-      className="min-h-screen p-4 m-8 flex flex-col items-center justify-center py-0 bg-cover bg-center bg-no-repeat"
+      className="min-h-screen p-4 m-8 flex flex-col items-center justify-center py-0 relative overflow-hidden"
     >
+      {/* Background layer – scaled for zoom effect */}
+      <div
+        ref={bgRef}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${hlBg})`, willChange: "transform" }}
+      />
+      {/* Content above bg */}
+      <div className="relative z-10 w-full flex flex-col items-center justify-center">
       <h2
         ref={addToRefs}
         className="text-center text-white font-bold my-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-4"
@@ -124,6 +111,7 @@ export default function HL() {
             </div>
           </div>
         ))}
+      </div>
       </div>
     </section>
   );
