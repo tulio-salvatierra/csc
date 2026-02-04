@@ -115,7 +115,7 @@ export default function ServicesComponent() {
   return (
     <section className="mwg_effect042" ref={rootRef}>
       <div className="pin-height" ref={pinHeightRef}>
-        <div className="container" ref={containerRef}>
+        <div className="container min-h-screen" ref={containerRef}>
           <div className="text">
             <h2>Premium Services</h2>
           </div>
