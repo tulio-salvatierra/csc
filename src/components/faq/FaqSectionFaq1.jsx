@@ -2,6 +2,8 @@ import { TELEPHONE } from "../../constants";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 
+import BookingButton from "../BookingButton/BookingButton";
+
 export default function FaqSectionFaq1() {
   const fadeRefs = useRef([]);
   fadeRefs.current = [];
@@ -114,12 +116,7 @@ export default function FaqSectionFaq1() {
               Can’t find the answer you’re looking for? Please send us a
               message.
             </p>
-            <a
-              className="bg-black text-white text-sm py-2 px-4 rounded block md:inline-block"
-              href={`${TELEPHONE}`}
-            >
-              Get in Touch
-            </a>
+            <BookingButton href={`${TELEPHONE}`} label="Get in Touch" />  
           </div>
         </div>
       </section>

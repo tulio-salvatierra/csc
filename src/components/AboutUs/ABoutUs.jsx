@@ -106,7 +106,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h5 className="text-xl font-semibold">{member.name}</h5>
+                  <h5 className="text-xl font-semibold text-2xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}> {member.name}</h5>
                   <p className="text-gray-500 text-center">{member.role}</p>
                 </div>
               </div>
@@ -116,9 +116,9 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission Section */}
-      <section ref={addToRefs} className="mb-20 mt-10 mx-6">
-        <h2 className="text-4xl font-bold mb-3">Our Mission</h2>
-        <blockquote className="border-l-4 border-gray-300 pl-3">
+      <section ref={addToRefs} className="mb-20 mt-10 mx-6 content-center">
+        <h2 className="text-4xl font-bold mb-3 text-center">Our Mission</h2>
+        <blockquote className="border-l-4 border-gray-300 pl-3 mx-auto sm:w-1/2 w-full">
           <p className="text-gray-500">
             "Our mission is to enhance your natural beauty and boost your
             confidence by providing personalized, results-driven skincare
