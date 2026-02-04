@@ -112,13 +112,13 @@ export default function Services() {
                   ref={(el) => {
                     if (el) imageRefs.current[index] = el;
                   }}
-                  className="mx-auto mb-4 position-relative h-80 w-100 object-cover will-change-transform"
+                  className="mx-auto mb-4 position-relative h-100 w-100 object-cover will-change-transform"
                   src={service.icon}
                   alt={service.name}
                 />
               </div>
               <a className="inline-block no-underline mb-6" href="#">
-                <h2 className="text-left p-0font-semibold">
+                <h2 className="text-left p-0font-semibold text-2xl md:text-3xl lg:text-4xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>
                   {service.name}
                 </h2>
 

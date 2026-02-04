@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 
-// Fonts
+
 @font-face {
   font-family: "Moula";
   src: url(../src/assets/fonts/Nanum/Nanum-Regular.ttf) format("truetype");
@@ -151,7 +151,7 @@ body {
   overflow-x: hidden;
 }
 
-// Layout
+
 
 .header {
 top: 0;

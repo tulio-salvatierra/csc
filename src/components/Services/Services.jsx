@@ -137,7 +137,7 @@ export default function ServicesComponent() {
                   className="media"
                 />
                 <div className="media-content">
-                  <h3 className="media-title">{service.title}</h3>
+                  <h3 className="media-title" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>{service.title}</h3>
                   <p className="media-description text-white">{service.description}</p>
                 </div>
               </Link>

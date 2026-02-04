@@ -14,8 +14,8 @@
 
 .mwg_effect042 .container {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  width: 100dvw;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -23,14 +23,23 @@
   perspective: 1000px;
 }
 
+@media (max-width: 1024px) {
+  .mwg_effect042 .container {
+    height: 100dvh;
+    width: 100dvw;
+
+  }
+}
+
+
 .mwg_effect042 .text {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   z-index: 10;
 }
 
 .mwg_effect042 .text p {
-  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: bold;
   margin: 0.5rem 0;
   color: #000;
@@ -40,7 +49,7 @@
   position: relative;
   width: 100%;
   max-width: auto;
-  height: 500px;
+  height: 80vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -49,13 +58,13 @@
 
 .mwg_effect042 .media-wrapper {
   position: absolute;
-  width: 700px;
-  height: 450px;
+  width: 74dvw;
+  height: 80dvh;
   transform-style: preserve-3d;
   will-change: transform;
   backface-visibility: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  border-radius: 12px;
+  
   overflow: hidden;
 }
 
@@ -75,19 +84,18 @@
   right: 0;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
   padding: 2rem 1.5rem 1.5rem;
-  border-radius: 0 0 12px 12px;
   color: white;
   transform: translateZ(0);
 }
 
 .mwg_effect042 .media-title {
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: bold;
   margin: 0 0 0.5rem 0;
 }
 
 .mwg_effect042 .media-description {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0;
   color: white;
 }
