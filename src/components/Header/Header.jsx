@@ -37,8 +37,8 @@ export default function Header() {
 
           <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
             <svg
-              width={32}
-              height={32}
+              width={24}
+              height={24}
               viewBox="0 0 24 24"
               fill="#000"
               xmlns="http://www.w3.org/2000/svg"

@@ -25,7 +25,7 @@ export default function CancellationPolicy() {
         ref={addToRefs}
         className="flex flex-col mx-auto p-2 w-full h-1/2 items-center rounded-md"
       >
-        <div className="card p-10 justify-between leading-normal w-5/6 sm:w-3/4  bg-white/60 rounded-md shadow-lg">
+        <div className="card p-10 backdrop-blur-sm justify-between leading-normal w-full sm:w-3/4 md:w-1/2  bg-white/20 rounded-md shadow-lg">
           <h2 ref={addToRefs} className="text-center mt-2 mb-8 text-3xl font-bold">
             New Cancellation Policy
           </h2>
@@ -37,7 +37,7 @@ export default function CancellationPolicy() {
               cancellations or rescheduling.
             </p>
             <ul className="mb-8 mt-8 font-black list-disc list-inside text-black">
-              <li ref={addToRefs} className="mb-2">
+              <li ref={addToRefs} className="m-2">
                 <strong style={{ color: "black"}}>Within 48 Hours:</strong> 50% of
                 the service cost will be charged.
               </li>
@@ -54,7 +54,9 @@ export default function CancellationPolicy() {
               Thank you for your understanding and cooperation!
             </p>
           </div>
+          <div className="text-center">
           <BookingButton href={"/policies"} label={"Read Our Policies"} />
+        </div>
         </div>
       </div>
     </section>
