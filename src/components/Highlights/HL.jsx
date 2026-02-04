@@ -67,25 +67,37 @@ export default function HL() {
     >
       <h2
         ref={addToRefs}
-        className="text-center text-white fw-bold mb-4 fs-1"
+        className="text-center text-white font-bold mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-4"
       >
         Why Choose Us
       </h2>
-      <div className="row text-left g-4">
+      <div className="w-full max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
         {highlights.map((highlight, index) => (
           <div
             key={index}
             ref={addToRefs}
-            className="col-md-4 bg-black/80 text-white border-2 m-2.5 rounded-lg"
+            className="bg-black/10 backdrop-blur-sm text-white border-2 m-2 md:m-0 rounded-lg"
           >
-            <div className="card-body p-4">
-              <h2 className="text-muted fs-1 text-left p-4 text-decoration-none">
+            <div className="p-4 sm:p-6 text-left">
+              <h2
+                style={{
+                  fontFamily: "Grapevine",
+                  textTransform: "uppercase",
+                  fontSize: "clamp(4rem, 15vw, 250px)",
+                }}
+                className="text-gray-100 no-underline leading-none"
+              >
                 {highlight.id}
               </h2>
-              <h5 className="fw-bold hlTitle fs-3 text-white">
-                {highlight.title}
-              </h5>
-              <p className="text-muted mt-4">{highlight.description}</p>
+              <p
+                className="font-bold text-white"
+                style={{ fontSize: "clamp(1.5rem, 4vw, 70px)" }}
+              >
+                <span style={{ color: "#fff", fontFamily: "Grapevine", textTransform: "uppercase" }}>
+                  {highlight.title}
+                </span>
+              </p>
+              <p className="mt-4 text-sm sm:text-base text-white/90">{highlight.description}</p>
             </div>
           </div>
         ))}
