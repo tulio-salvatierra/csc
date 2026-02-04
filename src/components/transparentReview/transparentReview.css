@@ -15,14 +15,15 @@
   position: absolute;
   top: 25px;
   left: 25px;
-  font: 500 normal 4vw/0.9 'Inter', sans-serif;
+  font: 500 normal 4vw/0.9 'Moula', sans-serif;
   letter-spacing: -0.03em;
   color: #F1F1F1;
   z-index: 10;
 }
 
 .mwg_effect025 .card {
-  width: 20vw;
+  width: 30vw;
+  height: 50vh;
   aspect-ratio: 0.8;
   position: relative;
 }
@@ -43,7 +44,7 @@
 }
 
 .mwg_effect025 .card .content .top {
-  font: 500 normal 1.9vw / 0.9 'Inter', sans-serif;
+  font: 500 normal 1.9vw / 0.9 'Moula', sans-serif;
   letter-spacing: -0.03em;
   margin: 0;
 }
@@ -52,14 +53,15 @@
   display: flex;
   align-items: center;
   column-gap: 15px;
-  font: 500 normal 1.1vw / 0.9 'Inter', sans-serif;
+  font: 500 normal 1.1vw / 0.9 'Grapevine', sans-serif;
   letter-spacing: -0.03em;
   border-top: 1px dashed #000;
   padding: 25px 0 0;
 }
 
 .mwg_effect025 .card .content .bubble {
-  width: 3.3vw;
+  width: 20vw;
+  height: 20vh;
   aspect-ratio: 1;
   border-radius: 100%;
   background-color: #FFF;

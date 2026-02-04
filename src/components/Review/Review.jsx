@@ -22,28 +22,28 @@ export default function ReviewCards() {
   });
 
   return (
-    <section className="min-h-60 flex flex-col items-center justify-center bg-white mx-6">
-      <h2 ref={addToRefs} className="">
-        What our clients say about us?
+    <section className="min-h-screen flex flex-col items-center justify-evenly bg-white mx-6">
+      <h2 ref={addToRefs} className="text-4xl md:text-3xl lg:text-4xl">
+        What our clients say about<span style={{ fontFamily: "Grapevine" }}> us?</span>
       </h2>
-      <h3 ref={addToRefs} className="text-gray-500">
+      <p ref={addToRefs} className="text-gray-500 text-lg md:text-xl lg:text-2xl">
         See the feedback we received in our Google My Business profile:
-      </h3>
-      <div className="row flex flex-wrap justify-center">
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {mockReviews.map((review, idx) => (
-          <div key={idx} className="flex mb-4" ref={addToRefs}>
-            <div className="w-100 h-75 content-evenly shadow-lg m-4 p-4 rounded-lg bg-gray-100">
-              <p className="">{review.text}</p>
+          <div key={idx} className="flex mb-4 col-span-1" ref={addToRefs}>
+            <div className="w-100 h-100 content-between flex flex-col justify-between shadow-lg m-4 p-4 rounded-lg bg-gray-100">
+              <p className="" style={{ fontSize: "clamp(1.75rem, 4vw, 2rem)", fontFamily: "Grapevine" }}>{review.text}</p>
               <div className="">
                 <img
                   src={review.photoUrl}
                   alt={review.author}
                   className="rounded-circle"
-                  style={{ width: "50px", height: "50px" }}
+                  style={{ width: "100px", height: "100px" }}
                 />
                 <div className="ms-3">
-                  <p className="">{review.author}</p>
-                  <small className="">{review.date}</small>
+                  <p className="" style={{ fontSize: "1.5rem", fontFamily: "Grapevine" }}>{review.author}</p>
+                  <small className="" style={{ fontSize: "1rem", fontFamily: "Grapevine" }}>{review.date}</small>
                 </div>
               </div>
             </div>
