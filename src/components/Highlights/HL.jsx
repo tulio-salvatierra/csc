@@ -66,7 +66,7 @@ export default function HL() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen p-4 m-8 flex flex-col items-center justify-center py-0 relative overflow-hidden"
+      className="min-h-screen p-4  flex flex-col items-center justify-center py-0 relative overflow-hidden"
     >
       {/* Background layer – scaled for zoom effect */}
       <div
@@ -78,11 +78,11 @@ export default function HL() {
       <div className="relative z-10 w-full flex flex-col items-center justify-center">
       <h2
         ref={addToRefs}
-        className="text-center text-white font-bold my-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl px-4"
+        className="text-center text-white font-bold my-4 text-4xl sm:text-6xl lg:text-6xl px-4"
       >
         Why Choose Us
       </h2>
-      <div className="w-full max-w-6xl mx-auto px-4 grid grid-cols-1  md:gap-6">
+      <div className="w-full mx-auto px-4 grid grid-cols-1  md:gap-6">
         {highlights.map((highlight, index) => (
           <div
             key={index}
@@ -94,20 +94,25 @@ export default function HL() {
                 style={{
                   fontFamily: "Grapevine",
                   textTransform: "uppercase",
-                  fontSize: "clamp(3rem, 10vw, 150px)",
+                  fontSize: "clamp(4rem, 10vw, 150px)",
                 }}
                 className="text-gray-100 no-underline leading-none"
               >
                 {highlight.id}
               </h3>
               <p
-                className="font-bold text-white text-2xl md:text-3xl lg:text-4xl"
+                className="font-bold text-white text-4xl md:text-6xl lg:text-6xl"
               >
-                <span style={{ color: "#fff", fontFamily: "Grapevine", textTransform: "uppercase" }}>
+                <span  style={{
+                  fontFamily: "Grapevine",
+                  textTransform: "uppercase",
+                  fontSize: "clamp(3rem, 9vw, 100px)",
+                  color: "#000",
+                }}>
                   {highlight.title}
                 </span>
               </p>
-              <p className="mt-4 text-sm sm:text-base text-white/90">{highlight.description}</p>
+              <p style={{color: "#fff"}} className="mt-4 text-4xl sm:text-6xl lg:text-6xl text-white/90">{highlight.description}</p>
             </div>
           </div>
         ))}

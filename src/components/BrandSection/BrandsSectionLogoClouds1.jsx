@@ -32,21 +32,21 @@ export default function BrandsSectionLogoClouds1() {
   ];
   return (
     <>
-      <section className="min-h-screen flex flex-col items-center justify-center bg-white mx-6">
-        <div className="container">
-          <p ref={addToRefs} className="text-gray-500 mb-6 leading-relaxed text-center">
+      <section className="min-h-auto flex flex-col items-center justify-center bg-white mx-auto mb-12">
+        <div className="">
+          <p ref={addToRefs} className="text-gray-500 mb-6 leading-relaxed text-center text-[4rem] sm:text-[6rem]">
             Trusted by brands all over the world
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
             {brands.map(({ productSrc, logoSrc, altProduct, altLogo }, i) => (
               <div
                 key={i}
-                className="bg-red-100 card flex flex-col items-center justify-evenly p-6"
+                className="flex flex-col items-center justify-evenly p-1"
                 ref={addToRefs}
               >
                 <img
-                  className="object-cover w-full h-64"
-                  style={{ width: '100%', height: '256px', objectFit: 'cover' }}
+                  className="object-cover w-full min-h-full"
+                  style={{ width: '100%', objectFit: 'cover' }}
                   src={productSrc}
                   alt={altProduct}
                   ref={addToRefs}

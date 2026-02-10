@@ -74,7 +74,7 @@ export default function Services() {
   return (
     <>
       <section className="bg-white">
-        <div ref={headerSectionRef} className="h-72 bg-cover bg-center bg-services">
+        <div ref={headerSectionRef} className="bg-cover bg-center bg-services">
           <div className="flex flex-col items-center justify-center mb-16 mb-md-20">
             <h1
               ref={addToRefs}
@@ -100,10 +100,10 @@ export default function Services() {
             <div
               key={`service ${index}`}
               ref={addToRefs}
-              className="w-full md:w-1/3 mb-12 px-5 flex flex-col justify-between shadow-md hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm md:mx-2 bg-white hover:bg-gray-50 p-4"
+              className="w-full h-full mb-1  flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm  bg-white hover:bg-gray-50 p-1"
             >
               <a className="no-underline" href="#">
-                <span className="mb-4 inline-block bg-blue-500 uppercase text-white text-sm font-light px-2 py-1 rounded">
+                <span className="mb-4 font-[Grapevine] inline-block bg-blue-500 uppercase text-white text-sm font-light px-2 py-1 rounded">
                   {service.category}
                 </span>
               </a>
@@ -112,7 +112,7 @@ export default function Services() {
                   ref={(el) => {
                     if (el) imageRefs.current[index] = el;
                   }}
-                  className="mx-auto mb-4 position-relative h-100 w-100 object-cover will-change-transform"
+                  className="mx-auto mb-1 w-100 object-cover will-change-transform"
                   src={service.icon}
                   alt={service.name}
                 />
