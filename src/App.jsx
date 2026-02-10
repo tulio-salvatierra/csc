@@ -1,15 +1,23 @@
 import Lenis from "lenis";
 import React, { useEffect } from "react";
 import "./App.css";
-import { Routes, Route } from "react-router";
+import { Routes, Route, useLocation } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
 import ServicesPage from "./pages/ServicesPage";
 import PolicyPage from "./pages/PolicyPage";
 import About from "./pages/AboutPage";
 import NotFound from "./pages/notFound";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { pushPageView } from "./utils/gtm";
 
 function App() {
+  const location = useLocation();
+
+  // Push page_view to GTM dataLayer on SPA route change
+  useEffect(() => {
+    pushPageView(location.pathname, document.title);
+  }, [location.pathname]);
+
   useEffect(() => {
     const lenis = new Lenis();
     // Make Lenis accessible globally for ScrollToTop component
