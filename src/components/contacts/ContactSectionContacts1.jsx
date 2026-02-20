@@ -20,8 +20,8 @@ export default function ContactSection() {
 
   return (
     <>
-      <section ref={addToRefs} className="min-h-0.5 flex items-center justify-center mt-10 m-1 mx-auto">
-        <div className="row w-full bg-gray-200 p-8 shadow-sm">
+      <section ref={addToRefs} className="min-h-screen flex items-center justify-center mt-10  mx-auto">
+        <div className="h-full w-full bg-gray-200 p-1 shadow-sm">
           <h2 className="mb-2">Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
             Get in touch with us today for all your skincare needs.

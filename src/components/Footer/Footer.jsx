@@ -9,13 +9,13 @@ export default function Footer() {
   const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
 
   return (
-    <footer className="bg-white border-t border-gray-100">
-      <div ref={footerLinksRef} className="w-full mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+    <footer className="bg-white border-t border-gray-600 bg-gray-200">
+      <div ref={footerLinksRef} className="w-full mx-auto px-1 p-24 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Logo Section */}
           <div className="lg:col-span-6 xl:col-span-7">
             <div className="flex flex-col items-start">
-              <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 xl:w-56 xl:h-56 rounded-2xl flex items-center justify-center mb-8">
+              <div className="w-100 h-100 sm:w-100 sm:h-100  flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
                   <Link to="/" aria-label="Carolina Skin Centre Home">
                     <img className="" src={Logo} alt="Carolina Skin Centre Logo" />

@@ -66,7 +66,7 @@ export default function HL() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen p-4  flex flex-col items-center justify-center py-0 relative overflow-hidden"
+      className="min-h-screen p-1 py-24 flex flex-col items-center justify-center py-0 relative overflow-hidden"
     >
       {/* Background layer – scaled for zoom effect */}
       <div
@@ -96,7 +96,7 @@ export default function HL() {
                   textTransform: "uppercase",
                   fontSize: "clamp(4rem, 10vw, 150px)",
                 }}
-                className="text-gray-100 no-underline leading-none"
+                className="text-gray-500 no-underline leading-none"
               >
                 {highlight.id}
               </h3>
@@ -107,7 +107,7 @@ export default function HL() {
                   fontFamily: "Grapevine",
                   textTransform: "uppercase",
                   fontSize: "clamp(3rem, 9vw, 100px)",
-                  color: "#000",
+                  color: "#fff",
                 }}>
                   {highlight.title}
                 </span>

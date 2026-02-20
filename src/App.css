@@ -317,3 +317,25 @@ flex-direction: column;
   backface-visibility: hidden;
 }
 
+/* Brands section trust heading */
+.brands-trust-heading {
+  font-size: 4rem;
+}
+@media (min-width: 640px) {
+  .brands-trust-heading {
+    font-size: 6rem;
+  }
+}
+
+@keyframes spin-globe {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.globe-spin {
+  animation: spin-globe 8s linear infinite;
+}
+

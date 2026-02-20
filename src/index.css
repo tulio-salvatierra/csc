@@ -13,3 +13,11 @@
   background: currentColor;
   pointer-events: none;
 }
+
+/* Contact section: visible underline and link text on gray background */
+.contact-links-wrap .underline-link {
+  color: #171717;
+}
+.contact-links-wrap .underline-link .underline {
+  background: #171717;
+}

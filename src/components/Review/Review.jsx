@@ -29,10 +29,10 @@ export default function ReviewCards() {
       <p ref={addToRefs} className="text-gray-500 text-lg md:text-xl lg:text-2xl">
         See the feedback we received in our Google My Business profile:
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+      <div className="p-1 mt-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 mx-auto">
         {mockReviews.map((review, idx) => (
           <div key={idx} className="flex mb-4 col-span-1" ref={addToRefs}>
-            <div className="w-100 h-100 content-between flex flex-col justify-between shadow-lg m-1 p-4 bg-gray-100">
+            <div className="w-full h-100 content-between flex flex-col justify-between shadow-lg m-1 p-1 bg-gray-200 mx-auto">
               <p className="" style={{ fontSize: "clamp(1.75rem, 4vw, 2rem)", fontFamily: "Grapevine" }}>{review.text}</p>
               <div className="">
                 <img
