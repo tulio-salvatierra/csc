@@ -13,7 +13,7 @@ export default function Services() {
   const fadeRefs = useRef([]);
   const headerSectionRef = useRef(null);
   const imageRefs = useRef([]);
-  
+
   fadeRefs.current = [];
   const addToRefs = (el) => {
     if (el && !fadeRefs.current.includes(el)) {
@@ -63,7 +63,7 @@ export default function Services() {
               end: "bottom top",
               scrub: true,
             },
-          }
+          },
         );
       });
     });
@@ -87,9 +87,9 @@ export default function Services() {
               ref={addToRefs}
               className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
             >
-              At our Skin Wellness Studio, we offer a range of expert facial
+              At my skin care studio, I offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
-              Our services include Luxurious Facials, HydraFacials,
+              My services include Luxurious Facials, HydraFacials,
               Microdermabrasion, Nanoneedle, Acne Facials and Professional
               Eyebrow Shaping and Tinting.
             </p>
@@ -100,7 +100,7 @@ export default function Services() {
             <div
               key={`service ${index}`}
               ref={addToRefs}
-              className="p-4 my-8 w-full h-full mb-1  flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm  bg-white hover:bg-gray-50 p-1 hover:border-1 hover:border-black/10 hover:scale-105 transition-all duration-300 ease-in-out"
+              className="p-4 my-8 w-full mb-1  flex flex-col justify-between hover:shadow-lg rounded-sm  bg-white hover:bg-gray-50 hover:border-1 hover:border-black/10 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <a className="no-underline" href="#">
                 <span className="mb-4 font-[Grapevine] inline-block bg-black/20 uppercase text-black text-sm font-light px-2 py-1 rounded">
@@ -112,13 +112,19 @@ export default function Services() {
                   ref={(el) => {
                     if (el) imageRefs.current[index] = el;
                   }}
-                  className="mx-auto mb-1 w-100 object-cover will-change-transform"
+                  className="mx-auto mb-1 w-100 h-100 object-cover will-change-transform"
                   src={service.icon}
                   alt={service.name}
                 />
               </div>
               <a className="inline-block no-underline mb-6" href="#">
-                <h2 className="text-left p-0font-semibold text-2xl md:text-3xl lg:text-4xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>
+                <h2
+                  className="text-left p-0font-semibold text-2xl md:text-3xl lg:text-4xl"
+                  style={{
+                    fontFamily: "Grapevine",
+                    textTransform: "uppercase",
+                  }}
+                >
                   {service.name}
                 </h2>
 

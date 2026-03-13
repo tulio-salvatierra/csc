@@ -9,13 +9,13 @@ export default function Footer() {
   const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
 
   return (
-    <footer className="bg-white border-t border-gray-600 bg-gray-200">
+    <footer className="bg-white border-t border-gray-600">
       <div ref={footerLinksRef} className="w-full mx-auto px-1 p-24 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Logo Section */}
           <div className="lg:col-span-6 xl:col-span-7">
             <div className="flex flex-col items-start">
-              <div className="w-100 h-100 sm:w-100 sm:h-100  flex items-center justify-center mb-8">
+              <div className="w-150 h-150 sm:w-150 sm:h-150  flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
                   <Link to="/" aria-label="Carolina Skin Centre Home">
                     <img className="" src={Logo} alt="Carolina Skin Centre Logo" />
@@ -31,9 +31,9 @@ export default function Footer() {
           </div>
 
           {/* Navigation Menu */}
-          <div className="lg:col-span-3 xl:col-span-2 lg:pl-8">
+          <div className="lg:col-span-3 xl:col-span-2 lg:pl-8 p-8">
             <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-              Navigation
+              Menu
             </h3>
             <nav className="space-y-6">
               <ul className="list-none p-0 m-0">
@@ -55,7 +55,7 @@ export default function Footer() {
           </div>
 
           {/* Social Media Links */}
-          <div className="lg:col-span-3 xl:col-span-3 lg:pl-8">
+          <div className="lg:col-span-3 xl:col-span-3 lg:pl-8 p-8">
             <h3 className="text-sm font-semibold text-gray-900 tracking-normal mb-8" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}>
               Connect
             </h3>

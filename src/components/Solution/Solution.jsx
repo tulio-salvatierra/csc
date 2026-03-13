@@ -96,7 +96,7 @@ export default function Solutions() {
   return (
     <section
       ref={sectionRef}
-      className="p-4 mt-8 h-screen flex flex-col justify-center relative"
+      className="p-4 mt-8 min-h-screen flex flex-col justify-center relative"
     >
       <div className="grid items-center justify-center text-center mt-20">
         <h2 ref={titleRef} className="mb-3">
@@ -136,7 +136,7 @@ export default function Solutions() {
               src={SkinCare}
               alt="Skin Care Treatment"
               className="object-cover will-change-transform"
-              style={{ width: "100%", height: "auto" }}
+              style={{ width: "auto", height: "auto" }}
             />
           </div>
         </div>

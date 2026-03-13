@@ -117,7 +117,8 @@ export default function ServicesComponent() {
       <div className="pin-height" ref={pinHeightRef}>
         <div className="container min-h-screen" ref={containerRef}>
           <div className="text">
-            <h2>Premium Services</h2>
+            <h2 className="text-2xl font-bold">Premium Services</h2>
+            <p className="text-gray-500" style={{ fontSize: "1.25rem", fontWeight: "bold", fontFamily: "Grapevine" }}>Click in the image to read more</p>
           </div>
 
           <div className="medias">
