@@ -3,7 +3,6 @@ import services from "./servicesPageCard";
 import { BOOKING_URL_2 } from "../../constants";
 import "./../../../src/App.css";
 import { useRef, useEffect } from "react";
-import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 import BookingButton from "../BookingButton";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -11,17 +10,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Services() {
-  const fadeRefs = useRef([]);
   const headerSectionRef = useRef(null);
   const imageRefs = useRef([]);
-
-  fadeRefs.current = [];
-  const addToRefs = (el) => {
-    if (el && !fadeRefs.current.includes(el)) {
-      fadeRefs.current.push(el);
-    }
-  };
-  useFadeInAnimation(fadeRefs);
 
   // Parallax effect for header background
   useEffect(() => {
@@ -76,18 +66,12 @@ export default function Services() {
     <>
       <section className="bg-white">
         <div ref={headerSectionRef} className="bg-cover bg-center bg-services">
-          <div className="flex flex-col items-center justify-center mb-16 mb-md-20">
-            <h1
-              ref={addToRefs}
-              className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
-            >
+          <div className="flex flex-col items-center justify-center mb-16 mb-md-20 pt-24 pb-8">
+            <h1 className="m-3 text-center text-white text-5xl md:text-7xl font-bold">
               Services
             </h1>
 
-            <p
-              ref={addToRefs}
-              className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
-            >
+            <p className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4 text-gray-800">
               At my skin care studio, I offer a range of expert skin care facials
               and spa and facial treatments designed to rejuvenate and enhance
               your natural beauty. My skincare services include Luxurious
@@ -101,7 +85,6 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={`service ${index}`}
-              ref={addToRefs}
               className="p-4 my-8 w-full mb-1  flex flex-col justify-between hover:shadow-lg rounded-sm  bg-white hover:bg-gray-50 hover:border-1 hover:border-black/10 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <Link className="no-underline" to={`/services/${service.slug}`}>
