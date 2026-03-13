@@ -15,7 +15,7 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="lg:col-span-6 xl:col-span-7">
             <div className="flex flex-col items-start">
-              <div className="w-150 h-150 sm:w-150 sm:h-150  flex items-center justify-center mb-8">
+              <div className="w-150 h-150 sm:w-100 sm:h-100  flex items-center justify-center mb-8">
                 <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
                   <Link to="/" aria-label="Carolina Skin Centre Home">
                     <img className="" src={Logo} alt="Carolina Skin Centre Logo" />

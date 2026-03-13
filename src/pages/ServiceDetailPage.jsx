@@ -101,7 +101,7 @@ export default function ServiceDetailPage() {
                   FAQ
                 </h2>
                 <p className="text-gray-500 max-w-2xl mx-auto">
-                  Common questions about {service.name} at Carolina Skin Centre.
+                  Common questions about my {service.name} service.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16">

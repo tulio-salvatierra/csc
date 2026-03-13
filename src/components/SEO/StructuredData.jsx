@@ -14,7 +14,7 @@ export function LocalBusinessSchema() {
       url: SITE_URL,
       telephone: TELEPHONE.replace("tel:", ""),
       email: EMAIL,
-      description: "Professional skincare services in Midland, Texas. Esthetician near me for facials, skin care facials, spa and facial treatments, chemical peels, HydraFacials, dermaplaning, and more with over 18 years of experience.",
+      description: "I provide professional skincare services in Midland, Texas—facials, skin care facials, spa and facial treatments, chemical peels, HydraFacials, dermaplaning, and more with over 18 years of experience.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "705 W Wadley Ave Suite-23",

@@ -73,7 +73,7 @@ export default function PolicyComponent() {
               ref={(el) => (animated.current[0] = el)}
               className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
             >
-              Our Policies
+              My Policies
             </h1>
 
             <p
