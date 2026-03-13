@@ -30,7 +30,7 @@ const servicesCardInfo = [
     description:
       "Microdermabrasion is a non-invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. The procedure typically uses either a diamond-tipped wand or fine crystals combined with suction to resurface the skin by promoting cell turnover and collagen production.",
     icon: MD,
-    category: "Eyebrow services",
+    category: "Skin Rejuvenation",
   },
   {
     id: 4,

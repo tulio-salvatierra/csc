@@ -13,12 +13,12 @@ export default function HL() {
       id: 1,
       title: "Expert aesthetician",
       description:
-        "Board-certified professional with over 10 years of experience",
+        "Board certified professional with over 10 years of experience",
     },
     {
       id: 2,
       title: "Cutting-edge Technology",
-      description: "State-of-the-art equipment for optimal results",
+      description: "State of the art equipment for optimal results",
     },
     {
       id: 3,

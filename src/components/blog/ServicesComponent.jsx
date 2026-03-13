@@ -100,10 +100,10 @@ export default function Services() {
             <div
               key={`service ${index}`}
               ref={addToRefs}
-              className="w-full h-full mb-1  flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm  bg-white hover:bg-gray-50 p-1"
+              className="p-4 my-8 w-full h-full mb-1  flex flex-col justify-between hover:shadow-lg transition-shadow duration-300 ease-in-out rounded-sm  bg-white hover:bg-gray-50 p-1 hover:border-1 hover:border-black/10 hover:scale-105 transition-all duration-300 ease-in-out"
             >
               <a className="no-underline" href="#">
-                <span className="mb-4 font-[Grapevine] inline-block bg-blue-500 uppercase text-white text-sm font-light px-2 py-1 rounded">
+                <span className="mb-4 font-[Grapevine] inline-block bg-black/20 uppercase text-black text-sm font-light px-2 py-1 rounded">
                   {service.category}
                 </span>
               </a>

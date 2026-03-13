@@ -25,7 +25,7 @@ export default function CancellationPolicy() {
         ref={addToRefs}
         className="flex flex-col mx-auto p-2 w-full h-1/2 items-center rounded-md"
       >
-        <div className="card p-10 backdrop-blur-sm justify-between leading-normal w-full sm:w-3/4 md:w-1/2  bg-white/20 rounded-md shadow-lg">
+        <div className="card p-10 backdrop-blur-sm justify-between leading-normal w-full sm:w-3/4 md:w-1/2  bg-white/50 rounded-md shadow-lg">
           <h2 ref={addToRefs} className="text-center mt-2 mb-8 text-3xl font-bold">
             New Cancellation Policy
           </h2>

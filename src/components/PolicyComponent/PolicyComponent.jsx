@@ -80,9 +80,9 @@ export default function PolicyComponent() {
               ref={(el) => (animated.current[1] = el)}
               className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
             >
-              At our skin care studio, we offer a range of expert facial
+              At my skin care studio, I offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
-              Our services include luxurious facials, HydraFacials,
+              My services include luxurious facials, HydraFacials,
               microdermabrasion, nano needle, acne facials and professional
               eyebrow shaping and tinting.
             </p>

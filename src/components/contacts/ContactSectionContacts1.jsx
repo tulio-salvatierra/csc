@@ -22,23 +22,12 @@ export default function ContactSection() {
     <>
       <section ref={addToRefs} className="min-h-screen flex items-center justify-center mt-10  mx-auto">
         <div className="h-full w-full bg-gray-200 p-1 shadow-sm">
-          <h2 className="mb-2">Contact</h2>
+          <h2 className="mb-2 font-[Grapevine] text-4xl">Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
-            Get in touch with us today for all your skincare needs.
+            Get in touch with me today for all your skincare needs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-            <div>
-              <div ref={addToRefs} className="mt-8 text-left">
-                <h3 className="">Address</h3>
-                <a
-                  className="mb-0 text-muted text-decoration-none"
-                  href={ADDRESS_URL}
-                >
-                  <p>705 W Wadley Ave Suite-23, Midland, TX
-                  79705</p>
-                </a>
-              </div>
-              <div ref={addToRefs} className="text-left">
+            <div ref={addToRefs} className="text-left">
                 <h3 className="">E-mail</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
@@ -92,7 +81,6 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-        </div>
       </section>
     </>
   );
