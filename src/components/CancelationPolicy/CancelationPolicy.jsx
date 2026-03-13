@@ -31,8 +31,8 @@ export default function CancellationPolicy() {
           </h2>
           <div className="sm:mx-16">
             <p ref={addToRefs} className="mb-4 text-lg" style={{ color: "black"}}>
-              To ensure customer satisfaction, we kindly ask as a courtesy for
-              other customers, please provide a minimum of{" "}
+              To ensure your satisfaction, I kindly ask as a courtesy that
+              you provide a minimum of{" "}
               <strong className="font-black italic">48 hours notice</strong> for any
               cancellations or rescheduling.
             </p>
@@ -55,7 +55,7 @@ export default function CancellationPolicy() {
             </p>
           </div>
           <div className="text-center">
-          <BookingButton href={"/policies"} label={"Read Our Policies"} />
+          <BookingButton href={"/policies"} label={"Read My Policies"} />
         </div>
         </div>
       </div>

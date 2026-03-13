@@ -24,7 +24,8 @@ export default function Footer() {
               </div>
               <div className="space-y-6">
                 <p className="text-gray-600 text-2xl leading-relaxed max-w-2xl">
-                  Hydrate, renew and balance your skin
+                  Hydrate, renew and balance your skin—skincare, facials, and
+                  spa and facial treatments in Midland, TX.
                 </p>
               </div>
             </div>

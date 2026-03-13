@@ -10,15 +10,15 @@ import { BreadcrumbSchema, PersonSchema, FAQSchema } from "../components/SEO/Str
 const aboutFaqs = [
   {
     question: "What skincare treatments are best for anti-aging?",
-    answer: "We offer specialized anti-aging facials, such as HydraFacial, Nano Needling, and chemical peels, designed to target fine lines, wrinkles, and loss of elasticity. These treatments promote collagen production and leave your skin rejuvenated and glowing.",
+    answer: "I offer specialized anti-aging facials, such as HydraFacial, Nano Needling, and chemical peels, designed to target fine lines, wrinkles, and loss of elasticity. These treatments promote collagen production and leave your skin rejuvenated and glowing.",
   },
   {
     question: "How often should I get a deep cleansing facial?",
-    answer: "For optimal results, we recommend a facial every 4-6 weeks. This helps maintain clear and healthy skin by removing impurities and preventing clogged pores.",
+    answer: "For optimal results, I recommend a facial every 4-6 weeks. This helps maintain clear and healthy skin by removing impurities and preventing clogged pores.",
   },
   {
     question: "Are the waxing services suitable for sensitive skin?",
-    answer: "Yes, our face and body waxing services are gentle and suitable for sensitive skin. We use high-quality, hypoallergenic waxes to minimize irritation and ensure a comfortable experience.",
+    answer: "Yes, my face and body waxing services are gentle and suitable for sensitive skin. I use high-quality, hypoallergenic waxes to minimize irritation and ensure a comfortable experience.",
   },
   {
     question: "How long do eyelash extensions last, and how do I maintain them?",
@@ -48,8 +48,8 @@ export default function About() {
     <>
       <SEO
         title="About Carolina Skin Centre | Expert Esthetician in Midland, TX | 18+ Years Experience"
-        description="Meet Carolina Alcalá, an experienced esthetician with over 18 years in skincare. European and naturopathic techniques combined with advanced medispa procedures in Midland, Texas. Serving Midland, Odessa & West Texas."
-        keywords="Carolina Alcalá esthetician, Midland skincare expert, experienced esthetician near me, skin care professional Midland TX, 18 years experience, best esthetician West Texas, skincare specialist Permian Basin"
+        description="Meet Carolina Alcalá, an experienced skin esthetician with over 18 years in skincare and facials. European and naturopathic techniques combined with advanced medispa procedures in Midland, Texas. Your local esthetician near me for customized skin care facials, skin care treatments, and spa and facial services serving Midland, Odessa & West Texas."
+        keywords="esthetician near me, skin esthetician, facials, skin care facials, skin care treatments, skincare, Carolina Alcalá esthetician, Midland skincare expert, skin care professional Midland TX, experienced esthetician near me, 18 years experience, best esthetician West Texas, skincare specialist Permian Basin"
         url="/about"
       />
       <BreadcrumbSchema

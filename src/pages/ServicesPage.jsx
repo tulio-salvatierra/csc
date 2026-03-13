@@ -20,8 +20,8 @@ export default function Services() {
     <>
       <SEO
         title="Skincare Services | Facials, HydraFacials, Chemical Peels in Midland TX"
-        description="Professional skincare services in Midland, TX: HydraFacials, chemical peels, dermaplaning, nano needle, carboxy therapy & waxing. Expert facial treatments serving Midland, Odessa & the Permian Basin."
-        keywords="skincare services Midland TX, HydraFacial near me, chemical peels Midland, dermaplaning Midland Texas, nano needle therapy, carboxy therapy West Texas, facial treatments Odessa TX, waxing services Midland, skin rejuvenation Permian Basin, best facials near me"
+        description="Professional skincare services in Midland, TX: facials, HydraFacials, chemical peels, dermaplaning, nano needle, carboxy therapy & waxing. Skin care treatments and spa and facial services from a licensed skin esthetician serving Midland, Odessa & the Permian Basin."
+        keywords="esthetician near me, face and spa, facials, skin care facials, skin care treatment near me, skin care treatments, skin esthetician, skin near me, skincare, spa and facial, skincare services Midland TX, HydraFacial near me, chemical peels Midland, dermaplaning Midland Texas, nano needle therapy, carboxy therapy West Texas, facial treatments Odessa TX, waxing services Midland, skin rejuvenation Permian Basin, best facials near me"
         url="/services"
       />
       <BreadcrumbSchema

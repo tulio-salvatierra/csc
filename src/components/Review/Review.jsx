@@ -24,10 +24,10 @@ export default function ReviewCards() {
   return (
     <section className="min-h-[50vh] flex flex-col items-center justify-center bg-white mx-auto">
       <h2 ref={addToRefs} className="text-4xl md:text-3xl lg:text-4xl">
-        What our clients say about<span style={{ fontFamily: "Grapevine" }}> us?</span>
+        What my clients say about<span style={{ fontFamily: "Grapevine" }}> me</span>
       </h2>
       <p ref={addToRefs} className="text-gray-500 text-lg md:text-xl lg:text-2xl">
-        See the feedback we received in our Google My Business profile:
+        See the feedback I've received in my Google Business profile:
       </p>
       <div className="p-1 mt-10 w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 mx-auto">
         {mockReviews.map((review, idx) => (

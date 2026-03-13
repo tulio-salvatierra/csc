@@ -11,8 +11,8 @@ export default function PolicyPage() {
     <>
       <SEO
         title="Policies & Cancellation - Carolina Skin Centre, Midland TX"
-        description="Learn about my cancellation policy, booking terms, and service policies at Carolina Skin Centre in Midland, Texas."
-        keywords="cancellation policy, booking policy, skincare policies, Midland TX esthetician policies"
+        description="Learn about my cancellation policy, booking terms, and service policies for facials, skincare, and spa and facial treatments at Carolina Skin Centre in Midland, Texas."
+        keywords="cancellation policy, booking policy, skincare policies, spa and facial policies, skin care treatments terms, Midland TX esthetician policies"
         url="/policies"
       />
       <BreadcrumbSchema

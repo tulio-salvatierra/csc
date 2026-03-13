@@ -66,7 +66,7 @@ export default function HL() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen p-1 py-24 flex flex-col items-center justify-center py-0 relative overflow-hidden"
+      className="min-h-screen p-1 py-24 flex flex-col items-center justify-center relative overflow-hidden"
     >
       {/* Background layer – scaled for zoom effect */}
       <div
@@ -80,7 +80,7 @@ export default function HL() {
         ref={addToRefs}
         className="text-center text-white font-bold my-4 text-4xl sm:text-6xl lg:text-6xl px-4"
       >
-        Why Choose Us
+        Why Choose Me
       </h2>
       <div className="w-full mx-auto px-4 grid grid-cols-1  md:gap-6">
         {highlights.map((highlight, index) => (

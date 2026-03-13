@@ -156,8 +156,8 @@ export default function HeroReviewCarousel() {
   return (
     <section className="mwg_effect025">
       <p className="title">
-        They say it better <br />
-        than we do
+        My clients say it better <br />
+        than I do
       </p>
       <div className="container" ref={containerRef}>
         {displayReviews.map((review, index) => (

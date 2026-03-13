@@ -4,6 +4,7 @@ import "./App.css";
 import { Routes, Route, useLocation } from "react-router-dom";
 import IndexPage from "./pages/IndexPage";
 import ServicesPage from "./pages/ServicesPage";
+import ServiceDetailPage from "./pages/ServiceDetailPage";
 import PolicyPage from "./pages/PolicyPage";
 import About from "./pages/AboutPage";
 import NotFound from "./pages/notFound";
@@ -43,6 +44,7 @@ function App() {
       <Routes>
         <Route path="/" element={<IndexPage />} errorElement={NotFound} />
         <Route path="/services" element={<ServicesPage />} errorElement={NotFound}/>
+        <Route path="/services/:serviceSlug" element={<ServiceDetailPage />} errorElement={NotFound}/>
         <Route path="/policies" element={<PolicyPage />} errorElement={NotFound}/>
         <Route path="/about" element={<About />} errorElement={NotFound}/>
       </Routes>

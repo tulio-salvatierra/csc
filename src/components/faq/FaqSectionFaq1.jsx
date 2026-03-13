@@ -41,7 +41,7 @@ export default function FaqSectionFaq1() {
                   What skincare treatments are best for anti-aging?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  We offer specialized anti-aging facials, such as Hydrafacial,
+                  I offer specialized anti-aging facials, such as HydraFacial,
                   Nano Needling, and chemical peels, designed to target fine
                   lines, wrinkles, and loss of elasticity. These treatments
                   promote collagen production and leave your skin rejuvenated
@@ -60,7 +60,7 @@ export default function FaqSectionFaq1() {
                   How often should I get a deep cleansing facial?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  For optimal results, we recommend a facial every 4-6 weeks.
+                  For optimal results, I recommend a facial every 4-6 weeks.
                   This helps maintain clear and healthy skin by removing
                   impurities and preventing clogged pores.
                 </p>
@@ -77,8 +77,8 @@ export default function FaqSectionFaq1() {
                   Are the waxing services suitable for sensitive skin?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  Yes, our face and body waxing services are gentle and suitable
-                  for sensitive skin. We use high-quality, hypoallergenic waxes
+                  Yes, my face and body waxing services are gentle and suitable
+                  for sensitive skin. I use high-quality, hypoallergenic waxes
                   to minimize irritation and ensure a comfortable experience.
                 </p>
               </div>
@@ -113,7 +113,7 @@ export default function FaqSectionFaq1() {
               Have more questions?
             </h2>
             <p className="mb-8 leading-relaxed text-gray-500 text-center">
-              Can’t find the answer you’re looking for? Please send us a
+              Can’t find the answer you’re looking for? Please send me a
               message.
             </p>
             <BookingButton href={`${TELEPHONE}`} label="Get in Touch" />  

@@ -117,8 +117,9 @@ export default function Hero() {
             className="bg-red-100 rounded-lg w-full sm:w-3/4 mx-auto p-4 mb-8 text-white text-left mt-4 font-light"
           >
             Improve the health and appearance of your skin through personalized
-            facial treatments that will balance your skin by delivering visible
-            and long-lasting results located in the heart of Midland, TX.
+            skin care facials and spa and facial treatments that balance your
+            skin and deliver visible, long-lasting results—your skincare and face
+            and spa destination in the heart of Midland, TX.
           </MaskedLines>
         </div>
 

@@ -68,24 +68,24 @@ export default function AboutPage() {
 
   return (
     <>
-      {/* Our Story Section */}
+      {/* My Story Section */}
       <section ref={sectionRef} className="mb-20 flex items-center justify-center">
         <div className="bg-about grid place-items-center w-full p-6">
           <h1 ref={addToRefs} className="mb-3 text-white text-5xl md:text-7xl font-bold mt-28">
-            Our Story
+            My Story
           </h1>
           <p ref={addToRefs} className="w-full md:w-1/2 font-light bg-red-100 p-4 mt-4">
             I battled acne in my late teens and early twenties, which shook my
-            confidence. After seeing real results from professional treatments,
+            confidence. After seeing real results from professional skin care treatments and facials,
             I felt renewed and inspired to help others achieve that same boost.
-            As an esthetician, I’m dedicated to delivering personalized,
-            effective skincare so every client can feel confident and supported
+            As your skin esthetician, I’m dedicated to delivering personalized,
+            effective skincare and spa and facial services so every client can feel confident and supported
             on their unique journey.
           </p>
         </div>
       </section>
 
-      {/* Our Team Section */}
+      {/* About Me Section */}
       <section ref={addToRefs} className="mb-20 mx-6">
         <h2 className="mb-3 text-4xl font-bold">About me</h2>
         <div className="flex flex-wrap gap-4 justify-center mt-10">
@@ -106,7 +106,7 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="p-6 text-center">
-                  <h5 className="text-xl font-semibold text-2xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}> {member.name}</h5>
+                  <h5 className="font-semibold text-2xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase", letterSpacing: "0.05em" }}> {member.name}</h5>
                   <p className="text-gray-500 text-center">{member.role}</p>
                 </div>
               </div>
@@ -115,15 +115,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Our Mission Section */}
+      {/* My Mission Section */}
       <section ref={addToRefs} className="mb-20 mt-10 mx-6 content-center">
-        <h2 className="text-4xl font-bold mb-3 text-center">Our Mission</h2>
+        <h2 className="text-4xl font-bold mb-3 text-center">My Mission</h2>
         <blockquote className="border-l-4 border-gray-300 pl-3 mx-auto sm:w-1/2 w-full">
           <p className="text-gray-500">
-            "Our mission is to enhance your natural beauty and boost your
+            "My mission is to enhance your natural beauty and boost your
             confidence by providing personalized, results-driven skincare
             treatments and luxurious beauty services. From rejuvenating facials
-            to expert lash and brow care, we are dedicated to helping you look
+            to expert lash and brow care, I am dedicated to helping you look
             and feel your best."
           </p>
         </blockquote>

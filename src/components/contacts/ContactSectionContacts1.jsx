@@ -24,7 +24,8 @@ export default function ContactSection() {
         <div className="h-full w-full bg-gray-200 p-1 shadow-sm">
           <h2 className="mb-2 text-4xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
-            Get in touch with me today for all your skincare needs.
+            Get in touch today for facials, skin care treatments, and spa and
+            facial services—your esthetician near me in Midland, TX.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div ref={addToRefs} className="text-left">
@@ -67,7 +68,7 @@ export default function ContactSection() {
                 <p className="mb-0 text-muted">Saturdat, Sunday & Monday: Closed</p>
               </div>
               <div ref={addToRefs} className="text-left p-8">
-              <h3>Find us here</h3>
+              <h3>Find me here</h3>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3382.5314245664918!2d-102.089112!3d32.0278042!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fbd91880973d63%3A0x8959ca0465189d49!2sCarolina%20Skin%20Centre!5e0!3m2!1ses!2sus!4v1741568209833!5m2!1ses!2sus"
                 width="100%"

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import services from "./servicesPageCard";
 import { BOOKING_URL_2 } from "../../constants";
 import "./../../../src/App.css";
@@ -87,11 +88,12 @@ export default function Services() {
               ref={addToRefs}
               className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4"
             >
-              At my skin care studio, I offer a range of expert facial
-              treatments designed to rejuvenate and enhance your natural beauty.
-              My services include Luxurious Facials, HydraFacials,
-              Microdermabrasion, Nanoneedle, Acne Facials and Professional
-              Eyebrow Shaping and Tinting.
+              At my skin care studio, I offer a range of expert skin care facials
+              and spa and facial treatments designed to rejuvenate and enhance
+              your natural beauty. My skincare services include Luxurious
+              Facials, HydraFacials, Microdermabrasion, Nanoneedle, Acne Facials
+              and Professional Eyebrow Shaping and Tinting—skin care treatments
+              near you in Midland, TX.
             </p>
           </div>
         </div>
@@ -102,24 +104,26 @@ export default function Services() {
               ref={addToRefs}
               className="p-4 my-8 w-full mb-1  flex flex-col justify-between hover:shadow-lg rounded-sm  bg-white hover:bg-gray-50 hover:border-1 hover:border-black/10 hover:scale-105 transition-all duration-300 ease-in-out"
             >
-              <a className="no-underline" href="#">
+              <Link className="no-underline" to={`/services/${service.slug}`}>
                 <span className="mb-4 font-[Grapevine] inline-block bg-black/20 uppercase text-black text-sm font-light px-2 py-1 rounded">
                   {service.category}
                 </span>
-              </a>
-              <div className="mb-8 overflow-hidden">
-                <img
-                  ref={(el) => {
-                    if (el) imageRefs.current[index] = el;
-                  }}
-                  className="mx-auto mb-1 w-100 h-100 object-cover will-change-transform"
-                  src={service.icon}
-                  alt={service.name}
-                />
-              </div>
-              <a className="inline-block no-underline mb-6" href="#">
+              </Link>
+              <Link to={`/services/${service.slug}`} className="no-underline">
+                <div className="mb-8 overflow-hidden">
+                  <img
+                    ref={(el) => {
+                      if (el) imageRefs.current[index] = el;
+                    }}
+                    className="mx-auto mb-1 w-100 h-100 object-cover will-change-transform"
+                    src={service.icon}
+                    alt={`${service.name} skincare facial treatment at Carolina Skin Centre`}
+                  />
+                </div>
+              </Link>
+              <Link className="inline-block no-underline mb-6" to={`/services/${service.slug}`}>
                 <h2
-                  className="text-left p-0font-semibold text-2xl md:text-3xl lg:text-4xl"
+                  className="text-left p-0 font-semibold text-2xl md:text-3xl lg:text-4xl"
                   style={{
                     fontFamily: "Grapevine",
                     textTransform: "uppercase",
@@ -129,7 +133,7 @@ export default function Services() {
                 </h2>
 
                 <p className="text-gray-500">{service.description}</p>
-              </a>
+              </Link>
               <div className="text-center">
                 <BookingButton
                   href={BOOKING_URL_2}
