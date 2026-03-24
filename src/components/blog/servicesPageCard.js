@@ -18,7 +18,7 @@ const servicesCardInfo = [
     name: "Dermaplaning",
     slug: "dermaplaning",
     description:
-      "Dermaplaning is a non-invasive skincare treatment that involves using a sterile, surgical scalpel to gently exfoliate the top layer of dead skin cells and remove fine vellus hair (peach fuzz) from the face. This process helps to reveal smoother, brighter skin, allowing for better product absorption and a flawless makeup application.",
+      "Dermaplaning is a non invasive skincare treatment that involves using a sterile, surgical scalpel to gently exfoliate the top layer of dead skin cells and remove fine vellus hair (peach fuzz) from the face. This process helps to reveal smoother, brighter skin, allowing for better product absorption and a flawless makeup application.",
     icon: DP,
     category: "Facial treatments",
   },
@@ -27,7 +27,7 @@ const servicesCardInfo = [
     name: "HydraFacials",
     slug: "hydrafacials",
     description:
-      "A HydraFacial is a non-invasive, multi-step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized device. It combines gentle suction with nourishing serums to improve skin texture, tone, and overall radiance.",
+      "A HydraFacial is a non invasive multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized device. It combines gentle suction with nourishing serums to improve skin texture, tone, and overall radiance.",
     icon: HF,
     category: "HydraFacials",
   },
@@ -36,7 +36,7 @@ const servicesCardInfo = [
     name: "Microdermabrasion",
     slug: "microdermabrasion",
     description:
-      "Microdermabrasion is a non-invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. The procedure typically uses either a diamond-tipped wand or fine crystals combined with suction to resurface the skin by promoting cell turnover and collagen production.",
+      "Microdermabrasion is a non invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. The procedure typically uses either a diamond tipped wand or fine crystals combined with suction to resurface the skin by promoting cell turnover and collagen production.",
     icon: MD,
     category: "Skin Rejuvenation",
   },
@@ -72,7 +72,7 @@ const servicesCardInfo = [
     name: "Nano Needle",
     slug: "nano-needle",
     description:
-      "An advanced and non-invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting-edge treatment uses ultra-fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without pain or downtime.",
+      "An advanced and non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without pain or downtime.",
     category: "Skin rejuvenation",
     icon: NN,
   },
@@ -81,7 +81,7 @@ const servicesCardInfo = [
     name: "Carboxy Therapy",
     slug: "carboxy-therapy",
     description:
-      "A non-invasive skin treatment that involves infusing carbon dioxide (CO₂) into the skin to boost oxygen flow, improve circulation, and stimulate collagen production. It is used for facial rejuvenation, cellulite reduction, dark circles, and scar treatment.",
+      "A non invasive skin treatment that involves infusing carbon dioxide (CO₂) into the skin to boost oxygen flow, improve circulation, and stimulate collagen production. It is used for facial rejuvenation, dark circles, and scar treatment.",
     category: "Skin rejuvenation",
     icon: Therapy,
   },

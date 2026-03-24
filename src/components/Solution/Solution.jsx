@@ -12,10 +12,10 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Solutions() {
   const sectionRef = useRef(null);
-  const titleRef   = useRef(null);
-  const textRef    = useRef(null);
-  const buttonRef  = useRef(null);
-  const imageRef   = useRef(null);
+  const titleRef = useRef(null);
+  const textRef = useRef(null);
+  const buttonRef = useRef(null);
+  const imageRef = useRef(null);
   const imageContainerRef = useRef(null);
 
   // Parallax effect for image
@@ -38,7 +38,7 @@ export default function Solutions() {
             end: "bottom top",
             scrub: true,
           },
-        }
+        },
       );
     });
 
@@ -46,52 +46,52 @@ export default function Solutions() {
   }, []);
 
   // ✨ GSAP React hook version
- useGSAP(
-  () => {
-    const tl = gsap.timeline({
-      defaults: { ease: "power3.out" },
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 75%",    // 🔥 when section top hits 75% of viewport
-        toggleActions: "play none none reset",
-      },
-    });
+  useGSAP(
+    () => {
+      const tl = gsap.timeline({
+        defaults: { ease: "power3.out" },
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 75%", // 🔥 when section top hits 75% of viewport
+          toggleActions: "play none none reset",
+        },
+      });
 
-    tl.from(titleRef.current, {
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-    })
-      .from(
-        textRef.current,
-        {
-          y: 20,
-          opacity: 0,
-          duration: 1,
-        },
-        "-=0.8"
-      )
-      .from(
-        imageRef.current,
-        {
-          scale: 1.2,
-          opacity: 0,
-          duration: 1,
-        },
-        "-=0.6"
-      )
-      .from(
-        buttonRef.current,
-        {
-          y: 10,
-          opacity: 0,
-          duration: 0.5,
-        },
-        "-=0.4"
-      );
-  },
-  { scope: sectionRef }
-);
+      tl.from(titleRef.current, {
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+      })
+        .from(
+          textRef.current,
+          {
+            y: 20,
+            opacity: 0,
+            duration: 1,
+          },
+          "-=0.8",
+        )
+        .from(
+          imageRef.current,
+          {
+            scale: 1.2,
+            opacity: 0,
+            duration: 1,
+          },
+          "-=0.6",
+        )
+        .from(
+          buttonRef.current,
+          {
+            y: 10,
+            opacity: 0,
+            duration: 0.5,
+          },
+          "-=0.4",
+        );
+    },
+    { scope: sectionRef },
+  );
 
   return (
     <section
@@ -132,7 +132,10 @@ export default function Solutions() {
             </div>
           </div>
 
-          <div ref={imageContainerRef} className="grid place-items-center overflow-hidden rounded shadow-xl">
+          <div
+            ref={imageContainerRef}
+            className="grid place-items-center overflow-hidden rounded shadow-xl"
+          >
             <img
               ref={imageRef}
               src={SkinCare}

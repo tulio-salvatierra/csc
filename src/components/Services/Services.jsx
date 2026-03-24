@@ -36,7 +36,7 @@ export default function ServicesComponent() {
     {
       title: "Carboxy Therapy",
       description:
-        "A minimally invasive treatment that uses Carbon Dioxide to improve skin elasticity, reduce cellulite, and enhance circulation.",
+        "A minimally invasive treatment that uses Carbon Dioxide to improve skin elasticity and enhance circulation.",
       image: Therapy,
     },
   ];
