@@ -38,10 +38,10 @@ export default function FaqSectionFaq1() {
                   alt=""
                 />
                 <h3 className="mt-6 leading-relaxed mb-5 font-heading">
-                  What skincare treatments are best for anti-aging?
+                  What skincare treatments are best for anti aging?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  I offer specialized anti-aging facials, such as HydraFacial,
+                  I offer specialized anti aging facials, such as HydraFacial,
                   Nano Needling, and chemical peels, designed to target fine
                   lines, wrinkles, and loss of elasticity. These treatments
                   promote collagen production and leave your skin rejuvenated
@@ -60,7 +60,7 @@ export default function FaqSectionFaq1() {
                   How often should I get a deep cleansing facial?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  For optimal results, I recommend a facial every 4-6 weeks.
+                  For optimal results, I recommend a facial every 4 to 6 weeks.
                   This helps maintain clear and healthy skin by removing
                   impurities and preventing clogged pores.
                 </p>
@@ -78,7 +78,7 @@ export default function FaqSectionFaq1() {
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
                   Yes, my face and body waxing services are gentle and suitable
-                  for sensitive skin. I use high-quality, hypoallergenic waxes
+                  for sensitive skin. I use high quality, hypoallergenic waxes
                   to minimize irritation and ensure a comfortable experience.
                 </p>
               </div>
@@ -95,10 +95,10 @@ export default function FaqSectionFaq1() {
                   them?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  Eyelash extensions typically last 4-6 weeks, depending on your
+                  Eyelash extensions typically last 4 to 6 weeks, depending on your
                   natural lash cycle and care routine. To maintain them, avoid
-                  oil-based products near your lashes and schedule regular
-                  touch-ups every 2-3 weeks.
+                  oil based products near your lashes and schedule regular
+                  touch ups every 2 to 3 weeks.
                 </p>
               </div>
             </div>

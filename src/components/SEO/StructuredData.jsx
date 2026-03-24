@@ -14,10 +14,10 @@ export function LocalBusinessSchema() {
       url: SITE_URL,
       telephone: TELEPHONE.replace("tel:", ""),
       email: EMAIL,
-      description: "I provide professional skincare services in Midland, Texas—facials, skin care facials, spa and facial treatments, chemical peels, HydraFacials, dermaplaning, and more with over 18 years of experience.",
+      description: "I provide professional skincare services in Midland, Texas: facials, skin care facials, spa and facial treatments, chemical peels, HydraFacials, dermaplaning, and more with over 18 years of experience.",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "705 W Wadley Ave Suite-23",
+        streetAddress: "705 W Wadley Ave Suite 23",
         addressLocality: "Midland",
         addressRegion: "TX",
         postalCode: "79705",
@@ -82,7 +82,7 @@ export function LocalBusinessSchema() {
         "Nano Needle Therapy",
         "Carboxy Therapy",
         "Microdermabrasion",
-        "Anti-aging Treatments",
+        "Anti aging Treatments",
         "Waxing Services",
         "European Skincare Techniques",
         "Naturopathic Skincare",
@@ -96,7 +96,7 @@ export function LocalBusinessSchema() {
             itemOffered: {
               "@type": "Service",
               name: "HydraFacial",
-              description: "Multi-step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin.",
+              description: "Multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin.",
             },
           },
           {
@@ -104,7 +104,7 @@ export function LocalBusinessSchema() {
             itemOffered: {
               "@type": "Service",
               name: "Dermaplaning",
-              description: "Non-invasive skincare treatment that exfoliates and removes fine vellus hair for smoother, brighter skin.",
+              description: "Non invasive skincare treatment that exfoliates and removes fine vellus hair for smoother, brighter skin.",
             },
           },
           {
@@ -120,7 +120,7 @@ export function LocalBusinessSchema() {
             itemOffered: {
               "@type": "Service",
               name: "Nano Needle Therapy",
-              description: "Advanced non-invasive procedure using ultra-fine nano needles to stimulate collagen production.",
+              description: "Advanced non invasive procedure using ultra fine nano needles to stimulate collagen production.",
             },
           },
           {
@@ -128,7 +128,7 @@ export function LocalBusinessSchema() {
             itemOffered: {
               "@type": "Service",
               name: "Carboxy Therapy",
-              description: "Non-invasive CO2 skin treatment for facial rejuvenation and improved circulation.",
+              description: "Non invasive CO2 skin treatment for facial rejuvenation and improved circulation.",
             },
           },
           {
@@ -152,7 +152,7 @@ export function LocalBusinessSchema() {
             itemOffered: {
               "@type": "Service",
               name: "Waxing Services",
-              description: "Professional face and body hair removal using high-quality, hypoallergenic wax.",
+              description: "Professional face and body hair removal using high quality, hypoallergenic wax.",
             },
           },
         ],
@@ -277,7 +277,7 @@ export function PersonSchema({ person = {} }) {
     const schema = {
       "@context": "https://schema.org",
       "@type": "Person",
-      "@id": `${SITE_URL}#person-${person.name.toLowerCase().replace(/\s+/g, '-')}`,
+      "@id": `${SITE_URL}#person${person.name.toLowerCase().replace(/\s+/g, "")}`,
       name: person.name,
       jobTitle: person.jobTitle || "Licensed Esthetician",
       description: person.description,
@@ -292,17 +292,18 @@ export function PersonSchema({ person = {} }) {
         "Facial Treatments",
         "European Skincare Techniques",
         "Naturopathic Skincare",
-        "Anti-aging Treatments",
+        "Anti aging Treatments",
       ],
       alumniOf: person.alumniOf,
       award: person.awards,
     };
 
-    let script = document.querySelector(`script[type="application/ld+json"]#person-${person.name.toLowerCase().replace(/\s+/g, '-')}`);
+    const personId = `person${person.name.toLowerCase().replace(/\s+/g, "")}`;
+    let script = document.querySelector(`script[type="application/ld+json"]#${personId}`);
     if (!script) {
       script = document.createElement("script");
       script.type = "application/ld+json";
-      script.id = `person-${person.name.toLowerCase().replace(/\s+/g, '-')}`;
+      script.id = personId;
       document.head.appendChild(script);
     }
     script.textContent = JSON.stringify(schema);
@@ -326,7 +327,7 @@ export function ServiceSchema({ services = [] }) {
         name: "Carolina Skin Centre",
         address: {
           "@type": "PostalAddress",
-          streetAddress: "705 W Wadley Ave Suite-23",
+          streetAddress: "705 W Wadley Ave Suite 23",
           addressLocality: "Midland",
           addressRegion: "TX",
           postalCode: "79705",
@@ -347,7 +348,7 @@ export function ServiceSchema({ services = [] }) {
           name: "Carolina Skin Centre",
           address: {
             "@type": "PostalAddress",
-            streetAddress: "705 W Wadley Ave Suite-23",
+            streetAddress: "705 W Wadley Ave Suite 23",
             addressLocality: "Midland",
             addressRegion: "TX",
             postalCode: "79705",

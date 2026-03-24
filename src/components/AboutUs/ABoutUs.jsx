@@ -121,7 +121,7 @@ export default function AboutPage() {
         <blockquote className="border-l-4 border-gray-300 pl-3 mx-auto sm:w-1/2 w-full">
           <p className="text-gray-500">
             "My mission is to enhance your natural beauty and boost your
-            confidence by providing personalized, results-driven skincare
+            confidence by providing personalized, results driven skincare
             treatments and luxurious beauty services. From rejuvenating facials
             to expert lash and brow care, I am dedicated to helping you look
             and feel your best."

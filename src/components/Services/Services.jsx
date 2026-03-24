@@ -30,7 +30,7 @@ export default function ServicesComponent() {
     },
     {
       title: "Nano Needle",
-      description: "Non-invasive Skin Rejuvination Treatment",
+      description: "Non invasive skin rejuvenation treatment",
       image: NN,
     },
     {

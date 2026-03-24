@@ -25,11 +25,11 @@ export default function ContactSection() {
           <h2 className="mb-2 text-4xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>Contact</h2>
           <p className="text-muted text-left mb-6 lh-lg">
             Get in touch today for facials, skin care treatments, and spa and
-            facial services—your esthetician near me in Midland, TX.
+            facial services your esthetician near me in Midland, TX.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             <div ref={addToRefs} className="text-left">
-                <h3 className="">E-mail</h3>
+                <h3 className="">Email</h3>
                 <a
                   className="text-decoration-none text-muted fs-4 align-bottom"
                   href={`mailto:${EMAIL}`}
@@ -40,7 +40,7 @@ export default function ContactSection() {
               <div ref={addToRefs} className="">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
                 <a href={TELEPHONE} className="text-decoration-none">
-                  <p>432-638-0046</p>
+                  <p>432 638 0046</p>
                 </a>
               </div>
               <div ref={addToRefs} className="text-left">
@@ -63,7 +63,7 @@ export default function ContactSection() {
             <div>
               <div ref={addToRefs} className="text-left">
                 <h3>Hours:</h3>
-                <p className="mb-0 text-muted">Tuesday - Friday: 9:00 AM - 6:00 PM</p>
+                <p className="mb-0 text-muted">Tuesday to Friday: 9:00 AM to 6:00 PM</p>
                 
                 <p className="mb-0 text-muted">Saturdat, Sunday & Monday: Closed</p>
               </div>

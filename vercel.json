@@ -1,4 +1,10 @@
 {
+  "redirects": [
+    { "source": "/services/chemical-peels", "destination": "/services/chemicalpeels", "permanent": true },
+    { "source": "/services/waxing-services", "destination": "/services/waxingservices", "permanent": true },
+    { "source": "/services/nano-needle", "destination": "/services/nanoneedle", "permanent": true },
+    { "source": "/services/carboxy-therapy", "destination": "/services/carboxytherapy", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/metrics/:path*",

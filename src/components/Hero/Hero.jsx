@@ -118,7 +118,7 @@ export default function Hero() {
           >
             Improve the health and appearance of your skin through personalized
             skin care facials and spa and facial treatments that balance your
-            skin and deliver visible, long-lasting results—your skincare and face
+            skin and deliver visible, long lasting results. Your skincare and face
             and spa destination in the heart of Midland, TX.
           </MaskedLines>
         </div>

@@ -17,14 +17,14 @@ export const INSTAGRAM = [{ url: "https://www.instagram.com/carolinaskin", title
 
 export const WHATSAPP = [{url: "https://wa.me/4326380046", title: "WhatsApp"}];
 
-export const TELEPHONE = "tel:432-638-0046";
+export const TELEPHONE = "tel:+14326380046";
 
-export const BOOKING_URL = "tel:432-638-0046";
+export const BOOKING_URL = "tel:+14326380046";
 
 export const BOOKING_URL_2 =
   "https://book.salonbiz.com/widget/#/welcome?comToken=c1185t201404101626pu568R8C68u8RJ4Pz98Mr";
 
-export const ADDRESS = "705 W Wadley Ave Suite-23, Midland, TX 79705";
+export const ADDRESS = "705 W Wadley Ave Suite 23, Midland, TX 79705";
 
 export const ADDRESS_URL = "https://maps.app.goo.gl/8CoMekC7h5uvpQEe8";
 

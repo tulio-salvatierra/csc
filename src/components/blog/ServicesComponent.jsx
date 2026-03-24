@@ -76,7 +76,7 @@ export default function Services() {
               and spa and facial treatments designed to rejuvenate and enhance
               your natural beauty. My skincare services include Luxurious
               Facials, HydraFacials, Microdermabrasion, Nanoneedle, Acne Facials
-              and Professional Eyebrow Shaping and Tinting—skin care treatments
+              and Professional Eyebrow Shaping and Tinting skin care treatments
               near you in Midland, TX.
             </p>
           </div>

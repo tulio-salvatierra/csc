@@ -43,7 +43,7 @@ export default function CancellationPolicy() {
               </li>
               <li ref={addToRefs} className="m-2 ">
                 <strong style={{ color: "black"}}>
-                  Same-Day Cancellations / Rescheduling / No-Shows:
+                  Same day cancellations / rescheduling / no shows:
                 </strong>{" "} <br />
                 <strong className="italic" style={{ color: "black", marginTop: "0.5rem" }}>
                 Full service cost will be charged.

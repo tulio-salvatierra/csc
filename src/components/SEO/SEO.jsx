@@ -13,7 +13,7 @@ export default function SEO({
 }) {
   useEffect(() => {
     // Update document title
-    document.title = title || "Carolina Skin Centre, Midland, TX - Professional Skincare Services";
+    document.title = title || "Carolina Skin Centre, Midland, TX | Professional Skincare Services";
 
     // Update or create meta tags
     const updateMetaTag = (name, content, attribute = "name") => {

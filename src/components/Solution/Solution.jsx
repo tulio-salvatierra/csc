@@ -113,11 +113,11 @@ export default function Solutions() {
                 variant="lines"
                 className="mb-10 text-muted text-left justify-center-safe w-100"
               >
-                Hey! I'm Carolina, a licensed skin esthetician with over 18 years of
+                Hey! I'm Carolina, a licensed skin aesthetician with over 18 years of
                 experience in skincare and facials. My journey began with my
                 own struggle with acne, which led me to study at the Euro
                 Institute of Skin Care in Seattle. I combine European and
-                naturopathic techniques with advanced medispa procedures—your
+                naturopathic techniques with advanced medispa procedures. Your
                 esthetician near me for skin care treatments and spa and facial
                 services in Midland, Texas. Get in touch to book your
                 consultation today!

@@ -7,9 +7,9 @@ import WAX from "./../../assets/images/servicesComponent/wax.jpg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png"
 
-/** Slug for URL: lowercase, spaces to hyphens */
+/** Slug for URL: lowercase, no separators */
 export function getServiceSlug(name) {
-  return name.toLowerCase().replace(/\s+/g, "-");
+  return name.toLowerCase().replace(/\s+/g, "");
 }
 
 const servicesCardInfo = [
@@ -45,14 +45,14 @@ const servicesCardInfo = [
     name: "Facials",
     slug: "facials",
     description:
-      "My customized facials are designed to cleanse, nourish, and rejuvenate your skin, resulting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high-quality products and expert techniques, my facials deliver both relaxation and noticeable results and help you look and feel your best.",
+      "My customized facials are designed to cleanse, nourish, and rejuvenate your skin, resulting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high quality products and expert techniques, my facials deliver both relaxation and noticeable results and help you look and feel your best.",
     icon: EF,
     category: "Facials",
   },
   {
     id: 5,
     name: "Chemical Peels",
-    slug: "chemical-peels",
+    slug: "chemicalpeels",
     description:
       "Designed to exfoliate and renew your skin by revealing a fresher, more radiant complexion. Using carefully selected acids, chemical peels remove dead skin cells, unclog pores, and stimulate collagen production to improve skin texture, tone, and overall clarity.",
     icon: CP,
@@ -61,16 +61,16 @@ const servicesCardInfo = [
   {
     id: 6,
     name: "Waxing Services",
-    slug: "waxing-services",
+    slug: "waxingservices",
     description:
-      "Say goodbye to unwanted hair with my expert waxing services. From brows to bikini lines, I'll help you achieve smooth, hair-free skin. I use high-quality wax and techniques to ensure a comfortable and effective waxing experience.",
+      "Say goodbye to unwanted hair with my expert waxing services. From brows to bikini lines, I'll help you achieve smooth, hair free skin. I use high quality wax and techniques to ensure a comfortable and effective waxing experience.",
     icon: WAX,
     category: "Waxing services",
   },
   {
     id: 7,
     name: "Nano Needle",
-    slug: "nano-needle",
+    slug: "nanoneedle",
     description:
       "An advanced and non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without pain or downtime.",
     category: "Skin rejuvenation",
@@ -79,7 +79,7 @@ const servicesCardInfo = [
   {
     id: 8,
     name: "Carboxy Therapy",
-    slug: "carboxy-therapy",
+    slug: "carboxytherapy",
     description:
       "A non invasive skin treatment that involves infusing carbon dioxide (CO₂) into the skin to boost oxygen flow, improve circulation, and stimulate collagen production. It is used for facial rejuvenation, dark circles, and scar treatment.",
     category: "Skin rejuvenation",

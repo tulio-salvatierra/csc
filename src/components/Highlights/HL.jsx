@@ -17,7 +17,7 @@ export default function HL() {
     },
     {
       id: 2,
-      title: "Cutting-edge Technology",
+      title: "Cutting edge technology",
       description: "State of the art equipment for optimal results",
     },
     {
