@@ -3,7 +3,7 @@ import Logo from "../../assets/images/CSC.svg";
 import { Link } from "react-router-dom";
 import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
 
-const TULIO_URL = "https://tuliosalvatierra.com";
+const CICERO_URL = "https://cicerowebstudio.xyz";
 
 export default function Footer() {
   const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
@@ -13,17 +13,17 @@ export default function Footer() {
       <div ref={footerLinksRef} className="w-full mx-auto px-1 p-24 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Logo Section */}
-          <div className="lg:col-span-6 xl:col-span-7">
+          <div className="lg:col-span-6 xl:col-span-7 sm:w-full w-auto flex items-center justify-center">
             <div className="flex flex-col items-start">
-              <div className="w-150 h-150 sm:w-100 sm:h-100  flex items-center justify-center mb-8">
-                <span className="text-white font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
+              <div className="w-150 h-150 sm:w- sm:h-auto  mx-auto   flex items-center justify-center mb-8">
+                <span className="text-white mx-auto font-bold text-6xl sm:text-7xl lg:text-8xl xl:text-9xl">
                   <Link to="/" aria-label="Carolina Skin Centre Home">
-                    <img className="" src={Logo} alt="Carolina Skin Centre Logo" />
+                    <img className="sm:w-150 sm:h-150 w-100 h-100 mx-auto" src={Logo} alt="Carolina Skin Centre Logo" />
                   </Link>
                 </span>
               </div>
-              <div className="space-y-6">
-                <p className="text-gray-600 text-2xl leading-relaxed max-w-2xl">
+              <div className="space-y-6 sm:w-3/4 w-full mx-auto p-1">
+                <p className="text-gray-600 text-2xl leading-relaxed w-2/3 sm:w-full mx-auto text-left text-wrap">
                   Hydrate, renew and balance your skin: skincare, facials, and
                   spa and facial treatments in Midland, TX.
                 </p>
@@ -101,13 +101,13 @@ export default function Footer() {
                 <span className="underline" aria-hidden />
               </Link>
               <a
-                href={TULIO_URL}
+                href={CICERO_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline-link text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
                 style={{ cursor: "pointer" }}
               >
-                Made by Tulio Salvatierra
+                Made by Cicero Web Studio
                 <span className="underline" aria-hidden />
               </a>
             </div>

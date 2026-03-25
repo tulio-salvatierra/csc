@@ -71,7 +71,7 @@ export default function AboutPage() {
       {/* My Story Section */}
       <section ref={sectionRef} className="mb-20 flex items-center justify-center">
         <div className="bg-about grid place-items-center w-full p-6">
-          <h1 ref={addToRefs} className="mb-3 text-white text-5xl md:text-7xl font-bold mt-28">
+          <h1 ref={addToRefs} style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="mb-3 text-white text-5xl sm:text-7xl font-main-title mt-28">
             My Story
           </h1>
           <p ref={addToRefs} className="w-full md:w-1/2 font-light bg-red-100 p-4 mt-4">
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       {/* About Me Section */}
       <section ref={addToRefs} className="mb-20 mx-6">
-        <h2 className="mb-3 text-4xl font-bold">About me</h2>
+        <h2 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="mb-3 text-4xl font-bold">About me</h2>
         <div className="flex flex-wrap gap-4 justify-center mt-10">
           {teamMembers.map((member) => (
             <div
@@ -117,7 +117,7 @@ export default function AboutPage() {
 
       {/* My Mission Section */}
       <section ref={addToRefs} className="mb-20 mt-10 mx-6 content-center">
-        <h2 className="text-4xl font-bold mb-3 text-center">My Mission</h2>
+        <h2 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="text-4xl font-bold mb-3 text-center">My Mission</h2>
         <blockquote className="border-l-4 border-gray-300 pl-3 mx-auto sm:w-1/2 w-full">
           <p className="text-gray-500">
             "My mission is to enhance your natural beauty and boost your

@@ -19,6 +19,6 @@ export const policies = [
     title: "Gift Card Policy",
     image: GiftCard,
     description:
-      "My Gift cards are non-refundable and Non-transferable, they cannot be exchanged for cash. They are valid for 12 months from the date of purchase. Gift cards can be used towards any of my services or products.",
+      "My Gift cards are non refundable and non transferable, they cannot be exchanged for cash. They are valid for 12 months from the date of purchase. Gift cards can be used towards any of my services or products.",
   },
 ];

@@ -22,8 +22,8 @@ export default function ContactSection() {
     <>
       <section ref={addToRefs} className="min-h-screen flex items-center justify-center mt-10  mx-auto">
         <div className="h-full w-full bg-gray-200 p-1 shadow-sm">
-          <h2 className="mb-2 text-4xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>Contact</h2>
-          <p className="text-muted text-left mb-6 lh-lg">
+          <h2 className="mb-2 text-5xl sm:text-7xl" style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}>Contact</h2>
+          <p className="text-muted text-left mb-6 lh-lg text-2xl sm:text-3xl">
             Get in touch today for facials, skin care treatments, and spa and
             facial services your esthetician near me in Midland, TX.
           </p>
@@ -61,7 +61,7 @@ export default function ContactSection() {
               </div>
             </div>
             <div>
-              <div ref={addToRefs} className="text-left">
+              <div ref={addToRefs} className="text-left pt-8">
                 <h3>Hours:</h3>
                 <p className="mb-0 text-muted">Tuesday to Friday: 9:00 AM to 6:00 PM</p>
                 

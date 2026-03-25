@@ -1,14 +1,14 @@
 export const HOME_URL = "/";
 
-export const SERVICES_MENU_URL = "/services";
+export const SERVICES_URL = "/services#";
 
-export const ABOUT_URL = "/about";
+export const ABOUT_ME_URL = "/about#";
 
-export const CONTACT_URL = "/contact";
+export const CONTACT_ME_URL = "/contact#";
 
-export const POLICIES_URL = "/policies";
+export const POLICIES_URL = "/policies#";
 
-export const TULIO_URL = "https://tuliosalvatierra.com";
+export const CICERO_URL = "https://cicerowebstudio.xyz";
 
 export const EMAIL = "carolinaskincentre@yahoo.com";
 
@@ -37,17 +37,17 @@ export const MENU_ITEMS = [
   },
   {
     title: "Services",
-    url: SERVICES_MENU_URL,
+    url: SERVICES_URL,
     number: "02",
   },
   {
     title: "About",
-    url: ABOUT_URL,
+    url: ABOUT_ME_URL,
     number: "03",
   },
   {
     title: "Policies",
-    url: "/policies",
+    url: POLICIES_URL,
     number: "04",
   }
 ];

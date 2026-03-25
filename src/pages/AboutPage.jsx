@@ -30,7 +30,7 @@ const aboutFaqs = [
 const carolinaProfile = {
   name: "Carolina Alcalá",
   jobTitle: "Licensed Esthetician & Owner",
-  description: "Carolina Alcalá is an experienced esthetician with over 18 years in professional skincare. She combines European and naturopathic techniques with advanced medispa procedures to deliver personalized treatments that enhance and maintain skin health.",
+  description: "Carolina Alcalá is an experienced aesthetician with over 18 years in professional skincare. She combines European and naturopathic techniques with advanced medispa procedures to deliver personalized treatments that enhance and maintain skin health.",
   expertise: [
     "European Skincare Techniques",
     "Naturopathic Skincare",

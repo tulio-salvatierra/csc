@@ -25,7 +25,7 @@ export default function FaqSectionFaq1() {
       <section className="py-24 bg-gray-100 grid place-items-center" ref={addToRefs}>
         <div className="container">
           <div className="max-w-5xl mx-auto text-center mb-20">
-            <h2 className="fs-1 mb-6 leading-relaxed text-center px-xl-12 font-heading">
+            <h2 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="fs-1 mb-6 leading-relaxed text-center px-xl-12 font-heading">
               FAQ
             </h2>
           </div>
@@ -109,7 +109,7 @@ export default function FaqSectionFaq1() {
               src="pstls-assets/icons/faq-info.svg"
               alt=""
             />
-            <h2 className="mb-4 text-4xl font-heading text-center">
+            <h2 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="mb-4 text-4xl font-heading text-center">
               Have more questions?
             </h2>
             <p className="mb-8 leading-relaxed text-gray-500 text-center">

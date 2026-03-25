@@ -69,7 +69,7 @@ export default function PolicyComponent() {
       <section className="bg-white">
         <div ref={headerSectionRef} className="h-96 bg-cover bg-center bg-policy relative">
           <div className="flex flex-col items-center justify-center mb-16 md:mb-20">
-            <h1
+            <h1 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}
               ref={(el) => (animated.current[0] = el)}
               className="m-3 text-center text-white text-5xl md:text-7xl font-bold"
             >
@@ -93,7 +93,7 @@ export default function PolicyComponent() {
             <div
               key={`service ${index}`}
               ref={(el) => (animated.current[index + 2] = el)}
-              className="w-full mb-12 px-10"
+              className="w-full mb-12"
             >
               <div className="flex justify-center overflow-hidden rounded-lg shadow-md">
                 <img
@@ -104,7 +104,7 @@ export default function PolicyComponent() {
                   style={{
                     objectFit: "cover",
                     width: "auto",
-                    height: "80%",
+                    height: "100%",
                   }}
                   src={policy.image}
                   alt={policy.name}
