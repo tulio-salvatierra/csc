@@ -1,0 +1,109 @@
+<h2>System Architecture Overview</h2>
+<p class="subtitle">How all the pieces connect — from research to published post</p>
+
+<div style="font-family: monospace; font-size: 13px; line-height: 1.6; background: #0f1117; color: #e2e8f0; border-radius: 12px; padding: 28px; margin: 16px 0; overflow-x: auto;">
+
+  <div style="text-align: center; margin-bottom: 24px;">
+    <span style="background: #6366f1; color: white; padding: 6px 18px; border-radius: 20px; font-size: 14px; font-weight: 600; letter-spacing: 0.5px;">SOCIAL MEDIA MANAGEMENT SYSTEM</span>
+  </div>
+
+  <!-- Row 1: Triggers -->
+  <div style="display: flex; justify-content: center; gap: 16px; margin-bottom: 8px;">
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 120px;">
+      <div style="color: #94a3b8; font-size: 11px;">TRIGGER</div>
+      <div style="color: #f8fafc;">⏰ Daily Schedule</div>
+    </div>
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 120px;">
+      <div style="color: #94a3b8; font-size: 11px;">TRIGGER</div>
+      <div style="color: #f8fafc;">👤 Manual Run</div>
+    </div>
+    <div style="background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 10px 16px; text-align: center; min-width: 120px;">
+      <div style="color: #94a3b8; font-size: 11px;">TRIGGER</div>
+      <div style="color: #f8fafc;">✅ Post Approved</div>
+    </div>
+  </div>
+  <div style="text-align: center; color: #475569; margin-bottom: 8px;">↓ ↓ ↓</div>
+
+  <!-- Row 2: n8n Cloud -->
+  <div style="background: #1a1f2e; border: 2px solid #6366f1; border-radius: 12px; padding: 20px; margin-bottom: 8px;">
+    <div style="color: #818cf8; font-size: 12px; font-weight: 700; margin-bottom: 14px; letter-spacing: 1px;">⚙️ N8N CLOUD — AUTOMATION ORCHESTRATOR</div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center;">
+      <div style="background: #0f172a; border: 1px solid #6366f1; border-radius: 6px; padding: 8px 12px; text-align: center;">
+        <div style="color: #a5b4fc; font-size: 11px;">WORKFLOW 1</div>
+        <div style="color: #e2e8f0;">🔍 Research Agent</div>
+        <div style="color: #64748b; font-size: 11px;">Trends + Keywords</div>
+      </div>
+      <div style="color: #475569; display: flex; align-items: center;">→</div>
+      <div style="background: #0f172a; border: 1px solid #6366f1; border-radius: 6px; padding: 8px 12px; text-align: center;">
+        <div style="color: #a5b4fc; font-size: 11px;">WORKFLOW 2</div>
+        <div style="color: #e2e8f0;">✍️ Copy Agent</div>
+        <div style="color: #64748b; font-size: 11px;">Per-platform copy</div>
+      </div>
+      <div style="color: #475569; display: flex; align-items: center;">→</div>
+      <div style="background: #0f172a; border: 1px solid #6366f1; border-radius: 6px; padding: 8px 12px; text-align: center;">
+        <div style="color: #a5b4fc; font-size: 11px;">WORKFLOW 3</div>
+        <div style="color: #e2e8f0;">🖼️ Image Agent</div>
+        <div style="color: #64748b; font-size: 11px;">Templates + Stock</div>
+      </div>
+      <div style="color: #475569; display: flex; align-items: center;">→</div>
+      <div style="background: #0f172a; border: 1px solid #22c55e; border-radius: 6px; padding: 8px 12px; text-align: center;">
+        <div style="color: #86efac; font-size: 11px;">WORKFLOW 4</div>
+        <div style="color: #e2e8f0;">📤 Publisher</div>
+        <div style="color: #64748b; font-size: 11px;">After approval</div>
+      </div>
+    </div>
+  </div>
+  <div style="display: flex; justify-content: center; gap: 80px; color: #475569; margin-bottom: 8px;">
+    <span>↓ saves drafts</span>
+    <span>↓ sends alert</span>
+    <span>↓ reads approval</span>
+    <span>↓ posts live</span>
+  </div>
+
+  <!-- Row 3: Supabase + External AI -->
+  <div style="display: flex; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; justify-content: center;">
+    <div style="background: #052e16; border: 2px solid #22c55e; border-radius: 10px; padding: 16px; flex: 1; min-width: 200px;">
+      <div style="color: #86efac; font-size: 12px; font-weight: 700; margin-bottom: 10px;">🗄️ SUPABASE DATABASE</div>
+      <div style="color: #64748b; font-size: 12px;">• content_drafts (queue)</div>
+      <div style="color: #64748b; font-size: 12px;">• media_assets (images)</div>
+      <div style="color: #64748b; font-size: 12px;">• post_schedules</div>
+      <div style="color: #64748b; font-size: 12px;">• keywords + analytics</div>
+      <div style="color: #64748b; font-size: 12px;">• Storage bucket (media files)</div>
+    </div>
+    <div style="background: #1c1917; border: 2px solid #f97316; border-radius: 10px; padding: 16px; flex: 1; min-width: 200px;">
+      <div style="color: #fdba74; font-size: 12px; font-weight: 700; margin-bottom: 10px;">🤖 AI SERVICES</div>
+      <div style="color: #64748b; font-size: 12px;">• OpenAI GPT-4o (copy)</div>
+      <div style="color: #64748b; font-size: 12px;">• Perplexity (research)</div>
+      <div style="color: #64748b; font-size: 12px;">• DALL-E 3 (images)</div>
+      <div style="color: #64748b; font-size: 12px;">• Unsplash API (stock)</div>
+    </div>
+    <div style="background: #1e1b4b; border: 2px solid #a78bfa; border-radius: 10px; padding: 16px; flex: 1; min-width: 200px;">
+      <div style="color: #c4b5fd; font-size: 12px; font-weight: 700; margin-bottom: 10px;">📲 PLATFORM APIS</div>
+      <div style="color: #64748b; font-size: 12px;">• Meta Graph (IG + FB + WA)</div>
+      <div style="color: #64748b; font-size: 12px;">• X.com API v2</div>
+      <div style="color: #64748b; font-size: 12px;">• LinkedIn API</div>
+      <div style="color: #64748b; font-size: 12px;">• Pinterest API</div>
+    </div>
+  </div>
+  <div style="text-align: center; color: #475569; margin-bottom: 8px;">↑ real-time subscription ↑</div>
+
+  <!-- Row 4: Admin Dashboard -->
+  <div style="background: #0c1220; border: 2px solid #38bdf8; border-radius: 10px; padding: 16px; text-align: center;">
+    <div style="color: #7dd3fc; font-size: 12px; font-weight: 700; margin-bottom: 10px;">🖥️ REACT ADMIN DASHBOARD — /admin (protected route, embedded in your site)</div>
+    <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;">
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">📋 Content Queue</div>
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">👁️ Post Previews</div>
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">✅ Approve / Edit / Reject</div>
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">📅 Schedule Calendar</div>
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">🔑 Keyword Manager</div>
+      <div style="background: #0f172a; border: 1px solid #38bdf8; border-radius: 6px; padding: 6px 14px; color: #bae6fd; font-size: 12px;">📊 Analytics</div>
+    </div>
+  </div>
+
+  <!-- Notification bar -->
+  <div style="margin-top: 12px; background: #14532d; border: 1px solid #16a34a; border-radius: 8px; padding: 10px 16px; text-align: center;">
+    <span style="color: #86efac; font-size: 12px;">📱 WhatsApp Business API — notifies you when drafts are ready + broadcasts content to WA channel</span>
+  </div>
+</div>
+
+<p style="color: #64748b; font-size: 13px; text-align: center;">Does this architecture look right? Let me know in the terminal before we go deeper into each section.</p>

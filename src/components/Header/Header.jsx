@@ -164,7 +164,7 @@ export default function Header() {
             <div ref={socialUnderlineRef} className="flex space-x-4 justify-evenly py-4">
               <a
                 className="underline-link no-underline w-auto"
-                href={WHATSAPP}
+                href={WHATSAPP[0].url}
                 target="_blank"
                 rel="noreferrer"
                 ref={(el) => (socialIconsRef.current[0] = el)}
@@ -175,7 +175,7 @@ export default function Header() {
 
               <a
                 className="underline-link no-underline"
-                href={INSTAGRAM}
+                href={INSTAGRAM[0].url}
                 target="_blank"
                 rel="noreferrer"
                 ref={(el) => (socialIconsRef.current[1] = el)}

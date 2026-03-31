@@ -1,0 +1,66 @@
+<h2>Three Approaches to Your Social Media System</h2>
+<p class="subtitle">Pick the architecture that matches your priorities</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>n8n Cloud + Supabase + Custom React Dashboard ⭐ Recommended</h3>
+      <p><strong>Stack:</strong> n8n Cloud → OpenAI/Claude → Supabase → your React /admin route</p>
+      <p><strong>How it works:</strong> n8n Cloud runs all AI agent workflows (research, copy, image gen, scheduling). Supabase stores content drafts with real-time updates. Your existing React site gets an <code>/admin</code> route that queries Supabase — no extra hosting needed.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Zero infrastructure to manage</li>
+          <li>Dashboard lives inside your existing site</li>
+          <li>Supabase real-time = instant dashboard updates</li>
+          <li>Scales easily as posting frequency grows</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>n8n Cloud: ~$24–50/mo + Supabase free tier</li>
+          <li>Data stored on n8n + Supabase servers</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Self-hosted n8n (Railway) + Supabase + Custom React Dashboard</h3>
+      <p><strong>Stack:</strong> n8n on Railway → OpenAI/Claude → Supabase → your React /admin route</p>
+      <p><strong>How it works:</strong> Same architecture as A but you run n8n yourself on Railway ($5/mo). More control, lower long-term cost, but you handle n8n updates and uptime.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Cheapest long-term (~$5–10/mo total)</li>
+          <li>Full data control</li>
+          <li>Same clean React dashboard</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>You maintain n8n (updates, crashes)</li>
+          <li>Slightly more setup work upfront</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Make.com + Airtable + Lightweight Embed</h3>
+      <p><strong>Stack:</strong> Make.com scenarios → OpenAI → Airtable → embedded Airtable views in /admin</p>
+      <p><strong>How it works:</strong> Make.com (formerly Integromat) handles automation flows. Airtable acts as content database and review interface. Embed Airtable views or build minimal React wrappers around Airtable API.</p>
+      <div class="pros-cons">
+        <div class="pros"><h4>Pros</h4><ul>
+          <li>Airtable is excellent for content review UX</li>
+          <li>Very fast initial setup</li>
+          <li>No custom backend code</li>
+        </ul></div>
+        <div class="cons"><h4>Cons</h4><ul>
+          <li>Operations-based pricing can spike with volume</li>
+          <li>Dashboard feels less native in your site</li>
+          <li>Less flexible for custom AI agent logic</li>
+        </ul></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -15,7 +15,7 @@ export const EMAIL = "carolinaskincentre@yahoo.com";
 export const INSTAGRAM = [{ url: "https://www.instagram.com/carolinaskin", title: "Instagram" }];
 
 
-export const WHATSAPP = [{url: "https://wa.me/4326380046", title: "WhatsApp"}];
+export const WHATSAPP = [{url: "https://wa.me/+1(432)638-0046", title: "WhatsApp"}];
 
 export const TELEPHONE = "tel:+14326380046";
 

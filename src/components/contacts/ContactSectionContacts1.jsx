@@ -39,8 +39,8 @@ export default function ContactSection() {
               </div>
               <div ref={addToRefs} className="">
                 <h3 className="mb-0 text-left fs-2">Phone</h3>
-                <a href={TELEPHONE} className="text-decoration-none">
-                  <p>432 638 0046</p>
+                <a href={TELEPHONE[0].url} className="text-decoration-none">
+                  <p>{TELEPHONE[0].title}</p>
                 </a>
               </div>
               <div ref={addToRefs} className="text-left">
@@ -48,13 +48,13 @@ export default function ContactSection() {
                 <div className="d-flex justify-content-left">
                   <a
                     className="text-decoration-none"
-                    href={WHATSAPP}
+                    href={WHATSAPP[0].url}
                     target="_blank"
                     rel="noreferrer"
                   >
                     WhatsApp
                   </a>
-                  <a className="text-decoration-none p-3" href={INSTAGRAM}>
+                  <a className="text-decoration-none p-3" href={INSTAGRAM[0].url}>
                     Instagram
                   </a>
                 </div>

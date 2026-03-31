@@ -1,0 +1,118 @@
+<h2>The 4 n8n Agent Workflows</h2>
+<p class="subtitle">How each workflow runs — what triggers it, what it does, what it produces</p>
+
+<div style="display: flex; flex-direction: column; gap: 16px; margin-top: 8px;">
+
+  <!-- Workflow 1 -->
+  <div style="background: #0f172a; border: 2px solid #6366f1; border-radius: 10px; padding: 18px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+      <span style="background: #6366f1; color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">1</span>
+      <div>
+        <span style="color: #a5b4fc; font-weight: 700; font-size: 15px;">🔍 Research Agent</span>
+        <span style="color: #475569; font-size: 12px; margin-left: 10px;">Runs daily at 6am</span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">⏰ Cron trigger</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Perplexity API<br/><span style="color: #64748b; font-size: 11px;">web dev trends today</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Claude API<br/><span style="color: #64748b; font-size: 11px;">extract 5 post topics + keywords</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Supabase<br/><span style="color: #64748b; font-size: 11px;">save research_topics</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #22c55e; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #86efac;">Trigger Workflow 2 ↓</div>
+    </div>
+  </div>
+
+  <!-- Workflow 2 -->
+  <div style="background: #0f172a; border: 2px solid #f97316; border-radius: 10px; padding: 18px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+      <span style="background: #f97316; color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">2</span>
+      <div>
+        <span style="color: #fdba74; font-weight: 700; font-size: 15px;">✍️ Copy Agent</span>
+        <span style="color: #475569; font-size: 12px; margin-left: 10px;">Triggered by Workflow 1</span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Webhook trigger</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Loop per topic</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Claude API<br/><span style="color: #64748b; font-size: 11px;">5 platform copies per topic<br/>IG · FB · X · LI · Pinterest · WA</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Supabase<br/><span style="color: #64748b; font-size: 11px;">save draft<br/>status: pending_image</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #22c55e; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #86efac;">Trigger Workflow 3 ↓</div>
+    </div>
+    <div style="margin-top: 10px; background: #1a1a2e; border: 1px solid #334155; border-radius: 6px; padding: 8px 12px;">
+      <span style="color: #94a3b8; font-size: 12px;">Each copy includes: headline · body · hashtags · CTA · 3–5 SEO keywords → stored with draft</span>
+    </div>
+  </div>
+
+  <!-- Workflow 3 -->
+  <div style="background: #0f172a; border: 2px solid #ec4899; border-radius: 10px; padding: 18px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+      <span style="background: #ec4899; color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">3</span>
+      <div>
+        <span style="color: #f9a8d4; font-weight: 700; font-size: 15px;">🖼️ Image Agent</span>
+        <span style="color: #475569; font-size: 12px; margin-left: 10px;">Triggered by Workflow 2</span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-bottom: 10px;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Webhook trigger</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Detect type<br/><span style="color: #64748b; font-size: 11px;">carousel / lifestyle?</span></div>
+    </div>
+    <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 180px; background: #1a0a2e; border: 1px solid #ec4899; border-radius: 6px; padding: 10px;">
+        <div style="color: #f9a8d4; font-size: 12px; font-weight: 600; margin-bottom: 6px;">📊 Carousel / Infographic</div>
+        <div style="color: #64748b; font-size: 11px;">DALL-E 3 prompt → image</div>
+        <div style="color: #64748b; font-size: 11px;">+ HTML template overlay</div>
+        <div style="color: #64748b; font-size: 11px;">(logo, colors, text, CTA)</div>
+      </div>
+      <div style="flex: 1; min-width: 180px; background: #1a0a2e; border: 1px solid #ec4899; border-radius: 6px; padding: 10px;">
+        <div style="color: #f9a8d4; font-size: 12px; font-weight: 600; margin-bottom: 6px;">📷 Lifestyle / Context</div>
+        <div style="color: #64748b; font-size: 11px;">Unsplash API → stock photo</div>
+        <div style="color: #64748b; font-size: 11px;">+ branded overlay (n8n)</div>
+        <div style="color: #64748b; font-size: 11px;">(logo watermark + CTA)</div>
+      </div>
+    </div>
+    <div style="margin-top: 10px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Upload to Supabase Storage</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Update draft<br/><span style="color: #64748b; font-size: 11px;">status: pending_review</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #14532d; border: 1px solid #22c55e; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #86efac;">📱 WhatsApp notification sent</div>
+    </div>
+  </div>
+
+  <!-- Workflow 4 -->
+  <div style="background: #0f172a; border: 2px solid #22c55e; border-radius: 10px; padding: 18px;">
+    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+      <span style="background: #22c55e; color: white; border-radius: 50%; width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 13px; flex-shrink: 0;">4</span>
+      <div>
+        <span style="color: #86efac; font-weight: 700; font-size: 15px;">📤 Publisher Agent</span>
+        <span style="color: #475569; font-size: 12px; margin-left: 10px;">Triggered when you approve in dashboard</span>
+      </div>
+    </div>
+    <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center;">
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Supabase webhook<br/><span style="color: #64748b; font-size: 11px;">status → approved</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Check schedule time</div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Fan out per platform<br/><span style="color: #64748b; font-size: 11px;">parallel branches</span></div>
+      <div style="color: #475569; font-size: 12px;">→</div>
+      <div style="background: #1e293b; border: 1px solid #334155; border-radius: 6px; padding: 6px 10px; font-size: 12px; color: #e2e8f0;">Update status<br/><span style="color: #64748b; font-size: 11px;">published + timestamp</span></div>
+    </div>
+    <div style="margin-top: 10px; display: flex; gap: 8px; flex-wrap: wrap;">
+      <div style="background: #0f1117; border: 1px solid #1e3a5f; border-radius: 5px; padding: 5px 10px; font-size: 11px; color: #93c5fd;">📘 Meta Graph API → IG + FB + WA Channel</div>
+      <div style="background: #0f1117; border: 1px solid #1e3a5f; border-radius: 5px; padding: 5px 10px; font-size: 11px; color: #93c5fd;">🐦 X API v2 → tweet + image</div>
+      <div style="background: #0f1117; border: 1px solid #1e3a5f; border-radius: 5px; padding: 5px 10px; font-size: 11px; color: #93c5fd;">💼 LinkedIn API → post + image</div>
+      <div style="background: #0f1117; border: 1px solid #1e3a5f; border-radius: 5px; padding: 5px 10px; font-size: 11px; color: #93c5fd;">📌 Pinterest API → pin + board</div>
+    </div>
+  </div>
+
+</div>
+
+<p style="color: #64748b; font-size: 12px; text-align: center; margin-top: 12px;">Does this workflow chain look right? Reply in the terminal.</p>
