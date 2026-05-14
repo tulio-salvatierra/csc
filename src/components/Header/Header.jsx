@@ -34,9 +34,9 @@ export default function Header() {
     <>
       {/* Header NORMAL, no ref, no animación */}
       <section className="sticky top-0 w-full z-auto shadow-2xl header">
-        <nav className="flex items-center justify-between bg-white py-10 px-4 xl:px-8">
+        <nav className="flex items-center justify-between bg-white/30 backdrop-blur-sm py-10 px-4 xl:px-8">
           <a href="/" aria-label="Carolina Skin Centre Home">
-            <img className="w-[75px] h-auto" src={LogoBG} alt="Carolina Skin Centre Logo" />
+            <img className="w-[75px] h-auto" src={Logo} alt="Carolina Skin Centre Logo" />
           </a>
 
           <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
@@ -99,7 +99,7 @@ export default function Header() {
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
-                backdropFilter: "blur(4px)",
+      
                 opacity: 0.05,
               }}
             />
