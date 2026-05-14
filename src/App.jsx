@@ -48,7 +48,7 @@ function App() {
         buttonLabel="Book now"
       >
         <p>
-          <strong>First Platinum HydraFacial - Introductory Offer</strong>
+          <strong className="text-white font-bold text-2xl font-moula">First Platinum HydraFacial - Introductory Offer</strong>
         </p>
         <p>
           Experience the ultimate in skincare with your first Platinum HydraFacial. This

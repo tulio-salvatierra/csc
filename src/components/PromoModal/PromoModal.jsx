@@ -4,7 +4,7 @@ import { BOOKING_URL_2 } from "../../constants";
 import BookingButton from "../BookingButton/BookingButton";
 import "./PromoModal.css";
 
-const DEFAULT_DELAY_MS = 9000;
+const DEFAULT_DELAY_MS = 4000;
 
 /**
  * Full-screen promo modal: opens after `delayMs`, optional title + body (children),
@@ -59,7 +59,7 @@ export default function PromoModal({
 
   const modal = (
     <div
-      className="promo-modal-backdrop"
+      className="promo-modal-backdrop bg-black/50"
       role="presentation"
       onClick={() => setOpen(false)}
     >
@@ -72,10 +72,11 @@ export default function PromoModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div
-          className="promo-modal-bg"
+          className="promo-modal-bg bg-cover bg-center bg-no-repeat bg-blend-multiply blur-sm"
           style={{ backgroundImage: `url(${backgroundImage})` }}
           aria-hidden
         />
+        <div className="promo-modal-bg-overlay bg-black/50 backdrop-blur-sm" aria-hidden />
         <div className="promo-modal-scrim" aria-hidden />
         <button
           ref={closeBtnRef}
