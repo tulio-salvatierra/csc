@@ -99,12 +99,12 @@ export default function Header() {
                 backgroundSize: "contain",
                 backgroundRepeat: "no-repeat",
                 backgroundPosition: "center",
-      
+                backgroundColor: "rgba(0, 0, 0, 0.05)",
                 opacity: 0.05,
               }}
             />
             <div className="absolute inset-0 bg-white opacity-0 z-0 pointer-events-none" />
-            <div className="flex items-center mb-12">
+            <div className="flex items-center mb-12 mt-12">
               <a
                 className="flex-1 text-2xl font-semibold mb-0 no-underline"
                 href="/"
