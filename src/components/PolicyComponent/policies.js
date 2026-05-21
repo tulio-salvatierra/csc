@@ -7,7 +7,7 @@ export const policies = [
     title: "Cancellation Policy",
     image: Cancel,
     description:
-      "I understand that plans can change, and I want to make the process as smooth as possible for you. If you need to cancel your appointment, please do so at least 48 hours in advance. This allows me to offer your time slot to another client. Cancellations made less than 24 hours in advance may incur a cancellation fee.",
+      "I understand that plans can change, and I want to make the process as smooth as possible for you. If you need to cancel your appointment, please do so at least 48 hours in advance. This allows me to offer your time slot to another client. Cancellations made less than 48 hours in advance may incur a cancellation fee.",
   },
   {
     title: "Business Policy",
