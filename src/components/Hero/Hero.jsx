@@ -90,14 +90,14 @@ export default function Hero() {
         style={{ transform: "scale(1.15)" }}
       />
       {/* Content overlay */}
-      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p2-4 text-center">
+      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 mt-[-6] text-center">
         <div ref={titleRef}>
           <MaskedWords
             scrollStart={false}
             as="h1"
             variant="words"
             once={true}
-            className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-tight"
+            className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-none"
           >
             Hydrate, renew and balance{" "}
             <span style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}
@@ -114,7 +114,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="bg-red-100 rounded-lg w-full sm:w-3/4 mx-auto p-4 mb-8 text-white text-left mt-4 font-light"
+            className="bg-red-100 rounded-lg w-full sm:w-3/4 mx-auto p-4 mb-8 text-white text-left mt-4 font-light text-xs"
           >
             Improve the health and appearance of your skin through personalized
             skin care facials and spa and facial treatments that balance your
