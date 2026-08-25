@@ -5,6 +5,7 @@ import MaskedLines from "../../components/MaskedLines/MaskedLines";
 import MaskedWords from "../MaskedLines/MaskedLines";
 import BookingButton from "../BookingButton/BookingButton";
 import { BOOKING_URL_2 } from "../../constants";
+import "./Hero.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,7 +91,7 @@ export default function Hero() {
         style={{ transform: "scale(1.15)" }}
       />
       {/* Content overlay */}
-      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 mt-[-6] text-center">
+      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
         <div ref={titleRef}>
           <MaskedWords
             scrollStart={false}
@@ -114,7 +115,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="bg-red-100 rounded-lg w-full sm:w-3/4 mx-auto p-4 mb-8 text-white text-left mt-4 font-light text-xs"
+            className="bg-red-100 rounded-sm shadow-lg mb-4 w-full sm:w-3/4 mx-auto p-4 text-white text-left mt-4 font-light"
           >
             Improve the health and appearance of your skin through personalized
             skin care facials and spa and facial treatments that balance your

@@ -9,7 +9,7 @@ export default function Footer() {
   const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
 
   return (
-    <footer className="bg-white border-t border-gray-600">
+    <footer className="bg-white p-4 border-t border-gray-600">
       <div ref={footerLinksRef} className="w-full mx-auto px-1 p-24 lg:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-20">
           {/* Logo Section */}
