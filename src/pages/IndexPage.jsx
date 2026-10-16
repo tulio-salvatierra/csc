@@ -25,8 +25,8 @@ const homeFaqs = [
     answer: "For optimal results, I recommend a facial every 4 to 6 weeks. This helps maintain clear and healthy skin by removing impurities and preventing clogged pores.",
   },
   {
-    question: "Are the waxing services suitable for sensitive skin?",
-    answer: "Yes, my face and body waxing services are gentle and suitable for sensitive skin. I use high quality, hypoallergenic waxes to minimize irritation and ensure a comfortable experience.",
+    question: "Is there any downtime after a HydraFacial?",
+    answer: "No. HydraFacial is designed for immediate results with no downtime. You can return to normal activities and wear makeup right after.",
   },
   {
     question: "Where is Carolina Skin Centre located?",

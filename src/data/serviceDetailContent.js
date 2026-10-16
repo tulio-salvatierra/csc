@@ -70,19 +70,6 @@ Chemical peels are a powerful tool when performed by a licensed professional. I 
       { question: "What should I avoid before and after a peel?", answer: "I will give you specific instructions; typically avoid retinoids and strong actives before and after, and always use sunscreen and gentle products during healing." },
     ],
   },
-  waxingservices: {
-    article: `At Carolina Skin Centre, I offer expert waxing services to help you achieve smooth, hair free skin with minimal discomfort. From brows to bikini lines and beyond, I use high quality wax and proven techniques to ensure a comfortable and effective experience. I understand that waxing is not just about removal. It is about precision, hygiene, and care for your skin.
-
-My waxing services cover face and body, including eyebrows, lip, chin, underarms, arms, legs, and bikini area. I use professional grade waxes that are kind to the skin and reduce the risk of irritation. Before I begin, I assess the area and your skin type so I can choose the right product and method. After your appointment, I may recommend soothing products or simple aftercare to keep your skin smooth and calm.
-
-Consistency is key with waxing; regular appointments help hair grow back finer and sparser over time, and the experience becomes quicker and more comfortable. I welcome both new and returning clients in Midland, Odessa, and the Permian Basin. Whether you are preparing for a special occasion or maintaining your routine, my waxing services are designed to leave you feeling confident and well cared for.`,
-    faqs: [
-      { question: "How long should my hair be for waxing?", answer: "Typically about 1/4 inch (grain of rice length). If it is too short, wax may not adhere well; I can advise on timing before your visit." },
-      { question: "Is waxing safe for sensitive skin?", answer: "I use high quality, hypoallergenic waxes and can select formulas suited to sensitive skin. Let me know your concerns so I can tailor the service." },
-      { question: "How often should I wax?", answer: "Every 4 to 6 weeks is common for body waxing; facial areas may vary. I can recommend a schedule based on your growth and preferences." },
-      { question: "What should I avoid after waxing?", answer: "Avoid hot tubs, saunas, heavy exercise, and sun exposure for 24 to 48 hours. I will give you full aftercare instructions at your visit." },
-    ],
-  },
   nanoneedle: {
     article: `Nano Needle is an advanced, non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without the pain or downtime associated with traditional microneedling. At Carolina Skin Centre, I use Nano Needle to help clients achieve smoother, firmer, and more radiant skin with minimal discomfort and no lengthy recovery.
 

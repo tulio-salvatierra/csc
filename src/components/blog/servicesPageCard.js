@@ -3,7 +3,6 @@ import HF from "./../../assets/images/servicesComponent/hf.jpeg";
 import MD from "./../../assets/images/ServicesPageCard/md.jpg";
 import EF from "./../../assets/images/ServicesPageCard/ef.jpg";
 import CP from "./../../assets/images/servicesComponent/cp.jpeg";
-import WAX from "./../../assets/images/servicesComponent/wax.jpg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png"
 
@@ -57,15 +56,6 @@ const servicesCardInfo = [
       "Designed to exfoliate and renew your skin by revealing a fresher, more radiant complexion. Using carefully selected acids, chemical peels remove dead skin cells, unclog pores, and stimulate collagen production to improve skin texture, tone, and overall clarity.",
     icon: CP,
     category: "Skin rejuvenation",
-  },
-  {
-    id: 6,
-    name: "Waxing Services",
-    slug: "waxingservices",
-    description:
-      "Say goodbye to unwanted hair with my expert waxing services. From brows to bikini lines, I'll help you achieve smooth, hair free skin. I use high quality wax and techniques to ensure a comfortable and effective waxing experience.",
-    icon: WAX,
-    category: "Waxing services",
   },
   {
     id: 7,

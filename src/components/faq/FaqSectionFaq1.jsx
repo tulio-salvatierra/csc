@@ -74,12 +74,12 @@ export default function FaqSectionFaq1() {
                   alt=""
                 />
                 <h3 className="mt-6 leading-relaxed mb-5 font-heading">
-                  Are the waxing services suitable for sensitive skin?
+                  Is there any downtime after a HydraFacial?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  Yes, my face and body waxing services are gentle and suitable
-                  for sensitive skin. I use high quality, hypoallergenic waxes
-                  to minimize irritation and ensure a comfortable experience.
+                  No. HydraFacial is designed for immediate results with no
+                  downtime. You can return to normal activities and wear makeup
+                  right after.
                 </p>
               </div>
             </div>
@@ -91,14 +91,12 @@ export default function FaqSectionFaq1() {
                   alt=""
                 />
                 <h3 className="mt-6 leading-relaxed mb-5 font-heading">
-                  How long do eyelash extensions last, and how do I maintain
-                  them?
+                  Does Nano Needle hurt?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
-                  Eyelash extensions typically last 4 to 6 weeks, depending on your
-                  natural lash cycle and care routine. To maintain them, avoid
-                  oil based products near your lashes and schedule regular
-                  touch ups every 2 to 3 weeks.
+                  Most clients feel only a light prickling or pressure. It is
+                  significantly gentler than traditional microneedling and
+                  requires no numbing for most clients.
                 </p>
               </div>
             </div>

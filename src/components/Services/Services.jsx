@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./../../App.css";
 import "./Services.css";
 import CP from "./../../assets/images/servicesComponent/cp.jpeg";
-import WAX from "./../../assets/images/servicesComponent/wax.jpg";
+import HF from "./../../assets/images/servicesComponent/hf.jpeg";
 import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
 import Therapy from "./../../assets/images/servicesComponent/therapy.png";
 
@@ -24,9 +24,9 @@ export default function ServicesComponent() {
       image: CP,
     },
     {
-      title: "Waxing Services",
-      description: "Waxing services for face and body",
-      image: WAX,
+      title: "HydraFacials",
+      description: "Deep cleansing, exfoliation and hydration",
+      image: HF,
     },
     {
       title: "Nano Needle",
