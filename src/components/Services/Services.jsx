@@ -20,21 +20,25 @@ export default function ServicesComponent() {
   const services = [
     {
       title: "Chemical Peels",
+      slug: "chemical-peels-midland-tx",
       description: "Exfoliation and Skin Rejuvenation",
       image: CP,
     },
     {
       title: "HydraFacials",
+      slug: "hydrafacial-midland-tx",
       description: "Deep cleansing, exfoliation and hydration",
       image: HF,
     },
     {
       title: "Nano Needle",
+      slug: "nano-needling-midland-tx",
       description: "Non invasive skin rejuvenation treatment",
       image: NN,
     },
     {
       title: "Carboxy Therapy",
+      slug: "carboxy-therapy-midland-tx",
       description:
         "A minimally invasive treatment that uses Carbon Dioxide to improve skin elasticity and enhance circulation.",
       image: Therapy,
@@ -125,7 +129,7 @@ export default function ServicesComponent() {
             {services.map((service, index) => (
               <Link
                 key={index}
-                to="/services"
+                to={`/services/${service.slug}`}
                 className="media-wrapper"
                 ref={(el) => {
                   if (el) mediaRefs.current[index] = el;

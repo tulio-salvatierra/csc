@@ -100,12 +100,7 @@ export default function Hero() {
             once={true}
             className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-none"
           >
-            Hydrate, renew and balance{" "}
-            <span style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}
-            >
-              your
-            </span>{" "}
-            skin
+            Hydrate, renew and balance your skin
           </MaskedWords>
         </div>
 
