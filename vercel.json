@@ -1,10 +1,65 @@
 {
   "redirects": [
-    { "source": "/services/chemical-peels", "destination": "/services/chemicalpeels", "permanent": true },
-    { "source": "/services/waxing-services", "destination": "/services", "permanent": true },
-    { "source": "/services/waxingservices", "destination": "/services", "permanent": true },
-    { "source": "/services/nano-needle", "destination": "/services/nanoneedle", "permanent": true },
-    { "source": "/services/carboxy-therapy", "destination": "/services/carboxytherapy", "permanent": true }
+    {
+      "source": "/services/dermaplaning",
+      "destination": "/services/dermaplaning-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/hydrafacials",
+      "destination": "/services/hydrafacial-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/microdermabrasion",
+      "destination": "/services/microdermabrasion-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/facials",
+      "destination": "/services/facials-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/chemicalpeels",
+      "destination": "/services/chemical-peels-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/nanoneedle",
+      "destination": "/services/nano-needling-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/carboxytherapy",
+      "destination": "/services/carboxy-therapy-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/chemical-peels",
+      "destination": "/services/chemical-peels-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/nano-needle",
+      "destination": "/services/nano-needling-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/carboxy-therapy",
+      "destination": "/services/carboxy-therapy-midland-tx",
+      "permanent": true
+    },
+    {
+      "source": "/services/waxing-services",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/waxingservices",
+      "destination": "/services",
+      "permanent": true
+    }
   ],
   "rewrites": [
     {
