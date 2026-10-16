@@ -91,7 +91,7 @@ export default function Hero() {
         style={{ transform: "scale(1.15)" }}
       />
       {/* Content overlay */}
-      <div className="relative z-10 grid m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
+      <div className="relative z-10 grid w-full m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
         <div ref={titleRef}>
           <MaskedWords
             scrollStart={false}
