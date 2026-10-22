@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BOOKING_URL_2 } from "../../constants";
 import "./Solution.css";
-import SkinCare from "../../assets/images/solutions/skin-care.jpg";
+import CarolinaPhoto from "../../assets/images/solutions/carolina.webp";
 import BookingButton from "../BookingButton";
 import MaskedLines from "../MaskedLines/MaskedLines";
 
@@ -100,7 +100,7 @@ export default function Solutions() {
     >
       <div className="grid items-center justify-center text-center mt-20">
         <h2 ref={titleRef} className="mb-3">
-          Transform Your Skin with Professional Skincare & Personalized Care
+          Meet Carolina
         </h2>
 
         <div className="grid sm:grid-cols-2 grid-cols-1 gap-4 text-center items-center">
@@ -111,16 +111,25 @@ export default function Solutions() {
                 scrollStart={true}
                 once={true}
                 variant="lines"
+                className="mb-6 text-muted text-left justify-center-safe w-100"
+              >
+                I’m Carolina, a licensed aesthetician with over 18 years of
+                experience in skincare and facials. My personal journey with
+                acne inspired me to pursue professional training at the Euro
+                Institute of Skin Care in Seattle.
+              </MaskedLines>
+              <MaskedLines
+                as="p"
+                scrollStart={true}
+                once={true}
+                variant="lines"
                 className="mb-10 text-muted text-left justify-center-safe w-100"
               >
-                Hey! I'm Carolina, a licensed skin aesthetician with over 18 years of
-                experience in skincare and facials. My journey began with my
-                own struggle with acne, which led me to study at the Euro
-                Institute of Skin Care in Seattle. I combine European and
-                naturopathic techniques with advanced medispa procedures. Your
-                esthetician near me for skin care treatments and spa and facial
-                services in Midland, Texas. Get in touch to book your
-                consultation today!
+                I combine European skincare techniques with advanced treatments
+                to provide personalized care tailored to each client’s unique
+                skin needs. My goal is to help you achieve healthier, balanced
+                skin through professional treatments and individualized
+                attention.
               </MaskedLines>
             </div>
 
@@ -134,14 +143,14 @@ export default function Solutions() {
 
           <div
             ref={imageContainerRef}
-            className="grid place-items-center overflow-hidden rounded shadow-xl"
+            className="grid place-items-center overflow-hidden rounded shadow-xl w-full max-w-md mx-auto aspect-[4/5]"
           >
             <img
               ref={imageRef}
-              src={SkinCare}
-              alt="Skin care treatment and facials at Carolina Skin Centre"
-              className="object-cover will-change-transform"
-              style={{ width: "auto", height: "auto" }}
+              src={CarolinaPhoto}
+              alt="Carolina, licensed esthetician at Carolina Skin Centre in Midland, TX"
+              className="w-full h-full object-cover object-[50%_35%] will-change-transform"
+              loading="lazy"
             />
           </div>
         </div>

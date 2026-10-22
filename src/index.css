@@ -21,3 +21,53 @@
 .contact-links-wrap .underline-link .underline {
   background: #171717;
 }
+
+/*
+ * Glass panel: replaces the old pink/red text boxes.
+ * No color — a soft backdrop blur with a faint neutral shade for legibility,
+ * masked with a radial gradient so it fades out to transparent at the edges.
+ */
+.glass-panel {
+  position: relative;
+  isolation: isolate;
+  color: #fff;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+}
+
+.glass-panel::before {
+  content: "";
+  position: absolute;
+  inset: -2rem -3rem;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.1) 45%, rgba(0, 0, 0, 0) 75%);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 40%, transparent 72%);
+  mask-image: radial-gradient(ellipse at center, #000 40%, transparent 72%);
+}
+
+/* Policy page cards — override the global unlayered `p` styles from App.css */
+.policy-card h2 {
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  line-height: 1.2;
+}
+
+.policy-card p,
+.policy-card li {
+  color: #2b2b2b;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+/* Footer: unlayered overrides (global .underline-link / p rules beat Tailwind utilities) */
+.underline-link.footer-connect-link {
+  display: flex;
+}
+
+.footer-tagline {
+  color: #3a3a3a;
+  font-size: 1.25rem;
+  line-height: 1.6;
+}

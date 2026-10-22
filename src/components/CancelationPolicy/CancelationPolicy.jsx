@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
-import BookingButton from "../BookingButton";
+import { cancellationPolicy } from "../PolicyComponent/policies";
 import "./../../App.css";
+import "./CancelationPolicy.css";
 import policyBg from "../../assets/images/policies/policy_bg.jpg";
 
 export default function CancellationPolicy() {
@@ -15,6 +17,18 @@ export default function CancellationPolicy() {
 
   useFadeInAnimation(fadeRefs);
 
+  // Cursor-following tooltip (pointer devices only; hidden on touch via CSS)
+  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
+  const handleMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setTooltip({ visible: true, x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+  const hideTooltip = () => setTooltip((t) => ({ ...t, visible: false }));
+
+  const { paragraphs, list, closing } = cancellationPolicy;
+  // Homepage title is "Cancellation Policy"; the full title lives on /policies.
+  const sectionTitle = "Cancellation Policy";
+
   return (
     <section
       ref={addToRefs}
@@ -25,39 +39,51 @@ export default function CancellationPolicy() {
         ref={addToRefs}
         className="flex flex-col mx-auto p-2 w-full h-1/2 items-center rounded-md"
       >
-        <div className="card p-10 backdrop-blur-sm justify-between leading-normal w-full sm:w-3/4 md:w-1/2  bg-white/50 rounded-md shadow-lg">
-          <h2 ref={addToRefs} className="text-center mt-2 mb-8 text-3xl font-bold">
-            New Cancellation Policy
+        <Link
+          to="/policies"
+          aria-label={`${sectionTitle}: read all studio policies`}
+          onMouseMove={handleMove}
+          onMouseLeave={hideTooltip}
+          className="cancellation-card relative block p-10 backdrop-blur-sm w-full sm:w-3/4 md:w-1/2 bg-white/50 rounded-md shadow-lg text-black no-underline"
+        >
+          <h2 ref={addToRefs} className="text-center mt-2 mb-6 text-3xl font-bold">
+            {sectionTitle}
           </h2>
-          <div className="sm:mx-16">
-            <p ref={addToRefs} className="mb-4 text-lg" style={{ color: "black"}}>
-              To ensure your satisfaction, I kindly ask as a courtesy that
-              you provide a minimum of{" "}
-              <strong className="font-black italic">48 hours notice</strong> for any
-              cancellations or rescheduling.
-            </p>
-            <ul className="mb-8 mt-8 font-black list-disc list-inside text-black">
-              <li ref={addToRefs} className="m-2">
-                <strong style={{ color: "black"}}>Within 48 Hours:</strong> 50% of
-                the service cost will be charged.
-              </li>
-              <li ref={addToRefs} className="m-2 ">
-                <strong style={{ color: "black"}}>
-                  Same day cancellations / rescheduling / no shows:
-                </strong>{" "} <br />
-                <strong className="italic" style={{ color: "black", marginTop: "0.5rem" }}>
-                Full service cost will be charged.
-                </strong>
-              </li>
+          <div className="sm:mx-8 text-lg leading-relaxed">
+            {paragraphs.map((text) => (
+              <p key={text} ref={addToRefs} className="mb-4 font-normal">
+                {text}
+              </p>
+            ))}
+            <ul className="list-disc pl-5 mb-4 space-y-2">
+              {list.map((item) => (
+                <li key={item.label} ref={addToRefs}>
+                  <strong className="font-semibold">{item.label}</strong>{" "}
+                  {item.text}
+                </li>
+              ))}
             </ul>
-            <p ref={addToRefs} className="my-8" style={{ color: "black" }}>
-              Thank you for your understanding and cooperation!
+            <p ref={addToRefs} className="font-normal">
+              {closing}
             </p>
           </div>
-          <div className="text-center">
-          <BookingButton href={"/policies"} label={"Read My Policies"} />
-        </div>
-        </div>
+
+          {/* Shown only on touch screens, where there is no hover tooltip */}
+          <p className="cancellation-touch-cta mt-6 text-center font-semibold">
+            Read policies →
+          </p>
+
+          <span
+            className="cancellation-tooltip"
+            aria-hidden="true"
+            style={{
+              opacity: tooltip.visible ? 1 : 0,
+              transform: `translate(${tooltip.x + 16}px, ${tooltip.y + 16}px)`,
+            }}
+          >
+            Click here to read cancellation policies
+          </span>
+        </Link>
       </div>
     </section>
   );

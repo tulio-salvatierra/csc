@@ -74,7 +74,7 @@ export default function AboutPage() {
           <h1 ref={addToRefs} style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="mb-3 text-white text-5xl sm:text-7xl font-main-title mt-28">
             My Story
           </h1>
-          <p ref={addToRefs} className="w-full md:w-1/2 font-light bg-red-100 p-4 mt-4">
+          <p ref={addToRefs} className="glass-panel w-full md:w-1/2 font-light p-4 mt-4">
             I battled acne in my late teens and early twenties, which shook my
             confidence. After seeing real results from professional skin care treatments and facials,
             I felt renewed and inspired to help others achieve that same boost.
