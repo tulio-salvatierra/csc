@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
 import FloatingCallbutton from "../components/floatingCallButton";
 import SEO from "../components/SEO/SEO";
-import { BreadcrumbSchema, FAQSchema } from "../components/SEO/StructuredData";
+import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "../components/SEO/StructuredData";
 import services from "../components/blog/servicesPageCard";
 import { getServiceDetailContent } from "../data/serviceDetailContent";
 import BookingButton from "../components/BookingButton";
@@ -30,6 +30,7 @@ export default function ServiceDetailPage() {
   }
 
   const { article, faqs } = content;
+  const seoName = service.seoName || service.name;
   const breadcrumbs = [
     { name: "Home", url: "/" },
     { name: "Services", url: "/services" },
@@ -39,13 +40,14 @@ export default function ServiceDetailPage() {
   return (
     <>
       <SEO
-        title={`${service.name} | Carolina Skin Centre | Midland TX | Skin Care Facials`}
-        description={`${service.description} Esthetician near me in Midland, TX offering ${service.name.toLowerCase()} as part of professional skin care treatments, facials, and spa and facial services.`}
-        keywords={`${service.name} Midland TX, ${service.category}, Carolina Skin Centre, skincare ${service.name.toLowerCase()}, esthetician near me, skin care facials, skin care treatments, skincare, spa and facial, skin esthetician`}
+        title={`${seoName} in Midland, TX | Carolina Skin Centre`}
+        description={service.seoDescription || `${seoName} in Midland, TX at Carolina Skin Centre. ${service.description}`}
+        keywords={`${seoName} Midland TX, ${seoName} near me, ${service.category}, Carolina Skin Centre, skincare ${service.name.toLowerCase()}, esthetician near me, skin care facials, skin care treatments, skincare, spa and facial, skin esthetician`}
         url={`/services/${service.slug}`}
       />
       <BreadcrumbSchema items={breadcrumbs} />
       <FAQSchema faqs={faqs} />
+      <ServiceSchema services={[{ title: seoName, description: service.description }]} />
       <main className="parent-page">
         <div className="header">
           <Header />
@@ -57,7 +59,10 @@ export default function ServiceDetailPage() {
               <div className="flex flex-col items-center justify-center mb-16 pt-24 pb-12">
                
                 <h1 className="m-3 text-center text-white text-5xl md:text-7xl font-bold">
-                  {service.name}
+                  {seoName}
+                  <span className="block mt-2 text-2xl md:text-3xl font-light">
+                    in Midland, TX
+                  </span>
                 </h1>
                 <Link
                   to="/services"

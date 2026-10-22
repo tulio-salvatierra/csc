@@ -123,7 +123,7 @@ export default function AboutPage() {
             "My mission is to enhance your natural beauty and boost your
             confidence by providing personalized, results driven skincare
             treatments and luxurious beauty services. From rejuvenating facials
-            to expert lash and brow care, I am dedicated to helping you look
+            to advanced HydraFacial treatments, I am dedicated to helping you look
             and feel your best."
           </p>
         </blockquote>

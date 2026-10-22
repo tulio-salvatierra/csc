@@ -83,8 +83,8 @@ export default function PolicyComponent() {
               At my skin care studio, I offer a range of expert facial
               treatments designed to rejuvenate and enhance your natural beauty.
               My services include luxurious facials, HydraFacials,
-              microdermabrasion, nano needle, acne facials and professional
-              eyebrow shaping and tinting.
+              microdermabrasion, nano needle, acne facials, chemical peels,
+              dermaplaning and carboxy therapy.
             </p>
           </div>
         </div>

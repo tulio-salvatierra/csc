@@ -83,7 +83,6 @@ export function LocalBusinessSchema() {
         "Carboxy Therapy",
         "Microdermabrasion",
         "Anti aging Treatments",
-        "Waxing Services",
         "European Skincare Techniques",
         "Naturopathic Skincare",
       ],
@@ -145,14 +144,6 @@ export function LocalBusinessSchema() {
               "@type": "Service",
               name: "Custom Facials",
               description: "Personalized facial treatments tailored to your unique skin type and concerns.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Waxing Services",
-              description: "Professional face and body hair removal using high quality, hypoallergenic wax.",
             },
           },
         ],

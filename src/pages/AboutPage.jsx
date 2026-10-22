@@ -17,12 +17,12 @@ const aboutFaqs = [
     answer: "For optimal results, I recommend a facial every 4 to 6 weeks. This helps maintain clear and healthy skin by removing impurities and preventing clogged pores.",
   },
   {
-    question: "Are the waxing services suitable for sensitive skin?",
-    answer: "Yes, my face and body waxing services are gentle and suitable for sensitive skin. I use high quality, hypoallergenic waxes to minimize irritation and ensure a comfortable experience.",
+    question: "Is there any downtime after a HydraFacial?",
+    answer: "No. HydraFacial is designed for immediate results with no downtime. You can return to normal activities and wear makeup right after.",
   },
   {
-    question: "How long do eyelash extensions last, and how do I maintain them?",
-    answer: "Eyelash extensions typically last 4 to 6 weeks, depending on your natural lash cycle and care routine. To maintain them, avoid oil based products near your lashes and schedule regular touch ups every 2 to 3 weeks.",
+    question: "Does Nano Needle hurt?",
+    answer: "Most clients feel only a light prickling or pressure. It is significantly gentler than traditional microneedling and requires no numbing for most clients.",
   },
 ];
 
