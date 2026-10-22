@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { TELEPHONE, EMAIL, BOOKING_URL_2 } from "../../constants";
+import SERVICES from "../blog/servicesPageCard";
 
 const SITE_URL = "https://www.carolinaskincentre.com";
 
@@ -14,7 +15,7 @@ export function LocalBusinessSchema() {
       url: SITE_URL,
       telephone: TELEPHONE.replace("tel:", ""),
       email: EMAIL,
-      description: "I provide professional skincare services in Midland, Texas: facials, skin care facials, spa and facial treatments, chemical peels, HydraFacials, dermaplaning, and more with over 18 years of experience.",
+      description: "I provide professional skincare services in Midland, Texas: HydraFacials, customized facials, Nano-Needling, dermaplaning and lash tinting with over 18 years of experience.",
       address: {
         "@type": "PostalAddress",
         streetAddress: "705 W Wadley Ave Suite 23",
@@ -77,11 +78,10 @@ export function LocalBusinessSchema() {
         "skin esthetician",
         "skin near me",
         "HydraFacial",
-        "Chemical Peels",
+        "Customized Facials",
+        "Nano-Needling",
         "Dermaplaning",
-        "Nano Needle Therapy",
-        "Carboxy Therapy",
-        "Microdermabrasion",
+        "Lash Tinting",
         "Anti aging Treatments",
         "European Skincare Techniques",
         "Naturopathic Skincare",
@@ -89,64 +89,15 @@ export function LocalBusinessSchema() {
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Skincare Services",
-        itemListElement: [
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "HydraFacial",
-              description: "Multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin.",
-            },
+        itemListElement: SERVICES.map((service) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: service.name,
+            description: service.description,
+            url: `${SITE_URL}/services/${service.slug}`,
           },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Dermaplaning",
-              description: "Non invasive skincare treatment that exfoliates and removes fine vellus hair for smoother, brighter skin.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Chemical Peels",
-              description: "Skin renewal treatment using carefully selected acids to improve texture, tone, and clarity.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Nano Needle Therapy",
-              description: "Advanced non invasive procedure using ultra fine nano needles to stimulate collagen production.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Carboxy Therapy",
-              description: "Non invasive CO2 skin treatment for facial rejuvenation and improved circulation.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Microdermabrasion",
-              description: "Gentle exfoliation treatment to promote cell turnover and collagen production.",
-            },
-          },
-          {
-            "@type": "Offer",
-            itemOffered: {
-              "@type": "Service",
-              name: "Custom Facials",
-              description: "Personalized facial treatments tailored to your unique skin type and concerns.",
-            },
-          },
-        ],
+        })),
       },
       potentialAction: {
         "@type": "ReserveAction",

@@ -110,7 +110,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="bg-red-100 rounded-sm shadow-lg mb-4 w-full sm:w-3/4 mx-auto p-4 text-white text-left mt-4 font-light"
+            className="glass-panel mb-4 w-full sm:w-3/4 mx-auto p-4 text-white text-left mt-4 font-light"
           >
             Experience personalized skincare treatments designed to improve the
             health and appearance of your skin. With a focus on your individual

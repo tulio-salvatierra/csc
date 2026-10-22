@@ -42,7 +42,7 @@ export default function FaqSectionFaq1() {
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
                   I offer specialized anti aging facials, such as HydraFacial,
-                  Nano Needling, and chemical peels, designed to target fine
+                  Nano-Needling and customized facials, designed to target fine
                   lines, wrinkles, and loss of elasticity. These treatments
                   promote collagen production and leave your skin rejuvenated
                   and glowing.
@@ -91,7 +91,7 @@ export default function FaqSectionFaq1() {
                   alt=""
                 />
                 <h3 className="mt-6 leading-relaxed mb-5 font-heading">
-                  Does Nano Needle hurt?
+                  Does Nano-Needling hurt?
                 </h3>
                 <p className="text-gray-500 leading-relaxed mb-0">
                   Most clients feel only a light prickling or pressure. It is

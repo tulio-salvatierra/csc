@@ -10,7 +10,7 @@ The treatment works by physically sloughing off the outermost layer of dead skin
 
 Dermaplaning is suitable for most skin types, including those with dry or mature skin who want to improve texture and radiance without harsh chemicals or abrasive devices. It can be especially beneficial for individuals who feel their skin looks lackluster or who struggle with product buildup. Because the treatment is purely mechanical and does not involve heat or active ingredients, it is often well tolerated by sensitive skin when performed by a trained professional. However, it is typically not recommended for those with active acne, open breakouts, or certain skin conditions, so a consultation is important.
 
-At Carolina Skin Centre, dermaplaning is performed with care and precision. Each session is tailored to your skin’s needs and can be combined with other treatments such as hydrating facials or chemical peels for enhanced results. After the treatment, your skin may be slightly more sensitive to the sun, so daily sunscreen and gentle skincare are recommended. With regular sessions every three to four weeks, many clients maintain a consistently smooth, luminous complexion that looks healthy and radiant.`,
+At Carolina Skin Centre, dermaplaning is performed with care and precision. Each session is tailored to your skin’s needs and can be combined with other treatments such as hydrating facials or a HydraFacial for enhanced results. After the treatment, your skin may be slightly more sensitive to the sun, so daily sunscreen and gentle skincare are recommended. With regular sessions every three to four weeks, many clients maintain a consistently smooth, luminous complexion that looks healthy and radiant.`,
     faqs: [
       { question: "Is dermaplaning safe for sensitive skin?", answer: "When performed by a licensed professional, dermaplaning is generally safe and well tolerated. It is a gentle, mechanical exfoliation with no chemicals or heat. I assess your skin during consultation to ensure the treatment is appropriate for you." },
       { question: "Will the hair grow back thicker or darker?", answer: "No. Vellus hair is fine and soft; removing it does not change its structure or color. It will grow back at the same rate and texture as before." },
@@ -31,19 +31,6 @@ Because the treatment is gentle and non irritating, it is suitable for almost al
       { question: "Can HydraFacial help with acne?", answer: "Yes. The cleanse, exfoliation, and extraction steps help clear pores and reduce congestion, which can improve acne prone skin when done regularly." },
     ],
   },
-  "microdermabrasion-midland-tx": {
-    article: `Microdermabrasion is a non invasive exfoliation treatment that gently removes the outermost layer of dead skin cells using a specialized device. At Carolina Skin Centre, I use advanced equipment, typically with a diamond tipped wand or fine crystals combined with controlled suction, to resurface the skin, promote cell turnover, and encourage collagen production. The result is smoother texture, a more even tone, and a refreshed, radiant look with little to no downtime.
-
-The treatment works by physically abrading the stratum corneum, the top layer of the skin, in a controlled manner. This triggers the skin’s natural healing response and encourages new, healthier skin cells to surface. Over a series of treatments, many clients see improved clarity, reduced appearance of fine lines and shallow scars, and better absorption of skincare products. Microdermabrasion is suitable for most skin types and can be tailored to your sensitivity and goals.
-
-I recommend a consultation to ensure microdermabrasion is right for you, especially if you have active rosacea, broken capillaries, or certain skin conditions. For most clients, a series of sessions spaced a few weeks apart yields the best results, followed by maintenance treatments as needed. Combined with proper home care and sun protection, microdermabrasion at Carolina Skin Centre helps you achieve and maintain a smoother, more youthfullooking complexion in the heart of West Texas.`,
-    faqs: [
-      { question: "Does microdermabrasion hurt?", answer: "Most clients describe it as a mild scratching or vibrating sensation. It is generally comfortable, and I can adjust pressure for sensitivity." },
-      { question: "When will I see results?", answer: "Skin often looks fresher and smoother right after. Best results typically come after a series of treatments, as recommended by your esthetician." },
-      { question: "Can I do microdermabrasion if I have sensitive skin?", answer: "It can be suitable when pressure and frequency are tailored to your skin. I will assess your skin and adjust the treatment accordingly." },
-      { question: "How do I care for my skin after microdermabrasion?", answer: "I recommend gentle cleansing, moisturizer, and daily sunscreen. Avoid harsh actives and direct sun for a short period as advised." },
-    ],
-  },
   "facials-midland-tx": {
     article: `My customized facials at Carolina Skin Centre are designed to cleanse, nourish, and rejuvenate your skin, resulting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high quality products and expert techniques, my facials deliver both relaxation and noticeable results, helping you look and feel your best.
 
@@ -57,43 +44,29 @@ Whether you are new to professional facials or a longtime client, I focus on edu
       { question: "Do you offer facials for sensitive skin?", answer: "Yes. I customize every facial; for sensitive skin I use gentle products and techniques to soothe and strengthen the skin barrier." },
     ],
   },
-  "chemical-peels-midland-tx": {
-    article: `Chemical peels at Carolina Skin Centre are designed to exfoliate and renew your skin, revealing a fresher, more radiant complexion. Using carefully selected acids and formulations, I remove dead skin cells, unclog pores, and stimulate collagen production to improve texture, tone, and overall clarity. Peels can be customized in depth and strength to match your skin type and goals, from light refreshers to more intensive treatments for sun damage, hyperpigmentation, or fine lines.
-
-A typical peel involves cleansing the skin, applying the peel solution for a set time, and then neutralizing or removing it as needed. You may feel a mild tingling or warmth; I monitor your skin throughout and can adjust the treatment. Afterward, the skin may flake or peel lightly over the following days, depending on the depth of the peel. I provide clear aftercare instructions and recommend sun protection and gentle skincare to support healing and maximize results.
-
-Chemical peels are a powerful tool when performed by a licensed professional. I take your skin history, current products, and sensitivity into account before choosing the right peel for you. With a series of treatments and proper home care, many clients achieve smoother, more even, and youngerlooking skin. At Carolina Skin Centre, I combine chemical peels with my other facial and body treatments to offer a complete approach to skincare in the Permian Basin.`,
-    faqs: [
-      { question: "Will I peel after a chemical peel?", answer: "It depends on the depth. Light peels may cause minimal flaking; medium peels can produce more visible peeling. I will explain what to expect for your specific treatment." },
-      { question: "How many peels do I need?", answer: "Results vary. Some clients see improvement after one peel; others benefit from a series. I will recommend a plan based on your goals and skin response." },
-      { question: "Can I get a chemical peel if I have dark skin?", answer: "Yes. I use peels and protocols that are safe and effective for deeper skin tones and can minimize the risk of pigmentation changes when done correctly." },
-      { question: "What should I avoid before and after a peel?", answer: "I will give you specific instructions; typically avoid retinoids and strong actives before and after, and always use sunscreen and gentle products during healing." },
-    ],
-  },
   "nano-needling-midland-tx": {
-    article: `Nano Needle is an advanced, non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without the pain or downtime associated with traditional microneedling. At Carolina Skin Centre, I use Nano Needle to help clients achieve smoother, firmer, and more radiant skin with minimal discomfort and no lengthy recovery.
+    article: `Nano-Needling is an advanced, non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without the pain or downtime associated with traditional microneedling. At Carolina Skin Centre, I use Nano-Needling to help clients achieve smoother, firmer, and more radiant skin with minimal discomfort and no lengthy recovery.
 
 The nano needles are so fine that they work primarily in the outermost layers of the skin, triggering natural repair and renewal without causing visible wounds or bleeding. This makes the treatment suitable for those who want the benefits of needling, improved texture, reduced appearance of fine lines and pores, and better product penetration, without the intensity of deeper microneedling. I often combine the procedure with targeted serums to maximize results, and many clients see a refreshed glow soon after.
 
-Nano Needle is ideal for individuals concerned with texture, dullness, fine lines, or uneven tone who prefer a gentle approach. I recommend a consultation to ensure it is right for you and to plan a series of treatments if needed. With consistent care and sun protection, Nano Needle at Carolina Skin Centre can be a valuable part of your skincare journey in West Texas.`,
+Nano-Needling is ideal for individuals concerned with texture, dullness, fine lines, or uneven tone who prefer a gentle approach. I recommend a consultation to ensure it is right for you and to plan a series of treatments if needed. With consistent care and sun protection, Nano-Needling at Carolina Skin Centre can be a valuable part of your skincare journey in West Texas.`,
     faqs: [
-      { question: "Does Nano Needle hurt?", answer: "Most clients feel only a light prickling or pressure. It is significantly gentler than traditional microneedling and requires no numbing for most people." },
-      { question: "Is there downtime after Nano Needle?", answer: "Typically minimal. You may have slight redness for a short time; I will advise on aftercare and when you can resume normal activities and makeup." },
+      { question: "Does Nano-Needling hurt?", answer: "Most clients feel only a light prickling or pressure. It is significantly gentler than traditional microneedling and requires no numbing for most people." },
+      { question: "Is there downtime after Nano-Needling?", answer: "Typically minimal. You may have slight redness for a short time; I will advise on aftercare and when you can resume normal activities and makeup." },
       { question: "How many sessions do I need?", answer: "Results can be seen after one treatment; a series of sessions is often recommended for optimal improvement. I will suggest a plan during your consultation." },
-      { question: "Can Nano Needle be combined with other treatments?", answer: "Yes. It can complement facials, peels, or other services. I will schedule and combine treatments safely based on your skin and goals." },
+      { question: "Can Nano-Needling be combined with other treatments?", answer: "Yes. It can complement facials, HydraFacials, or other services. I will schedule and combine treatments safely based on your skin and goals." },
     ],
   },
-  "carboxy-therapy-midland-tx": {
-    article: `Carboxy therapy is a non invasive skin treatment that involves infusing medical grade carbon dioxide (CO₂) into the skin to boost oxygen flow, improve circulation, and stimulate collagen production. At Carolina Skin Centre, I use this technique to address facial rejuvenation, cellulite reduction, dark circles, and scar treatment, offering clients in Midland, Odessa, and the Permian Basin a sciencebacked option for healthier, more youthfullooking skin.
+  "lash-tinting-midland-tx": {
+    article: `Lash tinting is a quick, low maintenance way to define your lashes without daily mascara. A semi permanent tint is applied to your natural lashes to darken them from root to tip, so even fine or light colored lashes look fuller and more noticeable.
 
-The procedure works by introducing small amounts of CO₂ through fine needles or a specialized device. The body responds by increasing blood flow and oxygen delivery to the area, which supports cellular repair and collagen remodeling. Over time, this can lead to firmer skin, reduced appearance of cellulite, improved tone around the eyes, and smoother scarring. Treatments are typically well tolerated, with minimal discomfort and little to no downtime.
+At Carolina Skin Centre, I begin by cleansing the lash line and protecting the skin under your eyes. The tint is then carefully applied to your lashes while your eyes stay closed, left to process for a few minutes, and gently removed. The service is relaxing and usually takes less than half an hour.
 
-Carboxy therapy is suitable for many clients seeking non surgical improvement in skin quality and contour. I evaluate your concerns and medical history to ensure the treatment is appropriate and to design a plan that fits your goals. Combined with a healthy lifestyle and good skincare, carboxy therapy can be an effective part of your aesthetic and wellness routine at Carolina Skin Centre.`,
+Lash tinting is a good fit if you have light or fine lashes, want to skip mascara on vacation or during workouts, or simply want a polished look when you wake up. I do not offer lash extensions; tinting enhances the lashes you already have.`,
     faqs: [
-      { question: "What does carboxy therapy feel like?", answer: "You may feel a slight pressure or mild tingling as the CO₂ is introduced. Discomfort is generally minimal and brief." },
-      { question: "How many sessions are needed?", answer: "It depends on your goals and the area treated. I will recommend a series and maintenance plan during your consultation." },
-      { question: "Is carboxy therapy safe?", answer: "When I perform it, carboxy therapy is considered safe. I use medical grade CO₂ and follow strict protocols for your safety." },
-      { question: "Can carboxy therapy help with dark circles?", answer: "Yes. By improving circulation and oxygen delivery around the eyes, it can help reduce the appearance of dark circles and tiredlooking skin over time." },
+      { question: "How long does lash tinting last?", answer: "Results typically last about four to six weeks, depending on your natural lash growth cycle." },
+      { question: "Does lash tinting hurt?", answer: "No. Your eyes stay closed throughout the service, and most clients find it relaxing." },
+      { question: "Do you offer lash extensions?", answer: "No. I offer lash tinting only, which darkens and defines your natural lashes." },
     ],
   },
 };

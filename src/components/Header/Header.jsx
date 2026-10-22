@@ -11,9 +11,11 @@ import {
 import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
 import "./Header.css";
 import BookingButton from "../BookingButton";
+import SERVICES from "../blog/servicesPageCard";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const menuRef = useRef(null);
   const menuLinksRef = useRef([]);
   const overlayRef = useRef(null);
@@ -58,17 +60,42 @@ export default function Header() {
 
           <div className="hidden lg:flex justify-end items-center space-x-8">
             <ul ref={navUnderlineRef} className="flex space-x-8">
-              {MENU_ITEMS.map((item, index) => (
-                <li className="nav-item" key={index}>
-                  <Link
-                    className="underline-link text-2xl text-black no-underline"
-                    to={item.url}
-                  >
-                    {item.title}
-                    <span className="underline" aria-hidden />
-                  </Link>
-                </li>
-              ))}
+              {MENU_ITEMS.map((item, index) =>
+                item.title === "Services" ? (
+                  <li className="nav-item nav-dropdown" key={index}>
+                    <Link
+                      className="underline-link text-2xl text-black no-underline"
+                      to="/services"
+                      aria-haspopup="true"
+                    >
+                      {item.title}
+                      <span className="nav-dropdown-chevron" aria-hidden>
+                        ▾
+                      </span>
+                      <span className="underline" aria-hidden />
+                    </Link>
+                    <ul className="nav-dropdown-menu" aria-label="Services">
+                      {SERVICES.map((service) => (
+                        <li key={service.slug}>
+                          <Link to={`/services/${service.slug}`}>
+                            {service.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li className="nav-item" key={index}>
+                    <Link
+                      className="underline-link text-2xl text-black no-underline"
+                      to={item.url}
+                    >
+                      {item.title}
+                      <span className="underline" aria-hidden />
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
             <BookingButton href={BOOKING_URL_2} label={"Book now!"} />
           </div>
@@ -145,15 +172,43 @@ export default function Header() {
               </h2>
               {MENU_ITEMS.map((item, index) => (
                 <li className="py-2" key={index}>
-                  <a
-                    ref={(el) => (menuLinksRef.current[index] = el)}
-                    className="underline-link text-lg text-black no-underline w-fit"
-                    href={item.url}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.title}
-                    <span className="underline" aria-hidden />
-                  </a>
+                  <div className="flex items-center gap-3">
+                    <a
+                      ref={(el) => (menuLinksRef.current[index] = el)}
+                      className="underline-link text-lg text-black no-underline w-fit"
+                      href={item.url}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.title}
+                      <span className="underline" aria-hidden />
+                    </a>
+                    {item.title === "Services" && (
+                      <button
+                        type="button"
+                        className="mobile-services-toggle"
+                        aria-expanded={mobileServicesOpen}
+                        aria-label={mobileServicesOpen ? "Hide services" : "Show services"}
+                        onClick={() => setMobileServicesOpen((open) => !open)}
+                      >
+                        <span className={mobileServicesOpen ? "rotate-180 inline-block" : "inline-block"}>▾</span>
+                      </button>
+                    )}
+                  </div>
+                  {item.title === "Services" && mobileServicesOpen && (
+                    <ul className="mt-3 ml-4 space-y-3 border-l border-black/10 pl-4">
+                      {SERVICES.map((service) => (
+                        <li key={service.slug}>
+                          <Link
+                            className="text-base text-black/80 no-underline"
+                            to={`/services/${service.slug}`}
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {service.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </li>
               ))}
             </ul>

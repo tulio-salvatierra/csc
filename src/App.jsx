@@ -47,6 +47,7 @@ function App() {
         <Route path="/services/:serviceSlug" element={<ServiceDetailPage />} errorElement={NotFound}/>
         <Route path="/policies" element={<PolicyPage />} errorElement={NotFound}/>
         <Route path="/about" element={<About />} errorElement={NotFound}/>
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

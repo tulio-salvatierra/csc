@@ -11,18 +11,8 @@
       "permanent": true
     },
     {
-      "source": "/services/microdermabrasion",
-      "destination": "/services/microdermabrasion-midland-tx",
-      "permanent": true
-    },
-    {
       "source": "/services/facials",
       "destination": "/services/facials-midland-tx",
-      "permanent": true
-    },
-    {
-      "source": "/services/chemicalpeels",
-      "destination": "/services/chemical-peels-midland-tx",
       "permanent": true
     },
     {
@@ -31,23 +21,8 @@
       "permanent": true
     },
     {
-      "source": "/services/carboxytherapy",
-      "destination": "/services/carboxy-therapy-midland-tx",
-      "permanent": true
-    },
-    {
-      "source": "/services/chemical-peels",
-      "destination": "/services/chemical-peels-midland-tx",
-      "permanent": true
-    },
-    {
       "source": "/services/nano-needle",
       "destination": "/services/nano-needling-midland-tx",
-      "permanent": true
-    },
-    {
-      "source": "/services/carboxy-therapy",
-      "destination": "/services/carboxy-therapy-midland-tx",
       "permanent": true
     },
     {
@@ -58,6 +33,51 @@
     {
       "source": "/services/waxingservices",
       "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/microdermabrasion",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/microdermabrasion-midland-tx",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/chemicalpeels",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/chemical-peels",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/chemical-peels-midland-tx",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/carboxytherapy",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/carboxy-therapy",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/carboxy-therapy-midland-tx",
+      "destination": "/services",
+      "permanent": true
+    },
+    {
+      "source": "/services/lash-tinting",
+      "destination": "/services/lash-tinting-midland-tx",
       "permanent": true
     }
   ],

@@ -4,10 +4,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "./../../App.css";
 import "./Services.css";
-import CP from "./../../assets/images/servicesComponent/cp.jpeg";
-import HF from "./../../assets/images/servicesComponent/hf.jpeg";
-import NN from "./../../assets/images/ServicesPageCard/nano.jpg";
-import Therapy from "./../../assets/images/servicesComponent/therapy.png";
+import SERVICES from "../blog/servicesPageCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,33 +14,12 @@ export default function ServicesComponent() {
   const containerRef = useRef(null);
   const mediaRefs = useRef([]);
 
-  const services = [
-    {
-      title: "Chemical Peels",
-      slug: "chemical-peels-midland-tx",
-      description: "Exfoliation and Skin Rejuvenation",
-      image: CP,
-    },
-    {
-      title: "HydraFacials",
-      slug: "hydrafacial-midland-tx",
-      description: "Deep cleansing, exfoliation and hydration",
-      image: HF,
-    },
-    {
-      title: "Nano Needle",
-      slug: "nano-needling-midland-tx",
-      description: "Non invasive skin rejuvenation treatment",
-      image: NN,
-    },
-    {
-      title: "Carboxy Therapy",
-      slug: "carboxy-therapy-midland-tx",
-      description:
-        "A minimally invasive treatment that uses Carbon Dioxide to improve skin elasticity and enhance circulation.",
-      image: Therapy,
-    },
-  ];
+  const services = SERVICES.map((service) => ({
+    title: service.name,
+    slug: service.slug,
+    description: service.tagline,
+    image: service.icon,
+  }));
 
   useEffect(() => {
     const root = rootRef.current;
