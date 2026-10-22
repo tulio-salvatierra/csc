@@ -71,13 +71,12 @@ export default function Services() {
               Services
             </h1>
 
-            <p className="w-full md:w-1/2 justify-center font-light bg-red-100 p-4 text-gray-800">
+            <p className="glass-panel w-full md:w-1/2 justify-center font-light p-4">
               At my skin care studio, I offer a range of expert skin care facials
               and spa and facial treatments designed to rejuvenate and enhance
-              your natural beauty. My skincare services include Luxurious
-              Facials, HydraFacials, Microdermabrasion, Nanoneedle, Acne Facials,
-              Chemical Peels, Dermaplaning and Carboxy Therapy skin care
-              treatments near you in Midland, TX.
+              your natural beauty. My skincare services include HydraFacials,
+              Customized Facials, Nano-Needling, Dermaplaning and Lash Tinting
+              in Midland, TX.
             </p>
           </div>
         </div>

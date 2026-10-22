@@ -19,9 +19,9 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Skincare Services | Facials, HydraFacials, Chemical Peels in Midland TX"
-        description="Professional skincare services in Midland, TX: facials, HydraFacials, chemical peels, dermaplaning, nano needle & carboxy therapy. Skin care treatments and spa and facial services from a licensed skin esthetician serving Midland, Odessa & the Permian Basin."
-        keywords="esthetician near me, face and spa, facials, skin care facials, skin care treatment near me, skin care treatments, skin esthetician, skin near me, skincare, spa and facial, skincare services Midland TX, HydraFacial near me, chemical peels Midland, dermaplaning Midland Texas, nano needle therapy, carboxy therapy West Texas, facial treatments Odessa TX, skin rejuvenation Permian Basin, best facials near me"
+        title="Skincare Services | HydraFacials, Facials & Nano-Needling in Midland TX"
+        description="Professional skincare services in Midland, TX: HydraFacials, customized facials, Nano-Needling, dermaplaning & lash tinting. Skin care treatments and spa and facial services from a licensed skin esthetician serving Midland, Odessa & the Permian Basin."
+        keywords="esthetician near me, face and spa, facials, skin care facials, skin care treatment near me, skin care treatments, skin esthetician, skin near me, skincare, spa and facial, skincare services Midland TX, HydraFacial near me, Nano-Needling Midland, dermaplaning Midland Texas, lash tinting Midland, facial treatments Odessa TX, skin rejuvenation Permian Basin, best facials near me"
         url="/services"
       />
       <BreadcrumbSchema

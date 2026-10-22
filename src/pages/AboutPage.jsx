@@ -10,7 +10,7 @@ import { BreadcrumbSchema, PersonSchema, FAQSchema } from "../components/SEO/Str
 const aboutFaqs = [
   {
     question: "What skincare treatments are best for anti aging?",
-    answer: "I offer specialized anti aging facials, such as HydraFacial, Nano Needling, and chemical peels, designed to target fine lines, wrinkles, and loss of elasticity. These treatments promote collagen production and leave your skin rejuvenated and glowing.",
+    answer: "I offer specialized anti aging facials, such as HydraFacial, Nano-Needling and customized facials, designed to target fine lines, wrinkles, and loss of elasticity. These treatments promote collagen production and leave your skin rejuvenated and glowing.",
   },
   {
     question: "How often should I get a deep cleansing facial?",
@@ -21,7 +21,7 @@ const aboutFaqs = [
     answer: "No. HydraFacial is designed for immediate results with no downtime. You can return to normal activities and wear makeup right after.",
   },
   {
-    question: "Does Nano Needle hurt?",
+    question: "Does Nano-Needling hurt?",
     answer: "Most clients feel only a light prickling or pressure. It is significantly gentler than traditional microneedling and requires no numbing for most clients.",
   },
 ];
@@ -35,8 +35,8 @@ const carolinaProfile = {
     "European Skincare Techniques",
     "Naturopathic Skincare",
     "HydraFacial Treatments",
-    "Chemical Peels",
-    "Nano Needle Therapy",
+    "Nano-Needling",
+    "Lash Tinting",
     "Anti aging Treatments",
     "Dermaplaning",
     "Skin Analysis and Consultation",
