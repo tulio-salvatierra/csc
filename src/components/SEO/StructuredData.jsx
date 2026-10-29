@@ -207,6 +207,8 @@ export function FAQSchema({ faqs = [] }) {
       document.head.appendChild(script);
     }
     script.textContent = JSON.stringify(schema);
+    // Remove on route change so the FAQ markup doesn't leak onto other pages.
+    return () => script.remove();
   }, [faqs]);
 
   return null;
@@ -261,7 +263,9 @@ export function ServiceSchema({ services = [] }) {
     const serviceSchemas = services.map((service) => ({
       "@context": "https://schema.org",
       "@type": "Service",
+      name: service.title,
       serviceType: service.title,
+      ...(service.url && { url: `${SITE_URL}${service.url}` }),
       description: service.description,
       provider: {
         "@type": "BeautySalon",
@@ -309,16 +313,19 @@ export function ServiceSchema({ services = [] }) {
       }),
     }));
 
-    serviceSchemas.forEach((schema, index) => {
-      let script = document.querySelector(`script[type="application/ld+json"]#service-${index}`);
-      if (!script) {
-        script = document.createElement("script");
-        script.type = "application/ld+json";
-        script.id = `service-${index}`;
-        document.head.appendChild(script);
-      }
+    // Clear Service markup left by a previous route (e.g. 5 entries from /services).
+    document
+      .querySelectorAll('script[type="application/ld+json"][id^="service-"]')
+      .forEach((el) => el.remove());
+    const scripts = serviceSchemas.map((schema, index) => {
+      const script = document.createElement("script");
+      script.type = "application/ld+json";
+      script.id = `service-${index}`;
       script.textContent = JSON.stringify(schema);
+      document.head.appendChild(script);
+      return script;
     });
+    return () => scripts.forEach((el) => el.remove());
   }, [services]);
 
   return null;
