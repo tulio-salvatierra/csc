@@ -18,9 +18,9 @@ const servicesCardInfo = [
     seoName: "HydraFacial",
     tagline: "Deep cleansing, exfoliation and hydration",
     seoDescription:
-      "HydraFacial in Midland, TX: deep cleansing, exfoliation, extractions and hydration in one visit, with no downtime. Book with Carolina Skin Centre.",
+      "HydraFacial in Midland, TX: deep cleansing, exfoliation, extractions and hydration in one treatment. Book with Carolina Skin Centre.",
     description:
-      "A HydraFacial is a non invasive multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized device. It combines gentle suction with nourishing serums to improve skin texture, tone, and overall radiance.",
+      "A HydraFacial is a non invasive multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized device. It combines gentle suction with nourishing serums for personalized cleansing and hydration.",
     icon: HF,
     category: "HydraFacial",
   },

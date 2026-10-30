@@ -1,5 +1,5 @@
 /**
- * Per-service detail content: article (~700 words) and FAQ for /services/:slug pages.
+ * Per-service detail content: article, optional sections and booking guidance, and FAQ for /services/:slug pages.
  * Keyed by service slug (see servicesPageCard.js).
  */
 export const serviceDetailContent = {
@@ -19,31 +19,83 @@ At Carolina Skin Centre, dermaplaning is performed with care and precision. Each
     ],
   },
   "hydrafacial-midland-tx": {
-    article: `A HydraFacial is a non invasive, multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized handheld device. Unlike traditional facials that rely mainly on manual techniques, the HydraFacial system combines gentle suction with patented serums and tips to deliver consistent, noticeable results in a single session. The treatment is customizable for different skin types and concerns, from congestion and dullness to fine lines and uneven tone, making it one of the most requested services at Carolina Skin Centre.
-
-The process typically includes cleansing and exfoliation to loosen and remove dead skin cells, followed by a gentle chemical peel that can be adjusted in strength. Next, painless suction extracts debris from pores while simultaneously delivering hydrating and nourishing serums into the skin. The final steps infuse antioxidants, peptides, and other active ingredients tailored to your goals, whether that is hydration, brightness, or anti aging. There is no downtime; skin often looks clearer and more radiant immediately after the treatment.
-
-Because the treatment is gentle and non irritating, it is suitable for almost all skin types, including sensitive skin. It can be performed as a standalone service or combined with add ons such as boosters for extra glow or targeted concerns. Many clients schedule HydraFacials regularly, monthly or before special events, to maintain a healthy, luminous complexion. At Carolina Skin Centre, I use the HydraFacial system as a cornerstone of my facial offerings, helping clients in Midland, Odessa, and the Permian Basin achieve smoother, healthier looking skin with a relaxing, results driven experience.`,
-    faqs: [
-      { question: "How long does a HydraFacial take?", answer: "A standard HydraFacial typically takes about 45 to 60 minutes, depending on add ons and customizations." },
-      { question: "Is there any downtime?", answer: "No. HydraFacial is designed for immediate results with no downtime. You can return to normal activities and wear makeup right after." },
-      { question: "How often should I get a HydraFacial?", answer: "Many clients come monthly for maintenance. I can recommend a schedule based on your skin type and goals." },
-      { question: "Can HydraFacial help with acne?", answer: "Yes. The cleanse, exfoliation, and extraction steps help clear pores and reduce congestion, which can improve acne prone skin when done regularly." },
+    "intro": "HydraFacial in Midland combines cleansing, exfoliation, extractions and hydration in one treatment. At Carolina Skin Centre, I tailor your care to your skin and the concerns you want to discuss.",
+    "article": "My HydraFacial treatment uses a specialized device with gentle suction and nourishing serums to cleanse and hydrate your skin. It offers a different approach from a customized facial, which brings together products and techniques selected for your individual needs.",
+    "sections": [
+        {
+            "heading": "What your treatment includes",
+            "text": "Cleansing and exfoliation help remove surface buildup, followed by extractions and hydrating serums. I discuss your skin concerns with you so your treatment reflects your needs."
+        },
+        {
+            "heading": "Choosing between HydraFacial and a customized facial",
+            "text": "HydraFacial combines device-based cleansing and hydration. A customized facial allows me to select a combination of cleansing, exfoliation, massage, masks and serums. If you are unsure which to book, call me before choosing your appointment."
+        },
+        {
+            "heading": "Your visit in Midland",
+            "text": "Visit Carolina Skin Centre at 705 W Wadley Ave Suite 23, Midland, TX 79705. Before your appointment, let me know about your skin concerns and current routine so we can discuss suitable care and aftercare."
+        }
     ],
-  },
+    "relatedSlug": "facials-midland-tx",
+    "relatedLabel": "Explore customized facials in Midland",
+    "faqs": [
+        {
+            "question": "What does a HydraFacial include?",
+            "answer": "The treatment combines cleansing, exfoliation, extractions and hydration using a specialized device and serums. I tailor care to your skin concerns."
+        },
+        {
+            "question": "Should I book HydraFacial or a customized facial?",
+            "answer": "HydraFacial uses device-based cleansing and hydration, while a customized facial combines products and techniques selected for you. Call me if you would like help choosing."
+        },
+        {
+            "question": "How long should I allow for my appointment?",
+            "answer": "Please confirm the appointment length and current price in SalonBiz or contact me before booking."
+        },
+        {
+            "question": "Where can I book a HydraFacial in Midland?",
+            "answer": "Book Carolina Skin Centre through SalonBiz or call (432) 638-0046. The studio is at 705 W Wadley Ave Suite 23, Midland, TX 79705."
+        }
+    ]
+},
+
   "facials-midland-tx": {
-    article: `My customized facials at Carolina Skin Centre are designed to cleanse, nourish, and rejuvenate your skin, resulting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high quality products and expert techniques, my facials deliver both relaxation and noticeable results, helping you look and feel your best.
-
-I begin with a thorough consultation and skin analysis so I can choose the right products and methods for you. From there, your facial may include cleansing, exfoliation, extractions when appropriate, massage, and masks and serums suited to your goals. The experience is both therapeutic and effective, addressing not only the appearance of your skin but also the underlying health of your complexion. Many of my clients in Midland, Odessa, and the Permian Basin make facials a regular part of their selfcare routine.
-
-Whether you are new to professional facials or a longtime client, I focus on education and aftercare so you can maintain your results at home. I recommend scheduling facials every four to six weeks for optimal maintenance, though I can customize frequency based on your needs. At Carolina Skin Centre, my facials reflect my commitment to European and naturopathicinspired care combined with advanced techniques, all in a welcoming, professional environment.`,
-    faqs: [
-      { question: "How often should I get a facial?", answer: "For most people, every 4 to 6 weeks is ideal for maintaining clear, healthy skin and preventing buildup." },
-      { question: "What should I expect during my first facial?", answer: "I will discuss your skin history and goals, then perform a tailored treatment that may include cleanse, exfoliation, extractions, massage, and mask." },
-      { question: "Can I get a facial if I have acne?", answer: "Yes. I offer facials designed for acne prone skin, with gentle cleansing and appropriate extractions to avoid aggravating breakouts." },
-      { question: "Do you offer facials for sensitive skin?", answer: "Yes. I customize every facial; for sensitive skin I use gentle products and techniques to soothe and strengthen the skin barrier." },
+    "intro": "A customized facial starts with your skin. At Carolina Skin Centre in Midland, I choose products and techniques around your concerns, whether you are looking for hydration, gentle exfoliation or care for sensitive or acne-prone skin.",
+    "article": "Your skin needs can change, so I begin with a consultation and skin analysis. We discuss your skin history, current routine and goals before selecting your facial care.",
+    "sections": [
+        {
+            "heading": "What to expect at your first facial",
+            "text": "Your facial may include cleansing, exfoliation, extractions when appropriate, massage, and masks and serums selected for your skin. The combination depends on your consultation rather than a fixed routine for every client."
+        },
+        {
+            "heading": "Care tailored to your skin",
+            "text": "Tell me about dryness, sensitivity, congestion or other concerns when you visit. I combine European skincare techniques with individualized attention and discuss aftercare to help you care for your skin at home."
+        },
+        {
+            "heading": "Customized facial or HydraFacial?",
+            "text": "A customized facial brings together products and techniques selected for you. HydraFacial uses a specialized device for cleansing, exfoliation, extractions and hydration. If you are new to facials or unsure where to start, call me for help choosing."
+        }
     ],
-  },
+    "relatedSlug": "hydrafacial-midland-tx",
+    "relatedLabel": "Explore HydraFacial in Midland",
+    "faqs": [
+        {
+            "question": "What happens during my first facial?",
+            "answer": "We discuss your skin history and goals, then I assess your skin and tailor your care. Your facial may include cleansing, exfoliation, appropriate extractions, massage and a mask."
+        },
+        {
+            "question": "Can a facial be customized for sensitive or acne-prone skin?",
+            "answer": "I tailor products and techniques to your skin. Let me know about sensitivity, breakouts and your current routine so we can discuss suitable care."
+        },
+        {
+            "question": "How often should I book a facial?",
+            "answer": "I commonly recommend four to six weeks between facials, with your schedule tailored to your skin and goals during consultation."
+        },
+        {
+            "question": "How do I book a customized facial in Midland?",
+            "answer": "Use SalonBiz to book Carolina Skin Centre or call (432) 638-0046 for help choosing a treatment. Confirm the current price and appointment length before booking."
+        }
+    ]
+},
+
   "nano-needling-midland-tx": {
     article: `Nano-Needling is an advanced, non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without the pain or downtime associated with traditional microneedling. At Carolina Skin Centre, I use Nano-Needling to help clients achieve smoother, firmer, and more radiant skin with minimal discomfort and no lengthy recovery.
 

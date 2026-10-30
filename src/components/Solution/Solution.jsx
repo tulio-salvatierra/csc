@@ -136,7 +136,7 @@ export default function Solutions() {
             <div ref={buttonRef}>
               <BookingButton
                 href={BOOKING_URL_2}
-                label={"Book my appointment now!"}
+                label={"Book an appointment"}
               />
             </div>
           </div>

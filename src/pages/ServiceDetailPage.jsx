@@ -8,7 +8,7 @@ import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "../components/SEO/St
 import services from "../components/blog/servicesPageCard";
 import { getServiceDetailContent } from "../data/serviceDetailContent";
 import BookingButton from "../components/BookingButton";
-import { BOOKING_URL_2 } from "../constants";
+import { BOOKING_URL_2, TELEPHONE, PHONE_DISPLAY, ADDRESS, ADDRESS_URL } from "../constants";
 import { useRef } from "react";
 import { useFadeInAnimation } from "../hooks/useFadeInAnimation";
 import "../App.css";
@@ -29,7 +29,7 @@ export default function ServiceDetailPage() {
     return <Navigate to="/services" replace />;
   }
 
-  const { article, faqs } = content;
+  const { article, faqs, intro, sections, relatedSlug, relatedLabel } = content;
   const seoName = service.seoName || service.name;
   const breadcrumbs = [
     { name: "Home", url: "/" },
@@ -75,6 +75,14 @@ export default function ServiceDetailPage() {
             </div>
           </section>
 
+          {intro && (
+            <section className="bg-white px-4 py-8 text-center" aria-label="Book your treatment">
+              <p className="max-w-3xl mx-auto mb-6 text-gray-700 leading-relaxed">{intro}</p>
+              <BookingButton href={BOOKING_URL_2} label={`Book ${service.name}`} />
+              <p className="mt-4">Need help choosing? <a className="underline" href={TELEPHONE}>Call {PHONE_DISPLAY}</a></p>
+            </section>
+          )}
+
           {/* Article + featured image */}
           <section ref={addToRefs} className="bg-white py-12 md:py-16">
             <div className="max-w-4xl mx-auto px-4 md:px-6">
@@ -92,6 +100,19 @@ export default function ServiceDetailPage() {
                   </p>
                 ))}
               </div>
+              {sections?.map((section) => (
+                <section key={section.heading} className="mt-8">
+                  <h2 className="text-2xl md:text-3xl mb-4">{section.heading}</h2>
+                  <p className="text-gray-600 leading-relaxed">{section.text}</p>
+                </section>
+              ))}
+              {relatedSlug && (
+                <aside className="mt-8 p-6 bg-gray-100 rounded-sm">
+                  <Link className="underline" to={`/services/${relatedSlug}`}>{relatedLabel}</Link>
+                  <address className="not-italic mt-4"><a className="underline" href={ADDRESS_URL}>{ADDRESS}</a></address>
+                  <p className="mt-4">Book online through SalonBiz. Review my <Link className="underline" to="/policies">studio policies</Link> before booking.</p>
+                </aside>
+              )}
               <div className="mt-10 text-center">
                 <BookingButton href={BOOKING_URL_2} label="Book my appointment" />
               </div>
@@ -127,7 +148,7 @@ export default function ServiceDetailPage() {
               </div>
               <div className="text-center">
                 <p className="mb-6 text-gray-500">Have more questions?</p>
-                <BookingButton href={BOOKING_URL_2} label="Get in Touch" />
+                <a className="underline" href={TELEPHONE}>Call Carolina at {PHONE_DISPLAY}</a>
               </div>
             </div>
           </section>

@@ -78,8 +78,8 @@ export default function AboutPage() {
             I battled acne in my late teens and early twenties, which shook my
             confidence. After seeing real results from professional skin care treatments and facials,
             I felt renewed and inspired to help others achieve that same boost.
-            As your skin esthetician, I’m dedicated to delivering personalized,
-            effective skincare and spa and facial services so every client can feel confident and supported
+            I’m dedicated to delivering personalized skincare
+            so every client can feel confident and supported
             on their unique journey.
           </p>
         </div>

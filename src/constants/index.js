@@ -18,6 +18,7 @@ export const INSTAGRAM = [{ url: "https://www.instagram.com/carolinaskin", title
 export const WHATSAPP = [{url: "https://wa.me/14326380046", title: "WhatsApp"}];
 
 export const TELEPHONE = "tel:+14326380046";
+export const PHONE_DISPLAY = "(432) 638-0046";
 
 export const BOOKING_URL = "tel:+14326380046";
 

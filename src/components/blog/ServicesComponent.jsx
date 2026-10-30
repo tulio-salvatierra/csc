@@ -72,9 +72,8 @@ export default function Services() {
             </h1>
 
             <p className="glass-panel w-full md:w-1/2 justify-center font-light p-4">
-              At my skin care studio, I offer a range of expert skin care facials
-              and spa and facial treatments designed to rejuvenate and enhance
-              your natural beauty. My skincare services include HydraFacials,
+              Explore personalized skincare at Carolina Skin Centre.
+              My services include HydraFacial,
               Customized Facials, Nano-Needling, Dermaplaning and Lash Tinting
               in Midland, TX.
             </p>

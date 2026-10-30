@@ -27,7 +27,7 @@ export default function FloatingCallbutton() {
       <div className="btn-icon-content">
         <div className="btn-icon-content__mask">
           <span data-button-anim-target className="btn-icon-content__text">
-          Book your appointment Now!
+          Book an appointment
           </span>
         </div>
 
@@ -45,30 +45,6 @@ export default function FloatingCallbutton() {
         <div data-button-anim-target className="btn-icon-content__bg" />
       </div>
     </a>
-
-    {/* Button Variant 2 (white icon variant) */}
-    <a href="#" className="btn-icon-link w-inline-block">
-      <div className="btn-icon-content__mask">
-        <span data-button-anim-target className="btn-icon-content__text">
-          Book your appointment
-        </span>
-      </div>
-
-      <div data-icon-size="normal" className="btn-icon-icon">
-        <div data-button-anim-target className="btn-icon-icon__bg" />
-        <div className="btn-icon-icon__wrap color--white">
-          <div className="btn-icon-icon__list">
-            <ArrowIcon />
-            <ArrowIcon />
-            <ArrowIcon />
-          </div>
-        </div>
-      </div>
-    </a>
   </div>
 );
 }
-
-
-
-

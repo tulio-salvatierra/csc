@@ -1,4 +1,4 @@
-import { MENU_ITEMS, WHATSAPP, INSTAGRAM, ADDRESS_URL } from "../../constants";
+import { MENU_ITEMS, WHATSAPP, INSTAGRAM, ADDRESS_URL, ADDRESS, TELEPHONE, PHONE_DISPLAY } from "../../constants";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa6";
 import { LuMapPin } from "react-icons/lu";
 import Logo from "../../assets/images/CSC.png";
@@ -24,6 +24,11 @@ export default function Footer() {
               Personalized skincare and professional facial treatments in
               Midland, Texas.
             </p>
+            <address className="not-italic mt-4 text-gray-700">
+              <a href={ADDRESS_URL} target="_blank" rel="noopener noreferrer">{ADDRESS}</a>
+              <br />
+              <a href={TELEPHONE}>{PHONE_DISPLAY}</a>
+            </address>
           </div>
 
           {/* Menu + Connect, separated by a thin vertical rule on desktop */}
