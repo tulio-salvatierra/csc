@@ -1,8 +1,13 @@
 import React, { useEffect, useRef } from "react";
 import "./BookingButton.css";
 import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
+import { pushBookingClick } from "../../utils/gtm";
 
-export default function BookingButton({ href, label }) {
+/**
+ * @param {string} [trackingSource] - when set, clicks push a booking_click
+ *   event to GTM with this source label.
+ */
+export default function BookingButton({ href, label, trackingSource }) {
   const textRef = useRef(null);
   const fadeRefs = useRef([]);
 
@@ -45,6 +50,7 @@ export default function BookingButton({ href, label }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
+      onClick={trackingSource ? () => pushBookingClick(trackingSource) : undefined}
       className="btn-animate-chars place-self-center"
       ref={setFadeRef}
       style={{ 

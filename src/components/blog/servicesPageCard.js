@@ -17,8 +17,6 @@ const servicesCardInfo = [
     slug: "hydrafacial-midland-tx",
     seoName: "HydraFacial",
     tagline: "Deep cleansing, exfoliation and hydration",
-    seoDescription:
-      "HydraFacial in Midland, TX: deep cleansing, exfoliation, extractions and hydration in one treatment. Book with Carolina Skin Centre.",
     description:
       "A HydraFacial is a non invasive multi step facial treatment that deeply cleanses, exfoliates, extracts impurities, and hydrates the skin using a specialized device. It combines gentle suction with nourishing serums for personalized cleansing and hydration.",
     icon: HF,
@@ -30,8 +28,6 @@ const servicesCardInfo = [
     slug: "facials-midland-tx",
     seoName: "Customized Facials",
     tagline: "Tailored to your skin's unique needs",
-    seoDescription:
-      "Custom facials in Midland, TX tailored to your skin, from deep hydration to acne and anti-aging care. Book with Carolina Skin Centre.",
     description:
       "My customized facials are designed to cleanse, nourish, and rejuvenate your skin, resulting in a healthy, radiant glow. Each treatment is tailored to your unique skin type and concerns, whether you need deep hydration, gentle exfoliation, or targeted solutions for acne, aging, or sensitivity. Using high quality products and expert techniques, my facials deliver both relaxation and noticeable results and help you look and feel your best.",
     icon: EF,
@@ -43,8 +39,6 @@ const servicesCardInfo = [
     slug: "nano-needling-midland-tx",
     seoName: "Nano-Needling",
     tagline: "Non invasive skin rejuvenation",
-    seoDescription:
-      "Nano-Needling in Midland, TX: a gentle, non-invasive treatment that boosts serum absorption and collagen. Book with Carolina Skin Centre.",
     description:
       "An advanced and non invasive skincare procedure designed to rejuvenate your skin at a cellular level. This cutting edge treatment uses ultra fine nano needles to create microscopic channels on the skin’s surface, enhancing the absorption of serums and stimulating collagen production without pain or downtime.",
     icon: NN,
@@ -56,8 +50,6 @@ const servicesCardInfo = [
     slug: "dermaplaning-midland-tx",
     seoName: "Dermaplaning",
     tagline: "Smoother, brighter skin in one visit",
-    seoDescription:
-      "Dermaplaning in Midland, TX to remove dead skin and peach fuzz for smoother, brighter skin. Book with Carolina Skin Centre.",
     description:
       "Dermaplaning is a non invasive skincare treatment that involves using a sterile, surgical scalpel to gently exfoliate the top layer of dead skin cells and remove fine vellus hair (peach fuzz) from the face. This process helps to reveal smoother, brighter skin, allowing for better product absorption and a flawless makeup application.",
     icon: DP,
@@ -69,8 +61,6 @@ const servicesCardInfo = [
     slug: "lash-tinting-midland-tx",
     seoName: "Lash Tinting",
     tagline: "Defined natural lashes, no mascara",
-    seoDescription:
-      "Lash tinting in Midland, TX: darker, more defined natural lashes for weeks, no mascara needed. Book with Carolina Skin Centre.",
     description:
       "A semi permanent tint that darkens and defines your natural lashes from root to tip, so you can skip the mascara. Lash tinting only; no extensions.",
     icon: LT,

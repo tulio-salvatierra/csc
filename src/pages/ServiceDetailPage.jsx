@@ -7,6 +7,8 @@ import SEO from "../components/SEO/SEO";
 import { BreadcrumbSchema, FAQSchema, ServiceSchema } from "../components/SEO/StructuredData";
 import services from "../components/blog/servicesPageCard";
 import { getServiceDetailContent } from "../data/serviceDetailContent";
+import { SERVICE_SEO } from "../data/seoMeta";
+import { pushBookingClick } from "../utils/gtm";
 import BookingButton from "../components/BookingButton";
 import { BOOKING_URL_2, TELEPHONE, PHONE_DISPLAY, ADDRESS, ADDRESS_URL } from "../constants";
 import { useRef } from "react";
@@ -31,6 +33,11 @@ export default function ServiceDetailPage() {
 
   const { article, faqs, intro, sections, relatedSlug, relatedLabel } = content;
   const seoName = service.seoName || service.name;
+  const seoMeta = SERVICE_SEO[service.slug] || {
+    title: `${seoName} in Midland, TX | Carolina Skin Centre`,
+    description: `${seoName} in Midland, TX at Carolina Skin Centre. ${service.description}`,
+  };
+  const trackCall = (where) => () => pushBookingClick(`service:${service.slug}:${where}`, "phone");
   const breadcrumbs = [
     { name: "Home", url: "/" },
     { name: "Services", url: "/services" },
@@ -40,14 +47,14 @@ export default function ServiceDetailPage() {
   return (
     <>
       <SEO
-        title={`${seoName} in Midland, TX | Carolina Skin Centre`}
-        description={service.seoDescription || `${seoName} in Midland, TX at Carolina Skin Centre. ${service.description}`}
+        title={seoMeta.title}
+        description={seoMeta.description}
         keywords={`${seoName} Midland TX, ${seoName} near me, ${service.category}, Carolina Skin Centre, skincare ${service.name.toLowerCase()}, esthetician near me, skin care facials, skin care treatments, skincare, spa and facial, skin esthetician`}
         url={`/services/${service.slug}`}
       />
       <BreadcrumbSchema items={breadcrumbs} />
       <FAQSchema faqs={faqs} />
-      <ServiceSchema services={[{ title: seoName, description: service.description }]} />
+      <ServiceSchema services={[{ title: seoName, description: service.description, url: `/services/${service.slug}` }]} />
       <main className="parent-page">
         <div className="header">
           <Header />
@@ -78,8 +85,8 @@ export default function ServiceDetailPage() {
           {intro && (
             <section className="bg-white px-4 py-8 text-center" aria-label="Book your treatment">
               <p className="max-w-3xl mx-auto mb-6 text-gray-700 leading-relaxed">{intro}</p>
-              <BookingButton href={BOOKING_URL_2} label={`Book ${service.name}`} />
-              <p className="mt-4">Need help choosing? <a className="underline" href={TELEPHONE}>Call {PHONE_DISPLAY}</a></p>
+              <BookingButton href={BOOKING_URL_2} label={`Book ${service.name}`} trackingSource={`service:${service.slug}:intro`} />
+              <p className="mt-4">Need help choosing? <a className="underline" href={TELEPHONE} onClick={trackCall("intro")}>Call {PHONE_DISPLAY}</a></p>
             </section>
           )}
 
@@ -114,7 +121,7 @@ export default function ServiceDetailPage() {
                 </aside>
               )}
               <div className="mt-10 text-center">
-                <BookingButton href={BOOKING_URL_2} label="Book my appointment" />
+                <BookingButton href={BOOKING_URL_2} label="Book my appointment" trackingSource={`service:${service.slug}:article`} />
               </div>
             </div>
           </section>
@@ -148,7 +155,7 @@ export default function ServiceDetailPage() {
               </div>
               <div className="text-center">
                 <p className="mb-6 text-gray-500">Have more questions?</p>
-                <a className="underline" href={TELEPHONE}>Call Carolina at {PHONE_DISPLAY}</a>
+                <a className="underline" href={TELEPHONE} onClick={trackCall("faq")}>Call Carolina at {PHONE_DISPLAY}</a>
               </div>
             </div>
           </section>
