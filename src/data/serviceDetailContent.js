@@ -96,7 +96,9 @@ I'm a licensed esthetician with more than 18 years of experience, and every Hydr
     subhead: "in Midland, TX",
     intro: `No two faces get the same facial at my studio. Every customized facial starts with a skin analysis, then I build the treatment around what your skin needs that day, whether that's deep hydration, calming redness, clearing breakouts or softening the look of fine lines.
 
-I'm a licensed esthetician in Midland, TX with more than 18 years of experience, trained in European and naturopathic-inspired techniques. My facials are relaxing, but they're built for results, and you leave knowing how to keep them going at home.`,
+I'm a licensed esthetician in Midland, TX with more than 18 years of experience, trained in European and naturopathic-inspired techniques. My facials are relaxing, but they're built for results, and you leave knowing how to keep them going at home.
+
+Skin in Midland has a lot to deal with: dry air, wind, dust and strong sun most of the year. That mix leaves many of my clients dehydrated and congested at the same time, which is why a one-size facial rarely works here. A professional facial cleanses, exfoliates and extracts more deeply than an at-home skin care routine can, then puts back the hydration and protection your skin type needs, so you leave with a healthy glow that lasts.`,
     highlights: [
       { label: "Built for", value: "Your skin type and goals" },
       { label: "Downtime", value: "None for most facials" },
@@ -122,7 +124,7 @@ I'm a licensed esthetician in Midland, TX with more than 18 years of experience,
         body: "A relaxing facial massage, then a mask and serums chosen for your goal, finished with moisturizer and sun protection.",
       },
     ],
-    goodForTitle: "Facials I customize for",
+    goodForTitle: "Skin types and concerns I customize for",
     goodFor: [
       "Acne-prone and congested skin",
       "Dry, dehydrated or flaky skin",
@@ -152,6 +154,9 @@ I'm a licensed esthetician in Midland, TX with more than 18 years of experience,
       { question: "Can I get a facial if I have acne?", answer: "Yes. I offer facials for acne-prone skin, with gentle cleansing and careful extractions so breakouts aren't aggravated." },
       { question: "Do you offer facials for sensitive skin?", answer: "Yes. Every facial is customized, and for sensitive skin I use gentle products and techniques that calm and support the skin barrier." },
       { question: "What's the difference between a facial and a HydraFacial?", answer: "A customized facial is hands-on and fully adapted to your skin that day. A HydraFacial uses a specialized device to cleanse, extract and hydrate in a set sequence. Both are great; I'll help you choose." },
+      { question: "How should I prepare for my facial?", answer: "Come with a clean face if you can, and skip retinoids, at-home peels and waxing on your face for a few days before. Let me know about any medications, allergies or recent treatments when you book so I can plan around them." },
+      { question: "Will I break out after a facial?", answer: "Most clients don't. If your skin was congested, a spot or two can surface in the first few days as pores clear out. That's normal and settles quickly; just don't pick at it." },
+      { question: "I already have a good skin care routine. Do I still need facials?", answer: "A good routine keeps skin healthy day to day. A professional facial goes further with deeper exfoliation, extractions and treatment products, and it gives me a chance to check your skin and adjust your routine for the season." },
       { question: "Where are you located?", answer: "My studio is at 705 W Wadley Ave, Suite 23, in Midland, TX, a short drive for clients in Odessa and around the Permian Basin." },
     ],
     related: ["hydrafacial-midland-tx", "dermaplaning-midland-tx", "lash-tinting-midland-tx"],
