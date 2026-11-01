@@ -70,6 +70,10 @@ At Carolina Skin Centre, dermaplaning is performed with care and precision. Each
             "text": "Tell me about dryness, sensitivity, congestion or other concerns when you visit. I combine European skincare techniques with individualized attention and discuss aftercare to help you care for your skin at home."
         },
         {
+            "heading": "Skin care for the West Texas climate",
+            "text": "Dry air, wind, dust and strong sun can leave skin dehydrated and congested at the same time. A professional facial cleanses, exfoliates and extracts more deeply than an at-home skin care routine, then restores the hydration and protection your skin type needs for a healthy glow."
+        },
+        {
             "heading": "Customized facial or HydraFacial?",
             "text": "A customized facial brings together products and techniques selected for you. HydraFacial uses a specialized device for cleansing, exfoliation, extractions and hydration. If you are new to facials or unsure where to start, call me for help choosing."
         }
@@ -88,6 +92,18 @@ At Carolina Skin Centre, dermaplaning is performed with care and precision. Each
         {
             "question": "How often should I book a facial?",
             "answer": "I commonly recommend four to six weeks between facials, with your schedule tailored to your skin and goals during consultation."
+        },
+        {
+            "question": "How should I prepare for my facial?",
+            "answer": "Come with a clean face if you can, and skip retinoids, at-home peels and facial waxing for a few days before. Let me know about medications, allergies or recent treatments when you book."
+        },
+        {
+            "question": "Will I break out after a facial?",
+            "answer": "Most clients don't. If your skin was congested, a spot or two can surface in the first few days as pores clear. That settles quickly; avoid picking at it."
+        },
+        {
+            "question": "Do I need facials if I already have a good skin care routine?",
+            "answer": "A good routine keeps skin healthy day to day. A professional facial adds deeper exfoliation, extractions and treatment products, and it's a chance to check your skin and adjust your routine for the season."
         },
         {
             "question": "How do I book a customized facial in Midland?",
