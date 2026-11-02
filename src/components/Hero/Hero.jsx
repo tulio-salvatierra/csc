@@ -100,7 +100,7 @@ export default function Hero() {
             once={true}
             className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-none"
           >
-            Hydrate, renew and balance your skin
+            Elevated skin care, personalized for you
           </MaskedWords>
         </div>
 
@@ -115,7 +115,7 @@ export default function Hero() {
             Experience personalized skincare treatments designed to improve the
             health and appearance of your skin. With a focus on your individual
             skin needs, each treatment is customized to deliver visible,
-            long-lasting results in a relaxing and professional environment in
+            long lasting results in a relaxing and professional environment in
             Midland, Texas.
           </MaskedLines>
         </div>
@@ -123,7 +123,9 @@ export default function Hero() {
         <div ref={buttonRef}>
           <BookingButton
             href={BOOKING_URL_2}
-            label={"Book an appointment"}
+            label={"Book Your Experience"}
+            variant="light"
+            trackingSource="home:hero"
           />
         </div>
       </div>

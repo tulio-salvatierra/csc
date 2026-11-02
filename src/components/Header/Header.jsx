@@ -13,7 +13,7 @@ import "./Header.css";
 import BookingButton from "../BookingButton";
 import SERVICES from "../blog/servicesPageCard";
 
-export default function Header() {
+export default function Header({ showBookButton = true }) {
   const [isOpen, setIsOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const menuRef = useRef(null);
@@ -97,7 +97,9 @@ export default function Header() {
                 )
               )}
             </ul>
-            <BookingButton href={BOOKING_URL_2} label={"Book now!"} />
+            {showBookButton && (
+              <BookingButton href={BOOKING_URL_2} label={"Book now!"} />
+            )}
           </div>
         </nav>
       </section>
