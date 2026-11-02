@@ -90,6 +90,15 @@ export default function Hero() {
         className="absolute inset-0 bg-hero bg-cover bg-center will-change-transform"
         style={{ transform: "scale(1.15)" }}
       />
+      {/* Warm tint so white text stays readable on the light studio photo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(40,28,20,0.35) 0%, rgba(40,28,20,0.5) 55%, rgba(40,28,20,0.6) 100%)",
+        }}
+      />
       {/* Content overlay */}
       <div className="relative z-10 grid w-full m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
         <div ref={titleRef}>
