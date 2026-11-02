@@ -90,6 +90,15 @@ export default function Hero() {
         className="absolute inset-0 bg-hero bg-cover bg-center will-change-transform"
         style={{ transform: "scale(1.15)" }}
       />
+      {/* Warm tint so white text stays readable on the light studio photo */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(40,28,20,0.35) 0%, rgba(40,28,20,0.5) 55%, rgba(40,28,20,0.6) 100%)",
+        }}
+      />
       {/* Content overlay */}
       <div className="relative z-10 grid w-full m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
         <div ref={titleRef}>
@@ -100,7 +109,7 @@ export default function Hero() {
             once={true}
             className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-none"
           >
-            Hydrate, renew and balance your skin
+            Elevated skin care, personalized for you
           </MaskedWords>
         </div>
 
@@ -115,7 +124,7 @@ export default function Hero() {
             Experience personalized skincare treatments designed to improve the
             health and appearance of your skin. With a focus on your individual
             skin needs, each treatment is customized to deliver visible,
-            long-lasting results in a relaxing and professional environment in
+            long lasting results in a relaxing and professional environment in
             Midland, Texas.
           </MaskedLines>
         </div>
@@ -123,7 +132,9 @@ export default function Hero() {
         <div ref={buttonRef}>
           <BookingButton
             href={BOOKING_URL_2}
-            label={"Book an appointment"}
+            label={"Book Your Experience"}
+            variant="light"
+            trackingSource="home:hero"
           />
         </div>
       </div>

@@ -1,4 +1,3 @@
-import FloatingCallbutton from "../components/floatingCallButton";
 import Header from "../components/Header/Header";
 import Hero from "../components/Hero";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
@@ -52,7 +51,7 @@ export default function IndexPage() {
       <FAQSchema faqs={homeFaqs} />
       <main className="overflow-visible min-h-screen">
         <div className="header sticky top-0 z-50 bg-white shadow-lg">
-          <Header />
+          <Header showBookButton={false} />
         </div>
         <div className="parent-page min-h-screen overflow-visible grid grid-cols-1">
           <div className="col-span-1">
@@ -87,7 +86,6 @@ export default function IndexPage() {
           <Footer />
         </div>
       </main>
-      <FloatingCallbutton />
     </>
   );
 }

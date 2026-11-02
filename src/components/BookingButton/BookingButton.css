@@ -54,3 +54,7 @@
 .btn-animate-chars:hover .btn-animate-chars__bg {
   inset: 0.125em;
 }
+
+/* Light variant: white box, dark text (homepage hero, per Carolina 2026-11-01) */
+.btn-animate-chars--light { color: #1e1e1e; background-color: transparent; }
+.btn-animate-chars--light .btn-animate-chars__bg { background-color: #fff; }

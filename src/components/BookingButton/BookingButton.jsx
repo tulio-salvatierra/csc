@@ -4,10 +4,11 @@ import { useFadeInAnimation } from "../../hooks/useFadeInAnimation";
 import { pushBookingClick } from "../../utils/gtm";
 
 /**
+ * @param {"light"} [variant] - white box with dark text (homepage hero).
  * @param {string} [trackingSource] - when set, clicks push a booking_click
  *   event to GTM with this source label.
  */
-export default function BookingButton({ href, label, trackingSource }) {
+export default function BookingButton({ href, label, trackingSource, variant }) {
   const textRef = useRef(null);
   const fadeRefs = useRef([]);
 
@@ -51,7 +52,7 @@ export default function BookingButton({ href, label, trackingSource }) {
       rel="noopener noreferrer"
       aria-label={label}
       onClick={trackingSource ? () => pushBookingClick(trackingSource) : undefined}
-      className="btn-animate-chars place-self-center"
+      className={`btn-animate-chars place-self-center${variant === "light" ? " btn-animate-chars--light" : ""}`}
       ref={setFadeRef}
       style={{ 
         textDecoration: "none", 
