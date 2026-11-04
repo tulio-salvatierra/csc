@@ -41,9 +41,8 @@ export default function IndexPage() {
   return (
     <>
       <SEO
-        title="Carolina Skin Centre | Skincare & Facials in Midland TX | Esthetician Near Me"
+        title="Facials & Skin Care in Midland, TX | Carolina Skin Centre"
         description="Professional skincare & facial treatments in Midland, TX. Esthetician near me for facials, skin care facials, and spa and facial services including HydraFacials, Nano-Needling, dermaplaning & more. Serving Midland, Odessa & West Texas. 18+ years experience."
-        keywords="esthetician near me, face and spa, facials, skin care facials, skin care treatment near me, skin care treatments, skin esthetician, skin near me, skincare, spa and facial, skincare Midland TX, facial treatments near me, esthetician Midland Texas, HydraFacial Midland, Nano-Needling Midland TX, dermaplaning near me, skincare Odessa TX, best facials Midland, anti aging treatments West Texas"
         url="/"
       />
       <LocalBusinessSchema />

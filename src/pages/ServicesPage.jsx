@@ -23,7 +23,6 @@ export default function Services() {
       <SEO
         title={PAGE_SEO["/services"].title}
         description={PAGE_SEO["/services"].description}
-        keywords="esthetician near me, face and spa, facials, skin care facials, skin care treatment near me, skin care treatments, skin esthetician, skin near me, skincare, spa and facial, skincare services Midland TX, HydraFacial near me, Nano-Needling Midland, dermaplaning Midland Texas, lash tinting Midland, facial treatments Odessa TX, skin rejuvenation Permian Basin, best facials near me"
         url="/services"
       />
       <BreadcrumbSchema
