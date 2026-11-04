@@ -47,8 +47,8 @@ export const policies = [
     image: Children,
     imageAlt: "Olive branch in soft natural light",
     paragraphs: [
-      "To maintain a relaxing and professional environment, children under 12 are not permitted in the studio unless they have a scheduled appointment.",
-      "Children ages 10 and older receiving services may be accompanied by a parent or guardian.",
+      "To maintain a relaxing, professional environment and allow full attention to each treatment, please do not bring children under 12 to accompany you to your appointment. Children under 12 may attend only if they have their own scheduled treatment.",
+      "Clients ages 10–17 who are receiving a treatment must be accompanied by a parent or legal guardian.",
     ],
   },
   {
