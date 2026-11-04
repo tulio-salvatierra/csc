@@ -5,7 +5,6 @@ const SITE_URL = "https://www.carolinaskincentre.com";
 export default function SEO({
   title,
   description,
-  keywords,
   image = "/og-image.jpg",
   url,
   type = "website",
@@ -29,10 +28,6 @@ export default function SEO({
     // Basic meta tags
     if (description) {
       updateMetaTag("description", description);
-    }
-
-    if (keywords) {
-      updateMetaTag("keywords", keywords);
     }
 
     // Open Graph tags
@@ -64,7 +59,7 @@ export default function SEO({
     } else {
       updateMetaTag("robots", "index, follow");
     }
-  }, [title, description, keywords, image, url, type, noindex]);
+  }, [title, description, image, url, type, noindex]);
 
   return null;
 }

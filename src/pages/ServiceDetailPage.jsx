@@ -49,7 +49,6 @@ export default function ServiceDetailPage() {
       <SEO
         title={seoMeta.title}
         description={seoMeta.description}
-        keywords={`${seoName} Midland TX, ${seoName} near me, ${service.category}, Carolina Skin Centre, skincare ${service.name.toLowerCase()}, esthetician near me, skin care facials, skin care treatments, skincare, spa and facial, skin esthetician`}
         url={`/services/${service.slug}`}
       />
       <BreadcrumbSchema items={breadcrumbs} />
