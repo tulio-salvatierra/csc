@@ -31,7 +31,7 @@ export default function ServiceDetailPage() {
     return <Navigate to="/services" replace />;
   }
 
-  const { article, faqs, intro, sections, relatedSlug, relatedLabel } = content;
+  const { article, faqs, intro, sections, relatedSlug, relatedLabel, price, duration } = content;
   const seoName = service.seoName || service.name;
   const seoMeta = SERVICE_SEO[service.slug] || {
     title: `${seoName} in Midland, TX | Carolina Skin Centre`,
@@ -54,7 +54,7 @@ export default function ServiceDetailPage() {
       />
       <BreadcrumbSchema items={breadcrumbs} />
       <FAQSchema faqs={faqs} />
-      <ServiceSchema services={[{ title: seoName, description: service.description, url: `/services/${service.slug}` }]} />
+      <ServiceSchema services={[{ title: seoName, description: service.description, url: `/services/${service.slug}`, price, duration }]} />
       <main className="parent-page">
         <div className="header">
           <Header />
