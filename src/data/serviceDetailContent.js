@@ -70,12 +70,18 @@ At Carolina Skin Centre, dermaplaning is performed with care and precision. Each
             "text": "Tell me about dryness, sensitivity, congestion or other concerns when you visit. I combine European skincare techniques with individualized attention and discuss aftercare to help you care for your skin at home."
         },
         {
+            "heading": "Signature Skin facial: 60 minutes, $120",
+            "text": "My Signature Skin facial is a 60-minute treatment and costs $120. When I customize it with add-on treatments, the visit runs longer, depending on what we add, and each add-on is priced separately."
+        },
+        {
             "heading": "Customized facial or HydraFacial?",
             "text": "A customized facial brings together products and techniques selected for you. HydraFacial uses a specialized device for cleansing, exfoliation, extractions and hydration. If you are new to facials or unsure where to start, call me for help choosing."
         }
     ],
     "relatedSlug": "hydrafacial-midland-tx",
     "relatedLabel": "Explore HydraFacial in Midland",
+    "price": "120",
+    "duration": "PT60M",
     "faqs": [
         {
             "question": "What happens during my first facial?",
@@ -90,8 +96,12 @@ At Carolina Skin Centre, dermaplaning is performed with care and precision. Each
             "answer": "I commonly recommend four to six weeks between facials, with your schedule tailored to your skin and goals during consultation."
         },
         {
+            "question": "How long is a facial and how much does it cost?",
+            "answer": "The Signature Skin facial takes 60 minutes and costs $120. Add-on treatments lengthen the visit and are priced separately."
+        },
+        {
             "question": "How do I book a customized facial in Midland?",
-            "answer": "Use SalonBiz to book Carolina Skin Centre or call (432) 638-0046 for help choosing a treatment. Confirm the current price and appointment length before booking."
+            "answer": "Use SalonBiz to book Carolina Skin Centre or call (432) 638-0046 for help choosing a treatment."
         }
     ]
 },
