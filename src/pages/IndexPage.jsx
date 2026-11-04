@@ -6,6 +6,8 @@ import BrandsSection from "../components/BrandSection/BrandsSectionLogoClouds1";
 import Footer from "../components/Footer";
 import "../App.css";
 import Services from "../components/Services";
+import BeforeAfter from "../components/BeforeAfter/BeforeAfter";
+import VideoBooking from "../components/VideoBooking/VideoBooking";
 import SingleReviewCarousel from "../components/Review/Review";
 import Solutions from "../components/Solution/Solution";
 import HL from "../components/Highlights";
@@ -51,7 +53,7 @@ export default function IndexPage() {
       <WebSiteSchema />
       <FAQSchema faqs={homeFaqs} />
       <main className="overflow-visible min-h-screen">
-        <div className="header sticky top-0 z-50 bg-white shadow-lg">
+        <div className="header sticky top-0 z-50">
           <Header />
         </div>
         <div className="parent-page min-h-screen overflow-visible grid grid-cols-1">
@@ -68,13 +70,19 @@ export default function IndexPage() {
             <Services />
           </div>
           <div className="col-span-1">
+            <BeforeAfter />
+          </div>
+          <div className="col-span-1">
+            <SingleReviewCarousel />
+          </div>
+          <div className="col-span-1">
             <HL />
           </div>
           <div className="col-span-1">
             <Banner />
           </div>
           <div className="col-span-1">
-            <SingleReviewCarousel />
+            <VideoBooking />
           </div>
           <div className="col-span-1">
             <BrandsSection />

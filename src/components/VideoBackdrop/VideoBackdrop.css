@@ -1,0 +1,19 @@
+.video-backdrop { position: relative; isolation: isolate; min-height: 65svh; overflow: hidden; background: #39312b; color: #fff; display: grid; place-items: center; }
+.video-backdrop > video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 46%; z-index: -2; }
+.video-backdrop-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20, 17, 14, .68), rgba(20, 17, 14, .38)); z-index: -1; }
+.video-backdrop-content { width: 100%; max-width: 1120px; margin: 0 auto; padding: 6rem 1.25rem; }
+.video-backdrop-toggle { position: absolute; bottom: 1.25rem; left: 1.25rem; min-height: 44px; padding: .5rem 1rem; background: rgba(0, 0, 0, .5); color: #fff; border: 1px solid rgba(255, 255, 255, .65); cursor: pointer; font-size: .875rem; }
+.video-backdrop-toggle:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
+.video-booking h2 { max-width: 750px; font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.1; margin: 0 0 1.5rem; }
+.video-booking p { max-width: 560px; line-height: 1.7; margin-bottom: 2rem; color: #fff; }
+.video-booking .video-booking-eyebrow { text-transform: uppercase; letter-spacing: .18em; font-size: .8rem; margin-bottom: 1.25rem; }
+.service-video-cover { min-height: 60svh; text-align: center; }
+.service-video-cover h1 { font-size: clamp(2.75rem, 6vw, 5rem); line-height: 1.15; margin: 1rem 0; }
+.service-video-cover h1 span { display: block; margin-top: .75rem; font-size: clamp(1.25rem, 3vw, 2rem); font-weight: normal; }
+.service-video-cover .video-backdrop-content { padding-top: 10rem; }
+.service-video-back { color: #fff; text-decoration: underline; text-underline-offset: .3em; }
+@media (max-width: 600px) {
+  .video-booking { min-height: 75svh; }
+  .video-backdrop > video { object-position: center; }
+  .video-backdrop-shade { background: rgba(20, 17, 14, .55); }
+}

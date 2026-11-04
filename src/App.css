@@ -193,7 +193,7 @@ flex-direction: column;
 /* Hero Section */
 
 .bg-hero {
-  background-image: url("../src/assets/images/hero/csc-hero.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.38)), url("../src/assets/images/hero/studio-room.webp");
   display: flex;
   flex-direction: column;
   object-fit: cover;
@@ -209,7 +209,7 @@ flex-direction: column;
 }
 @media (max-width: 768px) {
   .bg-hero {
-    background-position: right;
+    background-position: center;
   }
   .hero-content {
     width: 100%;
