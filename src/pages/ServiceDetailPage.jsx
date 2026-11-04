@@ -14,6 +14,14 @@ import { BOOKING_URL_2, TELEPHONE, PHONE_DISPLAY, ADDRESS, ADDRESS_URL } from ".
 import { useRef } from "react";
 import { useFadeInAnimation } from "../hooks/useFadeInAnimation";
 import "../App.css";
+import VideoBackdrop from "../components/VideoBackdrop/VideoBackdrop";
+import devicePoster from "../assets/images/video-posters/device-facial.webp";
+import facialPoster from "../assets/images/video-posters/customized-facial.webp";
+
+const serviceVideos = {
+  "hydrafacial-midland-tx": { src: "/videos/device-facial.mp4", poster: devicePoster },
+  "facials-midland-tx": { src: "/videos/customized-facial.mp4", poster: facialPoster },
+};
 
 export default function ServiceDetailPage() {
   const { serviceSlug } = useParams();
@@ -38,6 +46,7 @@ export default function ServiceDetailPage() {
     description: `${seoName} in Midland, TX at Carolina Skin Centre. ${service.description}`,
   };
   const trackCall = (where) => () => pushBookingClick(`service:${service.slug}:${where}`, "phone");
+  const coverVideo = serviceVideos[serviceSlug];
   const breadcrumbs = [
     { name: "Home", url: "/" },
     { name: "Services", url: "/services" },
@@ -60,6 +69,12 @@ export default function ServiceDetailPage() {
         </div>
         <div className="content">
           {/* Hero: service name + image */}
+          {coverVideo ? (
+            <VideoBackdrop key={serviceSlug} src={coverVideo.src} poster={coverVideo.poster} className="service-video-cover" label={`${seoName} background video`}>
+              <h1>{seoName}<span>in Midland, TX</span></h1>
+              <Link to="/services" className="service-video-back">Back to services</Link>
+            </VideoBackdrop>
+          ) : (
           <section ref={addToRefs} className="bg-white">
             <div className="bg-cover bg-center bg-services">
               <div className="flex flex-col items-center justify-center mb-16 pt-24 pb-12">
@@ -80,6 +95,7 @@ export default function ServiceDetailPage() {
               </div>
             </div>
           </section>
+          )}
 
           {intro && (
             <section className="bg-white px-4 py-8 text-center" aria-label="Book your treatment">

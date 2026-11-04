@@ -35,7 +35,7 @@ export default function Header({ showBookButton = true }) {
   return (
     <>
       {/* Header NORMAL, no ref, no animación */}
-      <section className="sticky top-0 w-full z-auto header">
+      <section className="sticky top-0 w-full z-auto header site-navbar">
         <nav className="flex items-center justify-between py-0 px-2">
           <a href="/" aria-label="Carolina Skin Centre Home">
             <img className="w-[150px] h-auto" src={Logo} alt="Carolina Skin Centre Logo" />

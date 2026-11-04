@@ -4,7 +4,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BOOKING_URL_2 } from "../../constants";
 import "./Solution.css";
-import CarolinaPhoto from "../../assets/images/solutions/carolina.webp";
+import CarolinaPhoto from "../../assets/images/solutions/carolina-treatment.webp";
 import BookingButton from "../BookingButton";
 import MaskedLines from "../MaskedLines/MaskedLines";
 
@@ -25,12 +25,12 @@ export default function Solutions() {
     if (!image || !container) return;
 
     const ctx = gsap.context(() => {
-      gsap.set(image, { scale: 1.2 });
+      gsap.set(image, { scale: 1.05 });
       gsap.fromTo(
         image,
-        { yPercent: -15 },
+        { yPercent: -2 },
         {
-          yPercent: 15,
+          yPercent: 2,
           ease: "none",
           scrollTrigger: {
             trigger: container,
@@ -74,7 +74,7 @@ export default function Solutions() {
         .from(
           imageRef.current,
           {
-            scale: 1.2,
+            scale: 1.05,
             opacity: 0,
             duration: 1,
           },
@@ -143,13 +143,13 @@ export default function Solutions() {
 
           <div
             ref={imageContainerRef}
-            className="grid place-items-center overflow-hidden rounded shadow-xl w-full max-w-md mx-auto aspect-[4/5]"
+            className="grid place-items-center overflow-hidden rounded shadow-xl w-full max-w-md mx-auto aspect-[2/3]"
           >
             <img
               ref={imageRef}
               src={CarolinaPhoto}
-              alt="Carolina, licensed esthetician at Carolina Skin Centre in Midland, TX"
-              className="w-full h-full object-cover object-[50%_35%] will-change-transform"
+              alt="Skincare treatment at Carolina Skin Centre in Midland, Texas"
+              className="w-full h-full object-cover object-center will-change-transform"
               loading="lazy"
             />
           </div>

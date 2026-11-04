@@ -97,18 +97,20 @@ export default function Footer() {
                 Cancellation Policy
                 <span className="underline" aria-hidden />
               </Link>
-              <a
-                href={CICERO_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-link text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200 cursor-pointer"
-                style={{ cursor: "pointer" }}
-              >
-                Made by Cicero Web Studio
-                <span className="underline" aria-hidden />
-              </a>
+
             </div>
           </div>
+        </div>
+        <div className="mt-8 pt-6 pb-4 text-center border-t border-black/10">
+          <a
+            href={CICERO_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline-link inline-block text-sm text-gray-500 hover:text-gray-900 transition-colors duration-200"
+          >
+            Made by Cicero Web Studio
+            <span className="underline" aria-hidden />
+          </a>
         </div>
       </div>
     </footer>
