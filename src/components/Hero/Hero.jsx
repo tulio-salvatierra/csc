@@ -1,13 +1,11 @@
-import { useLayoutEffect, useRef, useEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MaskedLines from "../../components/MaskedLines/MaskedLines";
 import MaskedWords from "../MaskedLines/MaskedLines";
 import BookingButton from "../BookingButton/BookingButton";
 import { BOOKING_URL_2 } from "../../constants";
+import studioRoom from "../../assets/images/hero/studio-room-hero.webp";
 import "./Hero.css";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const sectionRef = useRef(null);
@@ -15,27 +13,6 @@ export default function Hero() {
   const textRef = useRef(null);
   const buttonRef = useRef(null);
   const bgRef = useRef(null);
-
-  // Parallax effect for background
-  useEffect(() => {
-    const bg = bgRef.current;
-    if (!bg) return;
-
-    const ctx = gsap.context(() => {
-      gsap.to(bg, {
-        yPercent: 30,
-        ease: "none",
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      });
-    });
-
-    return () => ctx.revert();
-  }, []);
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -49,7 +26,6 @@ export default function Hero() {
         .from(
           bgRef.current,
           {
-            scale: 1.5,
             duration: 1.5,
             opacity: 0.1,
             ease: "power3.out",
@@ -82,32 +58,33 @@ export default function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="relative grid place-items-center h-dvh min-h-[100svh] overflow-hidden"
+      className="home-hero"
     >
-      {/* Parallax Background */}
-      <div
-        ref={bgRef}
-        className="absolute inset-0 bg-hero bg-cover bg-center will-change-transform"
-        style={{ transform: "scale(1.15)" }}
-      />
+      {/* Natural image height keeps both edges visible at every screen width. */}
+      <div ref={bgRef} className="home-hero__media">
+        <img
+          src={studioRoom}
+          alt=""
+          width="1846"
+          height="852"
+          fetchPriority="high"
+          decoding="async"
+        />
+      </div>
       {/* Warm tint so white text stays readable on the light studio photo */}
       <div
         aria-hidden="true"
-        className="absolute inset-0"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(40,28,20,0.35) 0%, rgba(40,28,20,0.5) 55%, rgba(40,28,20,0.6) 100%)",
-        }}
+        className="home-hero__tint"
       />
-      {/* Content overlay */}
-      <div className="relative z-10 grid w-full m-auto sm:min-h-2/4 items-center sm:max-w-3/4 p-4 top-[10%] text-center">
+      {/* Copy sits below the photo on mobile and over it on desktop. */}
+      <div className="home-hero__content">
         <div ref={titleRef}>
           <MaskedWords
             scrollStart={false}
             as="h1"
             variant="words"
             once={true}
-            className="font-extrabold h-auto overflow-visible text-white tracking-tighter leading-none"
+            className="font-extrabold h-auto overflow-visible text-white tracking-tighter"
           >
             Elevated skin care, personalized for you
           </MaskedWords>
@@ -119,7 +96,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="glass-panel mb-4 w-full sm:w-3/4 mx-auto p-4 text-white text-left mt-4 font-light"
+            className="glass-panel text-white text-left font-light"
           >
             Experience personalized skincare treatments designed to improve the
             health and appearance of your skin. With a focus on your individual
