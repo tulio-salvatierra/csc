@@ -71,7 +71,7 @@ export default function AboutPage() {
       {/* My Story Section */}
       <section ref={sectionRef} className="mb-20 flex items-center justify-center">
         <div className="bg-about grid place-items-center w-full p-6">
-          <h1 ref={addToRefs} style={{ fontFamily: "Grapevine", textTransform: "uppercase" }} className="mb-3 text-white text-5xl sm:text-7xl font-main-title mt-28">
+          <h1 ref={addToRefs} style={{ textTransform: "uppercase" }} className="mb-3 text-white text-5xl sm:text-7xl mt-28">
             My Story
           </h1>
           <p ref={addToRefs} className="glass-panel w-full md:w-1/2 font-light p-4 mt-4">

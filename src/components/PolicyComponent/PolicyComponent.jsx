@@ -74,7 +74,7 @@ export default function PolicyComponent() {
           style={{ backgroundImage: `url(${StudioRoom})` }}
         >
           <div className="flex flex-col items-center justify-center px-4 pt-28 pb-16">
-            <h1 style={{ fontFamily: "Grapevine", textTransform: "uppercase" }}
+            <h1 style={{ textTransform: "uppercase" }}
               ref={(el) => (animated.current[0] = el)}
               className="m-3 text-center text-white text-5xl md:text-7xl font-bold drop-shadow-lg"
             >
