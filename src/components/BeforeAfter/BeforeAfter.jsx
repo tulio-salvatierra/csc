@@ -63,7 +63,7 @@ export default function BeforeAfter() {
             <p className="results-eyebrow">Dermaplaning</p>
             <h3>Your skin. Your treatment.</h3>
             <p>Every visit starts with you. I tailor your care to your skin concerns and goals, and help you choose a treatment that fits your needs.</p>
-            <BookingButton href={BOOKING_URL_2} label="Book a visit" />
+            <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
           </aside>
         </div>
         <p className="results-note">Individual results vary. Photos show individual examples and do not guarantee a particular outcome.</p>
