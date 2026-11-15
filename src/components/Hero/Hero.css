@@ -22,37 +22,65 @@ p {
     font-weight: 100;
 }
 
+/* Homepage hero: one full-bleed photo section on every screen size.
+   The photo fills at least one viewport height, keeps its aspect ratio
+   (object-fit: cover) and crops any extra width evenly on both sides.
+   Copy and CTA sit centered over a subtle gradient for legibility. */
 .home-hero {
+    position: relative;
     display: grid;
     width: 100%;
-    padding-top: 150px;
+    min-height: 100vh;
+    min-height: 100svh;
     overflow: hidden;
-    background: #f5eee6;
+    background: #2a1f18; /* only visible while the photo loads */
+}
+
+.home-hero__media,
+.home-hero__tint,
+.home-hero__content {
+    grid-area: 1 / 1;
 }
 
 .home-hero__media {
+    position: relative;
     min-width: 0;
 }
 
 .home-hero__media img {
+    position: absolute;
+    inset: 0;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .home-hero__tint {
-    display: none;
+    position: relative;
+    background: linear-gradient(
+        180deg,
+        rgba(40, 28, 20, 0.30) 0%,
+        rgba(40, 28, 20, 0.45) 50%,
+        rgba(40, 28, 20, 0.55) 100%
+    );
     pointer-events: none;
 }
 
 .home-hero__content {
     position: relative;
     z-index: 1;
+    align-self: center;
+    justify-self: center;
     display: grid;
+    justify-items: center;
     gap: 1.5rem;
-    padding: 2.5rem 1.5rem 3rem;
+    width: 100%;
+    max-width: 72rem;
+    /* top padding clears the fixed header on short screens */
+    padding: 6.5rem 1.5rem 3rem;
     text-align: center;
-    background: #3a2a20;
 }
 
 .home-hero__content h1 {
@@ -67,33 +95,13 @@ p {
     margin: 0 auto;
     font-size: 1rem;
     line-height: 1.5;
+    text-align: center;
 }
 
 @media (min-width: 1024px) {
-    .home-hero {
-        padding-top: 0;
-    }
-
-    .home-hero__media,
-    .home-hero__tint,
     .home-hero__content {
-        grid-area: 1 / 1;
-    }
-
-    .home-hero__media {
-        align-self: start;
-    }
-
-    .home-hero__tint {
-        display: block;
-        background: linear-gradient(180deg, rgba(40,28,20,0.35) 0%, rgba(40,28,20,0.5) 55%, rgba(40,28,20,0.6) 100%);
-    }
-
-    .home-hero__content {
-        align-self: center;
         gap: 1rem;
-        padding: 150px clamp(2rem, 5vw, 6rem) clamp(1.5rem, 3vw, 3rem);
-        background: transparent;
+        padding: 7rem clamp(2rem, 5vw, 6rem) 4rem;
     }
 
     .home-hero__content h1 {
@@ -105,6 +113,3 @@ p {
         font-size: clamp(0.875rem, 1.2vw, 1.125rem);
     }
 }
-
-
-

@@ -60,7 +60,6 @@ export default function Hero() {
       ref={sectionRef}
       className="home-hero"
     >
-      {/* Natural image height keeps both edges visible at every screen width. */}
       <div ref={bgRef} className="home-hero__media">
         <img
           src={studioRoom}
@@ -71,12 +70,11 @@ export default function Hero() {
           decoding="async"
         />
       </div>
-      {/* Warm tint so white text stays readable on the light studio photo */}
+      {/* Subtle warm gradient so the white copy stays readable over the photo */}
       <div
         aria-hidden="true"
         className="home-hero__tint"
       />
-      {/* Copy sits below the photo on mobile and over it on desktop. */}
       <div className="home-hero__content">
         <div ref={titleRef}>
           <MaskedWords
@@ -96,7 +94,7 @@ export default function Hero() {
             once={true}
             variant="lines"
             scrollStart={false}
-            className="glass-panel text-white text-left font-light"
+            className="glass-panel text-white font-light"
           >
             Experience personalized skincare treatments designed to improve the
             health and appearance of your skin. With a focus on your individual
