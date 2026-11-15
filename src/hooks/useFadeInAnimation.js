@@ -1,4 +1,4 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -6,8 +6,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 
-export function useFadeInAnimation(refsArray, options = {}) {
+/**
+ * Scroll-triggered fade-in for the elements collected in refsArray.
+ * Runs once on mount. Options are read from a ref so that callers passing an
+ * inline object (or none) don't re-run the animation on every re-render;
+ * re-running reset every element to opacity 0, which looked like the section
+ * "refreshing" whenever its state changed (e.g. the policy-card tooltip).
+ */
+export function useFadeInAnimation(refsArray, opts = {}) {
+  const optionsRef = useRef(opts);
+
   useLayoutEffect(() => {
+    const options = optionsRef.current;
     const ctx = gsap.context(() => {
       refsArray.current.forEach(el => {
         gsap.from(el, {
@@ -32,5 +42,5 @@ export function useFadeInAnimation(refsArray, options = {}) {
     }, refsArray);
 
     return () => ctx.revert();
-  }, [refsArray, options]);
+  }, [refsArray]);
 }

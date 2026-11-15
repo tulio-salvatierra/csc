@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useFadeInAnimation } from "./../../hooks/useFadeInAnimation";
 import { cancellationPolicy } from "../PolicyComponent/policies";
@@ -17,13 +17,19 @@ export default function CancellationPolicy() {
 
   useFadeInAnimation(fadeRefs);
 
-  // Cursor-following tooltip (pointer devices only; hidden on touch via CSS)
-  const [tooltip, setTooltip] = useState({ visible: false, x: 0, y: 0 });
+  // Cursor-following tooltip (pointer devices only; hidden on touch via CSS).
+  // Moved via the DOM directly so mouse movement never re-renders the section.
+  const tooltipRef = useRef(null);
   const handleMove = (e) => {
+    const tip = tooltipRef.current;
+    if (!tip) return;
     const rect = e.currentTarget.getBoundingClientRect();
-    setTooltip({ visible: true, x: e.clientX - rect.left, y: e.clientY - rect.top });
+    tip.style.opacity = "1";
+    tip.style.transform = `translate(${e.clientX - rect.left + 16}px, ${e.clientY - rect.top + 16}px)`;
   };
-  const hideTooltip = () => setTooltip((t) => ({ ...t, visible: false }));
+  const hideTooltip = () => {
+    if (tooltipRef.current) tooltipRef.current.style.opacity = "0";
+  };
 
   const { paragraphs, list, closing } = cancellationPolicy;
   // Homepage title is "Cancellation Policy"; the full title lives on /policies.
@@ -74,12 +80,10 @@ export default function CancellationPolicy() {
           </p>
 
           <span
+            ref={tooltipRef}
             className="cancellation-tooltip"
             aria-hidden="true"
-            style={{
-              opacity: tooltip.visible ? 1 : 0,
-              transform: `translate(${tooltip.x + 16}px, ${tooltip.y + 16}px)`,
-            }}
+            style={{ opacity: 0 }}
           >
             Click here to read cancellation policies
           </span>
