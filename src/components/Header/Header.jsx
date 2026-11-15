@@ -1,253 +1,180 @@
-import { useState, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import Logo from "../../assets/images/CSC.png";
-import LogoBG from "../../assets/images/CSC.svg";
 import { Link } from "react-router-dom";
 import {
   MENU_ITEMS,
   WHATSAPP,
   INSTAGRAM,
   BOOKING_URL_2,
+  TELEPHONE,
+  PHONE_DISPLAY,
+  ADDRESS,
+  ADDRESS_URL,
 } from "../../constants/index.js";
-import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
 import "./Header.css";
 import BookingButton from "../BookingButton";
 import SERVICES from "../blog/servicesPageCard";
 
+/**
+ * Site header + "card" menu (Nov 2026, Carolina asked for something more
+ * creative; reference: luxury-boutique menus). A white card grows out of the
+ * top-left corner, the page blurs behind it, links dim except the hovered one,
+ * and hovering a treatment previews its photo in the blurred space (desktop).
+ */
 export default function Header({ showBookButton = true }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const menuRef = useRef(null);
-  const menuLinksRef = useRef([]);
-  const overlayRef = useRef(null);
-  const socialIconsRef = useRef([]);
-  const { containerRef: navUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
-  const { containerRef: mobileNavUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
-  const { containerRef: socialUnderlineRef } = useUnderlineAnimation({ duration: 0.35 });
+  const [preview, setPreview] = useState(null);
+  const triggerRef = useRef(null);
+  const closeRef = useRef(null);
 
-  // Animation hooks removed
-
-  const handleOpen = () => {
-    setIsOpen(!isOpen);
+  const close = () => {
+    setIsOpen(false);
+    setPreview(null);
   };
 
-  // Animation close handler removed, use direct close
+  // Esc to close, lock page scroll, move focus in/out of the menu
+  useEffect(() => {
+    if (!isOpen) return undefined;
+    const onKey = (e) => e.key === "Escape" && close();
+    document.addEventListener("keydown", onKey);
+    const { overflow } = document.body.style;
+    document.body.style.overflow = "hidden";
+    const t = setTimeout(() => closeRef.current?.focus({ preventScroll: true }), 350);
+    const trigger = triggerRef.current;
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = overflow;
+      clearTimeout(t);
+      trigger?.focus({ preventScroll: true });
+    };
+  }, [isOpen]);
+
+  const mainLinks = MENU_ITEMS.filter((item) => item.title !== "Services");
+  let i = 0; // running index for the stagger delay
 
   return (
     <>
-      {/* Header NORMAL, no ref, no animación */}
       <section className="sticky top-0 w-full z-auto header site-navbar">
-        <nav className="flex items-center justify-between py-0 px-2">
-          <a href="/" aria-label="Carolina Skin Centre Home">
-            <img className="w-[150px] h-auto" src={Logo} alt="Carolina Skin Centre Logo" />
-          </a>
-
-          <button className="block lg:hidden p-0 z-50" onClick={handleOpen}>
-            <svg
-              width={32}
-              height={32}
-              viewBox="0 0 24 24"
-              fill="#000"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M3.5 7C3.22386 7 3 6.77614 3 6.5C3 6.22386 3.22386 6 3.5 6H20.5C20.7761 6 21 6.22386 21 6.5C21 6.77614 20.7761 7 20.5 7H3.5ZM3.5 12C3.22386 12 3 11.7761 3 11.5C3 11.2239 3.22386 11 3.5 11H20.5C20.7761 11 21 11.2239 21 11.5C21 11.7761 20.7761 12 20.5 12H3.5ZM3 16.5C3 16.7761 3.22386 17 3.5 17H20.5C20.7761 17 21 16.7761 21 16.5C21 16.2239 20.7761 16 20.5 16H3.5C3.22386 16 3 16.2239 3 16.5Z"
-                fill="#000"
-              />
-            </svg>
+        <nav className="cm-bar" aria-label="Main">
+          <button
+            ref={triggerRef}
+            type="button"
+            className="cm-trigger"
+            aria-expanded={isOpen}
+            aria-controls="site-menu"
+            onClick={() => setIsOpen(true)}
+          >
+            <span className="cm-trigger__lines" aria-hidden>
+              <span />
+              <span />
+            </span>
+            <span className="cm-trigger__label">Menu</span>
           </button>
 
-          <div className="hidden lg:flex justify-end items-center space-x-8">
-            <ul ref={navUnderlineRef} className="flex space-x-8">
-              {MENU_ITEMS.map((item, index) =>
-                item.title === "Services" ? (
-                  <li className="nav-item nav-dropdown" key={index}>
-                    <Link
-                      className="underline-link text-2xl text-black no-underline"
-                      to="/services"
-                      aria-haspopup="true"
-                    >
-                      {item.title}
-                      <span className="nav-dropdown-chevron" aria-hidden>
-                        ▾
-                      </span>
-                      <span className="underline" aria-hidden />
-                    </Link>
-                    <ul className="nav-dropdown-menu" aria-label="Services">
-                      {SERVICES.map((service) => (
-                        <li key={service.slug}>
-                          <Link to={`/services/${service.slug}`}>
-                            {service.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ) : (
-                  <li className="nav-item" key={index}>
-                    <Link
-                      className="underline-link text-2xl text-black no-underline"
-                      to={item.url}
-                    >
-                      {item.title}
-                      <span className="underline" aria-hidden />
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
+          <a href="/" className="cm-logo" aria-label="Carolina Skin Centre Home">
+            <img src={Logo} alt="Carolina Skin Centre Logo" />
+          </a>
+
+          <div className="cm-cta">
             {showBookButton && (
-              <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
+              <BookingButton
+                href={BOOKING_URL_2}
+                label={"Book Your Experience"}
+                variant="light"
+                trackingSource="header"
+              />
             )}
           </div>
         </nav>
       </section>
 
-      {/* Aquí SÍ el menú móvil animado */}
-      {isOpen && (
-        <div
-          ref={overlayRef}
-          className="fixed inset-0 opacity-100 pointer-events-auto backdrop-blur-sm transition-[opacity,backdrop-filter] duration-300"
-          onClick={() => setIsOpen(false)}
-        >
-          <div
-            ref={menuRef}
-            className="pointer-events-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-          <nav
-            className={`relative z-10 flex flex-col py-10 px-6 bg-white shadow-xl transform transition-all duration-300 ${
-              isOpen ? "translate-y-0 opacity-100" : "-translate-y-4 opacity-0"
-            }`}
-          >
-            <div
-              className="absolute inset-0 z-0 pointer-events-none"
-              style={{
-                backgroundImage: `url(${LogoBG})`,
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                backgroundColor: "rgba(0, 0, 0, 0.05)",
-                opacity: 0.05,
-              }}
-            />
-            <div className="absolute inset-0 bg-white opacity-0 z-0 pointer-events-none" />
-            <div className="flex items-center mb-12 mt-12">
-              <a
-                className="flex-1 text-2xl font-semibold mb-0 no-underline"
-                href="/"
-                aria-label="Carolina Skin Centre Home"
-              >
-                <img src={Logo} alt="Carolina Skin Centre Logo" width={15} />
-              </a>
-              <button
-                className="p-2"
-                type="button"
-                aria-label="Close"
-                onClick={handleOpen}
-              >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                  <line
-                    x1="4"
-                    y1="4"
-                    x2="20"
-                    y2="20"
-                    stroke="black"
-                    strokeWidth="2"
-                  />
-                  <line
-                    x1="20"
-                    y1="4"
-                    x2="4"
-                    y2="20"
-                    stroke="black"
-                    strokeWidth="2"
-                  />
-                </svg>
-              </button>
-            </div>
+      <div
+        id="site-menu"
+        className="cm"
+        data-open={isOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Site menu"
+        aria-hidden={!isOpen}
+        inert={!isOpen}
+      >
+        <div className="cm-scrim" onClick={close} aria-hidden />
 
-            <ul ref={mobileNavUnderlineRef} className="flex flex-col space-y-4">
-              <h2 className="text-sm font-semibold text-black tracking-normal mb-2">
-                Navigation
-              </h2>
-              {MENU_ITEMS.map((item, index) => (
-                <li className="py-2" key={index}>
-                  <div className="flex items-center gap-3">
-                    <a
-                      ref={(el) => (menuLinksRef.current[index] = el)}
-                      className="underline-link text-lg text-black no-underline w-fit"
-                      href={item.url}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.title}
-                      <span className="underline" aria-hidden />
-                    </a>
-                    {item.title === "Services" && (
-                      <button
-                        type="button"
-                        className="mobile-services-toggle"
-                        aria-expanded={mobileServicesOpen}
-                        aria-label={mobileServicesOpen ? "Hide services" : "Show services"}
-                        onClick={() => setMobileServicesOpen((open) => !open)}
-                      >
-                        <span className={mobileServicesOpen ? "rotate-180 inline-block" : "inline-block"}>▾</span>
-                      </button>
-                    )}
-                  </div>
-                  {item.title === "Services" && mobileServicesOpen && (
-                    <ul className="mt-3 ml-4 space-y-3 border-l border-black/10 pl-4">
-                      {SERVICES.map((service) => (
-                        <li key={service.slug}>
-                          <Link
-                            className="text-base text-black/80 no-underline"
-                            to={`/services/${service.slug}`}
-                            onClick={() => setIsOpen(false)}
-                          >
-                            {service.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+        {/* Treatment photo preview, floats in the blurred space (desktop) */}
+        <div className="cm-preview" aria-hidden>
+          {SERVICES.map((s) => (
+            <figure key={s.slug} className="cm-preview__item" data-active={preview === s.slug}>
+              <img src={s.icon} alt="" loading="lazy" />
+              <figcaption>{s.tagline}</figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div className="cm-card">
+          <button ref={closeRef} type="button" className="cm-close" aria-label="Close menu" onClick={close}>
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden>
+              <path d="M1 1l12 12M13 1L1 13" stroke="currentColor" strokeWidth="1.2" />
+            </svg>
+          </button>
+
+          <div className="cm-scroll">
+            <p className="cm-eyebrow" style={{ "--i": i++ }}>Treatments</p>
+            <ul className="cm-list" onMouseLeave={() => setPreview(null)}>
+              {SERVICES.map((s) => (
+                <li key={s.slug} style={{ "--i": i++ }}>
+                  <Link
+                    className="cm-link"
+                    to={`/services/${s.slug}`}
+                    onClick={close}
+                    onMouseEnter={() => setPreview(s.slug)}
+                    onFocus={(e) => e.target.matches(":focus-visible") && setPreview(s.slug)}
+                  >
+                    {s.name}
+                  </Link>
                 </li>
               ))}
             </ul>
 
-            <h2 className="text-sm font-semibold text-black  tracking-normal mt-8">
-              Connect
-            </h2>
-            <div ref={socialUnderlineRef} className="flex space-x-4 justify-evenly py-4">
-              <a
-                className="underline-link no-underline w-auto"
-                href={WHATSAPP[0].url}
-                target="_blank"
-                rel="noreferrer"
-                ref={(el) => (socialIconsRef.current[0] = el)}
-              >
-                Whatsapp
-                <span className="underline" aria-hidden />
-              </a>
+            <ul className="cm-list cm-list--secondary">
+              <li style={{ "--i": i++ }}>
+                <Link className="cm-link" to="/services" onClick={close}>
+                  All services
+                </Link>
+              </li>
+              {mainLinks.map((item) => (
+                <li key={item.title} style={{ "--i": i++ }}>
+                  <Link className="cm-link" to={item.url} onClick={close}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
 
-              <a
-                className="underline-link no-underline"
-                href={INSTAGRAM[0].url}
-                target="_blank"
-                rel="noreferrer"
-                ref={(el) => (socialIconsRef.current[1] = el)}
-              >
-                Instagram
-                <span className="underline" aria-hidden />
+            <div className="cm-foot" style={{ "--i": i++ }}>
+              <div className="cm-book">
+                <BookingButton
+                  href={BOOKING_URL_2}
+                  label={"Book Your Experience"}
+                  variant="light"
+                  trackingSource="menu"
+                />
+              </div>
+              <ul className="cm-utility">
+                <li><a href={TELEPHONE}>Call {PHONE_DISPLAY}</a></li>
+                <li><a href={WHATSAPP[0].url} target="_blank" rel="noreferrer">WhatsApp</a></li>
+                <li><a href={INSTAGRAM[0].url} target="_blank" rel="noreferrer">Instagram</a></li>
+              </ul>
+              <a className="cm-address" href={ADDRESS_URL} target="_blank" rel="noreferrer">
+                {ADDRESS}
               </a>
+              <p className="cm-legal">
+                <Link to="/policies" onClick={close}>Studio policies</Link>
+                <span>© {new Date().getFullYear()} Carolina Skin Centre</span>
+              </p>
             </div>
-            <div className="py-6">
-              <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
-            </div>
-          </nav>
+          </div>
         </div>
       </div>
-      )}
     </>
   );
 }
