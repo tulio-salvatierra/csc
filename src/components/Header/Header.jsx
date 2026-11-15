@@ -98,7 +98,7 @@ export default function Header({ showBookButton = true }) {
               )}
             </ul>
             {showBookButton && (
-              <BookingButton href={BOOKING_URL_2} label={"Book now!"} />
+              <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
             )}
           </div>
         </nav>
@@ -242,7 +242,7 @@ export default function Header({ showBookButton = true }) {
               </a>
             </div>
             <div className="py-6">
-              <BookingButton href={BOOKING_URL_2} label={"Book now"} />
+              <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
             </div>
           </nav>
         </div>

@@ -138,7 +138,7 @@ export default function PolicyComponent() {
           ))}
 
           <div className="text-center pt-6">
-            <BookingButton label={"Book now"} href={BOOKING_URL_2} />
+            <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" />
           </div>
         </div>
       </section>

@@ -118,7 +118,8 @@ export default function Services() {
               <div className="text-center">
                 <BookingButton
                   href={BOOKING_URL_2}
-                  label={"Book my appointment now!"}
+                  label={"Book Your Experience"}
+                  variant="light"
                 />
               </div>
             </div>

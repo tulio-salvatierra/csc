@@ -100,7 +100,7 @@ export default function ServiceDetailPage() {
           {intro && (
             <section className="bg-white px-4 py-8 text-center" aria-label="Book your treatment">
               <p className="max-w-3xl mx-auto mb-6 text-gray-700 leading-relaxed">{intro}</p>
-              <BookingButton href={BOOKING_URL_2} label={`Book ${service.name}`} trackingSource={`service:${service.slug}:intro`} />
+              <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" trackingSource={`service:${service.slug}:intro`} />
               <p className="mt-4">Need help choosing? <a className="underline" href={TELEPHONE} onClick={trackCall("intro")}>Call {PHONE_DISPLAY}</a></p>
             </section>
           )}
@@ -136,7 +136,7 @@ export default function ServiceDetailPage() {
                 </aside>
               )}
               <div className="mt-10 text-center">
-                <BookingButton href={BOOKING_URL_2} label="Book my appointment" trackingSource={`service:${service.slug}:article`} />
+                <BookingButton href={BOOKING_URL_2} label={"Book Your Experience"} variant="light" trackingSource={`service:${service.slug}:article`} />
               </div>
             </div>
           </section>
