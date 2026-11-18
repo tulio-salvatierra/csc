@@ -11,7 +11,7 @@ export default function Footer() {
   const { containerRef: footerLinksRef } = useUnderlineAnimation({ duration: 0.35 });
 
   return (
-    <footer className="bg-[#faf7f2] px-4 border-t border-black/10">
+    <footer className="w-full bg-[#faf7f2] px-4 border-t border-black/10">
       <div ref={footerLinksRef} className="w-full max-w-7xl mx-auto pt-20 pb-10 lg:pt-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* Logo + tagline */}
