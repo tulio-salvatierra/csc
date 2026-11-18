@@ -10,7 +10,6 @@ import VideoBooking from "../components/VideoBooking/VideoBooking";
 import SingleReviewCarousel from "../components/Review/Review";
 import Solutions from "../components/Solution/Solution";
 import HL from "../components/Highlights";
-import CancellationPolicy from "../components/CancelationPolicy";
 import { Banner } from "../components/Banner/Banner";
 import SEO from "../components/SEO/SEO";
 import { LocalBusinessSchema, WebSiteSchema, FAQSchema } from "../components/SEO/StructuredData";
@@ -60,9 +59,6 @@ export default function IndexPage() {
           </div>
           <div className="col-span-1 min-h-screen">
             <Solutions />
-          </div>
-          <div className="col-span-1">
-            <CancellationPolicy />
           </div>
           <div className="col-span-1">
             <Services />

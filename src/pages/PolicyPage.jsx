@@ -1,5 +1,4 @@
 import "./../App.css";
-import FloatingCallbutton from "../components/floatingCallButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PolicyComponent from "../components/PolicyComponent";
@@ -22,7 +21,7 @@ export default function PolicyPage() {
       />
       <main className="parent-page">
         <div className="header">
-          <Header />
+          <Header showBookButton={false} />
         </div>
         <div className="content">
          <PolicyComponent/>
@@ -31,7 +30,6 @@ export default function PolicyPage() {
           <Footer />
         </div>
       </main>
-      <FloatingCallbutton />
     </>
   );
 }
