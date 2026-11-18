@@ -4,9 +4,8 @@ import Children from "./../../assets/images/policies/policy-children.webp";
 import GiftCard from "./../../assets/images/policies/policy-giftcard.webp";
 
 /**
- * Studio policies — Carolina's copy (Oct 2026).
- * Single source for the Policies page AND the homepage cancellation section,
- * so the two can never say different things.
+ * Studio policies — Carolina's copy (Oct 2026, revised Nov 2026).
+ * Single source for the Policies page.
  */
 export const policiesIntro =
   "Please review my studio policies before booking your appointment. These guidelines help maintain a professional, respectful, and comfortable experience for every client.";
@@ -22,15 +21,11 @@ export const policies = [
     ],
     list: [
       {
-        label: "Less than 48 hours’ notice:",
-        text: "50% of the scheduled service cost will be charged.",
-      },
-      {
-        label: "Same-day cancellations, rescheduling, or no-shows:",
+        label: "No-shows:",
         text: "100% of the scheduled service cost will be charged.",
       },
     ],
-    closing: "Thank you for respecting my time and cancellation policy.",
+    closing: "Thank you for your understanding and consideration.",
   },
   {
     id: "standing",
@@ -38,7 +33,7 @@ export const policies = [
     image: Standing,
     imageAlt: "Appointment cards beside a green plant",
     paragraphs: [
-      "Three consecutive cancellations or rescheduled appointments may result in the loss of standing appointment privileges.",
+      "Three consecutive cancellations or rescheduled appointments may result in the loss of standing appointment privileges. A non-refundable deposit of $75 will be required for future bookings.",
     ],
   },
   {
@@ -57,10 +52,9 @@ export const policies = [
     image: GiftCard,
     imageAlt: "Gift card tied with a satin ribbon",
     paragraphs: [
-      "Gift cards are non-refundable, non-transferable, and cannot be redeemed for cash, except as required by law.",
+      "Gift cards are non-refundable, non-transferable, and cannot be redeemed for cash.",
       "Gift cards may be used toward services or retail products at Carolina Skin Centre.",
     ],
   },
 ];
 
-export const cancellationPolicy = policies[0];
