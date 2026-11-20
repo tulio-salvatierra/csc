@@ -8,8 +8,8 @@
 .client-review-stars { color: #80643c; letter-spacing: .2em; margin-bottom: 1.5rem; }
 .client-review blockquote { margin: 0 auto 2rem; max-width: 780px; }
 .client-review blockquote p { font-family: 'Moula', sans-serif; font-size: clamp(1.5rem, 3vw, 2rem); line-height: 1.6; color: #38322b; }
-.client-review figcaption { display: flex; align-items: center; justify-content: center; gap: 1rem; color: #59534c; }
-.client-review figcaption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
+.client-review .client-review-caption { display: flex; align-items: center; justify-content: center; gap: 1rem; color: #59534c; }
+.client-review .client-review-caption img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
 .client-review-controls { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 1rem; }
 .client-review-controls > button { min-width: 44px; min-height: 44px; border: 0; background: transparent; color: #38322b; cursor: pointer; }
 .client-review-controls .client-review-pause { padding: 0 1rem; }

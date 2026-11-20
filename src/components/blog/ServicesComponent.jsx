@@ -97,6 +97,8 @@ export default function Services() {
                       if (el) imageRefs.current[index] = el;
                     }}
                     className="mx-auto mb-1 w-100 h-100 object-cover will-change-transform"
+                    loading="lazy"
+                    decoding="async"
                     src={service.icon}
                     alt={`${service.name} skincare facial treatment at Carolina Skin Centre`}
                   />

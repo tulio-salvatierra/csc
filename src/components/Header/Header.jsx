@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import Logo from "../../assets/images/CSC.png";
+const Logo = "/images/csc-logo.webp";
 import { Link } from "react-router-dom";
 import {
   MENU_ITEMS,
@@ -72,7 +72,7 @@ export default function Header({ showBookButton = true }) {
           </button>
 
           <a href="/" className="cm-logo" aria-label="Carolina Skin Centre Home">
-            <img src={Logo} alt="Carolina Skin Centre Logo" />
+            <img src={Logo} alt="Carolina Skin Centre Logo" width="150" height="150" fetchPriority="high" />
           </a>
 
           <div className="cm-cta">

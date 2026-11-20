@@ -44,7 +44,7 @@ export default function BeforeAfter() {
                 <button
                   key={comparison.image}
                   type="button"
-                  aria-label={`View comparison ${index + 1}`}
+                  aria-label={`Comparison 0${index + 1}`}
                   aria-pressed={selected === index}
                   aria-controls="results-comparison"
                   onClick={() => setSelected(index)}

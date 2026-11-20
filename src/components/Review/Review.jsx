@@ -39,16 +39,16 @@ export default function ReviewCarousel() {
         <p className="client-reviews-highlight"><strong>{reviewCountLabel} five-star reviews</strong> on Google</p>
         <p className="client-reviews-intro">Kind words from clients who trust Carolina with their skincare.</p>
         <div className="client-review-stage" aria-live={autoPlaying ? "off" : "polite"} aria-atomic="true">
-          <figure key={review.id} className="client-review" role="group" aria-roledescription="slide" aria-label={`${active + 1} of ${reviews.length}`}>
-            <p className="client-review-stars" aria-label={`${review.rating} out of 5 stars`}>
+          <div key={review.id} className="client-review" role="group" aria-roledescription="slide" aria-label={`${active + 1} of ${reviews.length}`}>
+            <p className="client-review-stars" role="img" aria-label={`${review.rating} out of 5 stars`}>
               <span aria-hidden="true">{"★".repeat(review.rating)}</span>
             </p>
             <blockquote><p>“{review.text}”</p></blockquote>
-            <figcaption>
+            <div className="client-review-caption">
               <span className="client-review-avatar" aria-hidden="true">{review.author.split(/\s+/).slice(0, 2).map((part) => part[0]).join("")}</span>
               <span>{review.author}</span>
-            </figcaption>
-          </figure>
+            </div>
+          </div>
         </div>
         <div className="client-review-controls">
           <button type="button" aria-label="Previous review" onClick={() => setActive((current) => (current - 1 + reviews.length) % reviews.length)}>←</button>

@@ -104,6 +104,8 @@ export default function PolicyComponent() {
                     if (el) policyImageRefs.current[index] = el;
                   }}
                   className="absolute inset-0 w-full h-full object-cover will-change-transform"
+                  loading="lazy"
+                  decoding="async"
                   src={policy.image}
                   alt={policy.imageAlt}
                   loading="lazy"

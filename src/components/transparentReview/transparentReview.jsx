@@ -178,7 +178,7 @@ export default function HeroReviewCarousel() {
               <p className="top">"{review.text}"</p>
               <div className="bottom">
                 <div className="bubble">
-                  <img src={review.photoUrl} alt={review.author} />
+                  <img src={review.photoUrl} alt={review.author} loading="lazy" decoding="async" />
                 </div>
                 <div>
                   <p>{review.author}</p>

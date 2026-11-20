@@ -1,7 +1,7 @@
 import { MENU_ITEMS, WHATSAPP, INSTAGRAM, ADDRESS_URL, ADDRESS, TELEPHONE, PHONE_DISPLAY } from "../../constants";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa6";
 import { LuMapPin } from "react-icons/lu";
-import Logo from "../../assets/images/CSC.png";
+const Logo = "/images/csc-logo.webp";
 import { Link } from "react-router-dom";
 import { useUnderlineAnimation } from "../../hooks/useUnderlineAnimation";
 
@@ -17,7 +17,7 @@ export default function Footer() {
           {/* Logo + tagline */}
           <div className="lg:col-span-7 flex flex-col items-center text-center">
             <Link to="/" aria-label="Carolina Skin Centre Home">
-              <img className="w-[200px] sm:w-[300px] h-auto mx-auto" src={Logo} alt="Carolina Skin Centre Logo" />
+              <img className="w-[200px] sm:w-[300px] h-auto mx-auto" src={Logo} alt="Carolina Skin Centre Logo" width="300" height="300" loading="lazy" decoding="async" />
             </Link>
             <span className="block w-16 h-px bg-[#c9b8a6] my-6" aria-hidden />
             <p className="footer-tagline text-gray-700 text-xl leading-relaxed max-w-sm font-light">

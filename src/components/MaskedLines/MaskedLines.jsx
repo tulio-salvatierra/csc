@@ -40,6 +40,8 @@ function MaskedText({
               mask: "lines",
             }),
         autoSplit: true,
+        // Words/lines read fine to screen readers as-is; "auto" puts aria-label on <p>, which is not allowed.
+        aria: "none",
         // 🔑 this runs every time SplitText resplits (fonts, resize, etc.)
         onSplit: (split) => {
           const targets = isWords ? split.words : split.lines;
