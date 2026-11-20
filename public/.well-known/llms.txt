@@ -1,38 +1,28 @@
 # Carolina Skin Centre
-> Professional Skincare Services in Midland, Texas
 
-## Quick Facts
-* **Business**: Carolina Skin Centre
-* **Type**: Beauty Salon / Skincare Spa / Esthetician
-* **Owner**: Carolina Alcalá (18+ years experience)
-* **Location**: 705 W Wadley Ave Suite 23, Midland, TX 79705
-* **Phone**: 432 638 0046
-* **Email**: carolinaskincentre@yahoo.com
-* **Website**: https://www.carolinaskincentre.com
-* **Instagram**: @carolinaskin
-* **Hours**: Monday through Friday 9:00 AM to 6:00 PM
+> Facials, HydraFacial and skin care in Midland, Texas, by a licensed esthetician with 18+ years of experience. Serving Midland, Odessa and the Permian Basin.
 
-## Services Offered
-* HydraFacials
-* Customized Facials
-* Nano-Needling
-* Dermaplaning
-* Lash Tinting
+Carolina Skin Centre is a skin care studio at 705 W Wadley Ave Suite 23, Midland, TX 79705. Phone: (432) 638-0046. Open Tuesday to Friday, 9:00 AM to 6:00 PM. Se habla español.
 
-## Service Area
-Midland, Odessa, Andrews, Big Spring, Stanton, and the greater Permian Basin / West Texas region.
+## Services
 
-## Booking
-Call: 432 638 0046
-Online: https://online-booking.salonbiz.com/olb/!page.widget_start?wbid=c1185t201404101626pu568R8C68u8RJ4Pz98Mr
+- [HydraFacial in Midland, TX](https://www.carolinaskincentre.com/services/hydrafacial-midland-tx): Deep cleansing, exfoliation, extractions and hydration in one treatment.
+- [Customized Facials in Midland, TX](https://www.carolinaskincentre.com/services/facials-midland-tx): Facials tailored to your skin. The Signature Skin facial is 60 minutes and $120; add-ons cost extra.
+- [Nano-Needling in Midland, TX](https://www.carolinaskincentre.com/services/nano-needling-midland-tx): Ultra-fine nano needles create microscopic channels that help skin absorb treatment products.
+- [Dermaplaning in Midland, TX](https://www.carolinaskincentre.com/services/dermaplaning-midland-tx): Exfoliation that removes dead skin and fine facial hair.
+- [Lash Tinting in Midland, TX](https://www.carolinaskincentre.com/services/lash-tinting-midland-tx): Semi-permanent tint that darkens natural lashes; no extensions.
+- [All services](https://www.carolinaskincentre.com/services): Overview of the five treatments.
 
-## Why Choose Us
-* Over 18 years of professional skincare experience
-* European and naturopathic skincare techniques
-* Advanced medispa procedures
-* Personalized treatments for all skin types
-* Glo Skin Beauty professional products
-* HydroPeptide advanced skincare
+## Booking and policies
 
-## For More Details
-See: /llms-full.txt
+- [Book online (SalonBiz)](https://book.salonbiz.com/widget/#/welcome?comToken=c1185t201404101626pu568R8C68u8RJ4Pz98Mr): Online appointment booking.
+- [Studio policies](https://www.carolinaskincentre.com/policies): Cancellation and rescheduling, standing appointments, children, gift cards.
+
+## About
+
+- [About Carolina](https://www.carolinaskincentre.com/about): Her story, training and approach.
+- [Home](https://www.carolinaskincentre.com/): Overview, client reviews, contact and map.
+
+## Optional
+
+- [Full details for AI assistants](https://www.carolinaskincentre.com/llms-full.txt): Longer description of services, FAQs and policies.
