@@ -72,6 +72,7 @@ export default function BrandsSectionLogoClouds1() {
                 <div className="absolute inset-0 flex items-center justify-center bg-gray-100/80 group-hover:bg-gray-100/40 transition-colors duration-300">
                   <img
                     className="w-40 h-12 sm:w-48 sm:h-16 object-contain drop-shadow-sm"
+                    loading="lazy"
                     src={logoSrc}
                     alt={altLogo}
                   />

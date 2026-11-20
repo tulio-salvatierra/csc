@@ -48,7 +48,7 @@ export default function VideoBackdrop({ src, poster, children, className = "", l
       <video ref={videoRef} src={src} poster={poster} muted loop playsInline preload="none" aria-hidden="true" tabIndex={-1} onPlay={() => setPaused(false)} onPause={() => setPaused(true)} />
       <div className="video-backdrop-shade" aria-hidden="true" />
       <div className="video-backdrop-content">{children}</div>
-      <button type="button" className="video-backdrop-toggle" onClick={togglePlayback} aria-label={`${paused ? "Play" : "Pause"} ${label.toLowerCase()}`}>{paused ? "Play video" : "Pause video"}</button>
+      <button type="button" className="video-backdrop-toggle" onClick={togglePlayback} aria-label={`${paused ? "Play video" : "Pause video"}: ${label.toLowerCase()}`}>{paused ? "Play video" : "Pause video"}</button>
     </div>
   );
 }

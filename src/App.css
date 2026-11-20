@@ -4,7 +4,8 @@
 
 @font-face {
   font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-Regular.ttf) format("truetype");
+  src: url(../src/assets/fonts/Nanum/Nanum-Regular.woff2) format("woff2");
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
@@ -12,21 +13,24 @@
 @font-face {
   font-family: "Grapevine";
   src: url(../src/assets/fonts/grapevine/Grapevine.ttf) format("truetype");
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-Bold.ttf) format("truetype");
+  src: url(../src/assets/fonts/Nanum/Nanum-Bold.woff2) format("woff2");
+  font-display: swap;
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Moula";
-  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.ttf) format("truetype");
-  font-weight: extra-bold;
+  src: url(../src/assets/fonts/Nanum/Nanum-ExtraBold.woff2) format("woff2");
+  font-display: swap;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -84,7 +88,7 @@ h3 {
 p {
   font-family: 'Moula', sans-serif;
   font-size: 1.5rem;
-  color: #929292;
+  color: #6e6e6e; /* was #929292: 2.9:1 on the cream background; #6e6e6e passes 4.5:1 */
 
   @media (max-width: 1024px) {
       font-size: 1.25rem;
@@ -100,7 +104,7 @@ p {
 quote {
   font-family: 'Moula', sans-serif;
   font-size: 1.5rem;
-  color: #929292;
+  color: #6e6e6e;
 
   @media (max-width: 1024px) {
       font-size: 1.25rem;
@@ -130,7 +134,7 @@ li {
 
 strong, a {
   font-family: 'Moula', sans-serif;
-  font-weight: extra-bold;
+  font-weight: 800;
 }
 
 /* Ensure all links are clickable and show pointer cursor */

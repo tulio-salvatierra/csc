@@ -102,6 +102,8 @@ export default function AboutPage() {
                     src={member.image}
                     alt={member.name}
                     className="mx-auto will-change-transform"
+                  loading="lazy"
+                  decoding="async"
                     style={{ width: "100%", height: "auto" }}
                   />
                 </div>
