@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO/SEO";
 
 function NotFound() {
   return (
+    <>
+    <SEO title="Page not found | Carolina Skin Centre" noindex />
     <main className="min-h-screen flex items-center justify-center bg-[#faf7f2] px-6">
       <div className="text-center">
         <p className="text-sm tracking-[0.2em] uppercase text-gray-500 mb-4">404</p>
@@ -17,6 +20,7 @@ function NotFound() {
         </Link>
       </div>
     </main>
+    </>
   );
 }
 

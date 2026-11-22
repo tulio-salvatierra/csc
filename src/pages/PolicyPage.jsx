@@ -2,6 +2,7 @@ import "./../App.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import PolicyComponent from "../components/PolicyComponent";
+import { PAGE_SEO } from "../data/seoMeta";
 import SEO from "../components/SEO/SEO";
 import { BreadcrumbSchema } from "../components/SEO/StructuredData";
 
@@ -9,8 +10,8 @@ export default function PolicyPage() {
   return (
     <>
       <SEO
-        title="Policies & Cancellation | Carolina Skin Centre, Midland TX"
-        description="Learn about my cancellation policy, booking terms, and service policies for facials, skincare, and spa and facial treatments at Carolina Skin Centre in Midland, Texas."
+        title={PAGE_SEO["/policies"].title}
+        description={PAGE_SEO["/policies"].description}
         url="/policies"
       />
       <BreadcrumbSchema

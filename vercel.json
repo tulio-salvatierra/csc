@@ -26,56 +26,6 @@
       "permanent": true
     },
     {
-      "source": "/services/waxing-services",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/waxingservices",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/microdermabrasion",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/microdermabrasion-midland-tx",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/chemicalpeels",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/chemical-peels",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/chemical-peels-midland-tx",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/carboxytherapy",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/carboxy-therapy",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
-      "source": "/services/carboxy-therapy-midland-tx",
-      "destination": "/services",
-      "permanent": true
-    },
-    {
       "source": "/services/lash-tinting",
       "destination": "/services/lash-tinting-midland-tx",
       "permanent": true
@@ -85,10 +35,6 @@
     {
       "source": "/metrics/:path*",
       "destination": "https://gtm-wn7jpvgx.fps.goog/:path*"
-    },
-    {
-      "source": "/((?!\\.well-known/)(?!.*\\.[a-zA-Z0-9]+$).*)",
-      "destination": "/"
     }
   ]
 }
