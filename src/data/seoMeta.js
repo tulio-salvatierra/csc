@@ -43,4 +43,14 @@ export const PAGE_SEO = {
     description:
       "Professional skincare services in Midland, TX: HydraFacials, customized facials, Nano-Needling, dermaplaning & lash tinting from a licensed esthetician serving Midland, Odessa & the Permian Basin.",
   },
+  "/about": {
+    title: "About Carolina Skin Centre | Expert Esthetician in Midland, TX | 18+ Years Experience",
+    description:
+      "Meet Carolina Alcalá, an experienced skin esthetician with over 18 years in skincare and facials. European and naturopathic techniques combined with advanced medispa procedures in Midland, Texas. Your local esthetician near me for customized skin care facials, skin care treatments, and spa and facial services serving Midland, Odessa & West Texas.",
+  },
+  "/policies": {
+    title: "Policies & Cancellation | Carolina Skin Centre, Midland TX",
+    description:
+      "Learn about my cancellation policy, booking terms, and service policies for facials, skincare, and spa and facial treatments at Carolina Skin Centre in Midland, Texas.",
+  },
 };

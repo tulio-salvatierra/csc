@@ -3,6 +3,7 @@ import FaqSectionFaq1 from "../components/faq/FaqSectionFaq1";
 import FloatingCallbutton from "../components/floatingCallButton";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { PAGE_SEO } from "../data/seoMeta";
 import SEO from "../components/SEO/SEO";
 import { BreadcrumbSchema, PersonSchema, FAQSchema } from "../components/SEO/StructuredData";
 
@@ -47,8 +48,8 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Carolina Skin Centre | Expert Esthetician in Midland, TX | 18+ Years Experience"
-        description="Meet Carolina Alcalá, an experienced skin esthetician with over 18 years in skincare and facials. European and naturopathic techniques combined with advanced medispa procedures in Midland, Texas. Your local esthetician near me for customized skin care facials, skin care treatments, and spa and facial services serving Midland, Odessa & West Texas."
+        title={PAGE_SEO["/about"].title}
+        description={PAGE_SEO["/about"].description}
         url="/about"
       />
       <BreadcrumbSchema

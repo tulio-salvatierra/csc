@@ -1,4 +1,5 @@
-import { useParams, Navigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import NotFound from "./notFound";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ContactSection from "../components/contacts/ContactSectionContacts1";
@@ -36,7 +37,9 @@ export default function ServiceDetailPage() {
   useFadeInAnimation(fadeRefs);
 
   if (!service || !content) {
-    return <Navigate to="/services" replace />;
+    // Unknown slug: show the 404 page. The server already answers 404 for
+    // these URLs (no prerendered file), so Google drops them cleanly.
+    return <NotFound />;
   }
 
   const { article, faqs, intro, sections, relatedSlug, relatedLabel, price, duration } = content;

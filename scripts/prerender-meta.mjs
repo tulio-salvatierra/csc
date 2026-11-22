@@ -58,3 +58,19 @@ const routes = {
 };
 
 for (const [route, meta] of Object.entries(routes)) renderRoute(route, meta);
+
+/**
+ * 404 page. With no catch-all rewrite in vercel.json, Vercel answers any URL
+ * that has no file with dist/404.html and a real 404 status. Before this,
+ * every unknown URL returned the homepage with a 200, which Google reports as
+ * "Soft 404". The React app still boots here and shows the NotFound page.
+ */
+{
+  let html = template;
+  html = setTag(html, /<title>[\s\S]*?<\/title>/, `<title>Page not found | Carolina Skin Centre</title>`, "<title>", "404");
+  html = setTag(html, /<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/, `<meta name="robots" content="noindex" />`, "meta robots", "404");
+  html = setTag(html, /<meta\s+name="googlebot"\s+content="[^"]*"\s*\/?>/, `<meta name="googlebot" content="noindex" />`, "meta googlebot", "404");
+  html = setTag(html, /\s*<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/, "", "canonical", "404");
+  writeFileSync(join(distDir, "404.html"), html);
+  console.log("prerender-meta: 404.html written");
+}
